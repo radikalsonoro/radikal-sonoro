@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-28T22:40:40.527507+00:00",
+  "actualizado": "2026-10-29T05:56:44.062210+00:00",
   "elementos": [
     {
       "categoria": "Metal",
@@ -31,38 +31,10 @@
     },
     {
       "categoria": "Punk",
-      "titulo": "Calva Louise recorrerán España en octubre y noviembre con tres conciertos - Stairway to Rock",
-      "enlace": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE55VlpFSDhMM1d0NG83QURyVDZ0czJ0dVBXNXNnbzU0MUs4MjFOeG9HT08xaExxTk42NEZiZTBSbE8wNFZtWnc1N2JzUmdQYUlsSDNUQ3dmV1JscGdjMzdJM0ViYVZWRWli?oc=5",
-      "resumen": "Calva Louise recorrerán España en octubre y noviembre con tres conciertos Stairway to Rock",
-      "fecha": "2026-10-21T14:30:18+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "The Strokes en su único concierto en España: perdura la revolución del calambre con un Sant Jordi en pie - EL PAÍS",
-      "enlace": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNNmxwbWJYLVFTODVZa2xoVkctTF92Y05KZm1hc19CUDB0UXc5SmxLNkJWMGpRcEJlVGZYbUdhbmpuWEdSeTQ3RFVOX1IyRHhZWmphZGJVUlljRzd1dmZ0R21naXNXdHZSdE5qcVRrTDFnYXJycGhPbkxVaUhaZzlyb0pSZFhNUEJQS0xlVEZUM0ZOMG5fWUtZY3hIMmpIYmhQdjFJdWxxZmEtdzMyUjZEUlNoVm5ORGZWeFoyZXUtWFQwZWNoREI4M3M5eHJmYmdGdkNDdjRMLW5nZkdrWkcwbnotaVhwWnBBZEZZ0gH_AUFVX3lxTE14ai1JeU56Ni1CY2ZvZU53M3dhWUppZ1dWb2ZIYjM5dDdOMG9od3Y1Z3BKenJZZV9DQmFYeS1UWVZXeHhKa08yaE95M3YwT0JKaWtBY3BtYWc5WEhONDFFelF1VkhIdU9tb0NJRm96MWxSN0phMHAyY19SSkRnWFNadUhkM0lnSDhmS2NNVDFpcnlCWUhhRGFyTFkySGdfS1N4djZyZXhsVFJMRWx3eVlwYklVekZPU2p0WWpIZ0xiWjJKeTdLV1JJWjVIbUMzUjVaa2thNW95REc4YVBwREdoTnd4TkdxOEdQdWNsTUhsaWJPeDJBX1ZQaFhJQjl2WQ?oc=5",
-      "resumen": "The Strokes en su único concierto en España: perdura la revolución del calambre con un Sant Jordi en pie EL PAÍS",
-      "fecha": "2026-10-21T10:17:02+00:00"
-    },
-    {
-      "categoria": "Punk",
       "titulo": "Asturias se rinde ante la 'madrina del punk': un millar de voces arropa a Patti Smith en el 50 aniversario de su primera actuación en España - elDiario.es",
       "enlace": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQcjdDdExYZzdjdGRlOWh1Mm53SWNwbE52SmR2OFhzR1Y5a3dudGJQdVFEYS1MNW5LUmF3NHpDcUJRbDJiMEhWdmFJRkpLQXFDX3Bld3Q4TlNFck1pRGZ3NEJtMFgtdDRfbDdURnY4V215YVNaa1dkZ050bUUtWXUzamdFdFBycDF0WDZEdVBLNVFtVzdRT09JUTFlcUIxX19xMktOYkhJRzRzTFBBbldWTUhWQVpHX3p1UUJtZGFyNjA4eTF2eHdaaVhjUzZEWEVSZWpuNkNjVWPSAd4BQVVfeXFMUEEwek5ZZ3F1RHU0U2p4SG1felNpZ2pTdmlLeUhBTkJZTnEtNUV1c0xSYUUwX2RKRWlHbjBiSWNwdlFVZ295c0o3VHJydkFuWUdEQlRjOUNfYWJlUXBSNGR3SjlzbXVXM1hUN25kTTFRckhHQUhXVXpha2JHX3paT3lWWDJManY5OW1DN2Y0SGZxNGlUcVp6aFRTTGd2am0zUEEyMksyQ2w0WDBTQXFSY3hwc3AwQVg0dFdGZTlZUlpHX1k1ZnB6ZDVQZzl1YXFTMVVNcUhYYUREaXp4MWt3?oc=5",
       "resumen": "Asturias se rinde ante la 'madrina del punk': un millar de voces arropa a Patti Smith en el 50 aniversario de su primera actuación en España elDiario.es",
       "fecha": "2026-10-21T07:20:19+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "Patti Smith, 50 años después de su debut en España: mística, compromiso, poesía y puro rock and roll - EL PAÍS",
-      "enlace": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOMzB2RVRLbkJ2TTlldFBzSGR6bUNxNEtScC0xWVVSU2xtbVhQV0tZcV8ycVpzN3FwejJPdUVoSWpicVpSbk1sS2ZMMEczaU5hS0NyZkUzUnJqVzZiNF9wWWtVZnhlTjVqOFY3MzZnUkNpbWpEc2p1VlZsUkppckF0ZW5oa2padHY5ejg2V2FScnZYbnNHdFUzcm1xcDhYV3hTSGc3b0hMd05VYnFLbVRCZTZBRmpZTFpkTmhGZnQ2MW1YN3FZSVRjZzM1OE9VclhWTWxxUFJn0gHqAUFVX3lxTE1SX2VyM2wtVjliR1RidzlyN0F4NU5UZUlvdlk1QWRRM3lzTXI2ZnZJSzhON3lrSHNMd0thOFAzV3d5ZjZ2aTRrbF9tUjZHY2JvN1lKMlAwZzZ2VTI0LXVmbkI4QkF2TXJzU0c5c1g1ZXZUSUFlODZRanNQTWg0N3J4WGVpZURBU3ViVlVOVzd2VEFPamhvb0prSnJoZUNBb0t4dW5LeTlVbkczZzdaa2hkeXBZV2RTQ3lvR1hhVG1TdDA4NVdPMUpILUVGQURYRUloV0FPdGhxSVNqQ21hcjF6NkFpYXl1czhwUQ?oc=5",
-      "resumen": "Patti Smith, 50 años después de su debut en España: mística, compromiso, poesía y puro rock and roll EL PAÍS",
-      "fecha": "2026-10-20T19:41:47+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "Halloween 2026 en España: festivales del 31 de octubre - Modo Festival",
-      "enlace": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQWmltM000ZnBDeXFGdFhJUUNlMXpheUtpYjZjUmdWWURqY1d5a29SMnZleUNiRlB3TzdGMTNJNHdOVGVYbHI3cG9LOThReGtaRVp3X2p1T0x3QUhKX2FsZkVhdFdkT3MzR2FUT2lGZ2dKXzZnMlNJczhaYU5tSm1yLTBCblRuaUY1VWJGX2VpODg5Smc?oc=5",
-      "resumen": "Halloween 2026 en España: festivales del 31 de octubre Modo Festival",
-      "fecha": "2026-10-20T12:00:00+00:00"
     },
     {
       "categoria": "Punk",
@@ -72,25 +44,18 @@
       "fecha": "2026-10-19T07:00:00+00:00"
     },
     {
-      "categoria": "Punk",
+      "categoria": "Hardcore",
       "titulo": "IGNITE anuncia su regreso a España en 2027 con 8 conciertos y nuevo disco - Hellpress",
       "enlace": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPTzZaZDF3dk5UQzF5dnVXbnVIa0NRSGsxOHhXWk8xeURfUmdHOV9mN2Jzd1dzOFRpaTc3bndHMUhCNUdNbUZIOHU3eThZMktUMzVXeS02T3BGbWx0UklfcTFBTEZSelZ2dmZ4Rkdtal95aHZOR3JKdlo4RGJaQlZIRVI5eWZTUS05bVhOcVFENEp4a3JuSzlvcNIBngFBVV95cUxQaWtwOTZEemtnTXExcGtSN1RmdC15dnZvNHJaM29VZkRVUVNvWGZzOGRjUDNSVmUzRXNPTG1wTFJNUG5qemthRzFpZG1OM3hXcjVRZlFwZDJseVVHU0ZYX1dqcWt6SXNIQzBaZ0Nnd0Z5UGxaYTA4Wi0xWldOTk53X1ZNUXZodzRHUXNheTBTdFhBTExJcGs4aFBMMS1Odw?oc=5",
       "resumen": "IGNITE anuncia su regreso a España en 2027 con 8 conciertos y nuevo disco Hellpress",
       "fecha": "2026-10-14T07:00:00+00:00"
     },
     {
-      "categoria": "Punk",
+      "categoria": "Hardcore",
       "titulo": "Ignite anuncia ocho conciertos en España en 2027 con la presentación del disco “Still Wide Awake” - MariskalRock.com",
       "enlace": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNZmNxRGctUkR2VGhXQkU0eDl0TjdTb3h3R0RIZFVGa0h4dnpOVzdXVmd0blFCb2pybG5tUENDYkZ2UXgxQzhiZ1ZDaFdIdkRIeDdodU1jbEw2R3pjbGpHMXBNNFVFekpJRjY5S2VDdmhrSEYwVUxOb3VNekpTTmxhM0VBN29nYVg0YXJYOHNNSEpHYzBLR05QeUpGd3NKTU1QUVR1c2Z3dmJqVV95TWhoLTE3Um4yaWdtVFBqbUhHZzZvWWo5QkpUQWlB?oc=5",
       "resumen": "Ignite anuncia ocho conciertos en España en 2027 con la presentación del disco “Still Wide Awake” MariskalRock.com",
       "fecha": "2026-10-13T07:00:00+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "Guía de ocio para este sábado y domingo en Mérida: el esperado regreso de Bucéfalo, la magia de la Feria Chica y todos los conciertos - El Periódico Extremadura",
-      "enlace": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNbnNsUG05b1F5YzJlWXZfZE96X2lqRnEtZ1VBNHpaRlVacnR4YXh4c19oNk1TbnBoQ2RGU3hueWttelk3ZlVDVllvLTdmcERqbjRNX2N2c3BLQjg2VEZ3QnFweFF5RG1LejBEeFpYT3pRTjY2MldTeUFIZEluUW9sZEZRN1lxcUFyazFEeE9LY2pVeFZTc0Z2ejM1cGVHV2p2RlZHX0VZRTBtR3lENW1XMjV6TXrSAboBQVVfeXFMTnR0b2pNMVdxel9HcGRyWWxuUWhpMU9PQ1lHVFhydmx6bUhyLUdHYmx0Tk52MXVwREpZZkNuQllscFZuYk1VTVVybnB5WEZxV0RnUnEtcFRhYVlxTUEyWDE2dE9ueTluRkp1RXVwazZFQ2htd1ZUVU1JTUhDWUI4elNDZkVsTzBXM3gxMDlNN0pLUm5XTWg4WHZobk4zbHFZMVZvUHF3WUVzeVI1QTY0TnJPYXJ2VWhZWThB?oc=5",
-      "resumen": "Guía de ocio para este sábado y domingo en Mérida: el esperado regreso de Bucéfalo, la magia de la Feria Chica y todos los conciertos El Periódico Extremadura",
-      "fecha": "2026-10-10T07:00:00+00:00"
     },
     {
       "categoria": "Hardcore",
@@ -100,32 +65,11 @@
       "fecha": "2026-10-10T07:00:00+00:00"
     },
     {
-      "categoria": "Punk",
-      "titulo": "Rock al Parque 2026: horarios del lunes 12 de octubre, con Ministry, Editors, Los Bunkers y Rata Blanca - Infobae",
-      "enlace": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQQ2xLakRzVEpZcnNFb0s5Z0NrQ19ucUdNelhLN0piazVKbEZVVlNiRUlOTmxfa1hNTU55OS1rOFNXUU84WlpuMjRtNGZhMVplMks2WmZJOERYWlJtRl9TLUZ1c3RKQXdrVUdRTTY3Z29OVEJBaXUyaFNmRHhHaHI3VFMtR0tOdm5tNGV2TE5qZ2tKdkgxVjVuWWhwTE5VZ1lCcFZydTB3ZmlUTnZ6MmhxNkhyeXd3LWdjdlYzcXZ3NU9SMldMYXczaFFSZWlZeVVVOG1VVndiT2dHdVhW0gH3AUFVX3lxTE9md01LT3RGRFJkNW9iR0ZxbEhzZlpHUUpwVE43U1Zod3BYV2FpOUEyTVVyQXNYa0JtQVNpMDBOYjlWNFVNY2dKclpnZExPRW5GelFtOGFWd0E1ZVFzUVVRdWFQUkxfVVQtenUwRWZqOXpsQkRraU1majJNQVdnZGFrNmtRMFFXVXJOYi1qcFVfNUxHQnRCTmd5R2x5LVF4akE3NVFkQjlmaGxYSGpoV3NPbUdKX2dOdTdQcEdaSFZBWHBySjNYU05hTUdBdTNGb0kwcl81VXVsZHZkTDFDUWFDbTRMSzRYVnJKcFpGVk1fX2FCbi1DTFk?oc=5",
-      "resumen": "Rock al Parque 2026: horarios del lunes 12 de octubre, con Ministry, Editors, Los Bunkers y Rata Blanca Infobae",
-      "fecha": "2026-10-09T07:00:00+00:00"
-    },
-    {
       "categoria": "Hardcore",
       "titulo": "Knocked Loose, la banda de hardcore que actuará en el Leyendas del Rock de Villena: \"Medio festival va a morir ahí\" - Información",
       "enlace": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNQlgyZ0YwNTIzVDU1T0hkZ3JxS1NLYnhybnJXQzJqc0NxNjV3VkdOZFJnRzQtWUtkbzhLM1Utam5LTkhDT281VXJVUVhaRHVqR0ZwUnVjTlpIVTVLZjlZdzJHdmFCWm1NQ0RfNEZwNUFySHJpSFN3ZE9ncDg3d3ZJaU51ZmFEX2Y0MjNTSm16NnRaWlI5UVZOVnZ3dno3YVc4M3Z6N3QyakpiZmh0UjF3c3Fwd0pzUHVfeDlEcFZra1BlWXp0eEpuem8xb2XSAdIBQVVfeXFMUFNWYkdpOEJzMV9GbWJEbjVjbFZndTkzVFJXNWh4U3N1X0NxMlk3b1VfQWExekpXNlRjRHljTG9LV25pMXNwUEZqNHY5T0lyYWltMkhRSjY3V1E2Y2dqSE1wbHJjb0RFMmZtcTRyN1FIdGhobFpQWHJvRlVzVDBNVXFvdm9JUllUdG9vOE5sM3UxOTVnUU1FNTR2VHNhMjYwdjdsWm1uaXNIbDRzajFmLVZhSjJvRGtZNUtUa001QUo4c2JRMDgtcTlUM01EckdEQ0FB?oc=5",
       "resumen": "Knocked Loose, la banda de hardcore que actuará en el Leyendas del Rock de Villena: \"Medio festival va a morir ahí\" Información",
       "fecha": "2026-10-09T07:00:00+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "Rock Albox 2026: cartel, recinto y entradas - Modo Festival",
-      "enlace": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQb21IVmQ1NnJWajk4cTVONWFOZzg1R21XY3pKLS14M0FTT0VST1R0OUpmUUFIVVBTU0JmdXd0VDNuVzl2c3VPa3lzd3BYTW5QOVdFUWNEN0c5ZnB3WEw5d2FIUXk1cXk0TnZkMG9jNnNIRmtrQUYtdjNrdDNQZVJaT0dVT21YTXJucVE?oc=5",
-      "resumen": "Rock Albox 2026: cartel, recinto y entradas Modo Festival",
-      "fecha": "2026-10-07T07:00:00+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "Viña Rock 2027 celebrará su 30º aniversario: fechas confirmadas, entradas y novedades en Villarrobledo - La Guía Go!",
-      "enlace": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBMYXM4MTJhdEZpT3A2NGJEc2xzaXFlVGxfVzBnR3V6dS1ZYkZRTGJtZk9rUC0yVUJDQnQzX1FCSVRwcVBrdUZfQmRCQjF2eEZXVlY1NWtmdER1dU0?oc=5",
-      "resumen": "Viña Rock 2027 celebrará su 30º aniversario: fechas confirmadas, entradas y novedades en Villarrobledo La Guía Go!",
-      "fecha": "2026-10-05T07:00:00+00:00"
     },
     {
       "categoria": "Ska",
@@ -149,13 +93,6 @@
       "fecha": "2026-10-03T07:00:00+00:00"
     },
     {
-      "categoria": "Punk",
-      "titulo": "Azkena Rock Festival 2027: cartel completo, fechas y entradas - Modo Festival",
-      "enlace": "https://news.google.com/rss/articles/CBMingFBVV95cUxQbUVQTzd3T1ZCcmJ0RC1kQ1ktOEkyWVg2eFktc3d5NFY0czRLWG9DVXBnWlRNeHBXMHpvRHNqM3A5alFhUk1SVkpZbU5vdlRwVDVGSk05TkVFYjRWOG1jV3dSXzhubTFqZXBOLVNZV0tGbklLclFhSUpyLWp3Tzk0MHRxN3pGLW14Qy1MdjU0SzlSZ2NPVVNxR3NNYmhzZw?oc=5",
-      "resumen": "Azkena Rock Festival 2027: cartel completo, fechas y entradas Modo Festival",
-      "fecha": "2026-10-01T07:00:00+00:00"
-    },
-    {
       "categoria": "Metal",
       "titulo": "Conciertos de Metal y Hard Rock de octubre: EUROPE, EVANESCENCE, DEEP PURPLE, PRIMAL FEAR, SUFFOCATION y toda la agenda - Hellpress",
       "enlace": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOclZ6a1pNS3FhRWh1a0pzVDZycktJSGZZRnVBS1Q3ekFObzItSjUtcnEwRlRDazA4Y2I2Rk1TSDMyU25qTWRIYW1Ncl8yV25vazBIekxvOHc5c3RabDZYYVN4N1BKX2I4b2VmWXZWNHhEX0FPX0hkQkVfY1FPd3NzR2pFeFZMS2V4NWtmc2JRV2pNM01tSXV2bFdKYVFPSmcxVzZYQnY2SmpLSTV0N3B4cU8wNTFnb3M5bTIycGlCWTE5TWfSAcgBQVVfeXFMUHoyNFIwQUdfTkpCRlhDRnpnUmpKTkRqdkx3V005YlJ2MDhaOWJRNUhObG1keDFyanMtNmRlN2FfelpsUlBwY1hkbWgzYTRWTGI2V04tOXowWGNJeWFUcERzanZ1b2RJNm5lNERNNEJhczJSWEJfQi16Z0xVQ19UcEt6aWFWNmlVQm5QQ2x2cEVfWU0yZUk5MUlmRGtiQUptOVBZNEFvUWZFM0U5QmVNdjJqR1Z2c0tTTHBQU0RrSXVQTUZFZGxpZU0?oc=5",
@@ -164,52 +101,10 @@
     },
     {
       "categoria": "Punk",
-      "titulo": "Pirata Madrid Festival 2026 en Rivas-Vaciamadrid: cartel completo, fechas y horarios de los conciertos - El Confidencial",
-      "enlace": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQaGZXUUUwTV9Ba3FmbWlIcTYyYnhVNjBnWXN2WXZVWDE5ZndJWUFQaWp5Z3FpX0dIVUtkam5EOWluU25vZ01SOWZMQ1lqemNjaHNJdlpCTnR5eElQWl9XQUNkeXk1V1I5UDRxc0VXX2F4Si04WVdiSGtPWjdGZnZVQ1JkQk1GWURrUG5HOWpXS0ZyT01ibXFmNnc1WXZPWDJlLTJXMk1yRThhcjJYVXVlaQ?oc=5",
-      "resumen": "Pirata Madrid Festival 2026 en Rivas-Vaciamadrid: cartel completo, fechas y horarios de los conciertos El Confidencial",
-      "fecha": "2026-09-30T07:00:00+00:00"
-    },
-    {
-      "categoria": "Punk",
       "titulo": "El pueblo a 20 minutos de Zaragoza que estrena un festival de rock con una banda histórica: programación completa y cómo comprar las entradas - El Periódico de Aragón",
       "enlace": "https://news.google.com/rss/articles/CBMitAJBVV95cUxNd2pLdVhHR19jbVlsVjl0TVZ1UURrby1lRzFtSWpOUnJYdTNJMVRlZnIyVFg2WmlMQU1sOERIYnZ3Y0NZeVNfLVZfTkttYXpwMmdqQkpueHlLRWZPWFpkcEw2eTl3OER0cXc1dHJ3dkxXT3Bta1JJdExJLXU3Z3BJRmZiWEM2bjRUU1VCdDQxZTVCdEZSbkNwZkM4Rl80VnVsYXhiQjktYlNqRWdaY1JkRTlLS2N3OEZMZU9HT21FV0pPazd6ZEFuMURVRl9kUzdPMlZ6dWJ2OEdTeFJMUHBSYTFyay1GYmVSTmN6Sm9GYXlOdHlfZXVCanIyQjVwTVdHYnhyTlFsVlk2RXRWZVgxeXdsTkZ1Z3l5VmpscjB2OUVDVWYzRTBRVFNOVmpKa3FVUHFhdtIBugJBVV95cUxNU3Q5WktmS3lndGZGS1B2UDRWMVNOR1hMel9KR2JtQnZqbmNGZU51Rm9JaWFGb0RnMTUtRVZhNTQwQjV2QlRtVXI3dWFBcnMxYjlvWGJUUlcyYjFxYUhpMkNyM0luUjZvVGxZd1FEYmRadWxkUGJmYUJWcGIyc3I2RnBOcUlLV1Rkd0JkYk01SnR3OTNBWlY0VGJqd3kxOThTWnd3aFBHY1F1Q3M1Y2V6c0NlYTAwNldCWVA0RHZCSDlWT3B0UUVUYU9VbldPbTVVVFNzVFkta2dvVGR2UFg5U1l4Z0dHNzBqdmszZWtGTFJqUnU0VDhCc1FTbU9SZE9NMG9ROEZEc3YwZkZfNWFVcEpXOTdsNU1SMGpONy1GMlZDZ0h0R2N6Uzl5dGNfRHVvdnVWZ1NEekRHZw?oc=5",
       "resumen": "El pueblo a 20 minutos de Zaragoza que estrena un festival de rock con una banda histórica: programación completa y cómo comprar las entradas El Periódico de Aragón",
       "fecha": "2026-09-29T07:00:00+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "Sabaton encabezará Kingdom of Rock 2027 en Pamplona: fecha y venta de entradas - Modo Festival",
-      "enlace": "https://news.google.com/rss/articles/CBMigwFBVV95cUxORWJMcnlIVmxES2pDcjlxMks2ZEVJWnBHd29ZV2JZVl9VT2dnc2V5QUVXU0dMYlBsQWxMZ21udmdXQXNxd2k2X2xwbDVYa1M0TjNVc3hBNG4xRkdSYmNXdGJHQlZROWQ4TF9zOXFPX3N1bk1aNTJseEwxYzM3RmpxRHlEcw?oc=5",
-      "resumen": "Sabaton encabezará Kingdom of Rock 2027 en Pamplona: fecha y venta de entradas Modo Festival",
-      "fecha": "2026-09-26T07:00:00+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "Gotthard protagonizará cuatro noches de puro hard rock por España en septiembre de 2027 - Stairway to Rock",
-      "enlace": "https://news.google.com/rss/articles/CBMickFVX3lxTE1OdTI4a0JnRWUza1Q2aDVvV1Z1WnpQc3RTcVBDVTAxdFdXRmlwSk9RY0hfb2E1dnNaOU9RYld1UFExc19oLU5JTXBJQXhFX3M3LU5ZM3Vna0NGcVExRXFQdjNWQkhjMnJzd3BkTzFRaENydw?oc=5",
-      "resumen": "Gotthard protagonizará cuatro noches de puro hard rock por España en septiembre de 2027 Stairway to Rock",
-      "fecha": "2026-09-25T07:00:00+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "Sabaton encabeza el Kingdom of Rock Festival de Pamplona en abril de 2027 - La Ganzua",
-      "enlace": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOTzRTX2ZsSTltakc1NURiZENwbW9rRHRkQndlaFo4OUhUTkZvMENTTzR0X1dCd21oZjFSajFHTi1JQ1JxeFpZNDB5UWNJaU9aSnlyRmVveWtOU1BFVjN3TXpfT09JMU5ZNWZ0bmFyRzFGanZUZ2FFVV9hcWRQNTVGUkFZZzJhZnNaVVcxakl3czZWQjE1MGhFRGQwSmp2aUhZTm04YUltSjhpMVBpbklKaXNTYw?oc=5",
-      "resumen": "Sabaton encabeza el Kingdom of Rock Festival de Pamplona en abril de 2027 La Ganzua",
-      "fecha": "2026-09-25T07:00:00+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "Come y Calle vuelve a León con 16 conciertos gratis: programa y horarios de San Froilán - Modo Festival",
-      "enlace": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOYWpOVUQ0ZUVkNkJnQVJjWjNmU2FkSElZMDlNbmFONmJkUHU2czg4V0h6cmVHWk9PX083Uko5VVBrZTh6aGkxU0RYdjJsb0Vab1BKbE5iT2RzTE1qZ1BwdVAzOHhqQWR2WEJCdC16cUZ1bGRnQi1QMVY5RUpyTjFzQmdTZUt6UQ?oc=5",
-      "resumen": "Come y Calle vuelve a León con 16 conciertos gratis: programa y horarios de San Froilán Modo Festival",
-      "fecha": "2026-09-23T07:00:00+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "Airbag, grupo argentino de rock, dará conciertos en Barcelona y Madrid en septiembre de 2026 - La Ganzua",
-      "enlace": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQalZ5WncxQmN3UjdLTk5vZHFDVWZDOG90S2VoaUNSUFRxVTA0ZjRoOC1tTV9POFl5cjBuY21EcGtpa09naXBDTzI0blBKYWx3d3VCSlQzeDRzM0RWbmQyQ282bVpFUUhBM29JYlZCOTA5Rnk3eURIRFo3SlVUV0tVbVQ0ZHhkRnhXdS1FbVF0bUtzWTEzX2VPQUljTGZZZ1g5MlVhOHRDdUhIZDh2d3pHT0Nqdmx0NExOMXo3V21BeDVwXzF4Rjg1bi1n?oc=5",
-      "resumen": "Airbag, grupo argentino de rock, dará conciertos en Barcelona y Madrid en septiembre de 2026 La Ganzua",
-      "fecha": "2026-09-18T07:00:00+00:00"
     },
     {
       "categoria": "Hardcore",
@@ -226,32 +121,11 @@
       "fecha": "2026-09-16T09:21:27+00:00"
     },
     {
-      "categoria": "Punk",
-      "titulo": "Pacheco Rock 2026: Reincidentes, horario y entrada gratis - Modo Festival",
-      "enlace": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5NcnJPVXpJNzJXYjdkRVA2M1RBckdFdjhNQzd4TDJiZ1NLZHNST3dpcGszbWhvcy1UQWpHQkpmMW45bmxHZW1pVy1tS19YYjFhVEl0aUEwYkJzOUk2OHFjb05zejRHdkdCclNNeXFJa0F6ajFRV1JIRkx3?oc=5",
-      "resumen": "Pacheco Rock 2026: Reincidentes, horario y entrada gratis Modo Festival",
-      "fecha": "2026-09-14T07:00:00+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "O'Funk'illo, gratis en Festival Rock Bellavista 2026 - modofestival.es",
-      "enlace": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5HUGdUZE1rLVZJaWtUMkZ5eUllVWhMOXZ1T0YzZGlWa2dlOEhBVHhJMGNLcmkxWEIwbWowV3hiQjFhUkF3UHpjcldiR3pUcUhPM25qcTlsSUtwc3lDUEltTmt5U2JxRVJpSU1CYzR6dWFUOE84T08xZDI3Zw?oc=5",
-      "resumen": "O'Funk'illo, gratis en Festival Rock Bellavista 2026 modofestival.es",
-      "fecha": "2026-09-07T07:00:00+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "Piorno Rock 2026: cartel por días, entradas y camping - Modo Festival",
-      "enlace": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQLXF1aVZvbWhjNmQxdGR1Tjh3VnM5dEx4UkUxMkNRX0VVelc4M2x2cTl1bHlqYmxmZ3VLdU1pUlpvUnc3R0NRQWhYN3JxTndtSElHRFkyZHkzcTM2ZWVUaHBCVDJQd183aXhNZzVvb2tqcTA1aUtsX0NRbnBGdG16OQ?oc=5",
-      "resumen": "Piorno Rock 2026: cartel por días, entradas y camping Modo Festival",
-      "fecha": "2026-09-06T07:00:00+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "Zaidín Rock 2026 será gratis con Mägo de Oz, Boikot y Seguridad Social: cartel por días - Modo Festival",
-      "enlace": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOcUV3czh4Z094TGlVY1ByRkFDdmpIU2o0Q0xZS0c3NVllNnhqRUptdUYwc2xuRG4xZVNkQW43T0JoNWtySHpUd1pnZ2tuek1fQ2pLM3BMWjJHb3I0Y0hOR3VKMWdyRVp2cXFiMV9jOE9lOE9JVjkwUGNxUl9Lbnhoc3ZOTVdfZU5YOXVNeFlzeTlackZZ?oc=5",
-      "resumen": "Zaidín Rock 2026 será gratis con Mägo de Oz, Boikot y Seguridad Social: cartel por días Modo Festival",
-      "fecha": "2026-09-04T07:00:00+00:00"
+      "categoria": "Ska",
+      "titulo": "Ronnie Wood en Valladolid: 302.500 euros para ver gratis a un ‘rolling stone’ entre pullas políticas - EL PAÍS",
+      "enlace": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxONC1vdWE2N3F3YjQ0bTR2T3o4UGxUd0lzWU9mWV9XSjVpZlpGYnpfVFVVbEs0eE92aEVUWmtFdFJkdkFZb3ZqR1NydENWcTRkQ0F2LUdpSldOR2ZyMDBfUnZZWU16MVdIT0ZEaG5ETXVNaElJdmVlRnJEeHZJd1E2bHNjRDVGTm9KOG1GY1NIYzBIZEZFaVNscDZVRzU5ZlpUaHlNOVdpVURVMkNGV0xjcTRuTTdPeS1HWGlhbXY0Q3k3bnBCejVkYUdscGt0cFN0N0lQOUFB0gHqAUFVX3lxTE10V0NTQlJjeUowUnJPVlRzWGFoNnpfb3IxOHkzOV9Pb0hfS1JKY0JpODdJcHdiaWtCb1FiQnJJZ3JyUTRrTU9ZZjlNV1pva0xrOHZXQ1R4V0RrOGxQeVp1TE9tSmJTRVRsX01lbU1XSHlLTU8yZjhlOGJjV1o4WW1VSVdVVWl5eElCc1U4TWlVU2R3VlI5eEwteE1VRy15M2VtSTFpNzVwTkNxU2RZSGNBekkyb1FQNjZhZmZIYlA2ZWFpdUxVSGFFNnRTSS10QzNxNnpkVE8wbXlDN3AwbmRWUDRvaG9XR0U0UQ?oc=5",
+      "resumen": "Ronnie Wood en Valladolid: 302.500 euros para ver gratis a un ‘rolling stone’ entre pullas políticas EL PAÍS",
+      "fecha": "2026-09-09T07:00:00+00:00"
     },
     {
       "categoria": "Ska",
@@ -275,18 +149,11 @@
       "fecha": "2026-09-01T07:00:00+00:00"
     },
     {
-      "categoria": "Punk",
+      "categoria": "Ska",
       "titulo": "Rock al Parque 2026: este es el cartel oficial para la celebración de los 30 años, del 10 al 12 de octubre en el parque Simón Bolívar - Infobae",
       "enlace": "https://news.google.com/rss/articles/CBMihwJBVV95cUxPOG84QjdwY0dhSkxVVEhPM0ppR3dvZTlybnBzWUY0X0FOc3J4YkxtN3JPamNNWndORGtQR2J6WEVfd1FOQXBmdnF0YWZ5MkpzNTcyV2xib0dTNUZLN01GT2lZcWJGWFpBdlpzZTFBM19KSTg5RmVKVm9SbDA2d1FtZmRFYnFpcEp4SEU0U1oxaC1aTVpRVzkxWnMwUDZiNF9MbTJHaUp3MVcxVGtCUmprbzNVNGxpUVk5XzVpZ2Eya3Nia3c5ZDRzbWc5MjNjM190UmpEN1plR2lDYTZURnJTQWI5REdLdVBOUnI0Tzd4N1JhSEN0RWhBTjlNSC1WSks4UkdjUVNoWdIBogJBVV95cUxOLVZXYXBaaHM1VFNTbDRsQ0RLaDhPcndhSGk1a21PcEFrSndfMmNHcmJxTWVjSWZ3MWZPRDhpM0UzbnJLdDk5MlZnTGR5R0tPYl9RcVZ2Skhldk1kYkpycWdUbmtmczFjU3ZNbFpPM2pCOVVMVW5rbXY2UlBMZ09BcGd1cjIyTl9kTkFrRW1LRzBkQzBqMWxDVWlZV0pzWjhVYnNFVFBCQWg3YjlidHo3TDlFNzRiaEg3SXNFMHdMajlLbi00SVdkdVZ5RmNCN1lQQklQQlBOcGtSQ2NpRzBYUzgzOHhQWVNZb2l5bjdxRU1pcWE1dTFXNWNLRjNuZXZTWFM3RkpsbnhQd0ZLemNnNU9SNUs5dElPbTFXRGxSUzhfUQ?oc=5",
       "resumen": "Rock al Parque 2026: este es el cartel oficial para la celebración de los 30 años, del 10 al 12 de octubre en el parque Simón Bolívar Infobae",
       "fecha": "2026-08-26T07:00:00+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "Simple Plan ultima los detalles de su esperado regreso a España con dos conciertos multitudinarios - RockFM",
-      "enlace": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPSXRCVV9NYWRmMm1tR19KSWVtS1hXbDNxR2FrczFaN1NiSXEydkp3OFNFdTJ5cEVHdzhkaVRCbHNhN1NaanhEWC1KUXhYZ0pwa1d6Q2prZzdQdHIzT2Q1Vjh3ZXFmTnJEeHg2TkNId2prbVptNmp5aFNnY3JNS1d6TTNZTXE0Y1hmV2pNcERSX2hvbWtUaXBKa3F3YkIzU1IzLTgwdHdIRHJsdnBDLU9ta3B3d2N5NV9GUXBiQnZrWnhjd3ZKalVRV1E5b0N1WnhFOXg5ZlMtZw?oc=5",
-      "resumen": "Simple Plan ultima los detalles de su esperado regreso a España con dos conciertos multitudinarios RockFM",
-      "fecha": "2026-08-22T07:00:00+00:00"
     },
     {
       "categoria": "Punk",
@@ -296,48 +163,6 @@
       "fecha": "2026-08-21T07:00:00+00:00"
     },
     {
-      "categoria": "Punk",
-      "titulo": "Bodega Rock 2026: horarios de Leo Jiménez y Ankhara - Modo Festival",
-      "enlace": "https://news.google.com/rss/articles/CBMiekFVX3lxTE51d0dJWldRZDBrZUJyanZuWk9zd05NV1hpTVlTQl8zLTNBMTkzN1NnZGl5Uml4VTJObkZtOF90OVBPdzhXbWJuSmRqU2RkYWphRm05bmNkUlUtMlJ6NlEzRUdSdkh5M0xwdXNsUWJkMmtkYXkzOGtEbC1n?oc=5",
-      "resumen": "Bodega Rock 2026: horarios de Leo Jiménez y Ankhara Modo Festival",
-      "fecha": "2026-08-15T07:00:00+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "GBH ANUNCIA GIRA POR ESPAÑA PARA 2027 - Diario de un Rockero",
-      "enlace": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQU25jZjZNWlZWR3dqWEE5c0xCNkVraldRZzhld21kWDNXbzFyeU55WURPYXFIbnFfeFV5SnN6VE5Qck1USklPTmZ0VGZSVUE1czZvRTBmc3dDdTZYcHE3RDIxMUZZUUpjUjFCU3B1dXBXNEE5R0VhaktMTFRUUmZCeFBzY2ZNUVduTnc?oc=5",
-      "resumen": "GBH ANUNCIA GIRA POR ESPAÑA PARA 2027 Diario de un Rockero",
-      "fecha": "2026-08-13T07:00:00+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "Mediterránea 2026 suma tres conciertos gratis en Gandía - Modo Festival",
-      "enlace": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPSGNVSlZkU3J1R2RiRHFLTnlBY0RTYWpYRFhVTFRlVXprNTNfRjFwb3dRZVhhSVhRNDl3OElXdHg1b2dEdlA3U0FMS3F4ajNqbHVxSnJpdnRVWVRBbmk5b0tWMlMxbmphSGdwTlk1SWhjRmVUOENGUzdfRkdVbm9QQXplYlFpZw?oc=5",
-      "resumen": "Mediterránea 2026 suma tres conciertos gratis en Gandía Modo Festival",
-      "fecha": "2026-08-11T07:00:00+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "Leyendas del Rock 2027: primeras 26 bandas y fechas - Modo Festival",
-      "enlace": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNOEUxR0NJNy10VkZxemkxQjZiaFVVRkhQNDN2RGVKaHJaNWdsc05JX0NnYWRtejJoX2F5eWVPajdzb2FFeVo2dVVWaUJZckNyQk1tNzhsbnNVWFBvS3g1Z0k3dGtwTFo4eWZfVUpMdUVyVUFrVFVreWlRQ0htTkcxeTAxS00yRnItQkVjVjJpMA?oc=5",
-      "resumen": "Leyendas del Rock 2027: primeras 26 bandas y fechas Modo Festival",
-      "fecha": "2026-08-09T07:00:00+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "Dos décadas de Leyendas del Rock: el festival afronta la edición más ambiciosa y multitudinaria de su historia - Información",
-      "enlace": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOalI0a2NoMnBoMEQ3SnlTeVpHekU3YVZndm1QdFlCdUlOTjN6WVBLUGdBbVliS1ZqTGxWbF85M1daRXhLMFp0UFMxT3YwVXlDUkdrQno5U284Z0NORzhoWkt0VTFsQVNGMGVncU5HOUV1SFZiR2J6OEtyTFdHcDIxeFFjS3AzUFFCUVpudGl6NnFjaGowTEE1b3FxRWF0VE1va0FRZDY5NEtkMmx1VzhVdGhCSi14S01waWFMQUd4N3p5clJzVGV5SkZoc1JKTXFOVDJ0OHZaZkZRQ3A2NEtLdDZxdjNqVjFB0gHuAUFVX3lxTE94NkstWWxPLUpSYmdkenZCQldaNlF5WHVYZHkyeWcwYV9kUDVxaUtIVE5sRnJReEV1M3RZVEFMY1NlTEJxeF9Wa2Y3aEpiNEFiVEJTUzNTNGZoNFI4SzQ0ekRqU3hfZFNpejBVWjZHUE5UQ292eWtHb25QYW51QmpTR1V5TllrRjFWdnluWjExVHBGRE04bnJWenQ2Z2IzYVNNd1JlWlFBa3NoNUhSN0JIQUV2eXdzeDBhY18tZDYxTUVpTjMzTlVlTXJpWkswMkpfb21lVm5JZkQ3dTJxMnI1MlpzbWNGM3N3a1MzZWc?oc=5",
-      "resumen": "Dos décadas de Leyendas del Rock: el festival afronta la edición más ambiciosa y multitudinaria de su historia Información",
-      "fecha": "2026-08-03T07:00:00+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "El Derrame Rock vuelve a Langreo: habrá un gran concierto conmemorativo de los 30 años del festival en Talleres del Conde - La Nueva España",
-      "enlace": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOU2VjdTdvV0VFQmRWeGdGZ2w3RTUxQlBydDMwSE4tVzdLYXlKbTY3SzZmZlN4Mmlma2JQSFFTdE5XZW1MbnhTenU5SmVYbnRSekYtZ3VUeFNGb2xSWlNoSUlPME9LUExOcHFuSGF0VUxCdG4yMUxqbU83aURXaTdBWk5CTGs4VGV0Q2g1eWlyWdIBlAFBVV95cUxNTko1YU5QaFNlMHJzQkdoRTJ1UjAySUlwbVlmOTFJSTVfYzBRUTN0UGI5RmE1WmhGWHFZaW1JT3JDMVBPNEJIM3Iyb3FOdTZ0V2I1RDJKMExFWmpIdlVyY0lNR01peGxELXFOeVdfOXA4di1wUlVsYk1DckJ4bGdndURfOUFIQ1RCdUJBT2J3VnFHMzdI?oc=5",
-      "resumen": "El Derrame Rock vuelve a Langreo: habrá un gran concierto conmemorativo de los 30 años del festival en Talleres del Conde La Nueva España",
-      "fecha": "2026-08-02T07:00:00+00:00"
-    },
-    {
       "categoria": "Metal",
       "titulo": "Conciertos de Heavy Metal y Hard Rock en agosto: JUDAS PRIEST e IN FLAMES protagonizan la agenda - Hellpress",
       "enlace": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPZUhXNm5TcjRncDZkNllHWk9qeUt0cFV2NE1YeXRTcUJUQW1DYV9TVlZxZ3lYbE80Nk1rS0EwZV9KOENaeS1xa1BNaUdRN29rSUlTeV9tX01UcUhhdEJ3eHNHLVBUY3JSX3o2ZEFVZDdRQ1JaWUZQWGlxUHNXRzZRQ3FVVVhoaVhramlfOXBHeE5ldFkwbm9nWDh1U0RlMU8wTzlrSFRBUDFaV1h3RmRINlhnR1hYZEtMZUHSAb8BQVVfeXFMUFhkLXZHd05tcFRwZnZlZ1lJaDNjVEZRVWZqejBSTHVicm1BMjU3eU1vNHBIcTNWOFdUdnAxeVRFVG1mTHRkSUU5VnhvYTVodExab2NjaWg3V0c5V3otR3pUemxCQU14QUJxSUh5V29kcHA0N201MTc2bmdENUxmNXFoUGl3akFsc2hUbFFaa3ZPNmhaWFVMXzRwMWd6OEhKY0pnOVdEWGNpZE50SFN3S01ZaHFGNTB4V3NXTWp2Y2s?oc=5",
@@ -345,11 +170,186 @@
       "fecha": "2026-08-01T10:17:17+00:00"
     },
     {
-      "categoria": "Punk",
-      "titulo": "Este viernes, concierto de rock´n´roll de la mano de RadioCreep en Córdoba - El Debate",
-      "enlace": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPVGYtWGpJME9BYndNRUgwY0JDQTNuX0ZrZVNjRUh5NzUxMWdLVXZTWkJ0NEs2a19OOGl2Yms3Y1NySG9pc2d4WUNhSF9yaUxTclQzSm5GWFZick5xYTllT3E1UkxUanJpRW1IT0xMU2lkX19wek5FNGpJem5Nd2x5eUJ5TWZEMkIxNTNxck1hSERpMXdTTHU0allURWY0MHBfSUIyNDdObjNMMjJNMXl5dE5DMkZTUjVEQWg3TmRxek5RT3dLcHdZaENjNUFEbXBu0gHWAUFVX3lxTE9wY002R0JlQnY2SE42M2dXUDJOekNsREJMTl9QTHYya0VQWkJidHd6OGJxV3J6YU5rSHFJLVZFUGVlYnVuWVhzZmpIMlBieEQxbF9ucS1rektxX2FsOUZVdVBIcG41cWZtU0U4eXFqRWJYZXAweFB6QkZhM09GWGExQlE0Z3M0T3puTUxaZlBncFJxVENiSHo4bmpjTkNmUS1qSFBGTWxWczl4eFg4ckZMUTY3TGJ0R0xjbXdPRWlNOU9rUlZ5b0IzM25GTGRhOFRqVzZ0aXc?oc=5",
-      "resumen": "Este viernes, concierto de rock´n´roll de la mano de RadioCreep en Córdoba El Debate",
+      "categoria": "Metal",
+      "titulo": "Michael Schenker Group confirma tres conciertos en España - Dirty Rock Magazine",
+      "enlace": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNdHp4OFBBX1dlaGVTMlZfY2xFY3M4eWlrWW4yaWI1VWZ2NjVJWXJlMk5ucktpMUdKbUlzYXNtdzNhQVZQRHZNTUJiOXBGZWVVSm9QaVNhakZ1SkFqYUZkLThSdTc4T0VNYnl5Y0FUd3kzZGVvamt3MEFqdGhiTERiUmFnaTNsVWpLc2VVOEtZYk81bXdrOWVxRg?oc=5",
+      "resumen": "Michael Schenker Group confirma tres conciertos en España Dirty Rock Magazine",
       "fecha": "2026-07-30T07:00:00+00:00"
+    },
+    {
+      "categoria": "Punk",
+      "titulo": "Transvision Vamp confirma cuatro conciertos en España - Dirty Rock Magazine",
+      "enlace": "https://news.google.com/rss/articles/CBMickFVX3lxTE1zbEFxQUp5NXFMYnVpa2NzWlFPWU5hdkpLdDFDVXJ0ZG4xb2NRRV9uWFVhd2JiUmstSXdueXd2T2p6dF9VdGNLbmRCalBMZDZVZGV5LTd1dkdDMlhjbXZiSXluWmswY18ydjQyb2d4S2VSdw?oc=5",
+      "resumen": "Transvision Vamp confirma cuatro conciertos en España Dirty Rock Magazine",
+      "fecha": "2026-07-23T07:00:00+00:00"
+    },
+    {
+      "categoria": "Hardcore",
+      "titulo": "Hardcore por Venezuela: la escena punk madrileña celebra concierto solidario - Rock and Roll Army",
+      "enlace": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQN2xKTDJSVWdBa09RRFF5TF9ZWlRZMkR4dlBvMGFEek5pem9hbEFfRzRxRWktSjlfTUlDSmlIaHZPNFBRVG41OW9TTUVNVjc1OHpWYm1mckdUcG5mcGRqeTZINm9NMmVZN3A5QnpjbWdPdlNsSUE5MkpaUm1aZl9LNTZMeUtHRWd4Nzk5RVdoeVBDSzZFVkJYZnBZQnJNanpoZXhLb01rOUxrbWdfcDM5NzB4enVyMjBycXk0b1ZmMUU2bjZOVnJB?oc=5",
+      "resumen": "Hardcore por Venezuela: la escena punk madrileña celebra concierto solidario Rock and Roll Army",
+      "fecha": "2026-07-23T07:00:00+00:00"
+    },
+    {
+      "categoria": "Punk",
+      "titulo": "Festivales en España agosto 2026 - Enterticket",
+      "enlace": "https://news.google.com/rss/articles/CBMieEFVX3lxTE04VWdra1hubjBOT212eUlCdm5oaDZPLUV3RUdrbkMxNS1iWENnYjVZbWd3LUxjZmFaN3EtQWhndjJUWVBOSE0zcVl6cVZZbFZ6QXRZOFFnaXUtYUNrX1N0d0M1a0pocEtQb3BWZUU4UFNyZVQxMVZ1dQ?oc=5",
+      "resumen": "Festivales en España agosto 2026 Enterticket",
+      "fecha": "2026-07-22T07:00:00+00:00"
+    },
+    {
+      "categoria": "Metal",
+      "titulo": "RAM descargará su Heavy Metal en 4 conciertos dentro de la gira \"La Parca cae sobre España\" - Hellpress",
+      "enlace": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQYjI0QnUtZkRpa1NlV3FaNXdiLWZFLXJQTC1fVk80aGx4N2VOQmM1YzVId3cwWFVsWHV6Sm43ZV9UZHc2bS00OEE1cjJSTkNBR2pJVHBWTEtERXNIaVJjMjRGZ2MteXpGb2FXU3NZREJ1UTBvT3RybG1VR3pqaWdGZHNJNmhka1pvbXRfdkhmYVJOYlplWlNCdHFEVGxjQldrdW54U3AzVdIBrAFBVV95cUxNVm55Y2lfa0lfSGY0RkcybnFHX3U4X1lTOWF4Ti1tTW1SX2NOdnZ0ZXVIYk9qM281MERfRE9ndlY5Z3FLZWZSSGNiS3ZTd1BLNzYxRDU2bDF1RUJ0NHlIYUlrQlp5Q0dBcDYzXzJBWEtNWlVGaGFnUVB6YjFiZlJScW9qYjZEZ2V5b1cybFdLR2RZQkxPbHRkMldWMzViclg0NkdWQlY5SFNUa0lj?oc=5",
+      "resumen": "RAM descargará su Heavy Metal en 4 conciertos dentro de la gira \"La Parca cae sobre España\" Hellpress",
+      "fecha": "2026-07-15T07:00:00+00:00"
+    },
+    {
+      "categoria": "Hardcore",
+      "titulo": "La noche de los heavys de verdad - Diario de Burgos",
+      "enlace": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNUWpid2l6N3NuWFBUMVg0Z2pWRFdESE9NVXo5ZXpJYUxvRHdjM216aWQtSThQdXliM3NlQ0pNVkFSUWRyRFFVeTBlbFlFbmNmaFRLU1hBUUFtZzdELU5qUDFKRkYwWUNsZnEwNEoyenVQSGUyakNNYnJZaC1ZZ1VXZ0JHYjBmWEpzRDBMRVJRTm5FMlBka0dGdDNtSHkzWmhsZVZGRERHXy1mc25SZk84Sk9YSkg?oc=5",
+      "resumen": "La noche de los heavys de verdad Diario de Burgos",
+      "fecha": "2026-07-11T07:00:00+00:00"
+    },
+    {
+      "categoria": "Punk",
+      "titulo": "Evaristo, Marky Ramone y cincuenta bandas más en el regreso del festival punk más mítico de España a Villena - ABC",
+      "enlace": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNSWFpVkpKZmJtLTVjaVJhMzlELWFWX2JuQnFwenRkdmFUaTJERTc0V2VDRDhGUktoSHFRejNBUFdZUUdFTk1xb1lKYU1CSC1Jci1ua0JPN1pPWDhHcWlOVXFyaTktM3VGX2d1bE9GTHoxZXJabUpPWVItRGx2RkdnWTIzNWtLMXJPUGRoY2xQSVFpbjNWTzl6LUZ2LVQ3cGZMNHVudFJ4TkJVOFRvQzI3dGFJcUM1bzcwaWc?oc=5",
+      "resumen": "Evaristo, Marky Ramone y cincuenta bandas más en el regreso del festival punk más mítico de España a Villena ABC",
+      "fecha": "2026-07-08T07:00:00+00:00"
+    },
+    {
+      "categoria": "Punk",
+      "titulo": "El pueblo de Castellón de 118 habitantes donde el rock lleva casi tres décadas negándose a morir - El Periódico Mediterráneo",
+      "enlace": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNd1BZTmJLUExjN3Bob0ZUaDFUS29DeF9jQy1jZjlSRjdJeFR6ZDZ3NUNhOU1XSl9kUHoycnFMd2Y0d24wVlFROFBZbUgxX0dXNVl2RXlkX2RDOTZ5NmtqYm9NUHZ2VjF4M25wWkk0OC11UlJNVEtBUXpOdms2Rm9SOTBwNGJhQXdOR3BUcUZheDBGT0kzdWtLRnZqQ244aWRXX1E5RzVOMjl6bzZhOTJ3RncxM2gyT0xjSUItT1QtVV9lZ9IBxwFBVV95cUxNUS1McmxwQzBBelM5bnppWEtaaktHbkpIVTFsbS1zcXIzYnpPVlB0c2ttc0tLRjB0V2tDUnJoR19ZT085MW1peFdCNWNoVHhmU19XZktJMEx5VEFJZnl5eUtDNjZGYVRYOVhuN3E1OHdLQ1FIUGoteE9ia1RvcWtyZGZzLTIwSmRpTkxOQzgwWi0yZGlmUnVabnlmUUdLXzN1OTdja2FJNEJuLThfR3IwU1EtSkVJTEVGRFF2Zmttc1FaTUVhUFlR?oc=5",
+      "resumen": "El pueblo de Castellón de 118 habitantes donde el rock lleva casi tres décadas negándose a morir El Periódico Mediterráneo",
+      "fecha": "2026-07-07T07:00:00+00:00"
+    },
+    {
+      "categoria": "Punk",
+      "titulo": "Rock Imperium Festival 2027 - Madness Live!",
+      "enlace": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1QQXpla3JMb0FpWHNuM0RNcjVLbmdyZlM0T29YYVJNTWQxYkxENHB2eElieUhVcWwwaE94T0JoSzR2dlo2Z3lXWWlPYlBYanVRQUttaE0wTXVSNW9iSnJ0MWNzbG95QXhMMVhTQ2pVOXNUMjNpa3JZ?oc=5",
+      "resumen": "Rock Imperium Festival 2027 Madness Live!",
+      "fecha": "2026-07-06T09:39:40+00:00"
+    },
+    {
+      "categoria": "Hardcore",
+      "titulo": "Zurbarán Rock Burgos 2026: Horarios, fechas y playlist del festival gratuito del año - El Correo de Burgos",
+      "enlace": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQcTJyeklFaHhpZVdLOVBfV1YxeWhFRm1aZmFpSE1oUEVPMHFldm1mdkxTNUNJU2ZuYXJETEhBSktoNTJMQXloSDJabVdYNkM2QTl1czhxSGxUTHNVRTJwUEpOcElYVG5rR3pSamp1Vmp2RlhMZUlhRzI3VzktTDRVSkFuN29RaF84QzBHQ1BVUncwUmFONEtjcVl5b2pFSEx1N0dCYUd3MGdaRFdFUndZRnVGN0NWUVQtamFVQkpQN1F6bDdiaVpFTVd30gHPAUFVX3lxTE9WWmE5V2sybUNKeXp0aTZsc0tjck4yZVY5eGtsR3E2OER5WFdhbmZEUkxhTzdqNTZHNVROR0pTd1ZKbzhhMmJBZy05UHBzRWZLVjJDbzhIbDJoZEw3UWNIVVRMNVlIZkluTXJRVjU1MkI5dGtyYzh3WU9PZVJtT3NDWkgtRTE0cHNubFJnWXpmWFZ6cWM1T0ZaMW1xeFp3RFhzemFCaTQ0UzFzdlF5akNGbzdxc09Oak04TW9RaXBWQ2VPYXUxNmRiaWtxdDVvYw?oc=5",
+      "resumen": "Zurbarán Rock Burgos 2026: Horarios, fechas y playlist del festival gratuito del año El Correo de Burgos",
+      "fecha": "2026-07-06T07:00:00+00:00"
+    },
+    {
+      "categoria": "Ska",
+      "titulo": "Dos días de reggae, ska y cultura al aire libre: así será el Mash Masters Summer Fest de Borriol - Castellón Plaza",
+      "enlace": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPSm13TEUxSldHMWYzRXlCc2RqQUxacjhwTU50YTE1NFphOHdWcVg5NG1SN1dYQkF3U2E4S0lRS1hUVFoxRTlBd1I0X2Y5SkRUcHhFZy1Yck1YV0xaamQ3TU80cWRBOGJIV29yYTNRSTZTZWE5QjRvUjRYRmNsTGpxTy1COHMxT3FBTWk4ck5TM1VNYnMtYy16VXlCNVVyRUhCUW5VM0E2enhjcVh2c3VXc056OEMtZkZvM0wtSzlMVXdWLUxIY2xTckdpcXlCMmtpTmNjYkJhejljWTVfZUxVaw?oc=5",
+      "resumen": "Dos días de reggae, ska y cultura al aire libre: así será el Mash Masters Summer Fest de Borriol Castellón Plaza",
+      "fecha": "2026-07-04T07:00:00+00:00"
+    },
+    {
+      "categoria": "Hardcore",
+      "titulo": "Resurrection Fest: la cumbre metalera de las 25.000 hamburguesas, las 21.000 pizzas y litros ‘top secret’ de cerveza - EL PAÍS",
+      "enlace": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPcXR2X2dkT2ZGTk5NSm9la1ZXdkFXdmVEb1MzNGZoZ2lwOE9SVnRHSU85M0xMeTlHazlldWpWNHBlYjk5alpIdThLWWNMYkt2X1FFT2x3Tl9tOS16SVBoeFh2ckUwb21rY2lCOFY0d01FVFdCRjYybTFqeHdrUnBFOG45YVlJajI5MmZmM1ljZUJlVEhYY2NxYWhfblZQMlA1OWduTW4tVFNBemZscVJmZ1ZCUUFxRTI4azktNWNKSmtfX3JId3Y2SDBaeUc4ekY1dEd0ZEpPNExES1pPU0pPWXZsbTN5VGpDaDBJbVlhT01HUdIBhgJBVV95cUxNOVNZUFBhVjNTXzgxYThNSzF0dWpFR1FzYlFNVndfS1dFQXJ4VG9feUZ4N2NGYkQ3SS1sUGx2Ti1GTFctRlg3WVdWYmtPVVg0cHNBWkozZEpuZlJWSjdpNHRuNGlnSjJXS2RDZGpSNDhCVlhCSjlTNUstT2toSDRzTUpySkFhOWZfWnVLdmxZR1ZRV2VwUWNuZ19EMlBnaDZTMUhKLXBLYjV3cVF4V25QeldnU2l2cjJfOUxXcFFWN3pGRi1yRlN3MDdkVWVaUGR2VFFwUlBRMVRSakhRMzJUSTl4TGpzaGhRRzctcUY0ZDE5akRlQXhqbzY0QWpxSUFsYmVJZUx3?oc=5",
+      "resumen": "Resurrection Fest: la cumbre metalera de las 25.000 hamburguesas, las 21.000 pizzas y litros ‘top secret’ de cerveza EL PAÍS",
+      "fecha": "2026-07-02T07:00:00+00:00"
+    },
+    {
+      "categoria": "Metal",
+      "titulo": "Una de las bandas heavy más veteranas y con más seguidores del mundo da un concierto exclusivo en Zaragoza - El Periódico de Aragón",
+      "enlace": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNWDRvdmg0T1hHMlNvbFNhX1JLaEJhaWpYYWE0Yk1NZm5jN0ladnVMaU94S1lsWXN1RjVWVjBsUWFQOENuNVVOaUNoLVE1NUVQU3ZsQVRiRHZRVUJSWVBGRDROejU5NjI2TXVwMUVQa09PYVNENm5jLW9ZS0lIX2JqMkE0YlZzaTV4ejJudG5VOU9aVlVzZm1Xa3pLMHRVblFacTJjVHc1Y25uOFhka3BpME1oemdyM3JtZFRUUmdCS2RMZHphektOMlV6bk9TMFZpdTVoWjFOMGdMaFMxem15NjBiaW44djNKMUVZdWxDQdIB9AFBVV95cUxObzE4WU5ZV25LZlNJZURHM2UyVk9ZeHdQYUk3LU92TDhxRm5kckhFYkt4VGtQd3FxbmxyLUw0YmROeThJUTdLVHk1N0wxS0dtckdJWDFrdGlFdnduQUV3cmotcEFKaXVMWTNCOFllY1hNYUh1RFpQVHYtUUpzUXI3SjF4MFJBRTRGWmFncWxoZ3EtNENGYUVHMWhrWnBlQTVIVUp6OUlTSkY4eWtKY3RCeTdOT2ZlT1dRbmdOd2NPWjk4ZE9ITkliRmNlZ0hiMUdyd3hQS2RsYXV1TWtYc2l0dmR2TDJVLTktUmQtUGhuak1IUWlC?oc=5",
+      "resumen": "Una de las bandas heavy más veteranas y con más seguidores del mundo da un concierto exclusivo en Zaragoza El Periódico de Aragón",
+      "fecha": "2026-06-25T07:00:00+00:00"
+    },
+    {
+      "categoria": "Metal",
+      "titulo": "El festival Leyendas del Rock celebra 20 años como referente del heavy metal en España - Información",
+      "enlace": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOeGcxYUF1QzBMNEh1RmRucHBGQ0J2NjRBVlhQMGVpN2J0NXV4TEk2R3gwYllOWkpZS2lRVTBvTlFwemxvd0NBaEV0bzktalJPS25lU2hNdXcyWTVsUjdPX1F2ejBGNG5pZnIzVl9MNU9mNDdSc1c4VnBSTFBRVXNqdG5WR0RqNUxVRjlRU1dBLW9JTkF0eVhDb0NSSDNidmtqVGVV0gGoAUFVX3lxTE13UU12VGlvWmZKbUhrUi1URFk3TmMxYmV2OVVMRTg0QTdLdzlFejY5MkVWSWVGY2ZBRk5kOE1SVXBlamRKRFRvaVllYjlvZC1PMkJ1a3lIREp0S1luSnFmQ2NrUjJIWE5SOThMakpwWkdTVkdCd2VJZTBreUJ2OFBYWFdUY2hfaV83b2NMejkxZTRmR0hIV0ZjNF92ZlVMa2pwdk5jb2pqMg?oc=5",
+      "resumen": "El festival Leyendas del Rock celebra 20 años como referente del heavy metal en España Información",
+      "fecha": "2026-06-25T07:00:00+00:00"
+    },
+    {
+      "categoria": "Punk",
+      "titulo": "Verano 2026 | Música | Frecuencia Sonora. Rock Eme Equis - Casa de Mexico",
+      "enlace": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNNHZpYjNYODhFWkwzUVp6WG92VGtBVVo5QV82VVBQcFZRS21vQUZwT3ZNOFZOS1ZzVE85bkZwSlU4a0tCbXVuZ1BRLVRSdnMyWk02ZmRjVzdJRzhZU20yeTQxQmJYNVk1czNib0hDZV8yd0xzUkhRVzdfTFM3UWJDcWpRNHRRZmxSdUpoQmRlV2w?oc=5",
+      "resumen": "Verano 2026 | Música | Frecuencia Sonora. Rock Eme Equis Casa de Mexico",
+      "fecha": "2026-06-24T14:15:07+00:00"
+    },
+    {
+      "categoria": "Punk",
+      "titulo": "Festivales de música 2026: entre el boicot al Viña Rock, el décimo Mad Cool y el pinchazo (o no) de la burbuja - RTVE.es",
+      "enlace": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQMUlzY21wLWlrQUl2RE1vVG9LYXZJdzhIVTVxV29RNDFOYUN4ck1tUUtHZ2VkY2lOOVVKbEduODFqOHdVdFNST0FmaTRYM0JrREhseS1ocUVfejZvTjRhcm5DQnpmWUhVYlRlRnVZbWoyeU1FUDBES2lVWW00dFgxQmVzV2oxYl9NS05pZVZ4amVIakluU0p6Qk12RGZKeTdYSU45MQ?oc=5",
+      "resumen": "Festivales de música 2026: entre el boicot al Viña Rock, el décimo Mad Cool y el pinchazo (o no) de la burbuja RTVE.es",
+      "fecha": "2026-06-20T07:00:00+00:00"
+    },
+    {
+      "categoria": "Metal",
+      "titulo": "Michael Schenker Group regresará a España con 3 conciertos de la gira “Don’t Sell Your Soul” - Hellpress",
+      "enlace": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPcE9qNTBxdzdVOWhHeFdWS0syNmhKYTJpMkNmQlFfNk1zcWlXVnhSVG5mTVNkSU5MS3EycGl3aXVXRlVrUGVxaVZMSFk0Y2FHeGtackdzM0ZsUVVNeGhuY0RjYXFSdURyaFNZYUJrb0ZMRFVGSTFIZm1ZVmZtc3hZRm94QWY4b0o3X09yMkZkWjVULWhtUUItSWdB0gGfAUFVX3lxTFBYZmt3VDdyNV9FeDVoYkJKSC0zc0pQV3lNTVNZQWN0WThGdVlhTnBGRTlnWTFLSzZKY2NxZTBuX1JKeGxCd1IwS19reXdmdWNPbG81aHpoX2JLRHMyUUQ3bFhBNm1TRGZjR3lCZzJXaXpma2psamp3TU11XzFIdnVCMmljdjRGWVJFcENaS0hQSzROMVVJTUhnMWsxaE5qaw?oc=5",
+      "resumen": "Michael Schenker Group regresará a España con 3 conciertos de la gira “Don’t Sell Your Soul” Hellpress",
+      "fecha": "2026-06-10T07:00:00+00:00"
+    },
+    {
+      "categoria": "Punk",
+      "titulo": "The Dwarves visitan España este junio con dos conciertos cargados de caos y punk rock - Stairway to Rock",
+      "enlace": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5wSGpJZTQ1b1JmNmt6UVp2SVNBM1dsMnk2M2JrSmlZejJXMXkxWk9relkyTlFwQTIzTThNdEpnNWRNVEVTOTBCZ255eW9JcWY0VTdrVVB2bGhhMlBPa08xM2ZYRnhoN2ZKeUUxQWk3ZmloZW8?oc=5",
+      "resumen": "The Dwarves visitan España este junio con dos conciertos cargados de caos y punk rock Stairway to Rock",
+      "fecha": "2026-06-07T07:00:00+00:00"
+    },
+    {
+      "categoria": "Hardcore",
+      "titulo": "Festival Subsónico en Rivas: Yung Beef y Hard GZ lideran el cartel - El Mirador de Madrid",
+      "enlace": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5qbnhPeFZ2UlNwclF1czBDb1VpUlZOaTlGX0dMYlZ6UDFaQ19hNTFob0ZKM1ZRLXN4eFB1TEFvdXc3MFJHelFrb09oME4yQ1Ywa0hwTFFycmZKUUZZUjRUY0taWTJpZjV6UjhFMGRR?oc=5",
+      "resumen": "Festival Subsónico en Rivas: Yung Beef y Hard GZ lideran el cartel El Mirador de Madrid",
+      "fecha": "2026-06-05T07:00:00+00:00"
+    },
+    {
+      "categoria": "Metal",
+      "titulo": "LINKIN PARK, CLUTCH y CRYPTA protagonizan la agenda de conciertos de Rock y Metal en junio - Hellpress",
+      "enlace": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPdDN1ekxHbkcwWXRzbHNUZFc3UGdBdWpKM2dnc0JTRFJHeXg2VE43WUNUMWpaQWwtRzlyMEZ4X2ZVeWNOQXV3UW9VZVZQREV5TEZzeXRzWmY3YTNQM1MwWDJuakY1Z0J3LTM0R0VtblZnQmRaMWlEcDJWRmdmSEJnZm5fdHE1aDJhVjVnQ3BkTXVaYWRWMVlxNUdlb3doZ3ZJS2ZHSkRYbUh3d2N3VlHSAbMBQVVfeXFMTjVWbmNCa2RvY2dVa0JNcVZJTmh5MEVVVE55ZmdkZlNFaTJRRDVaOTBFOW44alJaUURoUkw2UGNXUWxtVU9GM2RTS1QzRnNRandzdTFReDNrbTdDUm1DU3JXOEVQdUt6cjY1amMzWHFOSWEwMXI1dFhzdl9PWC1FX0dlaGxHWGNwcW9pVUFBekJaN3dFSFF5d1hXbEtNeldxN2EtV2VIZkE5OXJYaGlTVGI1Qkk?oc=5",
+      "resumen": "LINKIN PARK, CLUTCH y CRYPTA protagonizan la agenda de conciertos de Rock y Metal en junio Hellpress",
+      "fecha": "2026-06-01T04:31:48+00:00"
+    },
+    {
+      "categoria": "Hardcore",
+      "titulo": "INTEGRITY visita España en septiembre con 3 conciertos en salas - Hellpress",
+      "enlace": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPWVU3dzd4RlFfTzZ4UFdrZUFkLU5reUhTQnVGZXFoLXN1RDlYdzNiSHpqZDNnQUFFUllLa0hiY0dHdXdVMFVNNk5iVERWbzNlQjZxY0tUVnVQcjRVZWxBVmFEWTc4X0V0d1U1UjZHazkza0k2cXg3UXprZWlicU02bFAzUU05UWg00gGOAUFVX3lxTE9NVng4X19ZMDdXR3JYVTVsY1Q3T08tRHpPak5XNGo4dklkZXFrbUlldFJ0NHQxbEEtV1M5U2Fkdm9LN19EY2JodHFqWlIxZXlQR2F1MGRxbTJadDN6YkNqT2tTOEp4akNaemtfTkxhbk5OUVpRME11Smx2R18yNDl2V2NqaUdfblgzZTdEZ2c?oc=5",
+      "resumen": "INTEGRITY visita España en septiembre con 3 conciertos en salas Hellpress",
+      "fecha": "2026-05-26T17:43:51+00:00"
+    },
+    {
+      "categoria": "Hardcore",
+      "titulo": "Integrity, banda clave para la historia del hardcore, anuncia una gira de tres conciertos en España - MariskalRock.com",
+      "enlace": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQQVV6UFpxNHREaHB6V1RoajJIcERFazcwVFprUDRWTjBpRFcyRDBKaDJaaDJ1cVN1ZVNBNkhjLTBCcHBnVERjaFdjN04yNjcwT2haOXRPRC13My1DYUFoM1RQTmZOak5jQy11a2p0ZlYzMWx4N0pGOHZhMXBsMnIxWXVRejA1RHY4TGp4OHNhejV2YUNHbldNVnR3MTdiQUNjdW1qTXFBQWYtTFZHM2dkQVRkLW95SHFEb1pzSEp2bFZRQ09fTXV4UVBHaDJINzBVV0pjUG1n?oc=5",
+      "resumen": "Integrity, banda clave para la historia del hardcore, anuncia una gira de tres conciertos en España MariskalRock.com",
+      "fecha": "2026-05-26T07:00:00+00:00"
+    },
+    {
+      "categoria": "Hardcore",
+      "titulo": "Cuatro festivales al aire libre para más de 40.000 personas, la última gran apuesta de Fabrik en Humanes - Cadena SER",
+      "enlace": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOal9fV2NkNjVXamg0V1RHa3owUlZ0T2JHNWNTczhEc2NDV1JVMXdramNIbkhyMmJhWWZRR3Y4eDV2X1NUNnJpdFdSQVozOFJzelFwQmhLcDFHZWMzbDdPZGc5OG84RFVZcy1xVXhCZUZ5YWNiZmtXSnNfeURWUURiZ2dPbXlQai1IOERGVFY4TGdzajl6N29nd0VNU2lUWV8tX0lyTWR4dXhQczFDcmI0Q3o5VFVoMkhuMXc5d051OGNvNHFCMGVhTHc1cUZteUo2Szdpa29WNVVia2hmYjFRVi1UZTZNZFgxZ1Z5MzAwbVPSAYQCQVVfeXFMTUk3NGZJOWpFVkJCZXFMX0ZVMzZNSUFfUGpnclhPUnpHT3pyWmtYalN0bGM3SEp1b2tGSU91TV9RYWhSRmZOZnRJR25TRENpYUMtZEtfOEZldHZKbVdlbDMySnJ4b3hBdGhNOTJYZklfNHR2NUhOLVZ5OWZGMUxlOVdRMFhsQVRyWTlnR3NmNEpvUnNBdzB5Y0JmREtSQk16dEIyNmpGRjladWpnWmF5WmYzUU5NaHRIS2V1a1QwUDFkX2FIRE5qcjVDbkowRm8yWnFKLWhad21QemtqYVpaUjd0TlBuX2VxbDZhVjVBZ1hvUDVIY2Y2QU5vdnQ3NktETEtCQlg?oc=5",
+      "resumen": "Cuatro festivales al aire libre para más de 40.000 personas, la última gran apuesta de Fabrik en Humanes Cadena SER",
+      "fecha": "2026-05-20T07:00:00+00:00"
+    },
+    {
+      "categoria": "Punk",
+      "titulo": "El punk celta de The Real McKenzies llegará a España con una gira de cuatro conciertos - MariskalRock.com",
+      "enlace": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQc3ZScUkzejYtUzdMUmdweGlfakxEWjhvZGlfNVN3cmxpcmp6VThKeUptNVFWdk9iRHRDNjNlTjJsdEV5VDlzNkxCRnFzOUxySFdtcGhUSERWTlV3NXVHc24wVVNtem45cmJveWhsYjdOWnFWQlVmamZUM0pNSVFkWV9EUkR1ZF9vOHZHM3hYR0dzZ3lwUTN3UUoyNUt5eXRQa1o3VXhIT3A0VjlGYVRkUlJNcC0xTEQxenJ4Zm5fZU8wREliRndr?oc=5",
+      "resumen": "El punk celta de The Real McKenzies llegará a España con una gira de cuatro conciertos MariskalRock.com",
+      "fecha": "2026-05-12T07:00:00+00:00"
+    },
+    {
+      "categoria": "Punk",
+      "titulo": "Los mejores festivales de música en España en 2026 - IFEMA Madrid",
+      "enlace": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPWjlBMGs4UVhlVlVpUV8yNkFmOUtkeGtrUzZsbnFST2VCS0RhOXJzTl9GM0E4dzlzcGFtMTZBMWVQakQ3ZXNjaFZsa3BWb2o5TGYzQWZ2d2tNUnhPYjRGbm53YlJldzRwMUh4X1B3RzRnOE9MclJhVjU4bFRuR2gybVJ3?oc=5",
+      "resumen": "Los mejores festivales de música en España en 2026 IFEMA Madrid",
+      "fecha": "2026-04-30T07:00:00+00:00"
+    },
+    {
+      "categoria": "Punk",
+      "titulo": "El street punk de The Casualties llegará a España con conciertos enmarcados en su gira “Detonate Europe 2026” - MariskalRock.com",
+      "enlace": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQWnpOTjMwdV92QkM0WUkweXJ2Z0VSU1g3S1lfb25US0FJemFkUmlFYUMwODRuXzR4d19vUU1fdUZXTWlFczRySzA3anYxaW15cVFscC0xWXA2LTZSQkl1V2V1SnBIRVJmQWJNb2FoS0l2MU4yTEIzM0Q5TDJBVTQyY0pFakt4ZFV4aGFrbFB4NWltdHFhQjZrUmdJb0VacWRyeXZuQnF6cGdqMEY0Vjd1ejNsdjJ4NWJ4VV9hck5sUG9wTjNZN2laUmlRVkZwZklnZ3V5NkFDdV9WNkxVMmVMOHZvcw?oc=5",
+      "resumen": "El street punk de The Casualties llegará a España con conciertos enmarcados en su gira “Detonate Europe 2026” MariskalRock.com",
+      "fecha": "2026-04-22T15:31:26+00:00"
     }
   ]
 }
