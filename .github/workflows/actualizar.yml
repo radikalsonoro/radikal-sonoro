@@ -1,24 +1,172 @@
-name: Radikal Sonoro - Noticias y conciertos
+ import os
+import json
+import requests
+from bs4 import BeautifulSoup
 
-on:
-  workflow_dispatch:
+# Crear carpeta 'data' si no existe
+os.makedirs('data', exist_ok=True)
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
-      - name: Instalar dependencias
-        run: pip install requests beautifulsoup4 lxml
-      - name: Ejecutar script
-        run: python actualizar.py
-      - name: Subir cambios
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/
-          git commit -m "Actualizar datos [skip ci]" || exit 0
-          git push
+# ---------------------------------------------------------
+# 1. NOTICIAS AUTOMÁTICAS (Insonoro)
+# ---------------------------------------------------------
+def obtener_noticias():
+    print("Buscando noticias de la escena...")
+    noticias = []
+    url = "https://www.insonoro.com/noticias"
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
+    
+    try:
+        response = requests.get(url, headers=headers, timeout=10)
+        if response.status_code == 200:
+            soup = BeautifulSoup(response.text, 'html.parser')
+            articulos = soup.find_all('article', limit=10)
+            
+            for art in articulos:
+                titulo_elem = art.find(['h2', 'h3', 'a'])
+                link_elem = art.find('a', href=True)
+                img_elem = art.find('img')
+                
+                if titulo_elem and link_elem:
+                    titulo = titulo_elem.get_text(strip=True)
+                    enlace = link_elem['href']
+                    if not enlace.startswith('http'):
+                        enlace = "https://www.insonoro.com" + enlace
+                        
+                    imagen = ""
+                    if img_elem:
+                        imagen = img_elem.get('src') or img_elem.get('data-src') or ""
+                    
+                    noticias.append({
+                        "titulo": titulo,
+                        "enlace": enlace,
+                        "imagen": imagen,
+                        "fuente": "Insonoro"
+                    })
+    except Exception as e:
+        print(f"Error al obtener noticias: {e}")
+        
+    return noticias
+
+# ---------------------------------------------------------
+# 2. CONCIERTOS (5 Salas de Madrid + Lista de Bandas)
+# ---------------------------------------------------------
+def obtener_conciertos():
+    print("Buscando conciertos...")
+    conciertos = []
+
+    # A) Conciertos enviados directamente por bandas
+    conciertos_bandas = [
+        # Añade aquí conciertos enviados por bandas si lo necesitas:
+        # {
+        #     "fecha": "2024-05-20",
+        #     "bandas": "Nombre de la Banda + Teloneros",
+        #     "sala": "Gruta 77",
+        #     "ciudad": "Madrid",
+        #     "enlace": "https://enlace-entradas-o-evento.com"
+        # }
+    ]
+    conciertos.extend(conciertos_bandas)
+
+    # B) Scraping de Salas
+    headers = {'User-Agent': 'Mozilla/5.0'}
+
+    # 1. Gruta 77
+    try:
+        r = requests.get("https://gruta77.com/conciertos/", headers=headers, timeout=10)
+        if r.status_code == 200:
+            soup = BeautifulSoup(r.text, 'html.parser')
+            eventos = soup.find_all('div', class_='evento')  # Ajustar selector si cambia la web
+            for ev in eventos:
+                titulo = ev.get_text(strip=True)
+                if titulo:
+                    conciertos.append({
+                        "fecha": "Consultar web",
+                        "bandas": titulo,
+                        "sala": "Gruta 77",
+                        "ciudad": "Madrid",
+                        "enlace": "https://gruta77.com/conciertos/"
+                    })
+    except Exception as e:
+        print(f"Error en Gruta 77: {e}")
+
+    # 2. Wurlitzer Ballroom
+    try:
+        r = requests.get("https://www.wurlitzerballroom.com/", headers=headers, timeout=10)
+        if r.status_code == 200:
+            soup = BeautifulSoup(r.text, 'html.parser')
+            # Extraer texto de eventos básicos
+            for item in soup.find_all(['h2', 'h3'], limit=5):
+                texto = item.get_text(strip=True)
+                if texto and len(texto) > 3:
+                    conciertos.append({
+                        "fecha": "Próximamente",
+                        "bandas": texto,
+                        "sala": "Wurlitzer Ballroom",
+                        "ciudad": "Madrid",
+                        "enlace": "https://www.wurlitzerballroom.com/"
+                    })
+    except Exception as e:
+        print(f"Error en Wurlitzer: {e}")
+
+    # 3. La Trinchera / 4. Trashcan / 5. Rock Palace (Aviso genérico si no tienen HTML parseable directo)
+    salas_adicionales = [
+        {"sala": "La Trinchera", "url": "https://latrincheramadrid.com/"},
+        {"sala": "Trashcan Music Club", "url": "https://trashcanmusicclub.com/"},
+        {"sala": "Rock Palace", "url": "https://rockpalace.com/"}
+    ]
+
+    for s in salas_adicionales:
+        try:
+            r = requests.get(s["url"], headers=headers, timeout=10)
+            if r.status_code == 200:
+                conciertos.append({
+                    "fecha": "Ver programación",
+                    "bandas": f"Consulta los próximos conciertos directamente en {s['sala']}",
+                    "sala": s["sala"],
+                    "ciudad": "Madrid",
+                    "enlace": s["url"]
+                })
+        except Exception as e:
+            print(f"Error en {s['sala']}: {e}")
+
+    return conciertos
+
+# ---------------------------------------------------------
+# 3. VÍDEOS AUTOMÁTICOS DE YOUTUBE
+# ---------------------------------------------------------
+def obtener_videos():
+    print("Buscando vídeos...")
+    # Vídeos o directos recomendados de la escena underground
+    videos = [
+        {
+            "titulo": "Punk Rock / Hardcore Underground Madrid",
+            "url": "https://www.youtube.com/embed/videoseries?list=PL3oW29VIPy08yj8xL4vJv_A--4Xo_XgUf",
+            "fuente": "YouTube Playlist"
+        }
+    ]
+    return videos
+
+# ---------------------------------------------------------
+# EJECUCIÓN PRINCIPAL
+# ---------------------------------------------------------
+if __name__ == "__main__":
+    # Guardar Noticias
+    noticias_data = obtener_noticias()
+    with open('data/noticias.json', 'w', encoding='utf-8') as f:
+        json.dump(noticias_data, f, ensure_ascii=False, indent=4)
+    print(f"✔ Noticias guardadas: {len(noticias_data)}")
+
+    # Guardar Conciertos
+    conciertos_data = obtener_conciertos()
+    with open('data/conciertos.json', 'w', encoding='utf-8') as f:
+        json.dump(conciertos_data, f, ensure_ascii=False, indent=4)
+    print(f"✔ Conciertos guardados: {len(conciertos_data)}")
+
+    # Guardar Vídeos
+    videos_data = obtener_videos()
+    with open('data/videos.json', 'w', encoding='utf-8') as f:
+        json.dump(videos_data, f, ensure_ascii=False, indent=4)
+    print(f"✔ Vídeos guardados: {len(videos_data)}")
+
+    print("\n¡Proceso de actualización completado con éxito!")
+    
