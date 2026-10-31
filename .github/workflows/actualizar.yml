@@ -1,29 +1,108 @@
-name: Radikal Sonoro - Noticias y conciertos
+import json
+import os
+import requests
+from bs4 import BeautifulSoup
 
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: "17 */6 * * *"
+# Headers para simular un navegador real y evitar bloqueos al hacer scraping
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+}
 
-permissions:
-  contents: write
+# Lista global para acumular todos los eventos recopilados
+todos_los_conciertos = []
 
-jobs:
-  actualizar:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+# ==========================================
+# 1. NOTICIAS
+# ==========================================
+def actualizar_noticias():
+    """
+    Recopila las noticias previas de Radikal Sonoro.
+    """
+    print("Recopilando noticias...")
+    # Si ya tienes código previo para noticias, colócalo aquí.
 
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
 
-      - name: Recopilar noticias y conciertos
-        run: python actualizar.py
+# ==========================================
+# 2. CONCIERTOS (MADRID)
+# ==========================================
+def extraer_gruta77():
+    print("Extrayendo conciertos de Gruta 77...")
+    url = "https://gruta77.com/programacion-eventos-gruta77-madrid/"
+    try:
+        res = requests.get(url, headers=HEADERS, timeout=10)
+        if res.status_code == 200:
+            soup = BeautifulSoup(res.text, "html.parser")
+            # Extraer eventos de Gruta 77
+    except Exception as e:
+        print(f"Error al extraer Gruta 77: {e}")
 
-      - name: Guardar resultados
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/
-          git diff --cached --quiet || (git commit -m "Actualizar noticias y conciertos" && git push)
+def extraer_la_trinchera():
+    print("Extrayendo conciertos de La Trinchera...")
+    url = "https://salatrinchera.com/tag/conciertos/"
+    try:
+        res = requests.get(url, headers=HEADERS, timeout=10)
+        if res.status_code == 200:
+            soup = BeautifulSoup(res.text, "html.parser")
+            # Extraer eventos de La Trinchera
+    except Exception as e:
+        print(f"Error al extraer La Trinchera: {e}")
+
+def extraer_wurlitzer():
+    print("Extrayendo conciertos de Wurlitzer Ballroom...")
+    url = "https://www.wurlitzerballroom.com/"
+    try:
+        res = requests.get(url, headers=HEADERS, timeout=10)
+        if res.status_code == 200:
+            soup = BeautifulSoup(res.text, "html.parser")
+            # Extraer eventos de Wurlitzer
+    except Exception as e:
+        print(f"Error al extraer Wurlitzer: {e}")
+
+def extraer_trashcan():
+    print("Extrayendo conciertos de Trashcan Music Club...")
+    url = "https://trashcanmusicclub.es/"
+    try:
+        res = requests.get(url, headers=HEADERS, timeout=10)
+        if res.status_code == 200:
+            soup = BeautifulSoup(res.text, "html.parser")
+            # Extraer eventos de Trashcan
+    except Exception as e:
+        print(f"Error al extraer Trashcan: {e}")
+
+def extraer_rock_palace():
+    print("Extrayendo conciertos de Rock Palace...")
+    url = "https://rockpalace.es/"
+    try:
+        res = requests.get(url, headers=HEADERS, timeout=10)
+        if res.status_code == 200:
+            soup = BeautifulSoup(res.text, "html.parser")
+            # Extraer eventos de Rock Palace
+    except Exception as e:
+        print(f"Error al extraer Rock Palace: {e}")
+
+
+# ==========================================
+# 3. GUARDADO DE DATOS
+# ==========================================
+def guardar_conciertos():
+    os.makedirs("data", exist_ok=True)
+    archivo_destino = "data/conciertos.json"
+    
+    with open(archivo_destino, "w", encoding="utf-8") as f:
+        json.dump(todos_los_conciertos, f, ensure_ascii=False, indent=2)
+    print(f"Conciertos guardados correctamente en {archivo_destino}")
+
+
+# ==========================================
+# 4. EJECUCIÓN PRINCIPAL
+# ==========================================
+if _name_ == "_main_":
+    actualizar_noticias()
+    
+    extraer_gruta77()
+    extraer_la_trinchera()
+    extraer_wurlitzer()
+    extraer_trashcan()
+    extraer_rock_palace()
+    
+    guardar_conciertos()
