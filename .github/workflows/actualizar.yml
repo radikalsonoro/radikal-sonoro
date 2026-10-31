@@ -2,8 +2,8 @@ name: Radikal Sonoro - Noticias y conciertos
 
 on:
   schedule:
-    - cron: '0 */6 * * *' # Se ejecuta cada 6 horas
-  workflow_dispatch: # Permite ejecución manual
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
 
 jobs:
   build:
