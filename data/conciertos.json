@@ -1,6 +1,13 @@
 {
-  "actualizado": "2026-10-31T05:53:24.941205+00:00",
+  "actualizado": "2026-10-31T12:43:34.153936+00:00",
   "elementos": [
+    {
+      "categoria": "Metal",
+      "titulo": "Los conciertos de Metal y Hard Rock de noviembre: AMON AMARTH, ACCEPT, KAMELOT, BEAST IN BLACK y más - Hellpress",
+      "enlace": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQbzRhX29sYnk0R0xjNUo5ZWQzbVAxNEU5b0FSR2M2aXhpUjBBanZaZEgzTlkwTUJFN3RZRHhtYlRLOHlTNGZGOXpPVlNrR1I5ZmlDVExJblNPakJIdWZsMVM3Wm1JQjJoamhSRkR3a3BwNnY1NTJkT2I2NS1xbmhHM2pRX1NfUGNzSDZWZS1pVTd6bFF1ZUtmYXJ4b09mRFJRc2VjTEdfdUs2dXVSLUZVSWkteG9aYlhY0gG-AUFVX3lxTE42LWQ4a0Y1X1h0UWhleF9ZVEE1ZFZXYmc0ZVZCTXZLVjE1Q3hXWk92LUNNMVB5N0g2YVNNaHZKYnkxczJBalNYYzh5VGphdzdYblVGUG5BUzQtdHFlZ1haNzZ6ZjFjdlB4TXZxeWxXcG9ab19wMzloR0ptbF9rSURmdUtKS1JkVUIzMEFWSUVRNExQVW1pbDR3TzN2VVc2NlpTZFlocGFhcVFyVzdFQkVqWjVSYV9XbnNXbDRKVVE?oc=5",
+      "resumen": "Los conciertos de Metal y Hard Rock de noviembre: AMON AMARTH, ACCEPT, KAMELOT, BEAST IN BLACK y más Hellpress",
+      "fecha": "2026-10-31T08:51:54+00:00"
+    },
     {
       "categoria": "Metal",
       "titulo": "Bruce Dickinson presenta su gira de 2027 y Rock Imperium es su única fecha en España - Modo Festival",
@@ -65,13 +72,6 @@
       "fecha": "2026-10-21T07:00:00+00:00"
     },
     {
-      "categoria": "Punk",
-      "titulo": "The Strokes en su único concierto en España: perdura la revolución del calambre con un Sant Jordi en pie - EL PAÍS",
-      "enlace": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNNmxwbWJYLVFTODVZa2xoVkctTF92Y05KZm1hc19CUDB0UXc5SmxLNkJWMGpRcEJlVGZYbUdhbmpuWEdSeTQ3RFVOX1IyRHhZWmphZGJVUlljRzd1dmZ0R21naXNXdHZSdE5qcVRrTDFnYXJycGhPbkxVaUhaZzlyb0pSZFhNUEJQS0xlVEZUM0ZOMG5fWUtZY3hIMmpIYmhQdjFJdWxxZmEtdzMyUjZEUlNoVm5ORGZWeFoyZXUtWFQwZWNoREI4M3M5eHJmYmdGdkNDdjRMLW5nZkdrWkcwbnotaVhwWnBBZEZZ0gH_AUFVX3lxTE14ai1JeU56Ni1CY2ZvZU53M3dhWUppZ1dWb2ZIYjM5dDdOMG9od3Y1Z3BKenJZZV9DQmFYeS1UWVZXeHhKa08yaE95M3YwT0JKaWtBY3BtYWc5WEhONDFFelF1VkhIdU9tb0NJRm96MWxSN0phMHAyY19SSkRnWFNadUhkM0lnSDhmS2NNVDFpcnlCWUhhRGFyTFkySGdfS1N4djZyZXhsVFJMRWx3eVlwYklVekZPU2p0WWpIZ0xiWjJKeTdLV1JJWjVIbUMzUjVaa2thNW95REc4YVBwREdoTnd4TkdxOEdQdWNsTUhsaWJPeDJBX1ZQaFhJQjl2WQ?oc=5",
-      "resumen": "The Strokes en su único concierto en España: perdura la revolución del calambre con un Sant Jordi en pie EL PAÍS",
-      "fecha": "2026-10-21T07:00:00+00:00"
-    },
-    {
       "categoria": "Metal",
       "titulo": "Calva Louise recorrerán España en octubre y noviembre con tres conciertos - Stairway to Rock",
       "enlace": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE55VlpFSDhMM1d0NG83QURyVDZ0czJ0dVBXNXNnbzU0MUs4MjFOeG9HT08xaExxTk42NEZiZTBSbE8wNFZtWnc1N2JzUmdQYUlsSDNUQ3dmV1JscGdjMzdJM0ViYVZWRWli?oc=5",
@@ -111,7 +111,7 @@
       "titulo": "Noticias: Erik Grönwall – Frontiers Rock Festival 2027 – Annacrusa - Metal Hammer España",
       "enlace": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBpM2pYalFwaW5KdGRpT0Y2SzlWZjFoeU1vR25zaHZVNjRZSGJSXzZpeXhqTzVCNnJVeUFHajNUSXZxa05jRW5jRVdUQVJncEJ5NWo2dE1HT09KSEY5NzdPeFFoZTdiSHEzQ1g1N2daTEtHTjhBQ3VrT3Bocw?oc=5",
       "resumen": "Noticias: Erik Grönwall – Frontiers Rock Festival 2027 – Annacrusa Metal Hammer España",
-      "fecha": "2026-10-18T08:00:00+00:00"
+      "fecha": "2026-10-18T07:00:00+00:00"
     },
     {
       "categoria": "Metal",
@@ -128,6 +128,13 @@
       "fecha": "2026-10-14T07:00:00+00:00"
     },
     {
+      "categoria": "Hardcore",
+      "titulo": "Ignite anuncia ocho conciertos en España en 2027 con la presentación del disco “Still Wide Awake” - MariskalRock.com",
+      "enlace": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNZmNxRGctUkR2VGhXQkU0eDl0TjdTb3h3R0RIZFVGa0h4dnpOVzdXVmd0blFCb2pybG5tUENDYkZ2UXgxQzhiZ1ZDaFdIdkRIeDdodU1jbEw2R3pjbGpHMXBNNFVFekpJRjY5S2VDdmhrSEYwVUxOb3VNekpTTmxhM0VBN29nYVg0YXJYOHNNSEpHYzBLR05QeUpGd3NKTU1QUVR1c2Z3dmJqVV95TWhoLTE3Um4yaWdtVFBqbUhHZzZvWWo5QkpUQWlB?oc=5",
+      "resumen": "Ignite anuncia ocho conciertos en España en 2027 con la presentación del disco “Still Wide Awake” MariskalRock.com",
+      "fecha": "2026-10-13T07:00:00+00:00"
+    },
+    {
       "categoria": "Metal",
       "titulo": "Knocked Loose tendrá en Leyendas del Rock 2027 su única fecha en España - modofestival.es",
       "enlace": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNQTl6c1gtSldTcWZLTjdJYmVHS1B2cUdfS1BFa1dnaFVOZ1JINFJza04tbDdMak5yd0dreUpwQ1JFRGtkZll3Rk4yc1M2dzJLdFVGYUpyeXNOb1BNR1VRT0k1ZTUySGI5UnA3eWhJaEVxUXhYT2R4MEpWajNBZWk3cjc3UHlkeXc?oc=5",
@@ -135,11 +142,25 @@
       "fecha": "2026-10-13T07:00:00+00:00"
     },
     {
+      "categoria": "Hardcore",
+      "titulo": "Boundaries llevará ‘Yearning: The Unbeautiful After’ a Madrid y Barcelona - Guitar Calavera",
+      "enlace": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQcGFDQmhOR19FU2Ryb2R5cGFnSndhT0dQak9iZUlwUFJBTVhiSHNQOVJDUVVUR2pPQm8yZXh4LUR0b3d0TVNvSDgtaTItd25BbklKV2ZTUzFRYXdrTVROZWdHVTUzVHUyMVBlRmE5N3JoTldhU05ibTNkU2l4elEtVEM3NA?oc=5",
+      "resumen": "Boundaries llevará ‘Yearning: The Unbeautiful After’ a Madrid y Barcelona Guitar Calavera",
+      "fecha": "2026-10-10T07:00:00+00:00"
+    },
+    {
       "categoria": "Metal",
       "titulo": "Saxon en Stone & Music 2027: horario y entradas - Modo Festival",
       "enlace": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5aaEdxX1NqaTQ3bG9La3FDazI5TVlVaFQ3WjFlci0taDRaRUctVEtuczBrRTRZaVg3QXJ4RGdZVS0xbDBsczR5ZENxdVgwUUFvcTFCZVhNM3VvM1lDWnZVN3NQNy1aYkZRLXUzX2ZGYjc?oc=5",
       "resumen": "Saxon en Stone & Music 2027: horario y entradas Modo Festival",
       "fecha": "2026-10-10T07:00:00+00:00"
+    },
+    {
+      "categoria": "Hardcore",
+      "titulo": "Knocked Loose, la banda de hardcore que actuará en el Leyendas del Rock de Villena: \"Medio festival va a morir ahí\" - Información",
+      "enlace": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNQlgyZ0YwNTIzVDU1T0hkZ3JxS1NLYnhybnJXQzJqc0NxNjV3VkdOZFJnRzQtWUtkbzhLM1Utam5LTkhDT281VXJVUVhaRHVqR0ZwUnVjTlpIVTVLZjlZdzJHdmFCWm1NQ0RfNEZwNUFySHJpSFN3ZE9ncDg3d3ZJaU51ZmFEX2Y0MjNTSm16NnRaWlI5UVZOVnZ3dno3YVc4M3Z6N3QyakpiZmh0UjF3c3Fwd0pzUHVfeDlEcFZra1BlWXp0eEpuem8xb2XSAdIBQVVfeXFMUFNWYkdpOEJzMV9GbWJEbjVjbFZndTkzVFJXNWh4U3N1X0NxMlk3b1VfQWExekpXNlRjRHljTG9LV25pMXNwUEZqNHY5T0lyYWltMkhRSjY3V1E2Y2dqSE1wbHJjb0RFMmZtcTRyN1FIdGhobFpQWHJvRlVzVDBNVXFvdm9JUllUdG9vOE5sM3UxOTVnUU1FNTR2VHNhMjYwdjdsWm1uaXNIbDRzajFmLVZhSjJvRGtZNUtUa001QUo4c2JRMDgtcTlUM01EckdEQ0FB?oc=5",
+      "resumen": "Knocked Loose, la banda de hardcore que actuará en el Leyendas del Rock de Villena: \"Medio festival va a morir ahí\" Información",
+      "fecha": "2026-10-09T07:00:00+00:00"
     },
     {
       "categoria": "Metal",
@@ -161,13 +182,6 @@
       "enlace": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNRl8wd3ZlbTk1ckZSRlpXWk0tTGxLTlkwRDBjU29BQ2NIa1gwSVhaQVNkbUEyT2VESnpkeW1vSndNVHBfQXFxZTlTakMzODVkNFZBampWNmttZTVTdU0tVEIweU1tdFdwbE5ZQ1VDSUczc05JMlBiOWRHZGJVYUltYUtEczAxZTZfb2o3UUVPdWjSAZYBQVVfeXFMTnJENHRzeTFxLThCQkVJRG1RSmZFb1BlT1h0TkxWUVNlVUk4OU5sd2cyQWxxMDJ4bE5NRGxvVk1SdHdRY3c0a3NQdzF2U2dHN1g1ZmRTRVNVMXRXWmFJRDU2SGt4eEJuaUk5c0hiekg1Qkp5QXNid0RSWVdnZlhrMDYtQUt4OUpEaFBFNUFGWEtrNEsxVVZB?oc=5",
       "resumen": "Judas Priest se postula para los festivales de verano de 2027 Metal Journal",
       "fecha": "2026-10-06T19:40:42+00:00"
-    },
-    {
-      "categoria": "Ska",
-      "titulo": "THE INTERRUPTERS ANUNCIA GIRA POR ESPAÑA EN 2027 - Diario de un Rockero",
-      "enlace": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOdlYzN2ZQWG1tZ2N3dE5DSF9sMnZOMVNkb0FYQjZ5czVpS0NSWk5KaGJUbWdQMnVCNjJVSFJZTFhjWVA0OTdLUDR0bGZvTHh0WjJXVzk5eFh3U0I1WXVKMnhDM1dsNG1Hc1dJY0FEQWg1UlRZR091QmVHUnYtZ1N3MlNtR3pzY0owNHBiX1pRYTlOcm1iYjBWMg?oc=5",
-      "resumen": "THE INTERRUPTERS ANUNCIA GIRA POR ESPAÑA EN 2027 Diario de un Rockero",
-      "fecha": "2026-10-05T07:00:00+00:00"
     },
     {
       "categoria": "Metal",
@@ -226,6 +240,13 @@
       "fecha": "2026-09-30T07:00:00+00:00"
     },
     {
+      "categoria": "Punk",
+      "titulo": "Bad Religion, Patti Smith y Wilco lideran el cartel del 25 aniversario del Azkena Rock - EL PAÍS",
+      "enlace": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOdG14d3l0UHUyMnBMSkZfSzhjcXJDSngwdjBXc3hSOWVhRGszNU9MVGkyUzdWcmNSTllYN1d3d2duSTBqdHhqbk83S3k1M0pqbFRGVDFnY3JPYWVqRGdITEN3eUtPdE53eHRHdE1fUUpCeVgwVTVIeURwTHNLZjdxREpfcXlfY0tTcERGcF9tM0dJM25aM1U1QlFmWTdSTUZJYWdVR0lZOE5jYkhCOGVMMlI4RXZsdENLRWRaRWk3YzZMR1VpcXhr0gHbAUFVX3lxTE1wR2d1MXZyWGlGako1S2IzSjRRbkNXazVhUUlBdzREdnoxSnh1TjMtdkp1cTZzQllId3RQUzJ6NUFkYmdhTEdpODVZQmlxS1dpSjZfeVZnVndmQTBFRGg5WXYzTldMT1dtVzE3eVhIQjU1X2xJc05HbXBOa3haR1ZXSWRMQzltRGMtUnRGTG1QNTZlSUt5di1nTzdENHF5cmNKcWh3aEQ4ZWl1a0RZWVBZZ0pCZlRrd0V3OUY0b05ZdjVHQkN4NUpYdjNKZUFOZ01FekF2ajdYc3FzVQ?oc=5",
+      "resumen": "Bad Religion, Patti Smith y Wilco lideran el cartel del 25 aniversario del Azkena Rock EL PAÍS",
+      "fecha": "2026-09-30T07:00:00+00:00"
+    },
+    {
       "categoria": "Metal",
       "titulo": "Scanner anuncia tres conciertos en España en 2027 - Metal Journal",
       "enlace": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPUGRmWEVSTUdYNlRyYXAtNXhhUml1eGVHamo1TVFHdDJiZTJJZ0dVa2paekdmblhVZDVuczRhMThPTmhjMkdhSl8zMWREcHNHLVVpVkw1SjBQTlRfN2k4d05SVnRwZFBOM0NJa2lBQ3lsTEl1UWRWMEIycXBORXVoY9IBhgFBVV95cUxPdjFNcnJqWUljcGhLUU5vZ0VRNC1xNTNBckx1cFJ2elJ1X2NaSXZVX3ZlSHJOek42RkxISjJnWTBsY3hxRXcyVHNBZGV6emdhNU9zRWtKWDFaR1FLRDY1ZEloRzBuWVhNN3ZEVlZmTGxuc3R4NnEzYmtsZ0tUMzAyZkd1ZUZQUQ?oc=5",
@@ -237,13 +258,6 @@
       "titulo": "El pueblo a 20 minutos de Zaragoza que estrena un festival de rock con una banda histórica: programación completa y cómo comprar las entradas - El Periódico de Aragón",
       "enlace": "https://news.google.com/rss/articles/CBMitAJBVV95cUxNd2pLdVhHR19jbVlsVjl0TVZ1UURrby1lRzFtSWpOUnJYdTNJMVRlZnIyVFg2WmlMQU1sOERIYnZ3Y0NZeVNfLVZfTkttYXpwMmdqQkpueHlLRWZPWFpkcEw2eTl3OER0cXc1dHJ3dkxXT3Bta1JJdExJLXU3Z3BJRmZiWEM2bjRUU1VCdDQxZTVCdEZSbkNwZkM4Rl80VnVsYXhiQjktYlNqRWdaY1JkRTlLS2N3OEZMZU9HT21FV0pPazd6ZEFuMURVRl9kUzdPMlZ6dWJ2OEdTeFJMUHBSYTFyay1GYmVSTmN6Sm9GYXlOdHlfZXVCanIyQjVwTVdHYnhyTlFsVlk2RXRWZVgxeXdsTkZ1Z3l5VmpscjB2OUVDVWYzRTBRVFNOVmpKa3FVUHFhdtIBugJBVV95cUxNU3Q5WktmS3lndGZGS1B2UDRWMVNOR1hMel9KR2JtQnZqbmNGZU51Rm9JaWFGb0RnMTUtRVZhNTQwQjV2QlRtVXI3dWFBcnMxYjlvWGJUUlcyYjFxYUhpMkNyM0luUjZvVGxZd1FEYmRadWxkUGJmYUJWcGIyc3I2RnBOcUlLV1Rkd0JkYk01SnR3OTNBWlY0VGJqd3kxOThTWnd3aFBHY1F1Q3M1Y2V6c0NlYTAwNldCWVA0RHZCSDlWT3B0UUVUYU9VbldPbTVVVFNzVFkta2dvVGR2UFg5U1l4Z0dHNzBqdmszZWtGTFJqUnU0VDhCc1FTbU9SZE9NMG9ROEZEc3YwZkZfNWFVcEpXOTdsNU1SMGpONy1GMlZDZ0h0R2N6Uzl5dGNfRHVvdnVWZ1NEekRHZw?oc=5",
       "resumen": "El pueblo a 20 minutos de Zaragoza que estrena un festival de rock con una banda histórica: programación completa y cómo comprar las entradas El Periódico de Aragón",
-      "fecha": "2026-09-29T07:00:00+00:00"
-    },
-    {
-      "categoria": "Metal",
-      "titulo": "SCANNER regresará a España en 2027 con tres conciertos para celebrar sus 40 años - Hellpress",
-      "enlace": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPQ3AtcDk5MjBZQXJmbHR5aFVoTVpRRlBtUUtqWkhuY3NNb0swN1hHcnRjZGV1S3NDdGM1SWItZXM0SmhRenFYMXRmWi1GQnZnTExmSUFGSVl2cGNiaTZzZXdUWG9SNUpManhWLW84TFlqZDkzQUR1Q2syQnNjbi1BSUxtYjQ1cjdrbU5Qdlh3czZ3T1NVWFhmbdIBngFBVV95cUxPOE9ZZDJOd21pbTBhMk12MC1IZzhxRHdqNHZQWmZESGhlTlNPZ2F2OHc1UGxZMWFUYklSd2ZzRjlVSVVseXNCMlJYRUh2Z0ZLUURFOE96ZDZNS0xwQ1paX3puLXJESlJhblZudlpDTlQ0REtZTkNzeVFUcUVHQ2l6aDBNdHdoUjVsUGtZd2ZQSUFfblFCdmNveU43UXlkZw?oc=5",
-      "resumen": "SCANNER regresará a España en 2027 con tres conciertos para celebrar sus 40 años Hellpress",
       "fecha": "2026-09-29T07:00:00+00:00"
     },
     {
@@ -325,31 +339,17 @@
     },
     {
       "categoria": "Metal",
+      "titulo": "Primal Fear unirá fuerzas con Ankhara en una gira de conciertos por España - MariskalRock.com",
+      "enlace": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQMzhXT1Zac0J3YUxJNktROWZTSmJWMmEzalZiRjllYVpic1ZYZGg4UjdIYWZMZm1Oa2RpX19mOW9Sc1dmd2hfSjd4MmQxdnRuN0JxZ2YzYnluMkJ5OW9sRms3OGJ3d1I3aEZuTW51R2ttU0pIMEZhLWRGUTV1QlFOY0dZMUhBd3VXQVBXWDVzVXFPajFnUm8yOXpHTjlLU2V2VEgwc2FMbERQSHg4T3pHNm5kU0RBYWc?oc=5",
+      "resumen": "Primal Fear unirá fuerzas con Ankhara en una gira de conciertos por España MariskalRock.com",
+      "fecha": "2026-09-22T07:00:00+00:00"
+    },
+    {
+      "categoria": "Metal",
       "titulo": "NEVERMORE anuncia conciertos en España: el regreso de la banda de Metal será en Barcelona y Madrid - Hellpress",
       "enlace": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNUU1ZWUhFUHRLM2RmdHpsMGhLNHJWRmZNOUpmSTlaRG1mUFBHaThxSjF2YUdmMllGazdHdm41dmluYldocmUwaXlrMVpiWjREa1R3dUc3bU5xM2FySTl4TjVDMGhjTlIyTTM2RTVDV1RLLTdoQTV5cWZEbmJaekh5NmRrd0JwZnVsNTVNYTAtd2E5T2hzYVVDWXRaSnNEZVZFak8wMHItcGdXTHFv0gGyAUFVX3lxTFBISWY4S09JMk5IdHFKc3RiNU96SUw3S0pKcGItaFNoUl94b1VIbEVKaV9lUWFuQTBzeGJFT2VDbmVYZHQ3emhxeWt3RC00NW51QWZGV1BCXzVYQWNESUVaUFV3c0gzSFJFNXhCbzc2enhTQ2cycEl1b0dob2dNX2tCZWpxT2NsaUwtMXNfRmJaN2hXbEFoQnNrc3pnWHV6ZWI4TVNFdnZDcG5ENjktYVVUbWc?oc=5",
       "resumen": "NEVERMORE anuncia conciertos en España: el regreso de la banda de Metal será en Barcelona y Madrid Hellpress",
       "fecha": "2026-09-21T07:00:00+00:00"
-    },
-    {
-      "categoria": "Metal",
-      "titulo": "Evanescence regresa a España con dos conciertos en octubre - Stairway to Rock",
-      "enlace": "https://news.google.com/rss/articles/CBMijwFBVV95cUxObHRobHh2OXItcG9kam53Qnh5Z1U0dDA3bU0zNmVxYTJHcjhOUXk3NEpLOGUtbnZ2aXh0cHpOa19NaVVlZjlCUm85UTM4bzFXRVB4am1VLVBxMWFWaDJjRjNzVzRHaUJpTUg2Mlc4YWk4YWphQURJMkpTWEhscllFTkhrVEJNZGxkY2hmWTFqZw?oc=5",
-      "resumen": "Evanescence regresa a España con dos conciertos en octubre Stairway to Rock",
-      "fecha": "2026-09-21T07:00:00+00:00"
-    },
-    {
-      "categoria": "Metal",
-      "titulo": "MANOWAR aplazan ocho conciertos en Europa tras el fallecimiento de un familiar de Joey DeMaio y mantienen sus citas en España para 2027 - Metalcry.com",
-      "enlace": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQWWF5bFZwR1hhQ3pjcXRIRUt2dnlzWXdiZG9UWHUxNzllLTVkN2VmdzdnNGVjZnVrakp5MnZQaGZ4YjFaYmJ4d29CemcxbXRDVnVGNW9zc0p0ODBISGJ6M0hsbXZmMkJteTZ6dGZRMGNKeG1KUF9hVW5RNnkyUkRWN2txUFk4eXcydFhkME5fVnVMb1F2NTYzS1Y5N1c0TjlQcy04RTRtNkNhdk1YOE9IUTFJQmVQSEk1Sk5xWVRnVWNhY2dvVFl6SEx4cEQwLXkwVGNVbEhXbWsyN3JnUjAwTFA0MGl4RGdnYkUyUDJn0gH2AUFVX3lxTFBOc0FSZjlDNmlSUTFaMWJNTkZ6N28zSkJoRzlVR0R5ZHQ0QkhDclpHY3pfbHRzN1pTa01sa0ZWbk9WSXpYVC1MTGZJTURpMXBwNTg2Z1gzaXBqa0Y3M2hCWFcyTTRLX092WDFldHRhM1oxS3d4SkNaZW9CZ0VaLUU2UnU0eG1IekM4MGpKZmlqbHdDV1o2X3AxSVlyTjVHVkZ2RXZIeXk1R0tyY2tYR0g3cTVvTXRGRTQ2MTNObU1rUkItTTAtUU5MaDlMa1N4REt6SUxJdTNnU1hWbXJ5dW8xdFBQZnQ4REZ3dG85WF9ESXU1RXNOZw?oc=5",
-      "resumen": "MANOWAR aplazan ocho conciertos en Europa tras el fallecimiento de un familiar de Joey DeMaio y mantienen sus citas en España para 2027 Metalcry.com",
-      "fecha": "2026-09-20T07:00:00+00:00"
-    },
-    {
-      "categoria": "Metal",
-      "titulo": "Shakira arranca en Madrid una residencia de 12 conciertos - Metal Hammer España",
-      "enlace": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE95cDF0Uk5kSGVlbERFMW10UHdSZ1NWanRmSWRvajV4Um1Pem51Y2J3U0RfXzY5QUFvZlduVnU2NjZOY2ZfQmRjb1RwMGJPZ00?oc=5",
-      "resumen": "Shakira arranca en Madrid una residencia de 12 conciertos Metal Hammer España",
-      "fecha": "2026-09-18T07:00:00+00:00"
     }
   ]
 }
