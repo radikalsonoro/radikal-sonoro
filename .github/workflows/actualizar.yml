@@ -19,11 +19,11 @@ def actualizar_noticias():
     Recopila las noticias previas de Radikal Sonoro.
     """
     print("Recopilando noticias...")
-    # Si ya tienes código previo para noticias, colócalo aquí.
+    # Si tienes código previo para noticias, colócalo aquí.
 
 
 # ==========================================
-# 2. CONCIERTOS (MADRID)
+# 2. CONCIERTOS (MADRID - TODAS LAS SALAS)
 # ==========================================
 def extraer_gruta77():
     print("Extrayendo conciertos de Gruta 77...")
@@ -32,7 +32,28 @@ def extraer_gruta77():
         res = requests.get(url, headers=HEADERS, timeout=10)
         if res.status_code == 200:
             soup = BeautifulSoup(res.text, "html.parser")
-            # Extraer eventos de Gruta 77
+            eventos = soup.find_all(["article", "div"], class_=lambda c: c and ("event" in c.lower() or "post" in c.lower()))
+            
+            for ev in eventos:
+                titulo_el = ev.find(["h2", "h3", "a"])
+                if not titulo_el:
+                    continue
+                titulo = titulo_el.get_text(strip=True)
+                
+                enlace = titulo_el.get("href") if titulo_el.name == "a" else None
+                if not enlace and ev.find("a"):
+                    enlace = ev.find("a").get("href")
+                
+                fecha_el = ev.find(class_=lambda c: c and ("date" in c.lower() or "fecha" in c.lower() or "time" in c.lower()))
+                fecha = fecha_el.get_text(strip=True) if fecha_el else "Fecha por confirmar"
+
+                if titulo and len(titulo) > 3:
+                    todos_los_conciertos.append({
+                        "sala": "Gruta 77",
+                        "titulo": titulo,
+                        "fecha": fecha,
+                        "enlace": enlace or url
+                    })
     except Exception as e:
         print(f"Error al extraer Gruta 77: {e}")
 
@@ -43,7 +64,27 @@ def extraer_la_trinchera():
         res = requests.get(url, headers=HEADERS, timeout=10)
         if res.status_code == 200:
             soup = BeautifulSoup(res.text, "html.parser")
-            # Extraer eventos de La Trinchera
+            articulos = soup.find_all("article")
+            
+            for art in articulos:
+                titulo_el = art.find(["h1", "h2", "h3"])
+                if not titulo_el:
+                    continue
+                titulo = titulo_el.get_text(strip=True)
+                
+                link_el = art.find("a")
+                enlace = link_el.get("href") if link_el else url
+                
+                fecha_el = art.find("time") or art.find(class_=lambda c: c and ("date" in c.lower() or "entry-date" in c.lower()))
+                fecha = fecha_el.get_text(strip=True) if fecha_el else "Próximamente"
+
+                if titulo:
+                    todos_los_conciertos.append({
+                        "sala": "La Trinchera",
+                        "titulo": titulo,
+                        "fecha": fecha,
+                        "enlace": enlace
+                    })
     except Exception as e:
         print(f"Error al extraer La Trinchera: {e}")
 
@@ -54,9 +95,32 @@ def extraer_wurlitzer():
         res = requests.get(url, headers=HEADERS, timeout=10)
         if res.status_code == 200:
             soup = BeautifulSoup(res.text, "html.parser")
-            # Extraer eventos de Wurlitzer
+            eventos = soup.find_all(["article", "div", "section"], class_=lambda c: c and ("event" in c.lower() or "show" in c.lower() or "concierto" in c.lower()))
+            if not eventos:
+                eventos = soup.find_all(["div", "li"], class_=lambda c: c and "item" in c.lower())
+            
+            for ev in eventos:
+                titulo_el = ev.find(["h2", "h3", "h4", "a"])
+                if not titulo_el:
+                    continue
+                titulo = titulo_el.get_text(strip=True)
+                
+                enlace = titulo_el.get("href") if titulo_el.name == "a" else None
+                if not enlace and ev.find("a"):
+                    enlace = ev.find("a").get("href")
+                
+                fecha_el = ev.find(class_=lambda c: c and ("date" in c.lower() or "fecha" in c.lower() or "time" in c.lower()))
+                fecha = fecha_el.get_text(strip=True) if fecha_el else "Próximamente"
+
+                if titulo and len(titulo) > 2:
+                    todos_los_conciertos.append({
+                        "sala": "Wurlitzer Ballroom",
+                        "titulo": titulo,
+                        "fecha": fecha,
+                        "enlace": enlace or url
+                    })
     except Exception as e:
-        print(f"Error al extraer Wurlitzer: {e}")
+        print(f"Error al extraer Wurlitzer Ballroom: {e}")
 
 def extraer_trashcan():
     print("Extrayendo conciertos de Trashcan Music Club...")
@@ -65,44 +129,13 @@ def extraer_trashcan():
         res = requests.get(url, headers=HEADERS, timeout=10)
         if res.status_code == 200:
             soup = BeautifulSoup(res.text, "html.parser")
-            # Extraer eventos de Trashcan
-    except Exception as e:
-        print(f"Error al extraer Trashcan: {e}")
-
-def extraer_rock_palace():
-    print("Extrayendo conciertos de Rock Palace...")
-    url = "https://rockpalace.es/"
-    try:
-        res = requests.get(url, headers=HEADERS, timeout=10)
-        if res.status_code == 200:
-            soup = BeautifulSoup(res.text, "html.parser")
-            # Extraer eventos de Rock Palace
-    except Exception as e:
-        print(f"Error al extraer Rock Palace: {e}")
-
-
-# ==========================================
-# 3. GUARDADO DE DATOS
-# ==========================================
-def guardar_conciertos():
-    os.makedirs("data", exist_ok=True)
-    archivo_destino = "data/conciertos.json"
-    
-    with open(archivo_destino, "w", encoding="utf-8") as f:
-        json.dump(todos_los_conciertos, f, ensure_ascii=False, indent=2)
-    print(f"Conciertos guardados correctamente en {archivo_destino}")
-
-
-# ==========================================
-# 4. EJECUCIÓN PRINCIPAL
-# ==========================================
-if _name_ == "_main_":
-    actualizar_noticias()
-    
-    extraer_gruta77()
-    extraer_la_trinchera()
-    extraer_wurlitzer()
-    extraer_trashcan()
-    extraer_rock_palace()
-    
-    guardar_conciertos()
+            eventos = soup.find_all(["article", "div"], class_=lambda c: c and ("event" in c.lower() or "post" in c.lower() or "concierto" in c.lower()))
+            
+            for ev in eventos:
+                titulo_el = ev.find(["h2", "h3", "a"])
+                if not titulo_el:
+                    continue
+                titulo = titulo_el.get_text(strip=True)
+                
+                enlace = titulo_el.get("href") if titulo_el.name == "a" else None
+                if not enlace and
