@@ -1,178 +1,35 @@
-import json
-import os
-import re
-import requests
-from bs4 import BeautifulSoup
+name: Radikal Sonoro - Noticias y conciertos
 
-# Headers para simular un navegador real y evitar bloqueos al hacer scraping
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-}
+on:
+  schedule:
+    - cron: '0 */6 * * *' # Se ejecuta cada 6 horas
+  workflow_dispatch: # Permite ejecución manual
 
-# Listas globales para acumular todos los datos
-todos_los_conciertos = []
-todos_los_videos = []
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
-# ==========================================
-# 1. NOTICIAS
-# ==========================================
-def actualizar_noticias():
-    """
-    Recopila las noticias previas de Radikal Sonoro.
-    """
-    print("Recopilando noticias...")
-    # Si tienes código previo para noticias, colócalo aquí.
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
 
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
 
-# ==========================================
-# 2. VÍDEOS (BÚSQUEDA AUTOMÁTICA EN YOUTUBE)
-# ==========================================
-def actualizar_videos():
-    print("Buscando vídeos de la escena automáticamente...")
-    url_busqueda = "https://www.youtube.com/results?search_query=concierto+madrid+rock+punk"
-    try:
-        res = requests.get(url_busqueda, headers=HEADERS, timeout=10)
-        if res.status_code == 200:
-            soup = BeautifulSoup(res.text, "html.parser")
-            video_ids = re.findall(r"watch\?v=([a-zA-Z0-9_-]{11})", res.text)
-            ids_unicas = list(dict.fromkeys(video_ids))
-            
-            for vid in ids_unicas[:6]: # Guardar los primeros 6 vídeos encontrados
-                todos_los_videos.append({
-                    "titulo": "Vídeo destacado de la escena",
-                    "url": f"https://www.youtube.com/watch?v={vid}",
-                    "embed_url": f"https://www.youtube.com/embed/{vid}"
-                })
-            print(f"Encontrados {len(todos_los_videos)} vídeos automáticamente.")
-    except Exception as e:
-        print(f"Error al buscar vídeos: {e}")
+      - name: Instalar dependencias
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4 lxml
 
+      - name: Ejecutar script de actualización
+        run: python actualizar.py
 
-# ==========================================
-# 3. CONCIERTOS ANUNCIADOS POR BANDAS (OPCIÓN 1)
-# ==========================================
-def extraer_conciertos_bandas():
-    print("Añadiendo conciertos enviados por bandas...")
-    # Puedes añadir directamente aquí los conciertos que te envíen las bandas por email/redes
-    conciertos_bandas = [
-        # Ejemplo (puedes borrarlo o cambiarlo por los reales):
-        # {
-        #     "sala": "Gruta 77",
-        #     "titulo": "Nombre Banda 1 + Banda 2",
-        #     "fecha": "2026-11-15",
-        #     "enlace": "https://enlace-entradas-o-cartel.com"
-        # }
-    ]
-    todos_los_conciertos.extend(conciertos_bandas)
-
-
-# ==========================================
-# 4. CONCIERTOS DE SALAS (MADRID)
-# ==========================================
-def extraer_gruta77():
-    print("Extrayendo conciertos de Gruta 77...")
-    url = "https://gruta77.com/programacion-eventos-gruta77-madrid/"
-    try:
-        res = requests.get(url, headers=HEADERS, timeout=10)
-        if res.status_code == 200:
-            soup = BeautifulSoup(res.text, "html.parser")
-            eventos = soup.find_all(["article", "div"], class_=lambda c: c and ("event" in c.lower() or "post" in c.lower()))
-            
-            for ev in eventos:
-                titulo_el = ev.find(["h2", "h3", "a"])
-                if not titulo_el:
-                    continue
-                titulo = titulo_el.get_text(strip=True)
-                
-                enlace = titulo_el.get("href") if titulo_el.name == "a" else None
-                if not enlace and ev.find("a"):
-                    enlace = ev.find("a").get("href")
-                
-                fecha_el = ev.find(class_=lambda c: c and ("date" in c.lower() or "fecha" in c.lower() or "time" in c.lower()))
-                fecha = fecha_el.get_text(strip=True) if fecha_el else "Fecha por confirmar"
-
-                if titulo and len(titulo) > 3:
-                    todos_los_conciertos.append({
-                        "sala": "Gruta 77",
-                        "titulo": titulo,
-                        "fecha": fecha,
-                        "enlace": enlace or url
-                    })
-    except Exception as e:
-        print(f"Error al extraer Gruta 77: {e}")
-
-def extraer_la_trinchera():
-    print("Extrayendo conciertos de La Trinchera...")
-    url = "https://salatrinchera.com/tag/conciertos/"
-    try:
-        res = requests.get(url, headers=HEADERS, timeout=10)
-        if res.status_code == 200:
-            soup = BeautifulSoup(res.text, "html.parser")
-            articulos = soup.find_all("article")
-            
-            for art in articulos:
-                titulo_el = art.find(["h1", "h2", "h3"])
-                if not titulo_el:
-                    continue
-                titulo = titulo_el.get_text(strip=True)
-                
-                link_el = art.find("a")
-                enlace = link_el.get("href") if link_el else url
-                
-                fecha_el = art.find("time") or art.find(class_=lambda c: c and ("date" in c.lower() or "entry-date" in c.lower()))
-                fecha = fecha_el.get_text(strip=True) if fecha_el else "Próximamente"
-
-                if titulo:
-                    todos_los_conciertos.append({
-                        "sala": "La Trinchera",
-                        "titulo": titulo,
-                        "fecha": fecha,
-                        "enlace": enlace
-                    })
-    except Exception as e:
-        print(f"Error al extraer La Trinchera: {e}")
-
-def extraer_wurlitzer():
-    print("Extrayendo conciertos de Wurlitzer Ballroom...")
-    url = "https://www.wurlitzerballroom.com/"
-    try:
-        res = requests.get(url, headers=HEADERS, timeout=10)
-        if res.status_code == 200:
-            soup = BeautifulSoup(res.text, "html.parser")
-            eventos = soup.find_all(["article", "div", "section"], class_=lambda c: c and ("event" in c.lower() or "show" in c.lower() or "concierto" in c.lower()))
-            if not eventos:
-                eventos = soup.find_all(["div", "li"], class_=lambda c: c and "item" in c.lower())
-            
-            for ev in eventos:
-                titulo_el = ev.find(["h2", "h3", "h4", "a"])
-                if not titulo_el:
-                    continue
-                titulo = titulo_el.get_text(strip=True)
-                
-                enlace = titulo_el.get("href") if titulo_el.name == "a" else None
-                if not enlace and ev.find("a"):
-                    enlace = ev.find("a").get("href")
-                
-                fecha_el = ev.find(class_=lambda c: c and ("date" in c.lower() or "fecha" in c.lower() or "time" in c.lower()))
-                fecha = fecha_el.get_text(strip=True) if fecha_el else "Próximamente"
-
-                if titulo and len(titulo) > 2:
-                    todos_los_conciertos.append({
-                        "sala": "Wurlitzer Ballroom",
-                        "titulo": titulo,
-                        "fecha": fecha,
-                        "enlace": enlace or url
-                    })
-    except Exception as e:
-        print(f"Error al extraer Wurlitzer Ballroom: {e}")
-
-def extraer_trashcan():
-    print("Extrayendo conciertos de Trashcan Music Club...")
-    url = "https://trashcanmusicclub.es/"
-    try:
-        res = requests.get(url, headers=HEADERS, timeout=10)
-        if res.status_code == 200:
-            soup = BeautifulSoup(res.text, "html.parser")
-            eventos = soup.find_all(["article", "div"], class_=lambda c: c and ("event" in c.lower() or "post" in c.lower() or "concierto" in c.lower()))
-            
-            for
+      - name: Guardar y subir cambios a GitHub
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git commit -m "Actualización automática de conciertos y vídeos [skip ci]" || exit 0
+          git push
