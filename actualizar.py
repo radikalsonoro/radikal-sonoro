@@ -1,37 +1,89 @@
-name: Actualizar Radikal Sonoro
+import os
+import json
+import requests
+from bs4 import BeautifulSoup
+from datetime import datetime, timezone
 
-on:
-  schedule:
-    - cron: "0 7 * * *"
-  workflow_dispatch:
+# Radikal Sonoro: fuentes de noticias underground
+FUENTES = [
+    "https://www.insonoro.com/",
+]
 
-permissions:
-  contents: write
+CARPETA_DATA = "data"
 
-jobs:
-  actualizar:
-    runs-on: ubuntu-latest
 
-    steps:
-      - name: Descargar repositorio
-        uses: actions/checkout@v4
+def obtener_noticias():
+    noticias = []
+    vistos = set()
 
-      - name: Preparar Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
+    for url in FUENTES:
+        try:
+            respuesta = requests.get(
+                url,
+                headers={"User-Agent": "Mozilla/5.0"},
+                timeout=20
+            )
+            respuesta.raise_for_status()
 
-      - name: Instalar dependencias
-        run: |
-          pip install requests beautifulsoup4
+            soup = BeautifulSoup(respuesta.text, "html.parser")
 
-      - name: Actualizar noticias, conciertos y vídeos
-        run: python actualizar.py
+            for enlace in soup.find_all("a", href=True):
+                titulo = enlace.get_text(" ", strip=True)
+                destino = enlace["href"]
 
-      - name: Guardar actualizaciones
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/
-          git diff --staged --quiet || git commit -m "Actualizar contenidos automáticamente"
-          git push
+                if not titulo or len(titulo) < 15:
+                    continue
+
+                if destino.startswith("/"):
+                    destino = url.rstrip("/") + destino
+
+                if not destino.startswith("http"):
+                    continue
+
+                if destino in vistos:
+                    continue
+
+                vistos.add(destino)
+
+                noticias.append({
+                    "titulo": titulo,
+                    "url": destino,
+                    "fuente": "Insonoro",
+                    "fecha": datetime.now(timezone.utc).strftime("%Y-%m-%d")
+                })
+
+                if len(noticias) >= 30:
+                    break
+
+        except Exception as error:
+            print(f"Error leyendo {url}: {error}")
+
+    return noticias
+
+
+def guardar_json(nombre, contenido):
+    ruta = os.path.join(CARPETA_DATA, nombre)
+
+    with open(ruta, "w", encoding="utf-8") as archivo:
+        json.dump(
+            contenido,
+            archivo,
+            ensure_ascii=False,
+            indent=2
+        )
+
+
+def main():
+    os.makedirs(CARPETA_DATA, exist_ok=True)
+
+    noticias = obtener_noticias()
+
+    guardar_json("noticias.json", noticias)
+    guardar_json("conciertos.json", [])
+    guardar_json("videos.json", [])
+
+    print(f"Actualización terminada. Noticias encontradas: {len(noticias)}")
+
+
+if _name_ == "_main_":
+    main()
