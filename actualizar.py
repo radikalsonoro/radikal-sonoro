@@ -1,110 +1,37 @@
-import json
-import urllib.parse
-import urllib.request
-import xml.etree.ElementTree as ET
-from datetime import datetime, timezone
-from email.utils import parsedate_to_datetime
-from html import unescape
-import re
-import os
+name: Actualizar Radikal Sonoro
 
-FUENTES = {
-    "noticias": [
-        ("Punk", "punk rock"),
-        ("Hardcore", "hardcore punk"),
-        ("Ska", "ska music"),
-        ("Metal", "metal music"),
-        ("Underground", "underground music Spain"),
-    ],
-    "conciertos": [
-        ("Punk", "conciertos punk España"),
-        ("Hardcore", "conciertos hardcore España"),
-        ("Ska", "conciertos ska España"),
-        ("Metal", "conciertos metal España"),
-    ],
-}
+on:
+  schedule:
+    - cron: "0 7 * * *"
+  workflow_dispatch:
 
+permissions:
+  contents: write
 
-def obtener_rss(consulta):
-    parametros = urllib.parse.urlencode({
-        "q": consulta,
-        "hl": "es",
-        "gl": "ES",
-        "ceid": "ES:es",
-    })
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
 
-    url = "https://news.google.com/rss/search?" + parametros
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
 
-    peticion = urllib.request.Request(
-        url,
-        headers={"User-Agent": "Mozilla/5.0"}
-    )
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
 
-    with urllib.request.urlopen(peticion, timeout=20) as respuesta:
-        return ET.fromstring(respuesta.read())
+      - name: Instalar dependencias
+        run: |
+          pip install requests beautifulsoup4
 
+      - name: Actualizar noticias, conciertos y vídeos
+        run: python actualizar.py
 
-def limpiar(texto):
-    texto = re.sub(r"<[^>]+>", " ", texto or "")
-    return re.sub(r"\s+", " ", unescape(texto)).strip()
-
-
-def recopilar(tipo):
-    resultados = []
-    vistos = set()
-
-    for categoria, consulta in FUENTES[tipo]:
-        try:
-            raiz = obtener_rss(consulta)
-
-            for item in raiz.findall(".//item"):
-                titulo = limpiar(item.findtext("title"))
-                enlace = limpiar(item.findtext("link"))
-                resumen = limpiar(item.findtext("description"))
-                fecha = limpiar(item.findtext("pubDate"))
-
-                if not titulo or not enlace or enlace in vistos:
-                    continue
-
-                vistos.add(enlace)
-
-                try:
-                    fecha = parsedate_to_datetime(fecha).isoformat()
-                except Exception:
-                    fecha = ""
-
-                resultados.append({
-                    "categoria": categoria,
-                    "titulo": titulo,
-                    "enlace": enlace,
-                    "resumen": resumen[:300],
-                    "fecha": fecha,
-                })
-
-        except Exception as error:
-            print(f"Error en {categoria}: {error}")
-
-    resultados.sort(
-        key=lambda noticia: noticia["fecha"],
-        reverse=True
-    )
-
-    return resultados[:50]
-
-
-os.makedirs("data", exist_ok=True)
-
-for tipo in ("noticias", "conciertos"):
-    datos = {
-        "actualizado": datetime.now(timezone.utc).isoformat(),
-        "elementos": recopilar(tipo),
-    }
-
-    with open(
-        f"data/{tipo}.json",
-        "w",
-        encoding="utf-8"
-    ) as archivo:
-        json.dump(datos, archivo, ensure_ascii=False, indent=2)
-
-    print(f"{tipo}: {len(datos['elementos'])} resultados")
+      - name: Guardar actualizaciones
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git diff --staged --quiet || git commit -m "Actualizar contenidos automáticamente"
+          git push
