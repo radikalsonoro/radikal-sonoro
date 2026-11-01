@@ -1,355 +1,56 @@
-{
-  "actualizado": "2026-10-31T12:43:30.383483+00:00",
-  "elementos": [
-    {
-      "categoria": "Metal",
-      "titulo": "STRYPER lanza ‘Go Tell It On The Mountain’ como sencillo - Rock and Blog",
-      "enlace": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQYVNhZnl1eXVpVGFaYlpfLVdSTUlPZWFzZU5RODRYUHRuTV9PcVVIdTN2YWdIZTNjVGtaYzVCVWJFTm1MUkJOVjdmeHYxNTU1dzhfRndmUG15S0F2UUxodzJJUTNERHYtMDNwRlRIcUloakFNc0dsWWJwVkRnSVFxaU15LVRuQQ?oc=5",
-      "resumen": "STRYPER lanza ‘Go Tell It On The Mountain’ como sencillo Rock and Blog",
-      "fecha": "2026-10-31T12:41:25+00:00"
-    },
-    {
-      "categoria": "Metal",
-      "titulo": "EDGUY reedita tres discos en CD y vinilo: \"Hellfire Club\", \"Age Of The Joker\" y \"Space Police\" - Hellpress",
-      "enlace": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPU0NfbXpBN0dYNU16Ymx4NjlVY1pENTR0ek8taHU4TUpNTFRSd3ZOM05YMnRORV9mRHljNEExbGQ2bWp1SGJKY2ItdEpVZHRyWkFpX2d3VExLczhQYzdZWEpaUzlWMmZNUzRoT2xYYkdLc2FPN3dmYnNyQXlXWVFDLVN5a3RFSWl5NHFLRF9qYjdZcjBnSjVTbmZPdWtrWk94V2Q0Z05INnhxZU5QcnJF0gG0AUFVX3lxTFAxRzJfby1OcWVFR1A5d0RDT0hCM0Jxa3Myak01eEtyODNhWW01eHk4UHloTTNyZkVBZkl3M2VkaW5MOC1CdG1QbDFtUHk0Z1JwQ3VYeUY5aVdEZWI2NTdob19mMlRtRWd2aEJIbEFOQ3RRRklMbk1CX0xEOWFBaVdGYkZ1M3ZOaUg3TllCaVNiSGdXRzJTcTdTSklEeThrQ2V1UDg3azdmWXZSMVdRQ3N6Yk1EdA?oc=5",
-      "resumen": "EDGUY reedita tres discos en CD y vinilo: \"Hellfire Club\", \"Age Of The Joker\" y \"Space Police\" Hellpress",
-      "fecha": "2026-10-31T12:27:00+00:00"
-    },
-    {
-      "categoria": "Ska",
-      "titulo": "Traen de vuelta fiesta de ska - Reforma",
-      "enlace": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9qWHg2ZTZsYUlxOHlNTkN5TTR2Z0NfYmRvaGJ0RzJPT2JEYmVlQWxYaE9Rd09zakpld0NlSmI3RWFQRkw0Ml9DTmlva3h4cW1wc3Zad0Z0eUt4Y2pWeWl2VmZiMzFEQmVESDJ2SWFyRFM?oc=5",
-      "resumen": "Traen de vuelta fiesta de ska Reforma",
-      "fecha": "2026-10-31T11:04:36+00:00"
-    },
-    {
-      "categoria": "Metal",
-      "titulo": "Horarios concierto Absolom+Blackhead+Argi en Jerez de la Fra. - Rock The Best Music",
-      "enlace": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPOUhrSlN4NHhHYTZSb2NaRjdHQ1gxUENuN3lVSERpa1V2TlJDRUtYYWJFdWZYdkZLQ0NEQ0tQWERQR3JIT0dWc3ljU3lkZWloVGY2cVFGZlJNUEI5b0QzMmREYkh2VnJPQ1ZFTVVyZVplY19QM1BMZElOM3NyX0hsaUFmSlJYcDRZSHplWllWRnFWQmdUU1Y5RnViYk1KQU1TUlE?oc=5",
-      "resumen": "Horarios concierto Absolom+Blackhead+Argi en Jerez de la Fra. Rock The Best Music",
-      "fecha": "2026-10-31T10:01:58+00:00"
-    },
-    {
-      "categoria": "Metal",
-      "titulo": "Feral. Cambio de fecha concierto Puerto Re - Rock The Best Music",
-      "enlace": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPanVNSW1JWlhlekhRbUdPUVR0ejl1MWtjN2pIMzA3dDgzSzBKYjNVbWE4em5sX2xZbmZSal9MWGhYd1RjT0ZsVHZpbDB6dUJLOVd0YktCUnJWNktla2FDN25FdkhOUThDcVBHN0l4RXdNZkJCOTB2b0pfemw2ZHRYbVB1MVpxejcyU1JB?oc=5",
-      "resumen": "Feral. Cambio de fecha concierto Puerto Re Rock The Best Music",
-      "fecha": "2026-10-31T09:43:30+00:00"
-    },
-    {
-      "categoria": "Metal",
-      "titulo": "«Gloriosos 90» ya a la venta – Novedades de Lita Ford y Reino de Hades - Metal Hammer España",
-      "enlace": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBMb1ZBbGs3MXZZNW82VjU5eGtfQWVsNEtfTUhQbi1hY0xOdTVCNGVtRFF1SlJNMUhJRmo3UnA2MG54WXUtQ1Q5RzBDZHNjbG1XZmtHSUNrQ2tPRExRcmMzQ1hTYUR2MC1CWGhGSlFR?oc=5",
-      "resumen": "«Gloriosos 90» ya a la venta – Novedades de Lita Ford y Reino de Hades Metal Hammer España",
-      "fecha": "2026-10-31T09:00:00+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "Simple Plan y All Time Low compartirán escenario en Buenos Aires - Uno Entre Rios",
-      "enlace": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQOC1ndDg0eElIdlRpSnYyenc5c0h2SG9IVjFHdE9zaEhiRmx0dlUtM2syRFAza09fMjZzWC10Z1B4TU5MRGxGbW1rc1BmUnMzb19ZWmpaXzRoNDhBUlJvVThadzlyTjJ0T2xEVnFvU2FHV1NfVnMxd1F0ZVMydmU2UEVmWm9ER0RpdXZjemkzR2tkTDRfWXJ2M1ByYXlXYktPLTJBa244MVY0bEgzOEVKOW9mMNIBuAFBVV95cUxNV0RaSW9XUTczV1JsZzEtNGREUnNZZk43cTByTktlTURUN3ExMjdfdU91VGt0OE1QQVQ3akhOc0NSOS0wNEd5M1lpMHFVWl9xaFRDcTB0bmt1N2dzVFdQQTNMbHp5R0pEcWVJdnRLYkpkNGxwMFpJcWpoUXJybG1uWlFrQVR0Y3QtMGdhUGlzTlRhX2cwM1d2RUZHV0g1anpzT09WUHYxTlpPbWJpTzVLbWdEMkdBY2tM?oc=5",
-      "resumen": "Simple Plan y All Time Low compartirán escenario en Buenos Aires Uno Entre Rios",
-      "fecha": "2026-10-31T01:41:00+00:00"
-    },
-    {
-      "categoria": "Hardcore",
-      "titulo": "“No sé si tendrán el mismo impacto...”: Zack de la Rocha habla de Turnstile y la importancia que tienen actualmente - Rock&Pop",
-      "enlace": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOdnFaSndiOGJVMFAzNHZ5MVV0bHBBaXY0VFk1bU5wZTVxc1FwTGl2eFhpa2lQemtEd05wRDRBVjl1SzFOTktPV1Y2MkNmX3FlcThLVUNFR2NvTWRMTldMQlQxU25COGlTa2Mtc3hHUVctbXN4Qzd6dkdFbHI1aXZsMmhKVWJRWmJtb0d2Z3BodEhPOUNwNzZVTDdUTFZMaDB4MzE0d2FOaE4xanlkazRkODNEdzJSNlZHYnQ5c2plYkx3UHBXLWxNMDBxdXRjejcyNkRNdUh0YVFYOGQ30gHiAUFVX3lxTE45SGZCQVotNlROMUNiSWxqcXhZTjRCWDdxYlRlUGxvRV9LWmNsZ2lSUEZTYm5ZZnRaeEZ1U2ZrdEVmSllQV2V5d0pXMlExRVVhaDQ1akxIaG5GcGpqWVh6ZUdFZi1PZzhSQWIzOWVNMTM0Wlh2Y3RsMzZPRG8zeGZibjA3Ym4yMG9sSmFaSUtjc3N4VEVJMDBoSjRqVGRmeDA0bkVISXp0SkVmTDViLUR6TmVYaE02Zzk2aWpYV19pQ2hSa3pBZjJNNldBbWk4NHhFUWdvMFM2YktscXE4Y3Bua0E?oc=5",
-      "resumen": "“No sé si tendrán el mismo impacto...”: Zack de la Rocha habla de Turnstile y la importancia que tienen actualmente Rock&Pop",
-      "fecha": "2026-10-30T21:29:36+00:00"
-    },
-    {
-      "categoria": "Metal",
-      "titulo": "Crystal Eyes lanza ‘Remembrance’, nuevo sencillo del álbum ‘Thunder God’ - Rock and Blog",
-      "enlace": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPdDFYVHMtRHd4M0RkVXhjYlVzSzNsN21SLXNRalZHdWVXTG02UzZZWXJDTXFxeWVISFpnVU9kTzRDQWU3RVRUZ3ZQampoamh4TUdJSGMycGtwUkJ3UGVYeThqc2hQcFFkcTc2UzhSdjFtSGF1M0s1QWw0QUxGc3FrSDNiaTNKYUp5YlRvYlpJTEx1dndiNDVJ?oc=5",
-      "resumen": "Crystal Eyes lanza ‘Remembrance’, nuevo sencillo del álbum ‘Thunder God’ Rock and Blog",
-      "fecha": "2026-10-30T19:41:18+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "Fans convierten a Simple Plan en tendencia tras el inicio de la preventa para su esperado regreso: Link y cómo comprar las entradas - Infobae",
-      "enlace": "https://news.google.com/rss/articles/CBMigAJBVV95cUxOcmQtcEoweDJGNHhNYVFpWlRYelc2eVh2NEQtQWhYWWNUd2dYNjIxZWFqcFRkVFRiQVJna281ZlBNektUR01NRmplOEctMGVCYzlUbEgwaDFweVhPSGwtTDBXTzY5Z3ZxRG1LTlRyZ0x4Sm00bzlhTzN2TENyRFpkaGRESDZxYVpjcUdsbmRSVWNLcU9vVkh6c3ZDOXl6YU13VGRTZzhrRDAzc3pxNXZ5TzhnMEJueV91OFJHdXZTTTFkWHVOc3Nwd0lIUFhpVDd0UjVYdnZaY1N0OWJ4ZFozanNNSklqTHFoU3VpTHo0czNyODVJWjFOWlB6dlhaSTFz0gGbAkFVX3lxTFBjUzk2Y2ZHTGxuNzJFTm5VUHpVd1Q0TmR6OHpURy15Rm81UnNEbTFqbndyd3F3bTdZaVh3RzViOTNMem43bU9PSTZNbDFqc3Y1VlRtOTFVajBzOXZXLTc3dE9VT2NMc0RGWWZSb0pPMkd3cm5wUFBvTlVoajkxUHlKSDFYcHZHbTB5SllCOEdpOVRIWl83SnYtQTUxZF9NU2RVLXhPOGxPdmpodEloNE5sNDB5OXRXVXVWcUN0WGZxOFRWT2VIS1hXSmFreFJwRWlCQ0pWUHFnVjBObTdBd0hPaEYzUGNGYXkxMklaZUNIQTNwWThIOURPMVNkbEtYNmJvYUFBY2xCSFVzNi1FUjN0R0tQMS10NmM3TXM?oc=5",
-      "resumen": "Fans convierten a Simple Plan en tendencia tras el inicio de la preventa para su esperado regreso: Link y cómo comprar las entradas Infobae",
-      "fecha": "2026-10-30T18:56:00+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "Crim suma nuevos conciertos en España tras la respuesta \"extraordinaria\" de sus fans a las primeras fechas - MariskalRock.com",
-      "enlace": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPblJuWndPWkVGTDNucmJBYTE1N0tQTE1WejNrdmFmNTJrQW5rMzA0SFFGa0J0M20wMlZLQkZaV0RZUWl3M2EzUjlIaXR0RnNUc29lcTNiSG9JMGZfVGYyT3dzdk1HRU1USmdiMWJ2VnZHdk8yRE9GM3NPT3prMVBzeDBZVUlKSU1uck9LM25zM0laRDJDZ1o2YVFXZEs2N0Z0Rm5PNFFWLVFyWUxnV2ZFajg0MUd6c01EdkJrN0doM0RGZE1TSlZFSXBUN1Rfbkt2cnd4RGg2R3VicERyRHNR?oc=5",
-      "resumen": "Crim suma nuevos conciertos en España tras la respuesta \"extraordinaria\" de sus fans a las primeras fechas MariskalRock.com",
-      "fecha": "2026-10-30T18:04:00+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "Cinco discos de los Ramones, del menos bueno al kilómetro cero del punk - CrazyMinds",
-      "enlace": "https://news.google.com/rss/articles/CBMibEFVX3lxTE94ODF1UXBnYjIwNkRKZGRfSXFxR1N2OU9BYUNTcHAxMWtnbzJnbDNYQjgtdzhzNGlfNnlHNVl5UmVwbGVPOEppazhJTzB0c2pqLWJXdDJsaFNidm5pR1g1NWxrdnQzdUhNYzB3bA?oc=5",
-      "resumen": "Cinco discos de los Ramones, del menos bueno al kilómetro cero del punk CrazyMinds",
-      "fecha": "2026-10-30T18:00:00+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "Porno para Ricardo estrena el videoclip - 14ymedio",
-      "enlace": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOQUZkRlcxdi02dmp3eDBVYUxOLTVpQml2QjZNNFE0cC12NDVReU5jcFNTZDRDZllTTGgzR3drQ1JJQk01d3ZZdXVQemRsbFc0MllBRllvbHJENmVuSEtsRUZfc0NMWHk2aDFRMkNmV0R6Y0UwY1AyUDJyejRIa2tTckpvdljSAYoBQVVfeXFMT1hRSEZsb19QWmpRWkg2MDRBN1JtemYtc3ludlRXLUFJR2xMR0hITW80TUNsOW41cTRteU1JOVgxYTdJRGFJY09aalRwempaOWxiT3Q2eWNua1dlNmd1WnJydkxtX1UtTXNNMjk3elBGajZwWWhFcmF1MjVBbHBTbk5XcHJCM0J4cFR3?oc=5",
-      "resumen": "Porno para Ricardo estrena el videoclip 14ymedio",
-      "fecha": "2026-10-30T17:44:21+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "Rompiendo moldes a punta de 808, punk y nostalgia noventera: Kevis & Maykyy revientan la escena con «HP HOP - Revista Kuadro",
-      "enlace": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNSC1DS0ExN2t1SWVOZUY3Qi11RUxHaThWREVHSjdYUG4xXzAwOVJNYlhscXBFTi0zN3lIZjVxM1I2M094UzZvbXBpNmY2MnVVUVlNMEg5UmJxSTFLLW45NVpVN0JNdEpiUlNaWUhxUVAtX3Z1RWxYMFd5VFh3RDBLWnE4MlkwZnVKdjVnaUNuam1YRFd6QXBUVzNTNkZlNk4zcTZSaUxaMGRZVTVRYXlJUkFCR1Fna2R1emRMc1lDS0wyQ1doVnZjdw?oc=5",
-      "resumen": "Rompiendo moldes a punta de 808, punk y nostalgia noventera: Kevis & Maykyy revientan la escena con «HP HOP Revista Kuadro",
-      "fecha": "2026-10-30T17:33:55+00:00"
-    },
-    {
-      "categoria": "Metal",
-      "titulo": "Nuevo vídeo de los norteamericanos STRYPER - Heavy Mextal",
-      "enlace": "https://news.google.com/rss/articles/CBMidkFVX3lxTE42QllFU0xpcGlORU8xTDN6alFINmFId3N6NUpyb1k5aENQTkFtS211Y2hLQzFZYWxMVzJzay1tS1luQVpHQnVKUFUxOHBZUHVGOTl4NXNDY0d4Ung0MmU4ZU1aX0RaMk9rUUphY0Y5RjJYSUNnZ3c?oc=5",
-      "resumen": "Nuevo vídeo de los norteamericanos STRYPER Heavy Mextal",
-      "fecha": "2026-10-30T17:26:00+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "Aúpa Lumbreiras!! anuncia a Non Servium, Boikot, El Último Ke Zierre, Periferia o Laura DSK en la fiesta de presentación del festival para 2027 - MariskalRock.com",
-      "enlace": "https://news.google.com/rss/articles/CBMigwJBVV95cUxQT0hmSzdkTTNrZkFlRGZLX25vUXFPSk13X0ZxZ25WanlTZnlDakE1TUNzVzl4Sks5Z0lQX05DYzFpYUE5bDNsLTBMaGVJaml1TGdqc1hoS0ZidHhyQmlqRmVvVTNxSWRCM2FYalNxSzVoU3VwcnV2S0hMdC1icWg3Z1BXdnRtaVY3dUhVcTdvUlBOTEFlNW5jRUlVSHR4cXdPY0w3M3R3Zi00ampUS3NlZjNCclRmMk1ta09mQkhIS1Q1N2dqRUpNYXVyZUpuQm96RlFCS1hLcEIxYndtNUNUUC1aTzZoSTNEbDY3Nm0yajJFNzFrXzJ2dXloRHd5dzJrTEcw?oc=5",
-      "resumen": "Aúpa Lumbreiras!! anuncia a Non Servium, Boikot, El Último Ke Zierre, Periferia o Laura DSK en la fiesta de presentación del festival para 2027 MariskalRock.com",
-      "fecha": "2026-10-30T17:02:00+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "'Ya no es tu fiesta': Porno para Ricardo manda al castrismo al infierno en su nuevo sencillo - DIARIO DE CUBA",
-      "enlace": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1oeVhNcEVqdkV4aTNWWmJxMi1ITkxQR2MzXzROeDNlTjJkMENQQUg2WG50Mi1yS1ZpejYweGhPaXJqZnVFc25ZMzBxU1pKUHIwcDV4Wk50c3dzM1pCYzVueWs3Smw?oc=5",
-      "resumen": "'Ya no es tu fiesta': Porno para Ricardo manda al castrismo al infierno en su nuevo sencillo DIARIO DE CUBA",
-      "fecha": "2026-10-30T16:49:00+00:00"
-    },
-    {
-      "categoria": "Metal",
-      "titulo": "5 bandas de dos integrantes que hicieron historia en la música - Indie Hoy",
-      "enlace": "https://news.google.com/rss/articles/CBMimgFBVV95cUxObXZEcDdsc2tTeTZ5WkJzTU9nd3VNbjJhc0Y1OG5BUFVxRlhoaGNuTDlsM0FZc0w4TDVZNWpnRF9sUUdzMlp4cEctNXRXcmtXOEEzX3VRcWRoNXZWY0ljNVFFME9DNDJnenU0QmlacTdYbms1RDRWNnNPYVNTWl9CZlF4RHQyTERXcGFkbVJSWEhubFJqZ0xzLWNn0gGiAUFVX3lxTE5rakVJeWlhVElmcDhWdTFpRjVYeW1sZ1Z1ZlZmV2JPeV82VThpbUg3S3RFWGxUTmVVOTZERWFkRVl4a2RQdktleTJZeWtIMmpVbWRKVUpSM2JVV0t3OEI5bU9rVVpJNWpmY0w1a2hFbWxWcXZWUGtORE45aGd2SkphdnNGei1TZmZLbkJzVUJHbm9UZFgwM0dJMk9pZlZGZzdSdw?oc=5",
-      "resumen": "5 bandas de dos integrantes que hicieron historia en la música Indie Hoy",
-      "fecha": "2026-10-30T16:43:59+00:00"
-    },
-    {
-      "categoria": "Ska",
-      "titulo": "Panteón Rococó celebra 30 años de música con una noche de ska, nostalgia y slam en Torreón - MILENIO",
-      "enlace": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPOU95WlFjd3RheG1XTWRWNVdyWS1PZHBhTXFrS1p3YkFmQ2x0VVQ5aUtGMFo1TEd2QTNwZTllVl9vcmU1MHU0LTBoUWNxQjhSb2tCcVVRN3ViSml3cU5ibmVWQVBCSEYzRFBqcmszaU1nWnQtSURqNFoySDhKU0Fob0h0VzEwdUh1QzVNVjhxX0hOMWh6YVk2YnNvVTNEQ253RS1xQ9IBpAFBVV95cUxOM3dIa3QyMExsWWlwVjVUNllLQkRpNDVJNWs2b0NCS1cwaHJJN3ctcDhKRUlXaU40SlRSUGhTa1lUT01jN3RrX0ZyM2hJQkgyOUJtNVdUaGhWREFhaWN6Zm1OZHpvX1I3NTc2clc2TW1wSFlwYl8zZlJPakNQdndiSVU0T1RraTJsMXJ4ZXFYeFV4d0FEQ3NYZmNGclBQYzNYdmpuQg?oc=5",
-      "resumen": "Panteón Rococó celebra 30 años de música con una noche de ska, nostalgia y slam en Torreón MILENIO",
-      "fecha": "2026-10-30T16:22:00+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "Michael Monroe, la esencia del rock and roll en Madrid - Dirty Rock Magazine",
-      "enlace": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQYUpBRDREZ2lQQ2lZZ0dUcW96UnRocmpKUnFuWXBuTExuX1lsbThjeDFYRUJKVnprUjM3RWZQMWtKVmdyZlBSTE9tZlVIbi1PeTZGSHpOaVlheHRZMUxRQ0FaOHc0NDczVXA3cWJtWDBSWHYza25SbDRVYzVCNjhMNWVXUUZKLW5mb2JDUlNuNm9iUW8?oc=5",
-      "resumen": "Michael Monroe, la esencia del rock and roll en Madrid Dirty Rock Magazine",
-      "fecha": "2026-10-30T15:06:45+00:00"
-    },
-    {
-      "categoria": "Metal",
-      "titulo": "Diez canciones metal para Halloween - RockForEveryone",
-      "enlace": "https://news.google.com/rss/articles/CBMicEFVX3lxTE0xaUZDUHU0MjNDc2N2VGpWZ3JKekZpQkN6T21hZUFpVGFIcmZ1Q04xQ3U0NXZiOTQwblF0ZHU4V3lOY2FyeTMybGRPOGNLZFhGaW45MERac1Mxb29jZVh1MkhNMHNxN2JmOWZIaXhFWWk?oc=5",
-      "resumen": "Diez canciones metal para Halloween RockForEveryone",
-      "fecha": "2026-10-30T14:59:32+00:00"
-    },
-    {
-      "categoria": "Metal",
-      "titulo": "Crítica de Perfecth de Queens Of The Stone Age - RockForEveryone",
-      "enlace": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9oaUthN3JZcktQU3p1TFVoQW5oVlBUOU9kXzN6NEw5LWJJdUhVbEpBZ1loTFdvcnFWdWtIeG5ZQ3JDNUZDMHFpdjJNbWNqUFJrb2ZBdlI5M0Y4eFZNaEQ5RWRn?oc=5",
-      "resumen": "Crítica de Perfecth de Queens Of The Stone Age RockForEveryone",
-      "fecha": "2026-10-30T13:05:39+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "Crítica de la película ‘NOFX – 40 Years of Fuckin’ Up’ - RockZone",
-      "enlace": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPRk5QNnBZNjhIQWlQUHEwX0oxMHZQc3VIWnZQSXpNMFVUMXNLT0t4MWN4Ty1ZQm5CWV9RQkNfb3VNY1pBQUtnNU1PR1N0RTV1QlUzcXdaVHBEWmhDaWd1U25xYks2TmFYNmxDMWMyNTBRYzRocVhtNjROdmVVN1dXa0pUWnA?oc=5",
-      "resumen": "Crítica de la película ‘NOFX – 40 Years of Fuckin’ Up’ RockZone",
-      "fecha": "2026-10-30T12:34:06+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "Villena dice adiós a uno de sus míticos festivales por un cambio estratégico de los organizadores - Información",
-      "enlace": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxQRElrQ3RaLS1GbFB5YlVWM0lHcmhuanZlZ1RldGJGNGwxdHNXN014amQzeVFFSVk0eU1HNm4wTlRueXU4MmQxXzdGVDk5NGVXb0lkNmJ6ZnA3Q2M3MFo5Y2VzMkcxV2t0b1ZxR0NDejAwd3UtOEg3VkxVdFFKQjZ4MDBVZ2VNdm5oNlg2UDFpU3NCY09CZlV6WTZMOEdac3IwU1c2eG5UZWdrOUxabnFUSlhyNWtYZUlTTWJzZ3dLd2lDTFpoMDlXbzdRSkFKbGtKRmJXdm5Obm4tc2F3N3JfRHhxNHhYNnotSWNWZ0hYUVhMcXAzR3lvbTR1ZXpwR2pkbGsybHpRUlJGSFnSAZACQVVfeXFMTzRNNFFybHlNYWpaSzEtYXU3bThzelVkcDhqbFlVNi1yaG9jUmdYbWxZakZEVl8yRjlkU2ZMMUR5TVNqQUtoQ19GMGhoRmRiQndpWmswNV9kdFpDZWNvN01NbG1aRXNjeGNFbUdra2lOOFg3OFFvWndDYk02SFN3dklUMmFzREtHWXF1TEZlODluZjN3V2dmWUU0cGgtdlFqYk5TczZJa2J2eVBRMWFNOUl0bjdXckI3NnFDUktINUdDVExWNzM5QzNMd0pFMlg2N1ZxQTNVUmlMS0MtZU5uZDA2VFI1MkVQN3Y0YzEyQmxYTWVNaVo5TlJibzNrWF9Iemo1VHdBZDZia0NBMmxTZmY?oc=5",
-      "resumen": "Villena dice adiós a uno de sus míticos festivales por un cambio estratégico de los organizadores Información",
-      "fecha": "2026-10-30T12:08:38+00:00"
-    },
-    {
-      "categoria": "Metal",
-      "titulo": "Lita Ford encabeza el primer avance del Frontiers Rock Festival 2027. - Metaltrip",
-      "enlace": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPWXo0UXFsaTNpN3JTLVpsdnp4S0ZrdUJlaWNhTGFaV3RkR0VVVC1LZ0d4dHdXM0xpRlVIUnlZV1hTYWEzQmhPOWF2czloU0UtN014bklUWlRyN2pFazN5LS1QNHZfYjgxdkxqVVVtZWMzWWJzZlBPbGotb1ZPM0M4MHFmLVlmZmp0eUk1aTRBc0dOMTJjYVE?oc=5",
-      "resumen": "Lita Ford encabeza el primer avance del Frontiers Rock Festival 2027. Metaltrip",
-      "fecha": "2026-10-30T11:32:30+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "Vuelve la fiesta de presentación de Aupa Lumbreiras - El Periódico de Villena",
-      "enlace": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNLWpRRWRabXY5d0JVd1RPUTNsLWw3RC13ajNvSjZ6c0ZsVnBBUDY1eUlaYW5HWlFuZTJJdV81b3FzWWo2S2hlQm8wRWJLTEJqUW9YMUU5TjdwRDR0NVZzc2N5N0JUYS1iaDhPUDZBWVNIWHpKWkJ6MlhVRjllOUllVUNzY1RTdm15bHpJU2VR?oc=5",
-      "resumen": "Vuelve la fiesta de presentación de Aupa Lumbreiras El Periódico de Villena",
-      "fecha": "2026-10-30T10:52:31+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "Billy Idol, a sus 70 años, se prepara para entrar en el Rock & Roll Hall of Fame - 20Minutos",
-      "enlace": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNQ0ZfVXFsREVaeDR1S2hfTVEydE1nTVlaQTkyaHR1bzEtSDJVUlhqSXhYSE5zNE5KTkVNUjVWR2RmYlVGWGEzU1ZTM3V2T1dIVnlHekVOSnFFQng3ZmktUzdQVHM2YmYxbDlRVFU4SjVSdFp3ZWh0cUJkYm94ajlxVWpUc0dLQlRlSzZVNDZ5NzVDWU9YRzN2UnZlUWZCNU5NX0NuMTVsZVdRWGlIR1JYUzZtdTY?oc=5",
-      "resumen": "Billy Idol, a sus 70 años, se prepara para entrar en el Rock & Roll Hall of Fame 20Minutos",
-      "fecha": "2026-10-30T10:52:12+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "Noviembre sube el volumen en Rock & Blues Zaragoza - AraInfo",
-      "enlace": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5XNzBkVlIxOUVmR0tqQnpfVEtQT2FpZ3FpTVFieEtFVjNfd1k3UDRVRXBsYlp3LTljNlFUUVlMYnJBcjNjSnZnWU1yLUVQZXByZnNjcDh5aDhvVU1WVkFUakVQZWtZY0g0ZlRrZ1lrQzA?oc=5",
-      "resumen": "Noviembre sube el volumen en Rock & Blues Zaragoza AraInfo",
-      "fecha": "2026-10-30T10:49:58+00:00"
-    },
-    {
-      "categoria": "Metal",
-      "titulo": "\"Mið\" de ENSLAVED: el grupo de Black Metal Progresivo forja uno de sus discos más tribales y místicos - Hellpress",
-      "enlace": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOVGp4OVBra1lOVjFudzRBQ3FPcUl1SjFObDUyTENyWmZCaGhqckNTVDVfWnZJYmZFQ1NBYldhc3BMYXhDa3RSeFJrc3dfZmUxNklXQ2FRZ1FQbGEyT1JwYWRUSmd2SDdJcG1teVJEdS1LT1gta1B4R0JHaWtIQ296OS03RWJEZVRVNzVMem1UbGVFbzc2aE0tTTJOZzdScG9oUld4Rmg0T2VwVEtLMHVN?oc=5",
-      "resumen": "\"Mið\" de ENSLAVED: el grupo de Black Metal Progresivo forja uno de sus discos más tribales y místicos Hellpress",
-      "fecha": "2026-10-30T10:48:36+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "CRIM agotan entradas en tiempo récord y anuncian nuevas fechas en Tarragona y Barcelona - Metalcry.com",
-      "enlace": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQbFVBeU1ITGEySTdDejVHU3hpRHYyWERRU19yNXBUQ2VFdXdLdGJQTWl3U1UwSHlGdExQS0pzYVgxamNzSmhITm85REoyYjl0eV9VRmE0UElGVS1sN000dUl2V0J1ckpRNUZiYVFqYnFXYmw1RzFlMjdIRGV3X19uempvSV9hZUtma05WZ1pXSzRRclVZMjFYWFFPLUxpS01pV1hfMmZ6VEdtcGxrN2fSAbYBQVVfeXFMTUM3d0RTMEtybzR1NlFDS01wM3Q5b0NoVUtabHF0NlV5V09XOGhnTC1wVmlEWGEtTnQxYm9TVVRjVFNBeVZSa1BUZHJGUXNfVV9OR2ZFUlFpamlja2N6M3N4bGZ1dUVCSWpRcDhqM0JqaVpDSU95WFR5LVp1U3FOSkZ2NUxjdkZzemxwRVNPTDd2WTg5RDBiOW95OFU1UW4xcUN2X0poRi1GaE96RkE5XzNsOWRQSGc?oc=5",
-      "resumen": "CRIM agotan entradas en tiempo récord y anuncian nuevas fechas en Tarragona y Barcelona Metalcry.com",
-      "fecha": "2026-10-30T10:15:38+00:00"
-    },
-    {
-      "categoria": "Hardcore",
-      "titulo": "Dischord Records: cuatro décadas de independencia real - Foro3D",
-      "enlace": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPTEI2aXBzRmFCQmwyeE9rUEV2Tk9UZUVDVm9mR1BMYWZjdl94WHc0Q2RnQUdUZ1MxMDhtcUwxUFNHVVpNWWVNWVdaOWJrbThWcVBPZHI3MktuejVRUGdRYWxkX3loVHZOUUh3REFRRC0xNWhuaGE2WTVXTzEweU1FUS0yX1o5VlR4Ym1ST0FpaEVHLWFC?oc=5",
-      "resumen": "Dischord Records: cuatro décadas de independencia real Foro3D",
-      "fecha": "2026-10-30T10:00:00+00:00"
-    },
-    {
-      "categoria": "Hardcore",
-      "titulo": "Hells Bells Festival 2027 confirma a Midnight y suma 14 bandas en Szczecin - Foro3D",
-      "enlace": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxORTVyd21XY3hPQWJqRzNiR3VNLThLbGw3U1RES0d6ZU5fQld5SGh5dERZbmZPZExUSXo3Q3FfdGlmRnlnSmExcGxoWEktWXhBa0hBa2RJSHZmbW9RSXhBQVhLb2VjekNQQ3ZzZG9UQ1N5Ry1VZmEtVzJhdHZYVzdDXzJZTHR1WkFUQm41czVNM2FxczRsZ0c2MkNYblJIdzZRZW5LcUM2TGRJa2M?oc=5",
-      "resumen": "Hells Bells Festival 2027 confirma a Midnight y suma 14 bandas en Szczecin Foro3D",
-      "fecha": "2026-10-30T10:00:00+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "Noticias: Dynazty – Lambrini Girls – RadioCrimen – Searching Out Solutions - Metal Hammer España",
-      "enlace": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOQWRpWElfSWFtOHlWQlJ0TVFtN2N4dzBIWlU5QmZZQzdtaEpaUVF4M2RjUzdPTk1EaUNvZmMzdUlHanFqamZ3djVpVlpqYlc4N0haaVFuTlduZV9icXhOUklHVmprd1h2alBtaGM1R0szRGgwZjdfSDRsdk94OW11ejR5dW42RTJmR0E?oc=5",
-      "resumen": "Noticias: Dynazty – Lambrini Girls – RadioCrimen – Searching Out Solutions Metal Hammer España",
-      "fecha": "2026-10-30T09:00:00+00:00"
-    },
-    {
-      "categoria": "Metal",
-      "titulo": "BIME Bilbao 2026 la industria musical desde dentro - Metal Hammer España",
-      "enlace": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFA2VERmd1hfU1VVd0xPQzhnYW1vUDQybmRzWENSVDQ4OVdkVENvaVlFRkcySGV0T1daOFdNSXlQU0Z6eXg2eVdmUy0zSjRJRFltS2c?oc=5",
-      "resumen": "BIME Bilbao 2026 la industria musical desde dentro Metal Hammer España",
-      "fecha": "2026-10-30T08:46:34+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "Azero publica su nueva canción, ‘Inolvidable’, y anuncia el final de su gira en Zaragoza - Diario de Teruel",
-      "enlace": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPSy1PSjdKUkdBUXZjcmtOdnhIMUZLdmcyWW83MGlQNFVhQTJ1dlZoelNxRk9GQlJkZjRFWXZyc05NVThiZWprb1Bya3cxLUVXQ1liZE50RllhcTNUaF8zMnJZSktWX3dHWHh4bDRRblNIVWh3R1VPNzVoZDA2ZU5nRlE0NDU2TmhLWUdmRTlQamlyN0szU3ZtRWZ2b2VjVmQ1VHlnWGhUTzBpRmgwcGpkNzhBald0VFd4aTVqX3pEMA?oc=5",
-      "resumen": "Azero publica su nueva canción, ‘Inolvidable’, y anuncia el final de su gira en Zaragoza Diario de Teruel",
-      "fecha": "2026-10-30T08:45:38+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "Entrevistamos a Zack De La Rocha y Glen E Friedman: \"No creo que Turnstile pudiera existir sin algo como Bad Brains\" - Binaural",
-      "enlace": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNV003TDRfUklfd0JPYms4OGtKdmwyTlZsckFmMWhzMnJCaE9PVlhHaUg0S1I0UmRlMTBIT2NWUmQ1ZjdaeG1rX0lldmdlS1ZRMU9tZl9Yd0Ita0JMMndPcGxYV0ZRVXRVSURlVk9mZmF3WjJ0TnZiNDY3UElfdVBXV2lVU1NoaHFlTUhMZF9QR3h1RXVRSEFxTGx6RDZQNV9HajdGNldFN2ItMHc1YjBwRzhVbU5pQ1F3Q0g2Ti1sZGFIbnVlRnNyb0RjZTFJLVVqc1U0MlBITDhVMkhhcHVESUxPXzI?oc=5",
-      "resumen": "Entrevistamos a Zack De La Rocha y Glen E Friedman: \"No creo que Turnstile pudiera existir sin algo como Bad Brains\" Binaural",
-      "fecha": "2026-10-30T08:44:37+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "Minibús Intergalàctic te molarán si buscas el rock de siempre - Neo2 Magazine",
-      "enlace": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPRk9JWnUxT09xOW1lS3BmdEVnVkRidGtzMWRJVk52YjlJdC1xS3JBTXNRdXdxTEk1TkhwajdrWTZoUEkzWTdibGltNjRCVlBvc3V4OXNJREx3dHk4enkzZWZoVGZwX1l3a3Z5WWNOaWxEbDZHa19MdDdQMHFNM2htb1RqRTc4QQ?oc=5",
-      "resumen": "Minibús Intergalàctic te molarán si buscas el rock de siempre Neo2 Magazine",
-      "fecha": "2026-10-30T08:26:27+00:00"
-    },
-    {
-      "categoria": "Metal",
-      "titulo": "A Perfect Circle llega a CDMX junto a Dogstar, la banda de Keanu Reeves - Time Out México",
-      "enlace": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNQTRpTEpuTXNZRmxyamNnMDB5NXk3X2IwSk1CSTFWN1I4WjhVMTIyLWZZR0RDRGRQMjVnbjRxSVd5dlpicC03YXkwYkxpNTd4SVpZN2xQblQ1cHZPdnZtUklJcmRDUXVUOXZOVlVQMjhSN1RGald1WWh1NEJHYkhxTjBRMnFTRDRUeGxlY2RTVVZUNGYyRll4T2xBcHR0Z2FMLUdTOEJyWG5fbnZISHcybkgtVTVQeDJEMVZzOWpGbE8?oc=5",
-      "resumen": "A Perfect Circle llega a CDMX junto a Dogstar, la banda de Keanu Reeves Time Out México",
-      "fecha": "2026-10-30T06:00:00+00:00"
-    },
-    {
-      "categoria": "Metal",
-      "titulo": "SOiL estrena “Enemy X” tras una década - El Cuartel del Metal",
-      "enlace": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOcUNtMXBFb3JLbFNfZDBvaDlQYlNRMUxOendBaGJtZWh3RFJKTVVxaVhVSEN1ZzhCVUp1R1N3Z2FpSlhybXJnT1oySms4YXd4RXFzN0YwdUpQMmd6WERJd1ZEUXlyTFUtTUVxV3FqMEdabTRrSjZYeDF6RnVkSlNGVzQxdV9jdkl6TlE?oc=5",
-      "resumen": "SOiL estrena “Enemy X” tras una década El Cuartel del Metal",
-      "fecha": "2026-10-30T04:48:45+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "El Pintor Rock empieza la edición del 15.º aniversario con los primeros ‘pogos’ en el Parc de la Festa de Reus - diarimes.com",
-      "enlace": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPdHFialdsX1V1NkpwOUdtUl9DcDBwSDdOb0xHUTdGa3c2Rzk2YVZTMTRRX2ZnTjJhM0hQTE1mVk10ZGJZc2paQVBDR3FpVDMwVGktLXA1YmVpNDNEQ0ZzanFGbVdad2tfT0FmR0xfalBRLXVXcE9MU0lPRFdBZkxSYmxhOGRpTG54VUlOZGpVY1pHV0FjQWx5UU14b0NHZVlxQUJvRC0xa25QQ28xQk5zTzhHX2tkbC1sLVY3N0lnanRqNE0?oc=5",
-      "resumen": "El Pintor Rock empieza la edición del 15.º aniversario con los primeros ‘pogos’ en el Parc de la Festa de Reus diarimes.com",
-      "fecha": "2026-10-30T04:00:00+00:00"
-    },
-    {
-      "categoria": "Metal",
-      "titulo": "‘Yungblud: Idols’, la exposición fotográfica de Tom Pallant, llega a Londres en noviembre - Summa Inferno",
-      "enlace": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNNlhQbjNqUUJBdkFwNjN0S3lDak5BUEllVDlDZzk5ajZ6WUhPSUJ5RDY5MjJnS3lMczlselVDWHdaMUN1bC1ubHBFdzRXMExORlNMU19oaDlVSzRIWFBkS1pjTF9kX3ktUWhwdlAzYnRfcm9MMVdBbElhWHZCelFVYzVGQVZlb2R6dmww?oc=5",
-      "resumen": "‘Yungblud: Idols’, la exposición fotográfica de Tom Pallant, llega a Londres en noviembre Summa Inferno",
-      "fecha": "2026-10-30T01:22:33+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "La banda estadounidense Supersuckers recala hoy en Escenario Santander - El Diario Montañés",
-      "enlace": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNVTJPR3pCb1dlajllWDZoTFYzNzdWMjF2bGN5VWZTcFo1c2o1ZEVmVTlOSG9aVGpnNzhnLTRHdlFzYl8yNGhYQzlIcmowNURYc042cXpYa3RnUkVBcm9HTUhkU290YUhfUGxlOGFxUDlEMmEtYkhJMGp0MVZ4STQ4OWdicFdTSkVMVXFkX2tvWTJDaUt2aFVuN2tjbFpvWF9NTDV0dHI2cl94R09Kd08zbmFrbEVraWp4SVdYdzMwMl9BbVZLLUE?oc=5",
-      "resumen": "La banda estadounidense Supersuckers recala hoy en Escenario Santander El Diario Montañés",
-      "fecha": "2026-10-30T00:00:00+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "El punk i el rock inunden Reus: comencen els tres dies de PintorRock - Diari de Tarragona",
-      "enlace": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQVEI0ZW1TazBUcDBLTFI5OXpLZzR2clNQT3h0NlVyc2F4YlFIWWNSWk9fYXJWcWljTUNFNHJvbzUtSnBmUGtjUGlvRHdwUHZRbkxkdHpBVVdzT0ZHcVlCYVoxcUMzaVVlZlhPLWdzemF6LUoxS0lzdTFqVFdUQm53cUF4UWdBVFBvLWdCRTNUV19kNDM3RU93VHZ5MVVpV1p0cU82aTNsSmFFZ2xa0gGyAUFVX3lxTE9UN3dwdm4yTUYxakpGQ0RJWkNVWTJ6a2pMcEM2RUlSLW9lbGhzSVdoR2luMUhEcmZzV0gzaDcxN3o1TjZqbmNlNlhSYzZzMmlHcm43YmUxc1hsRDVjYmY0WlhYdFRGemdRV0F2dWlWYllzWFh5XzB0WkJQMHRCVnV6WTlQalhhM2xhUzA1M0p2bGpnckFFU0ZTUU1QbHZFcktIX3BzUnNoRmFXVkhIQTBzR2c?oc=5",
-      "resumen": "El punk i el rock inunden Reus: comencen els tres dies de PintorRock Diari de Tarragona",
-      "fecha": "2026-10-29T20:09:13+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "Haywire y el caos en Times Square - Rock and Blog",
-      "enlace": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9EM29ERXlmOEJrWEJEOUpEZ0U3cU02Z2UwT2lObThwbFItbjFqMHJHS2g5RUEtc181NjN1WDIzSEEzNVZQTkJndDY0LUdWLUNEQ1hxcmpqbDlnelRicEFKU2NQTEU1TXpZQ1E?oc=5",
-      "resumen": "Haywire y el caos en Times Square Rock and Blog",
-      "fecha": "2026-10-29T19:48:05+00:00"
-    },
-    {
-      "categoria": "Metal",
-      "titulo": "Benediction: Caos organizado - Rockaxis",
-      "enlace": "https://news.google.com/rss/articles/CBMiekFVX3lxTFAzVGtucDhOZk9pQWhvU1Y4VVZUNzdacUg4ZnRYVVBtQ0xIQklyQzh3Z2ZIcXpuNFNYYmE5SHc2N0JDb0NnYjl6cG5BRHl6eHlMdmxvV3N0U1VEVHdLVlZ4V0ctbEc1b0x5SG5xR1pWY0ZOc1k1b1AwY1p3?oc=5",
-      "resumen": "Benediction: Caos organizado Rockaxis",
-      "fecha": "2026-10-29T19:30:25+00:00"
-    },
-    {
-      "categoria": "Metal",
-      "titulo": "Pete Townshend admite por qué evitaba escuchar a Led Zeppelin y ahora quiere ver a Jimmy Page - LifeBoxset",
-      "enlace": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9SMERZODJFcTA5eFVqdVJ2X3dLaURDWUs5TXdsYTVNX2RHVHZILW94QXB2Y2ExQnIwT2FVSVo1NTVheVdjVGdjcVYtRUJCYUtGbmxZcl81OWRGakFYSXIxQnJBbDZlekc4?oc=5",
-      "resumen": "Pete Townshend admite por qué evitaba escuchar a Led Zeppelin y ahora quiere ver a Jimmy Page LifeBoxset",
-      "fecha": "2026-10-29T18:10:00+00:00"
-    },
-    {
-      "categoria": "Hardcore",
-      "titulo": "Militarie Gun: el post-hardcore y hardcore punk que llega al Corona Capital - Sopitas.com",
-      "enlace": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPR1Q2WWUtZlp3M1ZPUm9vR1VvS19sbFg3aENSaVBGNmdwOF85SGhHSjlYWjhnRWNWV0Fva2FvNHNCYlF6TVNFdTNXU2xFX19DLV9fdlJNaUlYUkZURGd6cXhyTC1RYW0xNHE5UVZCd0JhTFUybzRpeWgtVzdna1R2ZjU3MUxrcWk3M3NLQUVpWmZJZ1VkVFdvb0ZWczZNRjBkS2NFS1ZtTjY1QQ?oc=5",
-      "resumen": "Militarie Gun: el post-hardcore y hardcore punk que llega al Corona Capital Sopitas.com",
-      "fecha": "2026-10-29T17:27:07+00:00"
-    },
-    {
-      "categoria": "Metal",
-      "titulo": "Europe – Come This Madness – (José Luis Gutiérrez) - Metal Hammer España",
-      "enlace": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1HMmRDRWZyc29SVHdSVmF3ci1Db0laRm8ybUwtVEFSQVdrRGdzdXNaZXFWOVp2N2dNUVgya21ObjB6ZGU3c0pxS1hGWks0ejNyakI1eHFBci1fX0M5eFotMlk5bk9EUU9lV0RpS3BPZWZsMkRzcEVF?oc=5",
-      "resumen": "Europe – Come This Madness – (José Luis Gutiérrez) Metal Hammer España",
-      "fecha": "2026-10-29T17:00:00+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "La sala Rock & Blues Café de Zaragoza tendrá 22 citas musicales en noviembre - Noticias CLAVE",
-      "enlace": "https://news.google.com/rss/articles/CBMingFBVV95cUxPZUttQThKZ2xNbWNmSzI4Y2V4WjVXd3RxTTNlbzNCcGpJWXZxS0tCdFRvSkVtUGhvdDZKT25Kemo1dDc5R0ktZWVsTkFTQzJVeGZSNWdhZS1qNnd3VEdadDRIc1U2WFIzS0VreGFOQVZSTTRULW9qaVoxaHJGN19oRVpJLXl5TXVMa196c0dHNDNobHQyRkthUlp4c3BDQQ?oc=5",
-      "resumen": "La sala Rock & Blues Café de Zaragoza tendrá 22 citas musicales en noviembre Noticias CLAVE",
-      "fecha": "2026-10-29T16:24:43+00:00"
-    },
-    {
-      "categoria": "Punk",
-      "titulo": "La historia del legendario primer disco de Ramones, en un libro de Raúl Tamarit - Efe Eme",
-      "enlace": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5qcks2UjNSVFhqam94ZVNrY1A3TXVRNjYxRFhOaWZEaDNfMUJiSXNiNkh2M09pQ0VONWVzb1d6UmdMeEtFcVZNT2ZvVUptcEhSX0ZkT1FkYmJ6SG8?oc=5",
-      "resumen": "La historia del legendario primer disco de Ramones, en un libro de Raúl Tamarit Efe Eme",
-      "fecha": "2026-10-29T15:01:11+00:00"
-    }
-  ]
-}
+[
+  {
+    "titulo": "Crónicas de conciertos",
+    "url": "https://www.insonoro.com/cronicasconciertos",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-01"
+  },
+  {
+    "titulo": "Reseñas de discos",
+    "url": "https://www.insonoro.com/criticasdiscos",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-01"
+  },
+  {
+    "titulo": "Tinta & Decibelios",
+    "url": "https://www.insonoro.com/tintadecibelios",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-01"
+  },
+  {
+    "titulo": "Girls to the Stage!",
+    "url": "https://www.insonoro.com/girlstothestage",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-01"
+  },
+  {
+    "titulo": "Plataformas digitales",
+    "url": "https://orcd.co/loszigarros_carneconpatatas",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-01"
+  },
+  {
+    "titulo": "Envíanos tus noticias",
+    "url": "https://www.insonoro.com/colaboranoticias",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-01"
+  },
+  {
+    "titulo": "Agenda, conciertos",
+    "url": "https://www.insonoro.com/agenda",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-01"
+  },
+  {
+    "titulo": "Búsqueda general",
+    "url": "https://www.insonoro.com/buscar.php",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-01"
+  },
+  {
+    "titulo": "Licencia CreativeCommons",
+    "url": "http://creativecommons.org/licenses/by-nc-nd/2.5/es/",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-01"
+  }
+]
