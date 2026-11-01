@@ -4,9 +4,8 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import datetime, timezone
 
-# Radikal Sonoro: fuentes de noticias underground
 FUENTES = [
-    "https://www.insonoro.com/",
+    "https://www.insonoro.com/"
 ]
 
 CARPETA_DATA = "data"
@@ -25,7 +24,10 @@ def obtener_noticias():
             )
             respuesta.raise_for_status()
 
-            soup = BeautifulSoup(respuesta.text, "html.parser")
+            soup = BeautifulSoup(
+                respuesta.text,
+                "html.parser"
+            )
 
             for enlace in soup.find_all("a", href=True):
                 titulo = enlace.get_text(" ", strip=True)
@@ -49,7 +51,9 @@ def obtener_noticias():
                     "titulo": titulo,
                     "url": destino,
                     "fuente": "Insonoro",
-                    "fecha": datetime.now(timezone.utc).strftime("%Y-%m-%d")
+                    "fecha": datetime.now(
+                        timezone.utc
+                    ).strftime("%Y-%m-%d")
                 })
 
                 if len(noticias) >= 30:
@@ -62,7 +66,12 @@ def obtener_noticias():
 
 
 def guardar_json(nombre, contenido):
-    ruta = os.path.join(CARPETA_DATA, nombre)
+    os.makedirs(CARPETA_DATA, exist_ok=True)
+
+    ruta = os.path.join(
+        CARPETA_DATA,
+        nombre
+    )
 
     with open(ruta, "w", encoding="utf-8") as archivo:
         json.dump(
@@ -74,7 +83,7 @@ def guardar_json(nombre, contenido):
 
 
 def main():
-    os.makedirs(CARPETA_DATA, exist_ok=True)
+    print("Iniciando actualización de Radikal Sonoro...")
 
     noticias = obtener_noticias()
 
@@ -82,7 +91,10 @@ def main():
     guardar_json("conciertos.json", [])
     guardar_json("videos.json", [])
 
-    print(f"Actualización terminada. Noticias encontradas: {len(noticias)}")
+    print(
+        "Actualización terminada. "
+        f"Noticias encontradas: {len(noticias)}"
+    )
 
 
 if _name_ == "_main_":
