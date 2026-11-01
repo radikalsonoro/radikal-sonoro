@@ -68,10 +68,7 @@ def obtener_noticias():
 def guardar_json(nombre, contenido):
     os.makedirs(CARPETA_DATA, exist_ok=True)
 
-    ruta = os.path.join(
-        CARPETA_DATA,
-        nombre
-    )
+    ruta = os.path.join(CARPETA_DATA, nombre)
 
     with open(ruta, "w", encoding="utf-8") as archivo:
         json.dump(
@@ -83,7 +80,7 @@ def guardar_json(nombre, contenido):
 
 
 def main():
-    print("Iniciando actualización de Radikal Sonoro...")
+    print("Iniciando Radikal Sonoro...")
 
     noticias = obtener_noticias()
 
@@ -91,11 +88,8 @@ def main():
     guardar_json("conciertos.json", [])
     guardar_json("videos.json", [])
 
-    print(
-        "Actualización terminada. "
-        f"Noticias encontradas: {len(noticias)}"
-    )
+    print("Actualización terminada.")
+    print("Noticias encontradas:", len(noticias))
 
 
-if _name_ == "_main_":
-    main()
+main()
