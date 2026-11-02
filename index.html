@@ -89,8 +89,11 @@ label{display:grid;gap:6px;font-weight:bold}input,textarea{font:inherit;width:10
 
 <section id="videos">
 <h2>Videos</h2>
-<div class="video" id="vbox"></div>
-<p class="small">Se actualiza solo cuando agregas videos a tu lista de YouTube.</p>
+<div class="box" id="vbox" style="display:grid;gap:12px">
+<p>Descubre vídeos y directos recientes de la escena. Cada enlace abre YouTube con la búsqueda correspondiente.</p>
+<ul class="list" id="video-list"><li>Preparando búsquedas de vídeos…</li></ul>
+</div>
+<p class="small">Las búsquedas se actualizan con los resultados disponibles en YouTube; Radikal Sonoro no aloja los vídeos.</p>
 </section>
 
 <section id="spotify">
@@ -280,13 +283,22 @@ document.getElementById("play").addEventListener("click",function(){
   audio.play().then(function(){msg.textContent="Sonando en vivo.";}).catch(function(){msg.textContent="No se pudo reproducir. Intenta de nuevo.";});
 });
 
-var vb=document.getElementById("vbox");
-if(YT_PLAYLIST_ID){
-  vb.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/videoseries?list='+encodeURIComponent(YT_PLAYLIST_ID)+'" title="Videos" allowfullscreen loading="lazy"></iframe>';
-}else{
-  vb.style.display="grid";vb.style.placeItems="center";vb.style.color="#e9e7df";vb.style.padding="16px";vb.style.textAlign="center";
-  vb.textContent="Aquí irá tu lista de videos de YouTube.";
-}
+var videoList=document.getElementById("video-list");
+var videoSearches=[
+  ["Punk · vídeos y directos","punk underground music videos live sessions"],
+  ["Hardcore · conciertos completos","hardcore punk live full sets"],
+  ["Ska · vídeos y sesiones","ska punk official videos live sessions"],
+  ["Metal underground · vídeos","underground metal official music videos"],
+  ["Punk estatal · escena española","punk español grupos conciertos videoclips"],
+  ["Hardcore estatal · escena española","hardcore español conciertos directos"]
+];
+videoList.innerHTML="";
+videoSearches.forEach(function(item){
+  var li=document.createElement("li"),a=document.createElement("a");
+  a.href="https://www.youtube.com/results?search_query="+encodeURIComponent(item[1]);
+  a.target="_blank";a.rel="noopener noreferrer";a.textContent=item[0]+" ↗";
+  li.appendChild(a);videoList.appendChild(li);
+});
 
 var sb=document.getElementById("sbox");
 var m=SPOTIFY_URL.match(/open\.spotify\.com\/(?:intl-[a-z]+\/)?(playlist|album|artist|track|show|episode)\/([A-Za-z0-9]+)/);
