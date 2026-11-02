@@ -110,13 +110,11 @@ label{display:grid;gap:6px;font-weight:bold}input,textarea{font:inherit;width:10
 </section>
 
 <section id="conciertos">
-<h2>Conciertos</h2>
-<ul class="list">
-<li><span class="when">15 Nov</span>Banda de ejemplo + invitados, Tu ciudad</li>
-<li><span class="when">29 Nov</span>Noche de metal, Club de ejemplo</li>
-<li><span class="when">13 Dic</span>Ska fest, Lugar por confirmar</li>
-</ul>
-<p class="small">¿Tocas con tu banda? Envía aquí la información de tu concierto.</p>
+<h2>Conciertos y festivales</h2>
+<p class="small">Anuncios y noticias de conciertos punk, hardcore, ska y metal underground. Abre cada enlace para comprobar fecha, sala y entradas con la organización.</p>
+<div id="concert-news-status" class="small" role="status" aria-live="polite">Buscando anuncios de conciertos…</div>
+<ul class="list" id="concert-news-list"><li>Conectando con las fuentes…</li></ul>
+<p class="small">¿Organizas un concierto o tocas en una banda? Envíanos la información para revisarla.</p>
 <form id="concert-form" class="box" style="display:grid;gap:12px" onsubmit="return sendConcert(event)">
 <label>Grupo o artista *<input name="grupo" required></label>
 <label>Nombre del concierto o festival *<input name="evento" required></label>
@@ -165,8 +163,12 @@ async function loadNews(){
   var list=document.getElementById("news-list");
   var status=document.getElementById("news-status");
   var queries=[
-    {label:"España",q:'(punk OR hardcore OR ska OR metal) (concierto OR festival OR disco OR gira)',hl:"es-419",gl:"ES",ceid:"ES:es"},
-    {label:"Internacional",q:'(punk OR hardcore OR ska OR metal) (music OR band OR tour OR album OR festival)',hl:"en-US",gl:"US",ceid:"US:en"}
+    {label:"España · Punk",q:'punk (conciertos OR festival OR gira OR disco) España -mainstream',hl:"es",gl:"ES",ceid:"ES:es"},
+    {label:"España · Hardcore",q:'hardcore (conciertos OR festival OR gira OR disco) España',hl:"es",gl:"ES",ceid:"ES:es"},
+    {label:"España · Ska",q:'ska (conciertos OR festival OR gira OR disco) España',hl:"es",gl:"ES",ceid:"ES:es"},
+    {label:"España · Metal",q:'metal underground (conciertos OR festival OR gira OR disco) España',hl:"es",gl:"ES",ceid:"ES:es"},
+    {label:"Internacional · Punk/Hardcore/Ska",q:'(punk OR hardcore OR ska) (tour OR festival OR album OR release) underground',hl:"en-US",gl:"US",ceid:"US:en"},
+    {label:"Internacional · Metal",q:'underground metal (tour OR festival OR album OR release)',hl:"en-US",gl:"US",ceid:"US:en"}
   ];
   status.textContent="Buscando noticias recientes…";
   try{
@@ -202,6 +204,52 @@ async function loadNews(){
     list.innerHTML='<li>Prueba a recargar la página o consulta las noticias directamente en <a href="https://news.google.com/search?q=punk%20hardcore%20ska%20metal&hl=es&gl=ES&ceid=ES:es" target="_blank" rel="noopener noreferrer">Google News: punk, hardcore, ska y metal</a>.</li>';
   }
 }
+// Anuncios automáticos de conciertos: son noticias/enlaces, no fechas verificadas.
+async function loadConcertNews(){
+  var list=document.getElementById("concert-news-list");
+  var status=document.getElementById("concert-news-status");
+  var queries=[
+    {label:"España · Punk/Hardcore",q:'(punk OR hardcore) (conciertos OR festival OR gira) España',hl:"es",gl:"ES",ceid:"ES:es"},
+    {label:"España · Ska/Metal",q:'(ska OR metal underground) (conciertos OR festival OR gira) España',hl:"es",gl:"ES",ceid:"ES:es"},
+    {label:"Internacional",q:'(punk OR hardcore OR ska OR underground metal) (tour dates OR festival OR live shows)',hl:"en-US",gl:"US",ceid:"US:en"}
+  ];
+  status.textContent="Buscando anuncios recientes de conciertos…";
+  try{
+    var all=[];
+    for(var i=0;i<queries.length;i++){
+      var x=queries[i];
+      var rss="https://news.google.com/rss/search?q="+encodeURIComponent(x.q)+"&hl="+x.hl+"&gl="+x.gl+"&ceid="+x.ceid;
+      var api="https://api.rss2json.com/v1/api.json?rss_url="+encodeURIComponent(rss);
+      var response=await fetch(api);
+      if(!response.ok)continue;
+      var data=await response.json();
+      if(data.status==="ok"&&Array.isArray(data.items)){
+        data.items.forEach(function(item){item._region=x.label;all.push(item);});
+      }
+    }
+    var seen={},items=all.filter(function(item){
+      var key=(item.link||item.title||"").trim();
+      if(!key||seen[key])return false;seen[key]=true;
+      var published=new Date(item.pubDate||0);
+      return !isNaN(published)&&published.getTime()>Date.now()-90*86400000;
+    }).sort(function(a,b){return new Date(b.pubDate||0)-new Date(a.pubDate||0);}).slice(0,10);
+    if(!items.length)throw new Error("No hay anuncios recientes disponibles.");
+    list.innerHTML="";
+    items.forEach(function(item){
+      var li=document.createElement("li"),a=document.createElement("a"),meta=document.createElement("div");
+      a.href=item.link||"#";a.target="_blank";a.rel="noopener noreferrer";a.textContent=item.title||"Ver anuncio";
+      var date=item.pubDate?new Date(item.pubDate):null;
+      meta.className="small";
+      meta.textContent=item._region+" · Publicado "+(date&&!isNaN(date)?date.toLocaleDateString("es-ES"):"")+" · Google News";
+      li.appendChild(a);li.appendChild(meta);list.appendChild(li);
+    });
+    status.textContent="Anuncios actualizados: "+new Date().toLocaleString("es-ES")+". Comprueba siempre los datos con la sala o banda.";
+  }catch(error){
+    status.textContent="No se pudieron cargar anuncios de conciertos ahora mismo.";
+    list.innerHTML='<li>Consulta <a href="https://news.google.com/search?q=punk%20hardcore%20ska%20metal%20conciertos&hl=es&gl=ES&ceid=ES:es" target="_blank" rel="noopener noreferrer">Google News: conciertos punk, hardcore, ska y metal</a>.</li>';
+  }
+}
+
 function sendConcert(event){
   event.preventDefault();
   var form=document.getElementById("concert-form"),data=new FormData(form),subject="Concierto para la agenda de Radikal Sonoro: "+(data.get("evento")||data.get("grupo"));
@@ -215,6 +263,7 @@ function sendConcert(event){
 
 (function(){
 loadNews();
+loadConcertNews();
 var t=document.getElementById("title"),txt=t.textContent.trim(),cls=["a","b","c","d"],i=0,out="";
 txt.split(" ").forEach(function(w,wi){
   if(wi>0)out+='<span class="gap" aria-hidden="true"></span>';
