@@ -176,37 +176,41 @@ async function loadNews(){
     {label:"Internacional · Metal",q:'underground metal (tour OR festival OR album OR release)',hl:"en-US",gl:"US",ceid:"US:en"}
   ];
   status.textContent="Buscando noticias recientes…";
-  try{
-    var all=[];
-    for(var i=0;i<queries.length;i++){
-      var x=queries[i];
+  list.innerHTML="";
+  var results=await Promise.all(queries.map(async function(x){
+    try{
       var rss="https://news.google.com/rss/search?q="+encodeURIComponent(x.q)+"&hl="+x.hl+"&gl="+x.gl+"&ceid="+x.ceid;
       var api="https://api.rss2json.com/v1/api.json?rss_url="+encodeURIComponent(rss);
-      var response=await fetch(api);
-      if(!response.ok) throw new Error("No se pudo consultar el servicio de noticias.");
-      var data=await response.json();
-      if(data.status==="ok"&&Array.isArray(data.items)){
-        data.items.forEach(function(item){item._region=x.label;all.push(item);});
-      }
-    }
-    var seen={},items=all.filter(function(item){
-      var key=(item.link||item.title||"").trim();
-      if(!key||seen[key])return false;seen[key]=true;return true;
-    }).sort(function(a,b){return new Date(b.pubDate||0)-new Date(a.pubDate||0);}).slice(0,12);
-    if(!items.length) throw new Error("No hay noticias disponibles ahora mismo.");
-    list.innerHTML="";
+      var controller=new AbortController();
+      var timer=setTimeout(function(){controller.abort();},9000);
+      try{
+        var response=await fetch(api,{signal:controller.signal,cache:"no-store"});
+        if(!response.ok)return [];
+        var data=await response.json();
+        return data.status==="ok"&&Array.isArray(data.items)?data.items.map(function(item){item._region=x.label;return item;}):[];
+      }finally{clearTimeout(timer);}
+    }catch(e){return [];}
+  }));
+  var all=results.reduce(function(acc,items){return acc.concat(items);},[]);
+  var seen={},items=all.filter(function(item){
+    var key=(item.link||item.title||"").trim();
+    if(!key||seen[key])return false;
+    seen[key]=true;
+    return true;
+  }).sort(function(a,b){return new Date(b.pubDate||0)-new Date(a.pubDate||0);}).slice(0,15);
+  if(items.length){
     items.forEach(function(item){
       var li=document.createElement("li"),a=document.createElement("a"),meta=document.createElement("div");
       a.href=item.link||"#";a.target="_blank";a.rel="noopener noreferrer";a.textContent=item.title||"Leer noticia";
       var date=item.pubDate?new Date(item.pubDate):null;
       meta.className="small";
-      meta.textContent=(item._region==="España"?"España · ":"Internacional · ")+(date&&!isNaN(date)?date.toLocaleDateString("es-ES"):"")+" · Google News";
+      meta.textContent=(item._region||"Escena underground")+" · "+(date&&!isNaN(date)?date.toLocaleDateString("es-ES"):"")+" · Google News";
       li.appendChild(a);li.appendChild(meta);list.appendChild(li);
     });
-    status.textContent="Noticias actualizadas: "+new Date().toLocaleString("es-ES")+".";
-  }catch(error){
-    status.textContent="No se pudieron cargar las noticias automáticamente ahora mismo.";
-    list.innerHTML='<li>Prueba a recargar la página o consulta las noticias directamente en <a href="https://news.google.com/search?q=punk%20hardcore%20ska%20metal&hl=es&gl=ES&ceid=ES:es" target="_blank" rel="noopener noreferrer">Google News: punk, hardcore, ska y metal</a>.</li>';
+    status.textContent="Noticias cargadas ("+items.length+"). Última consulta: "+new Date().toLocaleTimeString("es-ES")+".";
+  }else{
+    status.textContent="Ahora no responden las fuentes automáticas. Puedes consultar estas noticias directamente:";
+    list.innerHTML='<li><a href="https://news.google.com/search?q=punk%20hardcore%20ska%20metal%20underground&hl=es&gl=ES&ceid=ES:es" target="_blank" rel="noopener noreferrer">Abrir noticias de punk, hardcore, ska y metal underground</a></li>';
   }
 }
 // Anuncios automáticos de conciertos: enlaces recientes de fuentes públicas.
@@ -321,7 +325,7 @@ function tick(){
   try{
     var n=nowIn();
     if(n.d===3&&n.m>=1200&&n.m<1320){ls.innerHTML='<span class="badge">En vivo ahora</span>Estamos al aire. Dale al botón de la radio.';return;}
-    var diff=((3-n.d)*1440+1200-n.m+10080)%10080,d=Math.floor(diff/1440),h=Math.floor(diff%1440/60),mi=diff%60;
+    var diff=((3-n.d)*1440+1200-n.m+10080)%10080;if(diff===0)diff=10080;var d=Math.floor(diff/1440),h=Math.floor(diff%1440/60),mi=diff%60;
     ls.textContent="Próxima emisión en "+(d?d+(d===1?" día, ":" días, "):"")+h+" h "+mi+" min.";
   }catch(e){ls.textContent="Programa en vivo con música, invitados y mucho ruido.";}
 }
