@@ -115,7 +115,9 @@ label{display:grid;gap:6px;font-weight:bold}input,textarea{font:inherit;width:10
 <div id="concert-news-status" class="small" role="status" aria-live="polite">Buscando anuncios de conciertos…</div>
 <ul class="list" id="concert-news-list"><li>Conectando con las fuentes…</li></ul>
 <p class="small">¿Organizas un concierto o tocas en una banda? Envíanos la información para revisarla.</p>
-<form id="concert-form" class="box" style="display:grid;gap:12px" onsubmit="return sendConcert(event)">
+<form id="concert-form" class="box" name="concert-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" action="/gracias.html" style="display:grid;gap:12px">
+<input type="hidden" name="form-name" value="concert-form">
+<p hidden><label>No rellenes este campo: <input name="bot-field"></label></p>
 <label>Grupo o artista *<input name="grupo" required></label>
 <label>Nombre del concierto o festival *<input name="evento" required></label>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px">
@@ -134,7 +136,7 @@ label{display:grid;gap:6px;font-weight:bold}input,textarea{font:inherit;width:10
 <label>Información adicional<textarea name="info" rows="4"></textarea></label>
 <label>Correo de contacto<input type="email" name="email" required></label>
 <button class="chip" type="submit">Enviar concierto</button>
-<p class="small" id="concert-msg" role="status">Este formulario prepara un correo. Para publicar automáticamente y recibir archivos online hay que conectarlo a un servicio de formularios; el HTML solo no puede almacenar ni publicar envíos.</p>
+<p class="small" id="concert-msg" role="status">El formulario enviará los datos a Radikal Sonoro mediante Netlify. Revisaremos la información antes de añadirla a la web.</p>
 </form>
 </section>
 
@@ -248,17 +250,6 @@ async function loadConcertNews(){
     status.textContent="No se pudieron cargar anuncios de conciertos ahora mismo.";
     list.innerHTML='<li>Consulta <a href="https://news.google.com/search?q=punk%20hardcore%20ska%20metal%20conciertos&hl=es&gl=ES&ceid=ES:es" target="_blank" rel="noopener noreferrer">Google News: conciertos punk, hardcore, ska y metal</a>.</li>';
   }
-}
-
-function sendConcert(event){
-  event.preventDefault();
-  var form=document.getElementById("concert-form"),data=new FormData(form),subject="Concierto para la agenda de Radikal Sonoro: "+(data.get("evento")||data.get("grupo"));
-  var lines=[];
-  data.forEach(function(value,key){if(key!=="cartel"&&value)lines.push(key+": "+value);});
-  lines.push("\nNota: si adjuntaste un cartel, añádelo manualmente al correo que se abra.");
-  document.getElementById("concert-msg").textContent="Se abrirá tu aplicación de correo. Revisa el mensaje y envíalo; el concierto no se publica automáticamente con este formulario HTML.";
-  window.location.href="mailto:radikalsonororadio@gmail.com?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(lines.join("\n"));
-  return false;
 }
 
 (function(){
