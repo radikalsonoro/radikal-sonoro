@@ -206,52 +206,63 @@ async function loadNews(){
     list.innerHTML='<li>Prueba a recargar la página o consulta las noticias directamente en <a href="https://news.google.com/search?q=punk%20hardcore%20ska%20metal&hl=es&gl=ES&ceid=ES:es" target="_blank" rel="noopener noreferrer">Google News: punk, hardcore, ska y metal</a>.</li>';
   }
 }
-// Anuncios automáticos de conciertos: son noticias/enlaces, no fechas verificadas.
+// Anuncios automáticos de conciertos: enlaces recientes de fuentes públicas.
 async function loadConcertNews(){
   var list=document.getElementById("concert-news-list");
   var status=document.getElementById("concert-news-status");
   var queries=[
-    {label:"España · Punk/Hardcore",q:'(punk OR hardcore) (conciertos OR festival OR gira) España',hl:"es",gl:"ES",ceid:"ES:es"},
-    {label:"España · Ska/Metal",q:'(ska OR metal underground) (conciertos OR festival OR gira) España',hl:"es",gl:"ES",ceid:"ES:es"},
-    {label:"Internacional",q:'(punk OR hardcore OR ska OR underground metal) (tour dates OR festival OR live shows)',hl:"en-US",gl:"US",ceid:"US:en"}
+    {label:"España · Punk y hardcore",q:'punk OR hardcore conciertos España',hl:"es",gl:"ES",ceid:"ES:es"},
+    {label:"España · Ska",q:'ska conciertos España',hl:"es",gl:"ES",ceid:"ES:es"},
+    {label:"España · Metal underground",q:'metal underground conciertos España',hl:"es",gl:"ES",ceid:"ES:es"},
+    {label:"Euskadi · Punk y hardcore",q:'punk OR hardcore conciertos Euskadi País Vasco',hl:"es",gl:"ES",ceid:"ES:es"},
+    {label:"Internacional · Punk y hardcore",q:'punk hardcore tour dates festival',hl:"en-US",gl:"US",ceid:"US:en"}
   ];
-  status.textContent="Buscando anuncios recientes de conciertos…";
-  try{
-    var all=[];
-    for(var i=0;i<queries.length;i++){
-      var x=queries[i];
+  status.textContent="Buscando conciertos y festivales…";
+  list.innerHTML="";
+  var all=[];
+  await Promise.all(queries.map(async function(x){
+    try{
       var rss="https://news.google.com/rss/search?q="+encodeURIComponent(x.q)+"&hl="+x.hl+"&gl="+x.gl+"&ceid="+x.ceid;
       var api="https://api.rss2json.com/v1/api.json?rss_url="+encodeURIComponent(rss);
-      var response=await fetch(api);
-      if(!response.ok)continue;
-      var data=await response.json();
-      if(data.status==="ok"&&Array.isArray(data.items)){
-        data.items.forEach(function(item){item._region=x.label;all.push(item);});
-      }
-    }
-    var seen={},items=all.filter(function(item){
-      var key=(item.link||item.title||"").trim();
-      if(!key||seen[key])return false;seen[key]=true;
-      var published=new Date(item.pubDate||0);
-      return !isNaN(published)&&published.getTime()>Date.now()-90*86400000;
-    }).sort(function(a,b){return new Date(b.pubDate||0)-new Date(a.pubDate||0);}).slice(0,10);
-    if(!items.length)throw new Error("No hay anuncios recientes disponibles.");
-    list.innerHTML="";
+      var controller=new AbortController();
+      var timer=setTimeout(function(){controller.abort();},9000);
+      try{
+        var response=await fetch(api,{signal:controller.signal,cache:"no-store"});
+        if(!response.ok)return;
+        var data=await response.json();
+        if(data.status==="ok"&&Array.isArray(data.items)){
+          data.items.forEach(function(item){item._region=x.label;all.push(item);});
+        }
+      }finally{clearTimeout(timer);}
+    }catch(e){}
+  }));
+  var seen={},items=all.filter(function(item){
+    var key=(item.link||item.title||"").trim();
+    if(!key||seen[key])return false;
+    seen[key]=true;
+    var published=new Date(item.pubDate||0);
+    return !isNaN(published)&&published.getTime()>Date.now()-365*86400000;
+  }).sort(function(a,b){return new Date(b.pubDate||0)-new Date(a.pubDate||0);}).slice(0,15);
+  if(items.length){
     items.forEach(function(item){
       var li=document.createElement("li"),a=document.createElement("a"),meta=document.createElement("div");
-      a.href=item.link||"#";a.target="_blank";a.rel="noopener noreferrer";a.textContent=item.title||"Ver anuncio";
+      a.href=item.link;a.target="_blank";a.rel="noopener noreferrer";a.textContent=item.title||"Ver anuncio";
       var date=item.pubDate?new Date(item.pubDate):null;
       meta.className="small";
-      meta.textContent=item._region+" · Publicado "+(date&&!isNaN(date)?date.toLocaleDateString("es-ES"):"")+" · Google News";
+      meta.textContent=item._region+" · "+(date&&!isNaN(date)?date.toLocaleDateString("es-ES"):"")+" · Google News";
       li.appendChild(a);li.appendChild(meta);list.appendChild(li);
     });
-    status.textContent="Anuncios actualizados: "+new Date().toLocaleString("es-ES")+". Comprueba siempre los datos con la sala o banda.";
-  }catch(error){
-    status.textContent="No se pudieron cargar anuncios de conciertos ahora mismo.";
-    list.innerHTML='<li>Consulta <a href="https://news.google.com/search?q=punk%20hardcore%20ska%20metal%20conciertos&hl=es&gl=ES&ceid=ES:es" target="_blank" rel="noopener noreferrer">Google News: conciertos punk, hardcore, ska y metal</a>.</li>';
+    status.textContent="Resultados encontrados. Comprueba siempre fecha, sala y entradas con la organización.";
+  }else{
+    status.textContent="El servicio de noticias no ha respondido. Puedes consultar estas búsquedas actualizadas:";
+    queries.forEach(function(x){
+      var li=document.createElement("li"),a=document.createElement("a");
+      a.href="https://news.google.com/search?q="+encodeURIComponent(x.q)+"&hl="+x.hl+"&gl="+x.gl+"&ceid="+x.ceid;
+      a.target="_blank";a.rel="noopener noreferrer";a.textContent="Buscar "+x.label;
+      li.appendChild(a);list.appendChild(li);
+    });
   }
 }
-
 (function(){
 loadNews();
 loadConcertNews();
