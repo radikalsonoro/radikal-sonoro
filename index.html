@@ -115,6 +115,7 @@ label{display:grid;gap:6px;font-weight:bold}input,textarea{font:inherit;width:10
 <section id="conciertos">
 <h2>Conciertos y festivales</h2>
 <p class="small">Anuncios y noticias de conciertos punk, hardcore, ska y metal underground. Abre cada enlace para comprobar fecha, sala y entradas con la organización.</p>
+<p class="small">Agenda colaboradora: <a href="https://primeralineavkbar.com/index.php/trinchera/" target="_blank" rel="noopener noreferrer">La Trinchera · Primera Línea VK Bar</a>.</p>
 <div id="concert-news-status" class="small" role="status" aria-live="polite">Buscando anuncios de conciertos…</div>
 <ul class="list" id="concert-news-list"><li>Conectando con las fuentes…</li></ul>
 <p class="small">¿Organizas un concierto o tocas en una banda? Envíanos la información para revisarla.</p>
@@ -222,7 +223,8 @@ async function loadConcertNews(){
     {label:"España · Ska",q:'ska conciertos España',hl:"es",gl:"ES",ceid:"ES:es"},
     {label:"España · Metal underground",q:'metal underground conciertos España',hl:"es",gl:"ES",ceid:"ES:es"},
     {label:"Euskadi · Punk y hardcore",q:'punk OR hardcore conciertos Euskadi País Vasco',hl:"es",gl:"ES",ceid:"ES:es"},
-    {label:"Internacional · Punk y hardcore",q:'punk hardcore tour dates festival',hl:"en-US",gl:"US",ceid:"US:en"}
+    {label:"Internacional · Punk y hardcore",q:'punk hardcore tour dates festival',hl:"en-US",gl:"US",ceid:"US:en"},
+    {label:"Primera Línea VK Bar · La Trinchera",q:'site:primeralineavkbar.com/index.php/trinchera conciertos punk hardcore metal',hl:"es",gl:"ES",ceid:"ES:es"}
   ];
   status.textContent="Buscando conciertos y festivales…";
   list.innerHTML="";
