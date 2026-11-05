@@ -237,15 +237,21 @@ async function loadConcertNews(){
   if(!list||!status)return;
   list.innerHTML="";
   list.className="concert-grid";
-  status.textContent="Agenda oficial de La Trinchera · Madrid. Fechas revisadas el 5 de noviembre de 2026.";
+  status.textContent="Agenda de La Trinchera · Madrid. Solo se muestran fechas futuras; revisa sala y entradas en la fuente oficial.";
   var source="https://primeralineavkbar.com/index.php/trinchera/";
   var upcoming=[
-    {date:"06 NOV 2026 · 21:00",name:"Ketesnuko + HCK Hardcore",place:"La Trinchera · Vallecas, Madrid",image:"https://primeralineavkbar.com/wp-content/uploads/2026/10/06.11-viernes--150x150.jpeg"},
-    {date:"07 NOV 2026 · 19:00",name:"Etxale + Desklate",place:"La Trinchera · Vallecas, Madrid",image:"https://primeralineavkbar.com/wp-content/uploads/2026/10/07.11-SABADO-NOCHE-1-150x150.jpeg"},
-    {date:"07 NOV 2026 · 12:00",name:"EXK+REMENTO + Cuatro Perras",place:"Sesión vermut · La Trinchera, Madrid",image:"https://primeralineavkbar.com/wp-content/uploads/2026/10/07.11-sabado-vermut-1-150x150.jpeg"},
-    {date:"08 NOV 2026 · 12:00",name:"Grippi + Intrusa + Arpia",place:"Sesión vermut · La Trinchera, Madrid",image:"https://primeralineavkbar.com/wp-content/uploads/2026/10/08.11-vermut-domingo-150x150.jpeg"},
-    {date:"12 NOV 2026",name:"Neuroot (Noruega) + Roke",place:"La Trinchera · Vallecas, Madrid",image:"https://primeralineavkbar.com/wp-content/uploads/2026/10/12.11-jueves-neuroot-150x150.jpeg"}
+    {iso:"2026-11-06",date:"06 NOV 2026 · 21:00",name:"Ketesnuko + HCK Hardcore",place:"La Trinchera · Vallecas, Madrid",image:"https://primeralineavkbar.com/wp-content/uploads/2026/10/06.11-viernes--150x150.jpeg"},
+    {iso:"2026-11-07",date:"07 NOV 2026 · 19:00",name:"Etxale + Desklate",place:"La Trinchera · Vallecas, Madrid",image:"https://primeralineavkbar.com/wp-content/uploads/2026/10/07.11-SABADO-NOCHE-1-150x150.jpeg"},
+    {iso:"2026-11-07",date:"07 NOV 2026 · 12:00",name:"EXK+REMENTO + Cuatro Perras",place:"Sesión vermut · La Trinchera, Madrid",image:"https://primeralineavkbar.com/wp-content/uploads/2026/10/07.11-sabado-vermut-1-150x150.jpeg"},
+    {iso:"2026-11-08",date:"08 NOV 2026 · 12:00",name:"Grippi + Intrusa + Arpia",place:"Sesión vermut · La Trinchera, Madrid",image:"https://primeralineavkbar.com/wp-content/uploads/2026/10/08.11-vermut-domingo-150x150.jpeg"},
+    {iso:"2026-11-12",date:"12 NOV 2026",name:"Neuroot (Noruega) + Roke",place:"La Trinchera · Vallecas, Madrid",image:"https://primeralineavkbar.com/wp-content/uploads/2026/10/12.11-jueves-neuroot-150x150.jpeg"}
   ];
+  var today=new Date();today.setHours(0,0,0,0);
+  upcoming=upcoming.filter(function(ev){
+    var parts=ev.iso.split("-"),eventDate=new Date(+parts[0],+parts[1]-1,+parts[2]);
+    return eventDate.getTime()>=today.getTime();
+  }).slice(0,5);
+  if(!upcoming.length){status.textContent="No hay próximos conciertos confirmados en esta agenda. Consulta las fuentes oficiales.";return;}
   upcoming.forEach(function(ev,index){
     var card=document.createElement("article"),img=document.createElement("img"),body=document.createElement("div");
     card.className="concert-card";
