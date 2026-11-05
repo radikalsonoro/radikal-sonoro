@@ -203,7 +203,7 @@ async function loadNews(){
     if(!key||seen[key])return false;
     seen[key]=true;
     return true;
-  }).sort(function(a,b){return new Date(b.pubDate||0)-new Date(a.pubDate||0);}).slice(0,15);
+  }).sort(function(a,b){return new Date(b.pubDate||0)-new Date(a.pubDate||0);}).slice(0,5);
   if(items.length){
     items.forEach(function(item){
       var li=document.createElement("li"),a=document.createElement("a"),meta=document.createElement("div");
@@ -256,7 +256,7 @@ async function loadConcertNews(){
     seen[key]=true;
     var published=new Date(item.pubDate||0);
     return !isNaN(published)&&published.getTime()>Date.now()-365*86400000;
-  }).sort(function(a,b){return new Date(b.pubDate||0)-new Date(a.pubDate||0);}).slice(0,15);
+  }).sort(function(a,b){return new Date(b.pubDate||0)-new Date(a.pubDate||0);}).slice(0,5);
   if(items.length){
     list.className="concert-grid";
     items.forEach(function(item){
