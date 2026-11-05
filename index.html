@@ -50,6 +50,7 @@ label{display:grid;gap:6px;font-weight:700;color:var(--ink)}
 input,textarea{font:inherit;width:100%;padding:11px;border:1px solid #555;background:#111;color:var(--ink);border-radius:2px}
 input[type=file]{padding:8px}button.chip{cursor:pointer}
 #news-status,#concert-news-status{margin-bottom:12px}
+.concert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:14px 0}.concert-card{background:#111;border:1px solid var(--line);border-bottom:3px solid var(--red);overflow:hidden}.concert-poster{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;background:#222}.concert-placeholder{aspect-ratio:3/4;display:flex;flex-direction:column;justify-content:space-between;padding:18px;background:repeating-linear-gradient(135deg,#171717 0 12px,#242424 12px 24px)}.concert-placeholder strong{font:32px/.95 Impact,sans-serif;text-transform:uppercase}.concert-placeholder span{color:#ff625d;font-size:11px;font-weight:900;letter-spacing:.15em}.concert-card-body{padding:12px}.concert-card-body a{font-weight:900}
 @media(min-width:800px){main{padding-left:28px;padding-right:28px}#videos,#spotify{display:inline-block;vertical-align:top;width:calc(50% - 12px)}#videos{margin-right:18px}}
 @media(max-width:600px){main{padding:18px 13px 42px}.logo{width:130px}.ransom{font-size:clamp(38px,11vw,58px)}section{padding:18px;margin-bottom:15px}.mag-nav{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap}.mag-nav a{white-space:nowrap;padding:8px}}
 </style>
@@ -257,15 +258,18 @@ async function loadConcertNews(){
     return !isNaN(published)&&published.getTime()>Date.now()-365*86400000;
   }).sort(function(a,b){return new Date(b.pubDate||0)-new Date(a.pubDate||0);}).slice(0,15);
   if(items.length){
+    list.className="concert-grid";
     items.forEach(function(item){
-      var li=document.createElement("li"),a=document.createElement("a"),meta=document.createElement("div");
-      a.href=item.link;a.target="_blank";a.rel="noopener noreferrer";a.textContent=item.title||"Ver anuncio";
-      var date=item.pubDate?new Date(item.pubDate):null;
-      meta.className="small";
-      meta.textContent=item._region+" · "+(date&&!isNaN(date)?date.toLocaleDateString("es-ES"):"")+" · Google News";
-      li.appendChild(a);li.appendChild(meta);list.appendChild(li);
+      var card=document.createElement("article"),body=document.createElement("div"),a=document.createElement("a"),meta=document.createElement("div");
+      card.className="concert-card";
+      var poster=item.thumbnail||(item.enclosure&&item.enclosure.link)||"";
+      if(poster){var img=document.createElement("img");img.className="concert-poster";img.src=poster;img.alt="Cartel: "+(item.title||"concierto");img.loading="lazy";img.onerror=function(){this.style.display="none";};card.appendChild(img);}
+      else{var ph=document.createElement("div"),tag=document.createElement("span"),name=document.createElement("strong");ph.className="concert-placeholder";tag.textContent="RADIKAL SONORO · AGENDA";name.textContent=item.title||"PRÓXIMO CONCIERTO";ph.appendChild(tag);ph.appendChild(name);card.appendChild(ph);}
+      body.className="concert-card-body";a.href=item.link;a.target="_blank";a.rel="noopener noreferrer";a.textContent=item.title||"Ver anuncio";
+      var date=item.pubDate?new Date(item.pubDate):null;meta.className="small";meta.textContent=item._region+" · "+(date&&!isNaN(date)?date.toLocaleDateString("es-ES"):"")+" · Consulta fecha y sala en el anuncio";
+      body.appendChild(a);body.appendChild(meta);card.appendChild(body);list.appendChild(card);
     });
-    status.textContent="Resultados encontrados. Comprueba siempre fecha, sala y entradas con la organización.";
+    status.textContent="Agenda visual: carteles cuando la fuente facilita una imagen. Comprueba fecha, sala y entradas con la organización.";
   }else{
     status.textContent="El servicio de noticias no ha respondido. Puedes consultar estas búsquedas actualizadas:";
     queries.forEach(function(x){
