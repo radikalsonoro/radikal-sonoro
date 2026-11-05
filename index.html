@@ -376,8 +376,8 @@ function tick(){
 tick();setInterval(tick,30000);
 
 var cl=document.getElementById("contactlist"),rl=document.getElementById("redes"),c="",r="";
-if(CONTACT_EMAIL)c+='<li><span class="when">Correo</span><a href="mailto:'+encodeURI(CONTACT_EMAIL)+'">'+CONTACT_EMAIL.replace(/[<>&"]/g,"")+'</a></li>';
-cl.innerHTML=c||'<li>Aquí irán tus datos de contacto.</li>';
+cl.innerHTML='<li>Escríbenos y conecta con la escena.</li>';
+if(CONTACT_EMAIL)r+='<a class="chip" href="mailto:'+encodeURI(CONTACT_EMAIL)+'">✉ '+CONTACT_EMAIL.replace(/[<>&"]/g,"")+'</a>';
 for(var k in REDES){if(REDES[k])r+='<a class="chip" href="'+encodeURI(REDES[k])+'" target="_blank" rel="noopener">'+k+'</a>';}
 rl.innerHTML=r||'<span class="small">Aquí irán tus redes sociales.</span>';
 })();
