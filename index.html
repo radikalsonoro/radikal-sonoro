@@ -112,8 +112,8 @@ footer{border-top:3px solid var(--red);font-weight:800;letter-spacing:.16em}
 </div>
 <section id="directo"><div class="section-head"><h2>En directo</h2><small>La escena no se calla</small></div><div class="box live"><strong>Todos los miércoles · 20:00 a 22:00 h</strong><p id="livestate" role="status">Programa en vivo con música, invitados y mucho ruido.</p></div></section>
 <section id="radio"><div class="section-head"><h2>Escucha la radio</h2><small>Emisión online</small></div><div class="radio-grid"><div class="radio-card"><h3>Radikal Sonoro · 24h</h3><p>Nuestra señal online. Dale al play y acompaña la resistencia sonora.</p><button id="play" type="button">▶ Escuchar en vivo</button><audio id="audio" controls preload="none"></audio><p class="msg" id="msg" role="status"></p></div><div class="radio-card" id="agora"><h3>Ágora Sol Radio</h3><p>Escucha la emisión en directo de Ágora Sol Radio.</p><audio controls preload="none" src="https://cervera.eldialdigital.com:23141/stream">Tu navegador no admite el reproductor de audio.</audio><p class="small">Radikal Sonoro: miércoles de 20:00 a 22:00 h.</p><a href="https://www.agorasolradio.org/directo/" target="_blank" rel="noopener">Abrir la web de Ágora Sol Radio ↗</a></div></div></section>
-<section id="noticias"><div class="section-head"><h2>Noticias</h2><small>Underground · Aquí y fuera</small></div><p class="small">Punk, hardcore, ska y metal independiente. Titulares enlazados a sus medios originales.</p><div id="news-status" role="status" aria-live="polite">Buscando noticias recientes…</div><ul class="list" id="news-list"><li>Conectando con las fuentes…</li></ul><p class="small">Fuentes: Google News RSS. Los artículos pertenecen a sus medios originales.</p></section>
-<section id="conciertos"><div class="section-head"><h2>Conciertos y festivales</h2><small>Próximas fechas</small></div><p class="small">Carteles y anuncios de la escena. Comprueba siempre fecha, sala y entradas con la organización.</p><p class="small">Agenda colaboradora: <a href="https://primeralineavkbar.com/index.php/trinchera/" target="_blank" rel="noopener noreferrer">La Trinchera · Primera Línea VK Bar</a>.</p><div id="concert-news-status" role="status" aria-live="polite">Buscando anuncios de conciertos…</div><ul class="list" id="concert-news-list"><li>Conectando con las fuentes…</li></ul><p class="small">¿Organizas un concierto o tocas en una banda? Envíanos la información para revisarla.</p>
+<section id="noticias"><div class="section-head"><h2>Noticias</h2><small>Underground · Aquí y fuera</small></div><p class="small">Selección de hasta 5 noticias recientes de punk, hardcore, ska y metal independiente. Enlaces a las fuentes originales.</p><div id="news-status" role="status" aria-live="polite">Buscando noticias recientes…</div><ul class="list" id="news-list"><li>Conectando con las fuentes…</li></ul><p class="small">Fuentes: Google News RSS. Los artículos pertenecen a sus medios originales.</p></section>
+<section id="conciertos"><div class="section-head"><h2>Conciertos y festivales</h2><small>Próximas fechas</small></div><p class="small">Hasta 5 próximos conciertos con fecha futura detectada. Carteles cuando están disponibles; confirma siempre sala y entradas con la organización.</p><p class="small">Agenda colaboradora: <a href="https://primeralineavkbar.com/index.php/trinchera/" target="_blank" rel="noopener noreferrer">La Trinchera · Primera Línea VK Bar</a>.</p><div id="concert-news-status" role="status" aria-live="polite">Buscando anuncios de conciertos…</div><ul class="list" id="concert-news-list"><li>Conectando con las fuentes…</li></ul><p class="small">¿Organizas un concierto o tocas en una banda? Envíanos la información para revisarla.</p>
 <form class="box" id="concert-form" name="concert-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" action="/gracias.html"><input type="hidden" name="form-name" value="concert-form"><p hidden><label>No rellenes este campo: <input name="bot-field"></label></p><label>Grupo o artista *<input name="grupo" required></label><label>Nombre del concierto o festival *<input name="evento" required></label><div class="formrow"><label>Fecha *<input type="date" name="fecha" required></label><label>Hora<input type="time" name="hora"></label></div><label>Sala o recinto *<input name="sala" required></label><div class="formrow"><label>Ciudad *<input name="ciudad" required></label><label>País<input name="pais"></label></div><label>Estilo musical<input name="estilo" placeholder="Punk, hardcore, ska, metal…"></label><label>Precio de entrada<input name="precio"></label><label>Enlace de entradas o evento<input type="url" name="enlace" placeholder="https://…"></label><label>Cartel del concierto<input type="file" name="cartel" accept="image/*,.pdf"></label><label>Información adicional<textarea name="info" rows="4"></textarea></label><label>Correo de contacto<input type="email" name="email" required></label><button class="chip" type="submit">Enviar concierto</button><p class="small" id="concert-msg" role="status">Los datos llegarán a Radikal Sonoro para su revisión.</p></form></section>
 <section id="videos"><div class="section-head"><h2>Vídeos</h2><small>Directos · Videoclips · Sesiones</small></div><ul class="list video-grid" id="video-list"><li>Preparando vídeos…</li></ul><p class="small">Los enlaces abren YouTube; Radikal Sonoro no aloja los vídeos.</p></section>
 <section id="spotify"><div class="section-head"><h2>Podcast</h2><small>Escucha y comparte</small></div><div class="spot" id="sbox"></div><p class="small">Síguenos en Spotify para no perderte los programas.</p></section>
@@ -162,8 +162,10 @@ async function loadNews(){
     var key=(item.link||item.title||"").trim();
     if(!key||seen[key])return false;
     seen[key]=true;
-    return true;
-  }).sort(function(a,b){return new Date(b.pubDate||0)-new Date(a.pubDate||0);}).slice(0,5);
+    var eventDate=getConcertDate(item);
+    item._eventDate=eventDate;
+    return !!eventDate&&eventDate.getTime()>=new Date(new Date().toDateString()).getTime();
+  }).sort(function(a,b){return a._eventDate-b._eventDate;}).slice(0,5);
   if(items.length){
     items.forEach(function(item){
       var li=document.createElement("li"),a=document.createElement("a"),meta=document.createElement("div");
@@ -179,14 +181,17 @@ async function loadNews(){
     list.innerHTML='<li><a href="https://news.google.com/search?q=punk%20hardcore%20ska%20metal%20underground&hl=es&gl=ES&ceid=ES:es" target="_blank" rel="noopener noreferrer">Abrir noticias de punk, hardcore, ska y metal underground</a></li>';
   }
 }
-// Extrae una fecha explícita del texto del anuncio; nunca usa la fecha de publicación como fecha del concierto.
+// Detecta fechas futuras explícitas en el anuncio (no confunde publicación con fecha del evento).
 function getConcertDate(item){
-  var text=[item.title||"",item.description||"",item.content||""].join(" ").replace(/<[^>]*>/g," ");
-  var m=text.match(/\\b(\\d{1,2})[\\/.-](\\d{1,2})[\\/.-](20\\d{2})\\b/);
-  if(m){var d=new Date(+m[3],+m[2]-1,+m[1]);if(d.getFullYear()===+m[3]&&d.getMonth()===+m[2]-1&&d.getDate()===+m[1])return d.toLocaleDateString("es-ES",{day:"2-digit",month:"short",year:"numeric"});}
-  m=text.match(/\\b(20\\d{2})-(\\d{2})-(\\d{2})\\b/);
-  if(m){var d2=new Date(+m[1],+m[2]-1,+m[3]);if(d2.getFullYear()===+m[1]&&d2.getMonth()===+m[2]-1&&d2.getDate()===+m[3])return d2.toLocaleDateString("es-ES",{day:"2-digit",month:"short",year:"numeric"});}
-  return "";
+  var text=[item.title||"",item.description||"",item.content||""].join(" ").replace(/<[^>]*>/g," ").replace(/&nbsp;/g," ");
+  var m=text.match(/\b(\d{1,2})[\/.-](\d{1,2})[\/.-](20\d{2})\b/);
+  if(m){var d=new Date(+m[3],+m[2]-1,+m[1]);if(d.getFullYear()===+m[3]&&d.getMonth()===+m[2]-1&&d.getDate()===+m[1])return d;}
+  m=text.match(/\b(20\d{2})-(\d{2})-(\d{2})\b/);
+  if(m){var d2=new Date(+m[1],+m[2]-1,+m[3]);if(d2.getFullYear()===+m[1]&&d2.getMonth()===+m[2]-1&&d2.getDate()===+m[3])return d2;}
+  var months={enero:0,febrero:1,marzo:2,abril:3,mayo:4,junio:5,julio:6,agosto:7,septiembre:8,setiembre:8,octubre:9,noviembre:10,diciembre:11};
+  m=text.toLowerCase().match(/\b(\d{1,2})\s+de\s+(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|setiembre|octubre|noviembre|diciembre)(?:\s+de\s+(20\d{2}))?/);
+  if(m){var year=+(m[3]||new Date().getFullYear()),d3=new Date(year,months[m[2]],+m[1]);if(!m[3]&&d3.getTime()<Date.now()-86400000)d3.setFullYear(year+1);if(d3.getDate()===+m[1]&&d3.getMonth()===months[m[2]])return d3;}
+  return null;
 }
 // Anuncios automáticos de conciertos: enlaces recientes de fuentes públicas.
 async function loadConcertNews(){
@@ -235,15 +240,15 @@ async function loadConcertNews(){
       if(poster){var img=document.createElement("img");img.className="concert-poster";img.src=poster;img.alt="Cartel: "+(item.title||"concierto");img.loading="lazy";img.onerror=function(){this.style.display="none";};card.appendChild(img);}
       else{var ph=document.createElement("div"),tag=document.createElement("span"),name=document.createElement("strong");ph.className="concert-placeholder";tag.textContent="RADIKAL SONORO · AGENDA";name.textContent=item.title||"PRÓXIMO CONCIERTO";ph.appendChild(tag);ph.appendChild(name);card.appendChild(ph);}
       body.className="concert-card-body";a.href=item.link;a.target="_blank";a.rel="noopener noreferrer";a.textContent=item.title||"Ver anuncio";
-      var eventDate=getConcertDate(item),dateTag=document.createElement("div");
-      dateTag.className="concert-date"+(eventDate?"":" pending");
-      dateTag.innerHTML=eventDate?"<small>FECHA DEL CONCIERTO</small>"+eventDate:"<small>FECHA DEL CONCIERTO</small>VER EN EL ANUNCIO";
+      var eventDate=item._eventDate,dateTag=document.createElement("div");
+      dateTag.className="concert-date";
+      dateTag.innerHTML="<small>FECHA DEL CONCIERTO</small>"+eventDate.toLocaleDateString("es-ES",{day:"2-digit",month:"short",year:"numeric"});
       var date=item.pubDate?new Date(item.pubDate):null;meta.className="small";meta.textContent=item._region+" · Publicado: "+(date&&!isNaN(date)?date.toLocaleDateString("es-ES"):"")+" · Confirma sala y entradas con la organización";
       body.appendChild(dateTag);body.appendChild(a);body.appendChild(meta);card.appendChild(body);list.appendChild(card);
     });
-    status.textContent="Agenda visual: carteles cuando la fuente facilita una imagen. Comprueba fecha, sala y entradas con la organización.";
+    status.textContent="5 próximos conciertos como máximo, ordenados por fecha del evento. Carteles cuando la fuente facilita imagen; confirma sala y entradas con la organización.";
   }else{
-    status.textContent="El servicio de noticias no ha respondido. Puedes consultar estas búsquedas actualizadas:";
+    status.textContent="No hay anuncios con fecha futura explícita entre las fuentes consultadas. Prueba estas agendas actualizadas:";
     queries.forEach(function(x){
       var li=document.createElement("li"),a=document.createElement("a");
       a.href="https://news.google.com/search?q="+encodeURIComponent(x.q)+"&hl="+x.hl+"&gl="+x.gl+"&ceid="+x.ceid;
