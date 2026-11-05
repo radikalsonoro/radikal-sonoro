@@ -240,6 +240,7 @@ async function loadConcertNews(){
     {label:"España · Metal underground",q:'metal underground conciertos España',hl:"es",gl:"ES",ceid:"ES:es"},
     {label:"Euskadi · Punk y hardcore",q:'punk OR hardcore conciertos Euskadi País Vasco',hl:"es",gl:"ES",ceid:"ES:es"},
     {label:"Internacional · Punk y hardcore",q:'punk hardcore tour dates festival',hl:"en-US",gl:"US",ceid:"US:en"},
+    {label:"La Trinchera · Madrid (agenda oficial)",q:'site:primeralineavkbar.com/index.php/trinchera conciertos noviembre diciembre 2026 punk hardcore ska metal',hl:"es",gl:"ES",ceid:"ES:es"},
     {label:"Primera Línea VK Bar · La Trinchera",q:'site:primeralineavkbar.com/index.php/trinchera conciertos punk hardcore metal',hl:"es",gl:"ES",ceid:"ES:es"}
   ];
   status.textContent="Buscando carteles y próximas fechas…";
@@ -314,13 +315,12 @@ async function loadConcertNews(){
     status.textContent="AGENDA DE NOVIEMBRE · Fechas verificadas en las agendas y promotoras enlazadas. Cartel gráfico provisional cuando no hay imagen oficial disponible.";
     list.className="concert-grid";
     var upcoming=[
-      ["13 NOV 2026","Spike and the Gimme Gimmes","Jimmy Jazz · Vitoria-Gasteiz","https://www.hfmncrew.cat/es/tickets/"],
-      ["14 NOV 2026","Underground Force Festival","Kafe Antzokia · Bermeo","https://www.europapress.es/euskadi/noticia-underground-force-festival-reunira-cinco-potentes-bandas-escena-subterranea-14-noviembre-bermeo-20261104181447.html"],
-      ["20 NOV 2026","Spike and the Gimme Gimmes","Sala Copérnico · Madrid","https://www.hfmncrew.cat/es/tickets/"],
-      ["27 NOV 2026","Brigade Loco","Lekuona Fabrika · Gipuzkoa","https://www.hfmncrew.cat/es/tickets/"],
-      ["28 NOV 2026","Split Dogs","Hell Dorado · Vitoria-Gasteiz","https://www.jacksonlive.es/?estilo=punk"]
-    ];
-    upcoming.forEach(function(ev,index){
+      ["06 NOV 2026","Ketesnuko + HCK Hardcore","La Trinchera · Vallecas, Madrid","https://primeralineavkbar.com/index.php/trinchera/"],
+      ["07 NOV 2026","Etxale + Desklate","La Trinchera · Vallecas, Madrid","https://primeralineavkbar.com/index.php/trinchera/"],
+      ["07 NOV 2026 · 12:00","EXK+REMENTO + Cuatro Perras","Sesión vermut · La Trinchera, Madrid","https://primeralineavkbar.com/index.php/trinchera/"],
+      ["08 NOV 2026 · 12:00","Grippi + Intrusa + Arpia","Sesión vermut · La Trinchera, Madrid","https://primeralineavkbar.com/index.php/trinchera/"],
+      ["12 NOV 2026","Neuroot (Noruega) + Roke","La Trinchera · Vallecas, Madrid","https://primeralineavkbar.com/index.php/trinchera/"]
+    ];    upcoming.forEach(function(ev,index){
       var card=document.createElement("article"),poster=document.createElement("div"),tag=document.createElement("span"),name=document.createElement("strong"),body=document.createElement("div"),date=document.createElement("div"),a=document.createElement("a"),meta=document.createElement("div"),more=document.createElement("a");
       card.className="concert-card";card.setAttribute("data-number",String(index+1).padStart(2,"0"));
       poster.className="concert-placeholder";tag.textContent="RADIKAL SONORO · AGENDA";name.textContent=ev[1];poster.appendChild(tag);poster.appendChild(name);
