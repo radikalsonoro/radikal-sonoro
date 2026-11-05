@@ -91,6 +91,33 @@ footer{border-top:3px solid var(--red);font-weight:800;letter-spacing:.16em}
 @media(max-width:700px){header{grid-template-columns:86px 1fr;column-gap:13px;padding:24px 15px 20px}header:after{display:none}.logo img{width:86px}h1{font-size:clamp(48px,13vw,76px);margin:9px 0 6px}.tagline{font-size:10px;letter-spacing:.04em}.header-stamp{font-size:8px;padding:5px 7px}.hero-main{min-height:300px;box-shadow:5px 5px 0 var(--red)}.hero-main h2{font-size:clamp(52px,14vw,72px)}.hero-main:after{font-size:140px}}
 @media(max-width:420px){header{grid-template-columns:68px 1fr}.logo img{width:68px}h1{font-size:47px}.tagline{font-size:9px}}
 
+
+/* AGENDA DE CONCIERTOS · FLYERS */
+#conciertos{overflow:hidden;background:linear-gradient(135deg,rgba(237,23,36,.09),transparent 38%),#101010}
+#conciertos .section-head h2{font-size:clamp(42px,7vw,66px);letter-spacing:-.02em}
+#conciertos .section-head small{font-size:11px;letter-spacing:.2em}
+#conciertos>p.small:first-of-type{max-width:720px;font-size:13px;color:#d0c8bb}
+.concert-grid{grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:20px;margin:22px 0 28px}
+.concert-card{position:relative;background:#080808;border:2px solid #f5f0e6;border-bottom:7px solid var(--red);box-shadow:7px 7px 0 #650b12;overflow:hidden;transition:transform .2s ease,box-shadow .2s ease}
+.concert-card:hover{transform:translateY(-5px) rotate(-.5deg);box-shadow:10px 12px 0 #650b12}
+.concert-card:before{content:attr(data-number);position:absolute;z-index:2;top:10px;left:10px;background:var(--red);color:white;font:900 17px "Barlow Condensed";padding:4px 9px;border:1px solid white;transform:rotate(-5deg)}
+.concert-poster{height:300px;aspect-ratio:4/5;object-fit:cover;background:#211;display:block;border-bottom:3px solid var(--red);transition:transform .35s ease}
+.concert-card:hover .concert-poster{transform:scale(1.025)}
+.concert-placeholder{height:300px;min-height:300px;padding:22px;background:radial-gradient(circle at 80% 15%,rgba(237,23,36,.4),transparent 30%),repeating-linear-gradient(135deg,#302b28 0 3px,#101010 3px 10px);border-bottom:3px solid var(--red)}
+.concert-placeholder span{background:var(--cream);color:#111;padding:5px 7px;width:max-content;transform:rotate(-3deg)}
+.concert-placeholder strong{font:900 clamp(28px,4vw,38px)/.95 "Barlow Condensed";text-transform:uppercase;text-shadow:3px 3px 0 var(--red);overflow-wrap:anywhere}
+.concert-card-body{padding:16px 16px 19px}
+.concert-date{display:flex;flex-direction:column;gap:1px;width:max-content;max-width:100%;background:var(--red);color:#fff;padding:7px 11px;margin:0 0 13px;font:900 18px/1.05 "Barlow Condensed";text-transform:uppercase;transform:rotate(-2deg);box-shadow:3px 3px 0 #000}
+.concert-date small{font:800 8px "DM Sans";letter-spacing:.16em}
+.concert-card-body>a:not(.concert-more){display:block;font:800 21px/1.08 "Barlow Condensed";text-transform:uppercase;text-decoration:none;margin:7px 0 10px;overflow-wrap:anywhere}
+.concert-card-body .small{font-size:10px;line-height:1.5;color:#aaa196}
+.concert-more{display:inline-block;margin-top:13px;padding:9px 12px;background:var(--cream);color:#111!important;border:2px solid var(--red);font:900 12px "DM Sans";letter-spacing:.1em;text-decoration:none;box-shadow:3px 3px 0 #000}
+.concert-more:hover{background:var(--red);color:#fff!important}
+#concert-news-status{display:inline-block;background:#f5f0e6;color:#111;padding:7px 10px;font-size:10px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+#concert-form{margin-top:20px}
+@media(max-width:520px){.concert-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.concert-poster,.concert-placeholder{height:220px;min-height:220px}.concert-card-body{padding:12px}.concert-card-body>a:not(.concert-more){font-size:18px}.concert-date{font-size:15px;padding:6px 8px}.concert-more{font-size:10px;padding:8px}.concert-placeholder strong{font-size:27px}}
+@media(max-width:350px){.concert-grid{grid-template-columns:1fr}.concert-poster,.concert-placeholder{height:290px;min-height:290px}}
+
 </style>
 </head>
 <body>
@@ -205,15 +232,15 @@ async function loadConcertNews(){
     {label:"Internacional · Punk y hardcore",q:'punk hardcore tour dates festival',hl:"en-US",gl:"US",ceid:"US:en"},
     {label:"Primera Línea VK Bar · La Trinchera",q:'site:primeralineavkbar.com/index.php/trinchera conciertos punk hardcore metal',hl:"es",gl:"ES",ceid:"ES:es"}
   ];
-  status.textContent="Buscando conciertos y festivales…";
+  status.textContent="Buscando carteles y próximas fechas…";
   list.innerHTML="";
+  list.className="concert-grid";
   var all=[];
   await Promise.all(queries.map(async function(x){
     try{
       var rss="https://news.google.com/rss/search?q="+encodeURIComponent(x.q)+"&hl="+x.hl+"&gl="+x.gl+"&ceid="+x.ceid;
       var api="https://api.rss2json.com/v1/api.json?rss_url="+encodeURIComponent(rss);
-      var controller=new AbortController();
-      var timer=setTimeout(function(){controller.abort();},9000);
+      var controller=new AbortController(),timer=setTimeout(function(){controller.abort();},9000);
       try{
         var response=await fetch(api,{signal:controller.signal,cache:"no-store"});
         if(!response.ok)return;
@@ -224,35 +251,61 @@ async function loadConcertNews(){
       }finally{clearTimeout(timer);}
     }catch(e){}
   }));
-  var seen={},items=all.filter(function(item){
+  var seen={},today=new Date();today.setHours(0,0,0,0);
+  var items=all.filter(function(item){
     var key=(item.link||item.title||"").trim();
     if(!key||seen[key])return false;
     seen[key]=true;
-    var published=new Date(item.pubDate||0);
-    return !isNaN(published)&&published.getTime()>Date.now()-365*86400000;
-  }).sort(function(a,b){return new Date(b.pubDate||0)-new Date(a.pubDate||0);}).slice(0,5);
+    item._eventDate=getConcertDate(item);
+    return item._eventDate&&item._eventDate>=today;
+  }).sort(function(a,b){return a._eventDate-b._eventDate;}).slice(0,5);
   if(items.length){
-    list.className="concert-grid";
-    items.forEach(function(item){
-      var card=document.createElement("article"),body=document.createElement("div"),a=document.createElement("a"),meta=document.createElement("div");
+    items.forEach(function(item,index){
+      var card=document.createElement("article"),body=document.createElement("div");
       card.className="concert-card";
+      card.setAttribute("data-number",String(index+1).padStart(2,"0"));
+      var html=[item.description||"",item.content||""].join(" ");
       var poster=item.thumbnail||(item.enclosure&&item.enclosure.link)||"";
-      if(poster){var img=document.createElement("img");img.className="concert-poster";img.src=poster;img.alt="Cartel: "+(item.title||"concierto");img.loading="lazy";img.onerror=function(){this.style.display="none";};card.appendChild(img);}
-      else{var ph=document.createElement("div"),tag=document.createElement("span"),name=document.createElement("strong");ph.className="concert-placeholder";tag.textContent="RADIKAL SONORO · AGENDA";name.textContent=item.title||"PRÓXIMO CONCIERTO";ph.appendChild(tag);ph.appendChild(name);card.appendChild(ph);}
-      body.className="concert-card-body";a.href=item.link;a.target="_blank";a.rel="noopener noreferrer";a.textContent=item.title||"Ver anuncio";
-      var eventDate=item._eventDate,dateTag=document.createElement("div");
+      if(!poster){
+        var match=html.match(/<img[^>]+src=["']([^"']+)["']/i);
+        if(match)poster=match[1];
+      }
+      if(poster){
+        var img=document.createElement("img");
+        img.className="concert-poster";img.src=poster;
+        img.alt="Cartel de "+(item.title||"concierto");img.loading="lazy";
+        img.onerror=function(){this.style.display="none";};
+        card.appendChild(img);
+      }else{
+        var ph=document.createElement("div"),tag=document.createElement("span"),name=document.createElement("strong");
+        ph.className="concert-placeholder";tag.textContent="RADIKAL SONORO · AGENDA";
+        name.textContent=item.title||"PRÓXIMO CONCIERTO";
+        ph.appendChild(tag);ph.appendChild(name);card.appendChild(ph);
+      }
+      body.className="concert-card-body";
+      var dateTag=document.createElement("div");
       dateTag.className="concert-date";
-      dateTag.innerHTML="<small>FECHA DEL CONCIERTO</small>"+eventDate.toLocaleDateString("es-ES",{day:"2-digit",month:"short",year:"numeric"});
-      var date=item.pubDate?new Date(item.pubDate):null;meta.className="small";meta.textContent=item._region+" · Publicado: "+(date&&!isNaN(date)?date.toLocaleDateString("es-ES"):"")+" · Confirma sala y entradas con la organización";
-      body.appendChild(dateTag);body.appendChild(a);body.appendChild(meta);card.appendChild(body);list.appendChild(card);
+      var dateLabel=document.createElement("small");dateLabel.textContent="FECHA DEL CONCIERTO";
+      dateTag.appendChild(dateLabel);
+      dateTag.appendChild(document.createTextNode(item._eventDate.toLocaleDateString("es-ES",{day:"2-digit",month:"long",year:"numeric"})));
+      var a=document.createElement("a");a.href=item.link||"#";a.target="_blank";a.rel="noopener noreferrer";
+      a.textContent=item.title||"Ver anuncio del concierto";
+      var meta=document.createElement("div");meta.className="small";
+      var published=item.pubDate?new Date(item.pubDate):null;
+      meta.textContent=item._region+" · Anuncio: "+(published&&!isNaN(published)?published.toLocaleDateString("es-ES"):"")+" · Verifica los datos con la organización";
+      body.appendChild(dateTag);body.appendChild(a);body.appendChild(meta);
+      var more=document.createElement("a");more.className="concert-more";more.href=item.link||"#";
+      more.target="_blank";more.rel="noopener noreferrer";more.textContent="VER EVENTO ↗";
+      body.appendChild(more);card.appendChild(body);list.appendChild(card);
     });
-    status.textContent="5 próximos conciertos como máximo, ordenados por fecha del evento. Carteles cuando la fuente facilita imagen; confirma sala y entradas con la organización.";
+    status.textContent="AGENDA ACTUALIZADA · "+items.length+" próximos eventos · Ordenados por fecha. Los carteles se muestran cuando la fuente incluye una imagen.";
   }else{
-    status.textContent="No hay anuncios con fecha futura explícita entre las fuentes consultadas. Prueba estas agendas actualizadas:";
+    list.className="list";
+    status.textContent="No hemos encontrado anuncios con fecha futura confirmable. Consulta estas agendas y envíanos carteles para ampliar la selección:";
     queries.forEach(function(x){
       var li=document.createElement("li"),a=document.createElement("a");
       a.href="https://news.google.com/search?q="+encodeURIComponent(x.q)+"&hl="+x.hl+"&gl="+x.gl+"&ceid="+x.ceid;
-      a.target="_blank";a.rel="noopener noreferrer";a.textContent="Buscar "+x.label;
+      a.target="_blank";a.rel="noopener noreferrer";a.textContent="↗ "+x.label;
       li.appendChild(a);list.appendChild(li);
     });
   }
