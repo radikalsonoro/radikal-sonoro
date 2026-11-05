@@ -6,51 +6,52 @@
 <title>Radikal Sonoro Radio Show</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Special+Elite&display=swap">
 <style>
-:root{--paper:#dcdad2;--ink:#0a0a0a;--hot:#c40000;--tape:#f2e04a;--line:#0a0a0a;
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121212;--ink:#e9e7df;--line:#e9e7df}}
-:root[data-theme="dark"]{--paper:#121212;--ink:#e9e7df;--line:#e9e7df}
-*,*::before,*::after{box-sizing:inherit}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
-body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.55 "Special Elite","Courier New",monospace}
-main{max-width:860px;margin:0 auto;padding:20px 16px 60px}
-h1,h2{font-family:"Bowlby One",Impact,sans-serif;font-weight:400;margin:0;line-height:1}
-a{color:inherit}
-a:focus-visible,button:focus-visible{outline:3px solid var(--hot);outline-offset:3px}
-.logo{display:block;max-width:300px;border:3px solid var(--line);background:#fff;transform:rotate(-2deg);box-shadow:6px 6px 0 var(--hot)}
+:root{--bg:#101010;--panel:#191919;--ink:#f1eee7;--muted:#aaa49a;--red:#e53935;--line:#343434;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:86px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Arial,Helvetica,sans-serif}
+main{max-width:1120px;margin:0 auto;padding:26px 22px 60px}
+h1,h2,h3{font-family:Impact,"Arial Narrow",sans-serif;font-weight:400;line-height:1.05;text-transform:uppercase;letter-spacing:.025em}
+h1{font-size:clamp(48px,9vw,92px);margin:22px 0 8px;color:var(--ink)}
+h2{font-size:clamp(25px,4vw,34px);margin:0 0 18px;color:var(--ink);display:flex;align-items:center;gap:12px}
+h2:before{content:"";display:block;width:7px;height:30px;background:var(--red)}
+a{color:var(--ink);text-decoration-color:var(--red);text-underline-offset:3px}
+a:hover{color:#ff7773}
+a:focus-visible,button:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.logo{display:block;width:min(180px,48vw);margin:0 auto 16px;border:0;background:transparent;transform:none;box-shadow:none}
 .logo img{display:block;width:100%;height:auto}
-.ransom{margin:28px 0 8px;font-size:clamp(40px,12vw,84px);display:flex;flex-wrap:wrap;gap:6px 4px}
-.ransom span{display:inline-block;padding:2px 8px;border:2px solid var(--line)}
-.ransom .a{background:var(--ink);color:var(--paper);transform:rotate(-3deg)}
-.ransom .b{background:var(--tape);color:#0a0a0a;transform:rotate(2deg)}
-.ransom .c{background:var(--hot);color:#fff;transform:rotate(-1deg)}
-.ransom .d{background:var(--paper);color:var(--ink);transform:rotate(3deg)}
-.ransom .gap{border:0;background:none;width:14px;padding:0}
-.sub{margin:0 0 36px;max-width:52ch}
-section{margin-top:44px}
-h2{font-size:30px;margin-bottom:14px;display:inline-block;background:var(--ink);color:var(--paper);padding:6px 12px;transform:rotate(-1deg)}
-.box{border:3px solid var(--line);padding:16px}
-.radio{background:var(--tape);color:#0a0a0a;border-color:#0a0a0a}
-.radio button{font:inherit;font-size:18px;background:#0a0a0a;color:#f2e04a;border:0;padding:12px 20px;cursor:pointer;min-height:48px}
-.radio audio{width:100%;margin-top:12px}
-.msg{margin:10px 0 0;min-height:1.5em}
-.spot{height:352px;width:100%;border:3px solid var(--line);background:#000;color:#e9e7df;display:grid;place-items:center;padding:16px;text-align:center}.spot iframe{width:100%;height:100%;border:0}
-.video{aspect-ratio:16/9;width:100%;border:3px solid var(--line);background:#000}
-.video iframe{width:100%;height:100%;border:0}
+.ransom{display:block;text-align:center;font-size:clamp(42px,8vw,82px);margin:18px 0 10px}
+.ransom span{display:inline;padding:0 3px;border:0;background:none!important;color:var(--ink)!important;transform:none!important}
+.ransom .c{color:var(--red)!important}.ransom .gap{display:inline-block;width:.18em}
+.sub{max-width:650px;margin:0 auto 22px;text-align:center;color:var(--muted);font-size:17px}
+nav.mag-nav{position:sticky;top:0;z-index:20;display:flex;justify-content:center;flex-wrap:wrap;gap:6px;background:rgba(16,16,16,.96);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 4px;margin:24px 0 30px;backdrop-filter:blur(8px)}
+.mag-nav a{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:7px 10px;color:var(--muted)}
+.mag-nav a:hover{background:var(--red);color:white}
+section{margin:0 0 22px;padding:24px;background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--red);border-radius:3px}
+.box{border:1px solid var(--line);padding:18px;background:#202020;border-radius:3px}
+.radio{background:#242018;color:var(--ink);border-color:#51472b}
+.radio button{font:inherit;font-weight:800;background:var(--red);color:#fff;border:0;padding:12px 20px;cursor:pointer;min-height:48px;border-radius:2px}
+.radio button:hover,.chip:hover{background:#ff5b55;color:#fff}
+.radio audio{width:100%;margin-top:12px}.msg{margin:10px 0 0;min-height:1.5em;color:var(--muted)}
+.spot{height:190px;width:100%;border:1px solid var(--line);background:#000;color:var(--ink);display:grid;place-items:center;padding:0;text-align:center;border-radius:3px;overflow:hidden}
+.spot iframe{width:100%;height:100%;border:0}
+.video{aspect-ratio:16/9;width:100%;border:1px solid var(--line);background:#000}.video iframe{width:100%;height:100%;border:0}
 ul.list{list-style:none;margin:0;padding:0}
-ul.list li{border-bottom:2px dashed var(--line);padding:12px 0}
-ul.list li:last-child{border-bottom:0}
-.when{display:inline-block;background:var(--hot);color:#fff;padding:0 8px;margin-right:8px}
-.small{font-size:14px;opacity:.8}
-.live{border-color:var(--hot)}
-.chip{display:inline-block;min-height:44px;line-height:32px;padding:6px 18px;margin:0 10px 10px 0;border:3px solid var(--line);background:var(--ink);color:var(--paper);text-decoration:none;font-family:"Bowlby One",Impact,sans-serif;font-size:16px}
-.chip:hover{background:var(--hot);color:#fff}
-.live strong{font-family:"Bowlby One",Impact,sans-serif;font-weight:400;font-size:24px;display:block;margin-bottom:6px}
-.badge{display:inline-block;background:var(--hot);color:#fff;padding:2px 10px;margin-right:8px}
-@media (prefers-reduced-motion:no-preference){.badge{animation:pulse 1.2s steps(2,jump-none) infinite}@keyframes pulse{50%{opacity:.35}}}
-footer{margin-top:60px;border-top:3px solid var(--line);padding-top:16px}
-@media (prefers-reduced-motion:no-preference){.ransom span{transition:transform .15s}.ransom span:hover{transform:rotate(0) scale(1.08)}}
-label{display:grid;gap:6px;font-weight:bold}input,textarea{font:inherit;width:100%;padding:10px;border:2px solid var(--line);background:var(--paper);color:var(--ink);border-radius:0}input[type=file]{padding:8px}button.chip{cursor:pointer}
+ul.list li{border-bottom:1px solid var(--line);padding:12px 0}ul.list li:last-child{border-bottom:0}
+.when{display:inline-block;background:var(--red);color:#fff;padding:2px 8px;margin-right:8px;font-size:12px;font-weight:800;text-transform:uppercase}
+.small{font-size:13px;color:var(--muted)}.live{border-color:var(--red)}
+.chip{display:inline-block;min-height:42px;line-height:28px;padding:7px 15px;margin:0 8px 8px 0;border:1px solid var(--line);background:#292929;color:var(--ink);text-decoration:none;font-weight:800;font-size:13px;text-transform:uppercase}
+.live strong{font-family:Impact,"Arial Narrow",sans-serif;font-weight:400;font-size:25px;display:block;margin-bottom:8px}
+.badge{display:inline-block;background:var(--red);color:#fff;padding:2px 10px;margin-right:8px}
+@media(prefers-reduced-motion:no-preference){.badge{animation:pulse 1.8s ease-in-out infinite}@keyframes pulse{50%{opacity:.55}}}
+footer{margin-top:34px;border-top:1px solid var(--line);padding:20px 0 0;text-align:center;color:var(--muted)}
+@media(prefers-reduced-motion:no-preference){.ransom span{transition:color .15s}.ransom span:hover{color:var(--red)!important}}
+label{display:grid;gap:6px;font-weight:700;color:var(--ink)}
+input,textarea{font:inherit;width:100%;padding:11px;border:1px solid #555;background:#111;color:var(--ink);border-radius:2px}
+input[type=file]{padding:8px}button.chip{cursor:pointer}
+#news-status,#concert-news-status{margin-bottom:12px}
+@media(min-width:800px){main{padding-left:28px;padding-right:28px}#videos,#spotify{display:inline-block;vertical-align:top;width:calc(50% - 12px)}#videos{margin-right:18px}}
+@media(max-width:600px){main{padding:18px 13px 42px}.logo{width:130px}.ransom{font-size:clamp(38px,11vw,58px)}section{padding:18px;margin-bottom:15px}.mag-nav{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap}.mag-nav a{white-space:nowrap;padding:8px}}
 </style>
 </head>
 <body>
@@ -59,6 +60,9 @@ label{display:grid;gap:6px;font-weight:bold}input,textarea{font:inherit;width:10
 
 <h1 class="ransom" id="title" aria-label="Punk hardcore metal ska">Punk Hardcore Metal Ska</h1>
 <p class="sub">Radio las 24 horas, videos, noticias y conciertos. Todo en un solo lugar y sin parar.</p>
+<nav class="mag-nav" aria-label="Navegación principal">
+<a href="#radio">Radio</a><a href="#noticias">Noticias</a><a href="#conciertos">Conciertos</a><a href="#videos">Vídeos</a><a href="#spotify">Podcast</a><a href="#contacto">Contacto</a>
+</nav>
 
 <section id="directo">
 <h2>En directo</h2>
