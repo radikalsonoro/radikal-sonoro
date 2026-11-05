@@ -234,103 +234,33 @@ function getConcertDate(item){
 async function loadConcertNews(){
   var list=document.getElementById("concert-news-list");
   var status=document.getElementById("concert-news-status");
-  var queries=[
-    {label:"España · Punk y hardcore",q:'punk OR hardcore conciertos España',hl:"es",gl:"ES",ceid:"ES:es"},
-    {label:"España · Ska",q:'ska conciertos España',hl:"es",gl:"ES",ceid:"ES:es"},
-    {label:"España · Metal underground",q:'metal underground conciertos España',hl:"es",gl:"ES",ceid:"ES:es"},
-    {label:"Euskadi · Punk y hardcore",q:'punk OR hardcore conciertos Euskadi País Vasco',hl:"es",gl:"ES",ceid:"ES:es"},
-    {label:"Internacional · Punk y hardcore",q:'punk hardcore tour dates festival',hl:"en-US",gl:"US",ceid:"US:en"},
-    {label:"La Trinchera · Madrid (agenda oficial)",q:'site:primeralineavkbar.com/index.php/trinchera conciertos noviembre diciembre 2026 punk hardcore ska metal',hl:"es",gl:"ES",ceid:"ES:es"},
-    {label:"Primera Línea VK Bar · La Trinchera",q:'site:primeralineavkbar.com/index.php/trinchera conciertos punk hardcore metal',hl:"es",gl:"ES",ceid:"ES:es"}
-  ];
-  status.textContent="Buscando carteles y próximas fechas…";
+  if(!list||!status)return;
   list.innerHTML="";
   list.className="concert-grid";
-  var all=[];
-  await Promise.all(queries.map(async function(x){
-    try{
-      var rss="https://news.google.com/rss/search?q="+encodeURIComponent(x.q)+"&hl="+x.hl+"&gl="+x.gl+"&ceid="+x.ceid;
-      var api="https://api.rss2json.com/v1/api.json?rss_url="+encodeURIComponent(rss);
-      var controller=new AbortController(),timer=setTimeout(function(){controller.abort();},9000);
-      try{
-        var response=await fetch(api,{signal:controller.signal,cache:"no-store"});
-        if(!response.ok)return;
-        var data=await response.json();
-        if(data.status==="ok"&&Array.isArray(data.items)){
-          data.items.forEach(function(item){item._region=x.label;all.push(item);});
-        }
-      }finally{clearTimeout(timer);}
-    }catch(e){}
-  }));
-  var seen={},today=new Date();today.setHours(0,0,0,0);
-  var items=all.filter(function(item){
-    var key=(item.link||item.title||"").trim();
-    if(!key||seen[key])return false;
-    seen[key]=true;
-    item._eventDate=getConcertDate(item);
-    return item._eventDate&&item._eventDate>=today;
-  }).sort(function(a,b){return a._eventDate-b._eventDate;}).slice(0,5);
-  if(items.length){
-    items.forEach(function(item,index){
-      var card=document.createElement("article"),body=document.createElement("div");
-      card.className="concert-card";
-      card.setAttribute("data-number",String(index+1).padStart(2,"0"));
-      var html=[item.description||"",item.content||""].join(" ");
-      var poster=item.thumbnail||(item.enclosure&&item.enclosure.link)||"";
-      if(!poster){
-        var match=html.match(/<img[^>]+src=["']([^"']+)["']/i);
-        if(match)poster=match[1];
-      }
-      if(poster){
-        var img=document.createElement("img");
-        img.className="concert-poster";img.src=poster;
-        img.alt="Cartel de "+(item.title||"concierto");img.loading="lazy";
-        img.onerror=function(){this.style.display="none";};
-        card.appendChild(img);
-      }else{
-        var ph=document.createElement("div"),tag=document.createElement("span"),name=document.createElement("strong");
-        ph.className="concert-placeholder";tag.textContent="RADIKAL SONORO · AGENDA";
-        name.textContent=item.title||"PRÓXIMO CONCIERTO";
-        ph.appendChild(tag);ph.appendChild(name);card.appendChild(ph);
-      }
-      body.className="concert-card-body";
-      var dateTag=document.createElement("div");
-      dateTag.className="concert-date";
-      var dateLabel=document.createElement("small");dateLabel.textContent="FECHA DEL CONCIERTO";
-      dateTag.appendChild(dateLabel);
-      dateTag.appendChild(document.createTextNode(item._eventDate.toLocaleDateString("es-ES",{day:"2-digit",month:"long",year:"numeric"})));
-      var a=document.createElement("a");a.href=item.link||"#";a.target="_blank";a.rel="noopener noreferrer";
-      a.textContent=item.title||"Ver anuncio del concierto";
-      var meta=document.createElement("div");meta.className="small";
-      var published=item.pubDate?new Date(item.pubDate):null;
-      meta.textContent=item._region+" · Anuncio: "+(published&&!isNaN(published)?published.toLocaleDateString("es-ES"):"")+" · Verifica los datos con la organización";
-      body.appendChild(dateTag);body.appendChild(a);body.appendChild(meta);
-      var more=document.createElement("a");more.className="concert-more";more.href=item.link||"#";
-      more.target="_blank";more.rel="noopener noreferrer";more.textContent="VER EVENTO ↗";
-      body.appendChild(more);card.appendChild(body);list.appendChild(card);
-    });
-    status.textContent="AGENDA ACTUALIZADA · "+items.length+" próximos eventos · Ordenados por fecha. Los carteles se muestran cuando la fuente incluye una imagen.";
-  }else{
-    list.className="list";
-    status.textContent="AGENDA DE NOVIEMBRE · Fechas verificadas en las agendas y promotoras enlazadas. Cartel gráfico provisional cuando no hay imagen oficial disponible.";
-    list.className="concert-grid";
-    var upcoming=[
-      ["06 NOV 2026","Ketesnuko + HCK Hardcore","La Trinchera · Vallecas, Madrid","https://primeralineavkbar.com/index.php/trinchera/"],
-      ["07 NOV 2026","Etxale + Desklate","La Trinchera · Vallecas, Madrid","https://primeralineavkbar.com/index.php/trinchera/"],
-      ["07 NOV 2026 · 12:00","EXK+REMENTO + Cuatro Perras","Sesión vermut · La Trinchera, Madrid","https://primeralineavkbar.com/index.php/trinchera/"],
-      ["08 NOV 2026 · 12:00","Grippi + Intrusa + Arpia","Sesión vermut · La Trinchera, Madrid","https://primeralineavkbar.com/index.php/trinchera/"],
-      ["12 NOV 2026","Neuroot (Noruega) + Roke","La Trinchera · Vallecas, Madrid","https://primeralineavkbar.com/index.php/trinchera/"]
-    ];    upcoming.forEach(function(ev,index){
-      var card=document.createElement("article"),poster=document.createElement("div"),tag=document.createElement("span"),name=document.createElement("strong"),body=document.createElement("div"),date=document.createElement("div"),a=document.createElement("a"),meta=document.createElement("div"),more=document.createElement("a");
-      card.className="concert-card";card.setAttribute("data-number",String(index+1).padStart(2,"0"));
-      poster.className="concert-placeholder";tag.textContent="RADIKAL SONORO · AGENDA";name.textContent=ev[1];poster.appendChild(tag);poster.appendChild(name);
-      body.className="concert-card-body";date.className="concert-date";var label=document.createElement("small");label.textContent="FECHA DEL CONCIERTO";date.appendChild(label);date.appendChild(document.createTextNode(ev[0]));
-      a.href=ev[3];a.target="_blank";a.rel="noopener noreferrer";a.textContent=ev[1];
-      meta.className="small";meta.textContent=ev[2]+" · Comprueba horarios y entradas en la fuente.";
-      more.className="concert-more";more.href=ev[3];more.target="_blank";more.rel="noopener noreferrer";more.textContent="VER EVENTO ↗";
-      body.appendChild(date);body.appendChild(a);body.appendChild(meta);body.appendChild(more);card.appendChild(poster);card.appendChild(body);list.appendChild(card);
-    });
-  }
+  status.textContent="Agenda oficial de La Trinchera · Madrid. Fechas revisadas el 5 de noviembre de 2026.";
+  var source="https://primeralineavkbar.com/index.php/trinchera/";
+  var upcoming=[
+    {date:"06 NOV 2026 · 21:00",name:"Ketesnuko + HCK Hardcore",place:"La Trinchera · Vallecas, Madrid",image:"https://primeralineavkbar.com/wp-content/uploads/2026/10/06.11-viernes--150x150.jpeg"},
+    {date:"07 NOV 2026 · 19:00",name:"Etxale + Desklate",place:"La Trinchera · Vallecas, Madrid",image:"https://primeralineavkbar.com/wp-content/uploads/2026/10/07.11-SABADO-NOCHE-1-150x150.jpeg"},
+    {date:"07 NOV 2026 · 12:00",name:"EXK+REMENTO + Cuatro Perras",place:"Sesión vermut · La Trinchera, Madrid",image:"https://primeralineavkbar.com/wp-content/uploads/2026/10/07.11-sabado-vermut-1-150x150.jpeg"},
+    {date:"08 NOV 2026 · 12:00",name:"Grippi + Intrusa + Arpia",place:"Sesión vermut · La Trinchera, Madrid",image:"https://primeralineavkbar.com/wp-content/uploads/2026/10/08.11-vermut-domingo-150x150.jpeg"},
+    {date:"12 NOV 2026",name:"Neuroot (Noruega) + Roke",place:"La Trinchera · Vallecas, Madrid",image:"https://primeralineavkbar.com/wp-content/uploads/2026/10/12.11-jueves-neuroot-150x150.jpeg"}
+  ];
+  upcoming.forEach(function(ev,index){
+    var card=document.createElement("article"),img=document.createElement("img"),body=document.createElement("div");
+    card.className="concert-card";
+    card.setAttribute("data-number",String(index+1).padStart(2,"0"));
+    img.className="concert-poster";img.src=ev.image;img.alt="Cartel oficial: "+ev.name;img.loading="lazy";
+    img.onerror=function(){var ph=document.createElement("div"),tag=document.createElement("span"),name=document.createElement("strong");ph.className="concert-placeholder";tag.textContent="LA TRINCHERA · MADRID";name.textContent=ev.name;ph.appendChild(tag);ph.appendChild(name);this.parentNode.replaceChild(ph,this);};
+    body.className="concert-card-body";
+    var date=document.createElement("div"),small=document.createElement("small"),title=document.createElement("a"),meta=document.createElement("div"),more=document.createElement("a");
+    date.className="concert-date";small.textContent="FECHA Y HORA";date.appendChild(small);date.appendChild(document.createTextNode(ev.date));
+    title.href=source;title.target="_blank";title.rel="noopener noreferrer";title.textContent=ev.name;
+    meta.className="small";meta.textContent=ev.place+" · Consulta cambios y entradas en la agenda oficial.";
+    more.className="concert-more";more.href=source;more.target="_blank";more.rel="noopener noreferrer";more.textContent="VER CARTEL Y ENTRADAS ↗";
+    body.appendChild(date);body.appendChild(title);body.appendChild(meta);body.appendChild(more);
+    card.appendChild(img);card.appendChild(body);list.appendChild(card);
+  });
 }
 (function(){
 loadNews();
