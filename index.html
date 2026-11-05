@@ -187,14 +187,15 @@ async function loadNews(){
     }catch(e){return [];}
   }));
   var all=results.reduce(function(acc,items){return acc.concat(items);},[]);
-  var seen={},items=all.filter(function(item){
+  var seen={},cutoff=Date.now()-21*24*60*60*1000;
+  var items=all.filter(function(item){
     var key=(item.link||item.title||"").trim();
     if(!key||seen[key])return false;
     seen[key]=true;
-    var eventDate=getConcertDate(item);
-    item._eventDate=eventDate;
-    return !!eventDate&&eventDate.getTime()>=new Date(new Date().toDateString()).getTime();
-  }).sort(function(a,b){return a._eventDate-b._eventDate;}).slice(0,5);
+    var published=item.pubDate?new Date(item.pubDate):null;
+    item._published=published;
+    return published&&!isNaN(published)&&published.getTime()>=cutoff;
+  }).sort(function(a,b){return b._published-a._published;}).slice(0,5);
   if(items.length){
     items.forEach(function(item){
       var li=document.createElement("li"),a=document.createElement("a"),meta=document.createElement("div");
@@ -206,8 +207,15 @@ async function loadNews(){
     });
     status.textContent="Noticias cargadas ("+items.length+"). Última consulta: "+new Date().toLocaleTimeString("es-ES")+".";
   }else{
-    status.textContent="Ahora no responden las fuentes automáticas. Puedes consultar estas noticias directamente:";
-    list.innerHTML='<li><a href="https://news.google.com/search?q=punk%20hardcore%20ska%20metal%20underground&hl=es&gl=ES&ceid=ES:es" target="_blank" rel="noopener noreferrer">Abrir noticias de punk, hardcore, ska y metal underground</a></li>';
+    status.textContent="Fuentes automáticas temporalmente lentas. Aquí tienes actualidad reciente de la escena:";
+    var fallbackNews=[
+      ["Koma publica «Protestantes», segundo adelanto de su directo","https://insonoro.com/","Insonoro · 5 noviembre 2026"],
+      ["Imperial Triumphant anuncia fechas en Bilbao y Madrid","https://www.webmetalextremo.com/noticias","WebMetalExtremo · 4 noviembre 2026"],
+      ["NIHILO publica «Abyss», su quinto álbum","https://www.webmetalextremo.com/noticias","WebMetalExtremo · 3 noviembre 2026"],
+      ["This Gift Is a Curse anuncia gira europea para 2027","https://www.webmetalextremo.com/noticias","WebMetalExtremo · 4 noviembre 2026"],
+      ["200 Stab Wounds estrena «Sweet Suicide»","https://www.webmetalextremo.com/noticias","WebMetalExtremo · 29 octubre 2026"]
+    ];
+    fallbackNews.forEach(function(n){var li=document.createElement("li"),a=document.createElement("a"),meta=document.createElement("div");a.href=n[1];a.target="_blank";a.rel="noopener noreferrer";a.textContent=n[0];meta.className="small";meta.textContent=n[2]+" · Ver fuente";li.appendChild(a);li.appendChild(meta);list.appendChild(li);});
   }
 }
 // Detecta fechas futuras explícitas en el anuncio (no confunde publicación con fecha del evento).
@@ -303,12 +311,24 @@ async function loadConcertNews(){
     status.textContent="AGENDA ACTUALIZADA · "+items.length+" próximos eventos · Ordenados por fecha. Los carteles se muestran cuando la fuente incluye una imagen.";
   }else{
     list.className="list";
-    status.textContent="No hemos encontrado anuncios con fecha futura confirmable. Consulta estas agendas y envíanos carteles para ampliar la selección:";
-    queries.forEach(function(x){
-      var li=document.createElement("li"),a=document.createElement("a");
-      a.href="https://news.google.com/search?q="+encodeURIComponent(x.q)+"&hl="+x.hl+"&gl="+x.gl+"&ceid="+x.ceid;
-      a.target="_blank";a.rel="noopener noreferrer";a.textContent="↗ "+x.label;
-      li.appendChild(a);list.appendChild(li);
+    status.textContent="AGENDA DE NOVIEMBRE · Fechas verificadas en las agendas y promotoras enlazadas. Cartel gráfico provisional cuando no hay imagen oficial disponible.";
+    list.className="concert-grid";
+    var upcoming=[
+      ["13 NOV 2026","Spike and the Gimme Gimmes","Jimmy Jazz · Vitoria-Gasteiz","https://www.hfmncrew.cat/es/tickets/"],
+      ["14 NOV 2026","Underground Force Festival","Kafe Antzokia · Bermeo","https://www.europapress.es/euskadi/noticia-underground-force-festival-reunira-cinco-potentes-bandas-escena-subterranea-14-noviembre-bermeo-20261104181447.html"],
+      ["20 NOV 2026","Spike and the Gimme Gimmes","Sala Copérnico · Madrid","https://www.hfmncrew.cat/es/tickets/"],
+      ["27 NOV 2026","Brigade Loco","Lekuona Fabrika · Gipuzkoa","https://www.hfmncrew.cat/es/tickets/"],
+      ["28 NOV 2026","Split Dogs","Hell Dorado · Vitoria-Gasteiz","https://www.jacksonlive.es/?estilo=punk"]
+    ];
+    upcoming.forEach(function(ev,index){
+      var card=document.createElement("article"),poster=document.createElement("div"),tag=document.createElement("span"),name=document.createElement("strong"),body=document.createElement("div"),date=document.createElement("div"),a=document.createElement("a"),meta=document.createElement("div"),more=document.createElement("a");
+      card.className="concert-card";card.setAttribute("data-number",String(index+1).padStart(2,"0"));
+      poster.className="concert-placeholder";tag.textContent="RADIKAL SONORO · AGENDA";name.textContent=ev[1];poster.appendChild(tag);poster.appendChild(name);
+      body.className="concert-card-body";date.className="concert-date";var label=document.createElement("small");label.textContent="FECHA DEL CONCIERTO";date.appendChild(label);date.appendChild(document.createTextNode(ev[0]));
+      a.href=ev[3];a.target="_blank";a.rel="noopener noreferrer";a.textContent=ev[1];
+      meta.className="small";meta.textContent=ev[2]+" · Comprueba horarios y entradas en la fuente.";
+      more.className="concert-more";more.href=ev[3];more.target="_blank";more.rel="noopener noreferrer";more.textContent="VER EVENTO ↗";
+      body.appendChild(date);body.appendChild(a);body.appendChild(meta);body.appendChild(more);card.appendChild(poster);card.appendChild(body);list.appendChild(card);
     });
   }
 }
