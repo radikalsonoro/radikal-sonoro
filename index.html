@@ -47,6 +47,50 @@ form{display:grid;gap:12px}label{display:grid;gap:6px;font-weight:700;font-size:
 footer{border-top:1px solid var(--line);padding:25px 10px;text-align:center;color:var(--muted);font-size:12px;letter-spacing:.05em}
 @media(max-width:700px){header{padding-top:22px}.hero{grid-template-columns:1fr}.hero-main{min-height:260px}.hero-side{grid-template-columns:1fr 1fr}.radio-grid{grid-template-columns:1fr}nav{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap}nav a{white-space:nowrap;padding:8px 11px}.formrow{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}}
 @media(max-width:420px){.hero-side{grid-template-columns:1fr}.hero-main{min-height:235px}main{padding-left:12px;padding-right:12px}section{padding:17px}}
+
+/* CARTEL PUNK UNDERGROUND */
+:root{--bg:#080808;--panel:#111;--panel2:#191919;--red:#ed1724;--cream:#f5f0e6;--muted:#b4ada2;--line:#514b43}
+body{background-color:#080808;background-image:radial-gradient(circle at 18% 12%,rgba(237,23,36,.12),transparent 24%),repeating-linear-gradient(-4deg,rgba(255,255,255,.018) 0 1px,transparent 1px 5px)}
+body:before{opacity:.22;background-image:radial-gradient(#f5f0e6 .6px,transparent .7px);background-size:4px 4px;mix-blend-mode:screen}
+.topline{height:9px;background:repeating-linear-gradient(-12deg,#ed1724 0 16px,#f5f0e6 16px 19px,#080808 19px 35px)}
+header{max-width:1180px;text-align:left;position:relative;padding:28px 26px 24px;display:grid;grid-template-columns:150px 1fr;column-gap:26px;align-items:center;background:linear-gradient(105deg,rgba(237,23,36,.10),transparent 52%)}
+header:after{content:"RUIDO · RESISTENCIA · AUTOGESTIÓN";position:absolute;right:25px;top:22px;color:#777064;font:800 10px "DM Sans",sans-serif;letter-spacing:.22em;transform:rotate(2deg)}
+.logo{grid-column:1;grid-row:1/4;margin:0;align-self:center;filter:grayscale(1) contrast(1.2)}
+.logo img{width:150px;filter:drop-shadow(5px 5px 0 var(--red))}
+h1{grid-column:2;text-align:left;font-size:clamp(64px,11vw,128px);line-height:.78;letter-spacing:-.055em;margin:16px 0 8px;text-shadow:4px 4px 0 #7c1017,-2px -2px 0 #000}
+h1 span{color:var(--red);-webkit-text-stroke:1px var(--cream)}
+.tagline{grid-column:2;margin:8px 0 14px;text-align:left;font:800 13px "DM Sans",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#eee5d8}
+.header-stamp{grid-column:2;justify-self:start;background:var(--red);color:#fff;border:2px solid var(--cream);box-shadow:4px 4px 0 #000;padding:7px 13px;transform:rotate(-3deg);font-size:10px}
+nav{border-top:2px solid var(--cream);border-bottom:2px solid var(--red);background:#080808;box-shadow:0 5px 0 rgba(237,23,36,.12)}
+nav a{font-size:19px;letter-spacing:.12em;padding:9px 16px;text-shadow:1px 1px #000}
+nav a:hover{transform:rotate(-2deg);box-shadow:3px 3px 0 var(--cream)}
+main{max-width:1180px}
+.hero{gap:13px;margin-bottom:16px}
+.hero-main{min-height:370px;border:3px solid var(--cream);box-shadow:8px 8px 0 var(--red);background:linear-gradient(100deg,rgba(0,0,0,.93),rgba(0,0,0,.48)),repeating-linear-gradient(135deg,#292929 0 3px,#101010 3px 10px)}
+.hero-main:after{content:"PUNK!";right:-18px;top:-10px;font:900 190px/.8 "Barlow Condensed";color:rgba(237,23,36,.2);transform:rotate(-13deg)}
+.hero-main:before{content:"NO FUTURE?";position:absolute;right:18px;bottom:18px;color:rgba(245,240,230,.18);font:900 42px "Barlow Condensed";transform:rotate(-8deg)}
+.hero-main h2{font-size:clamp(55px,8vw,92px);text-shadow:4px 4px 0 var(--red);transform:rotate(-2deg);transform-origin:left}
+.kicker{display:inline-block;background:var(--red);color:#fff;padding:5px 9px;width:max-content;transform:rotate(-2deg)}
+.cta{border:2px solid var(--cream);box-shadow:4px 4px 0 #000;transform:rotate(-1deg)}
+.sidebox{border:2px solid #655c50;box-shadow:4px 4px 0 #000;background:repeating-linear-gradient(-3deg,#171717 0 3px,#121212 3px 7px)}
+.sidebox:nth-child(2){transform:rotate(1deg);border-color:var(--red)}
+.sidebox strong{font-size:34px}
+section{border:2px solid #50483f;box-shadow:5px 5px 0 rgba(237,23,36,.62);background:linear-gradient(145deg,#151515,#0d0d0d);position:relative}
+.section-head{border-bottom:2px solid var(--red)}
+.section-head h2{font-size:clamp(35px,5vw,50px);text-shadow:2px 2px 0 #681017}
+.section-head small{background:var(--cream);color:#111;padding:4px 7px;transform:rotate(-2deg)}
+.box,.radio-card,.concert-card,.video-grid li{border:1px solid #61574b;box-shadow:3px 3px 0 #050505}
+.radio-card h3{font-size:31px}
+.radio button,.chip{border:2px solid var(--cream);box-shadow:3px 3px 0 #050505;transform:rotate(-.5deg)}
+.concert-card{border-bottom:5px solid var(--red)}
+.concert-poster{filter:contrast(1.12) saturate(.85)}
+.concert-placeholder{background:linear-gradient(135deg,rgba(237,23,36,.22),transparent),repeating-linear-gradient(135deg,#292929 0 2px,#101010 2px 8px)}
+.concert-date{transform:rotate(-2deg)}
+a{text-decoration-thickness:2px}
+footer{border-top:3px solid var(--red);font-weight:800;letter-spacing:.16em}
+@media(max-width:700px){header{grid-template-columns:86px 1fr;column-gap:13px;padding:24px 15px 20px}header:after{display:none}.logo img{width:86px}h1{font-size:clamp(48px,13vw,76px);margin:9px 0 6px}.tagline{font-size:10px;letter-spacing:.04em}.header-stamp{font-size:8px;padding:5px 7px}.hero-main{min-height:300px;box-shadow:5px 5px 0 var(--red)}.hero-main h2{font-size:clamp(52px,14vw,72px)}.hero-main:after{font-size:140px}}
+@media(max-width:420px){header{grid-template-columns:68px 1fr}.logo img{width:68px}h1{font-size:47px}.tagline{font-size:9px}}
+
 </style>
 </head>
 <body>
@@ -211,12 +255,15 @@ async function loadConcertNews(){
 (function(){
 loadNews();
 loadConcertNews();
-var t=document.getElementById("title"),txt=t.textContent.trim(),cls=["a","b","c","d"],i=0,out="";
+var t=document.getElementById("title");
+if(t){
+var txt=t.textContent.trim(),cls=["a","b","c","d"],i=0,out="";
 txt.split(" ").forEach(function(w,wi){
-  if(wi>0)out+='<span class="gap" aria-hidden="true"></span>';
-  w.split("").forEach(function(ch){out+='<span aria-hidden="true" class="'+cls[(i++*7+wi)%4]+'">'+ch+'</span>';});
+if(wi>0)out+='<span class="gap" aria-hidden="true"></span>';
+w.split("").forEach(function(ch){out+='<span aria-hidden="true" class="'+cls[(i++*7+wi)%4]+'">'+ch+'</span>';});
 });
 t.innerHTML=out;
+}
 
 var audio=document.getElementById("audio"),msg=document.getElementById("msg");
 document.getElementById("play").addEventListener("click",function(){
