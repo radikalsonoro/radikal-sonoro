@@ -54,6 +54,46 @@ input[type=file]{padding:8px}button.chip{cursor:pointer}
 @media(min-width:800px){main{padding-left:28px;padding-right:28px}#videos,#spotify{display:inline-block;vertical-align:top;width:calc(50% - 12px)}#videos{margin-right:18px}}
 @media(max-width:600px){main{padding:18px 13px 42px}.logo{width:130px}.ransom{font-size:clamp(38px,11vw,58px)}section{padding:18px;margin-bottom:15px}.mag-nav{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap}.mag-nav a{white-space:nowrap;padding:8px}}
 </style>
+
+<style id="radikal-fanzine-redesign">
+:root{--bg:#090909;--panel:#171717;--ink:#f7f1df;--muted:#b9b2a3;--red:#ed2024;--line:#56514a}
+body{background-color:#090909;background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.018) 0 1px,transparent 1px 4px);font-family:Arial,Helvetica,sans-serif}
+main{max-width:1240px;padding-top:18px}
+.logo{width:min(210px,48vw);margin:8px auto 4px;filter:grayscale(1) contrast(1.15);border:5px solid var(--ink);box-shadow:8px 8px 0 var(--red);transform:rotate(-1deg)}
+h1.ransom{font-family:'Bowlby One',Impact,sans-serif;font-size:clamp(46px,10vw,112px);line-height:.92;letter-spacing:-.055em;text-transform:uppercase;text-align:center;margin:28px auto 18px;max-width:1050px;text-shadow:4px 4px 0 var(--red),8px 8px 0 #000}
+.ransom span{display:inline-block!important;padding:0 2px!important;color:var(--ink)!important;text-shadow:3px 3px 0 var(--red)}
+.ransom .c{color:var(--red)!important;text-shadow:3px 3px 0 var(--ink)}
+.sub{font-family:'Special Elite',monospace;font-size:16px;letter-spacing:.03em;color:#e5dfd0;max-width:760px;border-top:1px solid var(--red);border-bottom:1px solid var(--red);padding:12px 8px;margin:0 auto 24px}
+nav.mag-nav{justify-content:flex-start;gap:0;background:#ed2024;border:3px solid var(--ink);box-shadow:6px 6px 0 #000;padding:5px;margin:28px 0 34px;transform:rotate(-.35deg)}
+.mag-nav a{color:#090909;font-family:'Bowlby One',Impact,sans-serif;font-size:13px;letter-spacing:.04em;padding:10px 13px}
+.mag-nav a:hover{background:#090909;color:#fff}
+section{position:relative;background:#171717;border:2px solid #777064;border-top:7px solid var(--red);border-radius:0;padding:26px;margin:0 0 28px;box-shadow:7px 7px 0 #000}
+section:nth-of-type(even){transform:rotate(.15deg)}
+section:nth-of-type(odd){transform:rotate(-.15deg)}
+h2{font-family:'Bowlby One',Impact,sans-serif;font-size:clamp(27px,4vw,39px);letter-spacing:-.025em;margin-bottom:20px}
+h2:before{width:12px;height:34px;transform:skew(-12deg)}
+.box{background:#101010;border:1px dashed #81796a;border-radius:0;padding:20px}
+.radio{background:#211d18;border:2px solid var(--red)}
+.radio button,.chip{background:var(--red);color:#fff;border:2px solid var(--ink);border-radius:0;box-shadow:3px 3px 0 #000;font-family:'Bowlby One',Impact,sans-serif;letter-spacing:.025em}
+.radio button:hover,.chip:hover{background:var(--ink);color:#090909}
+.spot{border:3px solid var(--ink);box-shadow:5px 5px 0 var(--red);border-radius:0}
+.concert-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.concert-card{background:#0c0c0c;border:2px solid var(--ink);border-radius:0;box-shadow:5px 5px 0 #000;transform:rotate(-.4deg)}
+.concert-card:nth-child(even){transform:rotate(.5deg)}
+.concert-poster,.concert-placeholder{aspect-ratio:3/4}
+.concert-placeholder{background:repeating-linear-gradient(135deg,#111 0 10px,#282323 10px 20px);border-bottom:4px solid var(--red)}
+.concert-placeholder strong{font-family:'Bowlby One',Impact,sans-serif;font-size:clamp(26px,3vw,38px);line-height:.95}
+.concert-date{background:var(--red);border:2px solid var(--ink);box-shadow:3px 3px 0 #000;font-family:'Bowlby One',Impact,sans-serif;font-size:clamp(25px,4vw,36px);padding:12px 8px}
+.concert-date.pending{background:#292929;color:#ff514f;border:2px dashed var(--red)}
+ul.list li{border-bottom:1px dashed #625c51;padding:15px 4px}
+ul.list li a{font-weight:900;text-decoration-thickness:2px}
+.when,.badge{background:var(--red);color:#fff;font-weight:900;letter-spacing:.04em}
+input,textarea{border:2px solid #746c60;border-radius:0;background:#080808}
+input:focus,textarea:focus{outline:2px solid var(--red);outline-offset:2px}
+footer{font-family:'Special Elite',monospace;border-top:3px solid var(--red);padding:24px 8px;text-transform:uppercase;letter-spacing:.08em}
+@media(max-width:600px){main{padding:12px 12px 36px}.logo{width:118px}.ransom{font-size:clamp(38px,11vw,58px);margin:24px auto 16px}.mag-nav{overflow-x:auto}.mag-nav a{padding:10px 12px}section{padding:17px;margin-bottom:23px}.box{padding:15px}}
+</style>
+
 </head>
 <body>
 <main>
