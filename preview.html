@@ -75,6 +75,34 @@ input[type=file]{padding:8px}button.chip{cursor:pointer}
 .concert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:14px 0}.concert-card{background:#111;border:1px solid var(--line);border-bottom:3px solid var(--red);overflow:hidden}.concert-poster{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;background:#222}.concert-placeholder{aspect-ratio:3/4;display:flex;flex-direction:column;justify-content:space-between;padding:18px;background:repeating-linear-gradient(135deg,#171717 0 12px,#242424 12px 24px)}.concert-placeholder strong{font:32px/.95 Impact,sans-serif;text-transform:uppercase}.concert-placeholder span{color:#ff625d;font-size:11px;font-weight:900;letter-spacing:.15em}.concert-card-body{padding:12px}.concert-card-body a{font-weight:900}.concert-date{display:block;background:var(--red);color:#fff;text-align:center;padding:10px 8px;margin:0 0 10px;font:clamp(24px,4vw,34px)/1 Impact,"Arial Narrow",sans-serif;letter-spacing:.04em;text-transform:uppercase}.concert-date small{display:block;font:800 10px/1.3 Arial,sans-serif;letter-spacing:.16em;margin-bottom:5px}.concert-date.pending{background:#292929;border:1px solid var(--red);color:#ff625d}
 @media(min-width:800px){main{padding-left:28px;padding-right:28px}#videos,#spotify{display:inline-block;vertical-align:top;width:calc(50% - 12px)}#videos{margin-right:18px}}
 @media(max-width:600px){main{padding:18px 13px 42px}.logo{width:130px}.ransom{font-size:clamp(38px,11vw,58px)}section{padding:18px;margin-bottom:15px}.mag-nav{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap}.mag-nav a{white-space:nowrap;padding:8px}}
+
+/* Recuperación del diseño punk-fanzine aprobado */
+:root{--bg:#080808;--panel:#111;--ink:#f5f0e6;--muted:#b4ada2;--red:#ed1724;--line:#514b43;color-scheme:dark}
+body{background:#080808!important;background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.012) 0 1px,transparent 1px 4px)!important;color:#f5f0e6!important;font-family:Arial,Helvetica,sans-serif!important;line-height:1.55!important}
+h1,h2,h3,.ransom,.concert-date,.concert-placeholder strong{font-family:Impact,"Arial Narrow",sans-serif!important;text-transform:uppercase!important;letter-spacing:.025em!important}
+h1.ransom{font-size:clamp(48px,10vw,96px)!important;line-height:.9!important;text-shadow:4px 4px 0 #ed1724!important;color:#f5f0e6!important}
+.sub{font-weight:900!important;letter-spacing:.13em!important;color:#f5f0e6!important}
+nav.mag-nav{border:2px solid #f5f0e6!important;border-left:0!important;border-right:0!important;border-radius:0!important;background:#080808!important;box-shadow:0 5px 0 rgba(237,23,36,.35)!important}
+.mag-nav a{font-family:Impact,"Arial Narrow",sans-serif!important;font-size:16px!important;letter-spacing:.08em!important;border-radius:0!important;color:#f5f0e6!important}
+.mag-nav a:hover{background:#ed1724!important}
+#hero{border:3px solid #f5f0e6!important;border-radius:0!important;box-shadow:8px 8px 0 #ed1724!important}
+#hero:before{background:linear-gradient(100deg,rgba(0,0,0,.94),rgba(0,0,0,.42))!important}
+section{background:linear-gradient(145deg,#171717,#0b0b0b)!important;border:2px solid #50483f!important;border-top:3px solid #ed1724!important;border-radius:0!important;box-shadow:5px 5px 0 rgba(237,23,36,.55)!important;padding:clamp(18px,3vw,28px)!important}
+h2{font-size:clamp(29px,5vw,42px)!important;text-shadow:2px 2px 0 #650b12!important}
+h2:before{background:#ed1724!important}
+.box,.radio,.spot,.rp-tile{border:2px solid #50483f!important;border-radius:0!important;background:#101010!important}
+.radio button,.chip,.rp-cta{border-radius:0!important;box-shadow:3px 3px 0 #000!important;background:#ed1724!important;color:#fff!important}
+.radikal-presenta{border:3px solid #f5f0e6!important;box-shadow:8px 8px 0 #ed1724!important;border-radius:0!important}
+.rp-kicker{background:#ed1724!important;color:#fff!important}
+.rp-feature{border-radius:0!important;background:linear-gradient(100deg,rgba(0,0,0,.95),rgba(0,0,0,.35)),repeating-linear-gradient(135deg,#292929 0 3px,#101010 3px 10px)!important}
+.rp-cta{background:#f5f0e6!important;color:#111!important}
+.rp-grid{background:#090909!important}
+.rp-tile{border-left:6px solid #ed1724!important}
+.concert-card{border:2px solid #f5f0e6!important;border-bottom:7px solid #ed1724!important;border-radius:0!important;box-shadow:7px 7px 0 #650b12!important}
+.concert-poster,.concert-placeholder{border-radius:0!important}
+.concert-date{transform:rotate(-2deg)!important;border-radius:0!important}
+input,textarea{border-radius:0!important}
+
 </style>
 
 <style id="radikal-professional-redesign">
