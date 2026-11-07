@@ -222,6 +222,156 @@ footer{border-top:2px solid var(--red);letter-spacing:.12em}
  #news-list li:first-child a{font-size:48px}
 }
 
+
+/* =========================================================
+   RADIKAL SONORO · REVISTA UNDER PUNK
+   Nueva dirección editorial sobre la identidad original.
+   ========================================================= */
+:root{
+ --bg:#080808;--panel:#111;--panel2:#181715;--red:#ed1c2a;
+ --cream:#f4efe5;--muted:#b7aea2;--line:#4b4139;
+ --display:"Barlow Condensed",Impact,sans-serif;
+}
+body{background:#080808;color:var(--cream);font-family:"DM Sans",Arial,sans-serif}
+body:before{opacity:.13;background-size:6px 6px}
+header{max-width:1260px;padding:22px 26px 20px;grid-template-columns:126px 1fr;column-gap:22px}
+.logo img{width:126px;filter:grayscale(1) contrast(1.2) drop-shadow(5px 5px 0 var(--red))}
+header:after{content:"FANZINE · RADIO · CULTURA DE RESISTENCIA";font-size:9px;letter-spacing:.2em}
+h1{font-family:var(--display);font-size:clamp(66px,11vw,132px);line-height:.76;letter-spacing:-.06em;text-shadow:3px 3px 0 #7e1119}
+.tagline{font-size:11px;letter-spacing:.19em;text-transform:uppercase;color:#e7dfd2}
+.header-stamp{background:var(--red);color:white;border:1px solid var(--cream);box-shadow:4px 4px 0 #000}
+nav{justify-content:flex-start;padding:7px max(18px,calc((100vw - 1200px)/2));gap:2px}
+nav a{font:800 18px var(--display);letter-spacing:.12em;padding:9px 15px}
+main{max-width:1260px;padding-left:24px;padding-right:24px}
+.hero{grid-template-columns:minmax(0,1.7fr) minmax(220px,.55fr);gap:0;margin:24px 0 22px}
+.hero-main{min-height:440px;padding:clamp(28px,6vw,76px);border:0;border-left:9px solid var(--red);box-shadow:none;
+ background:
+ radial-gradient(ellipse at 82% 30%,rgba(237,28,42,.28),transparent 32%),
+ linear-gradient(90deg,rgba(0,0,0,.94),rgba(0,0,0,.35)),
+ repeating-linear-gradient(135deg,#292522 0 2px,#0b0b0b 2px 10px)}
+.hero-main:after{content:"UNDER";font:900 clamp(170px,25vw,340px)/.8 var(--display);right:-30px;top:4px;color:rgba(244,239,229,.08);transform:rotate(-9deg)}
+.hero-main:before{content:"PUNK · HARDCORE · SKA · METAL";position:absolute;right:20px;bottom:20px;color:rgba(244,239,229,.55);font:800 10px "DM Sans";letter-spacing:.2em;transform:rotate(-3deg)}
+.hero-main h2{font:900 clamp(62px,9vw,116px)/.78 var(--display);letter-spacing:-.04em;text-shadow:5px 5px 0 var(--red);transform:rotate(-1.5deg);max-width:720px}
+.hero-main p{font-size:15px;max-width:430px;color:#e0d8cc}
+.hero-side{gap:0;background:#171513;border-top:3px solid var(--cream);border-bottom:3px solid var(--red)}
+.sidebox{background:transparent;border:0;border-bottom:1px solid #51483e;box-shadow:none;padding:26px 22px}
+.sidebox:nth-child(2){transform:none;border-color:transparent}
+.sidebox strong{font:900 clamp(28px,3.2vw,42px)/.9 var(--display)}
+.sidebox p{font-size:12px}
+section{background:transparent;border:0;border-top:1px solid #51483e;box-shadow:none;margin:32px 0;padding:26px 0;scroll-margin-top:78px}
+.section-head{border:0;padding:0;margin:0 0 20px;align-items:baseline}
+.section-head h2{font:900 clamp(43px,6vw,72px)/.82 var(--display);letter-spacing:-.025em}
+.section-head small{background:var(--red);color:#fff;padding:5px 9px;font-size:9px;letter-spacing:.18em;transform:rotate(-2deg)}
+/* La radio es el gran bloque editorial de portada */
+#radio{margin:24px 0 42px;padding:26px 28px 30px;background:var(--red);color:#fff;border:0;position:relative;overflow:hidden}
+#radio:after{content:"ON AIR";position:absolute;right:-12px;top:34px;font:900 clamp(100px,18vw,220px)/.8 var(--display);color:rgba(0,0,0,.13);transform:rotate(-8deg);pointer-events:none}
+#radio .section-head{position:relative;z-index:1;border-bottom:2px solid rgba(255,255,255,.6);padding-bottom:15px}
+#radio .section-head h2{font-size:clamp(50px,8vw,94px);text-shadow:4px 4px 0 #8f0b14}
+#radio .section-head small{background:var(--cream);color:#111}
+#radio .radio-grid{position:relative;z-index:1;grid-template-columns:1.2fr .8fr;gap:0;align-items:stretch}
+#radio .radio-card{background:transparent;border:0;box-shadow:none;padding:18px 24px 10px 0}
+#radio .radio-card+ .radio-card{border-left:1px solid rgba(255,255,255,.45);padding:18px 0 10px 24px}
+#radio .radio-card h3{font:900 clamp(34px,5vw,58px)/.9 var(--display);text-transform:uppercase;margin:0 0 10px}
+#radio .radio-card p{color:#fff;font-size:13px}
+#radio .radio-card:first-child h3:before{content:"● EN DIRECTO";display:block;font:900 10px "DM Sans";letter-spacing:.2em;margin-bottom:13px;color:#18090a}
+#radio button{background:#090909;color:#fff;border:2px solid #fff;box-shadow:5px 5px 0 rgba(0,0,0,.35);font:900 18px var(--display);letter-spacing:.1em;padding:14px 24px}
+#radio audio{display:block;max-width:100%;filter:grayscale(1) contrast(1.2);margin-top:14px}
+#radio .msg,#radio .small{color:#fff}
+#radio a{color:#fff;font-weight:800}
+/* Próximamente: anuncio especial, como una doble página */
+#proximamente{border:0;background:#171513;padding:24px;position:relative}
+#proximamente .section-head{border-bottom:1px solid #51483e;padding-bottom:13px}
+.upcoming-feature{grid-template-columns:minmax(240px,.9fr) 1.1fr;gap:36px}
+.upcoming-art{min-height:300px;border:3px solid var(--cream);box-shadow:8px 8px 0 var(--red);transform:rotate(-1deg)}
+.upcoming-copy h3{font:900 clamp(38px,5vw,62px)/.88 var(--display);letter-spacing:-.02em}
+.upcoming-copy p{max-width:520px}
+/* Noticias: una portada grande y titulares secundarios, sin tarjetas repetidas */
+#noticias{padding-top:34px}
+#noticias>.small:first-of-type{max-width:700px;font-size:13px;color:#d2c8ba}
+#news-status{display:inline-block;background:var(--cream);color:#111;padding:7px 10px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+#news-list{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0 22px;margin:18px 0 12px}
+#news-list li{list-style:none;min-width:0;padding:18px 0 20px;border:0;border-top:1px solid #51483e;position:relative}
+#news-list li:first-child{grid-column:1/9;grid-row:span 2;padding:24px 28px 28px 0;border-top:5px solid var(--red);border-bottom:1px solid #51483e}
+#news-list li:nth-child(2){grid-column:9/13;border-top:5px solid var(--cream)}
+#news-list li:nth-child(3){grid-column:9/13}
+#news-list li:nth-child(4){grid-column:1/7}
+#news-list li:nth-child(5){grid-column:7/13}
+#news-list li a{display:block;font:800 29px/ .98 var(--display);letter-spacing:-.01em;text-transform:uppercase;text-decoration:none;color:var(--cream)}
+#news-list li:first-child a{font:900 clamp(48px,7vw,86px)/.82 var(--display);letter-spacing:-.035em;color:#fff;max-width:780px}
+#news-list li a:hover{color:#ff5962}
+#news-list li p{font-size:13px!important;line-height:1.55;color:#c9c0b4!important;max-width:620px}
+#news-list li:first-child p{font-size:16px!important;max-width:660px}
+#news-list li .small{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#ed7479}
+#news-list li:first-child:before{content:"HISTORIA DESTACADA";display:inline-block;background:var(--red);color:#fff;padding:5px 8px;font:900 9px "DM Sans";letter-spacing:.18em;margin-bottom:15px;transform:rotate(-2deg)}
+/* Agenda: que manden los carteles */
+#conciertos{background:#151311;padding:26px 24px;margin-top:44px;border-top:4px solid var(--red)}
+#conciertos .section-head h2{font-size:clamp(48px,7vw,82px)}
+#conciertos .concert-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:15px}
+#conciertos .concert-card{background:#090909;border:0;border-bottom:4px solid var(--red);box-shadow:4px 5px 0 #000}
+#conciertos .concert-poster,#conciertos .concert-placeholder{height:clamp(170px,22vw,280px);min-height:0}
+#conciertos .concert-card-body{padding:12px}
+#conciertos .concert-card-body>a:not(.concert-more){font-size:20px}
+#conciertos .concert-date{font-size:15px}
+#conciertos .concert-more{box-shadow:none}
+/* Vídeos y podcasts: índice visual, no otra colección de cajas */
+#videos .video-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 24px}
+#videos .video-grid li{background:transparent;border:0;border-top:1px solid #51483e;box-shadow:none;padding:17px 4px}
+#videos .video-grid a{font:800 28px/.95 var(--display);text-transform:uppercase;text-decoration:none}
+#spotify .spot{max-width:850px;border-left:7px solid var(--red);background:#111}
+#spotify .box,.box{border:0;border-left:3px solid var(--red);background:#171513;box-shadow:none}
+#contacto .box{padding:22px}
+footer{border-top:4px solid var(--red);font:800 10px "DM Sans";letter-spacing:.2em;padding:30px 16px}
+/* móvil: mantener el impacto sin apretar columnas */
+@media(max-width:850px){
+ #conciertos .concert-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ #news-list li:first-child{grid-column:1/8}
+ #news-list li:nth-child(2),#news-list li:nth-child(3){grid-column:8/13}
+ #news-list li:nth-child(4){grid-column:1/7}
+ #news-list li:nth-child(5){grid-column:7/13}
+}
+@media(max-width:650px){
+ header{grid-template-columns:76px 1fr;padding:20px 15px 18px;column-gap:13px}
+ header:after{display:none}
+ .logo img{width:76px}
+ h1{font-size:clamp(48px,13vw,78px);margin:9px 0 6px}
+ .tagline{font-size:9px;letter-spacing:.08em}
+ .header-stamp{font-size:8px;padding:5px 7px}
+ main{padding-left:15px;padding-right:15px}
+ .hero{grid-template-columns:1fr;margin-top:14px}
+ .hero-main{min-height:330px;padding:28px 23px}
+ .hero-main h2{font-size:clamp(58px,15vw,82px)}
+ .hero-side{grid-template-columns:1fr 1fr}
+ .sidebox{padding:17px 13px}
+ #radio{padding:21px 17px 24px}
+ #radio .radio-grid{grid-template-columns:1fr}
+ #radio .radio-card,#radio .radio-card+.radio-card{padding:15px 0;border:0;border-top:1px solid rgba(255,255,255,.4)}
+ #radio .radio-card h3{font-size:40px}
+ #radio:after{font-size:130px;top:auto;bottom:0}
+ section{margin:25px 0;padding:21px 0}
+ .section-head h2{font-size:48px}
+ .upcoming-feature{grid-template-columns:1fr;gap:25px}
+ .upcoming-art{min-height:230px}
+ #news-list{grid-template-columns:1fr 1fr;gap:0 14px}
+ #news-list li:first-child{grid-column:1/-1;grid-row:auto;padding:19px 0 22px}
+ #news-list li:nth-child(2),#news-list li:nth-child(3),#news-list li:nth-child(4),#news-list li:nth-child(5){grid-column:span 1}
+ #news-list li:first-child a{font-size:clamp(48px,12vw,68px)}
+ #news-list li a{font-size:24px}
+ #conciertos{padding:21px 14px}
+ #conciertos .concert-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+ #conciertos .concert-poster,#conciertos .concert-placeholder{height:220px}
+ #videos .video-grid{grid-template-columns:1fr 1fr}
+ #videos .video-grid a{font-size:24px}
+}
+@media(max-width:390px){
+ .hero-side{grid-template-columns:1fr}
+ #news-list{grid-template-columns:1fr}
+ #news-list li:first-child,#news-list li:nth-child(2),#news-list li:nth-child(3),#news-list li:nth-child(4),#news-list li:nth-child(5){grid-column:1}
+ #news-list li:first-child a{font-size:49px}
+ #conciertos .concert-grid{grid-template-columns:1fr}
+ #conciertos .concert-poster,#conciertos .concert-placeholder{height:290px}
+ #videos .video-grid{grid-template-columns:1fr}
+}
+
 </style>
 </head>
 <body>
