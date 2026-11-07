@@ -134,231 +134,93 @@ footer{border-top:3px solid var(--red);font-weight:800;letter-spacing:.16em}
 .upcoming-copy .upcoming-note{color:#ff747a;font-size:12px;font-weight:800;letter-spacing:.04em}
 .upcoming-copy .cta{margin-top:8px}
 @media(max-width:650px){.upcoming-feature{grid-template-columns:1fr;gap:24px}.upcoming-art{min-height:220px}.upcoming-art strong{font-size:55px}.upcoming-copy{padding:0 3px}}
-
-/* ===== REDISEÑO EDITORIAL RADIKAL SONORO · NOV 2026 ===== */
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap');
-:root{--bg:#090909;--panel:#111;--panel2:#171717;--red:#f21d2f;--cream:#f4efe5;--muted:#b8b0a4;--line:#3c3731}
-body{background:#090909;color:var(--cream);font-family:"DM Sans",sans-serif}
-body:before{opacity:.12;background-size:3px 3px}
-header{max-width:none;width:100%;padding:28px max(24px,calc((100vw - 1160px)/2)) 30px;grid-template-columns:112px 1fr;column-gap:22px;background:#090909;border-bottom:1px solid #3c3731}
-header:after{content:"RADIO LIBRE / CULTURA UNDERGROUND";right:max(24px,calc((100vw - 1160px)/2));top:18px;font-size:9px;color:#aaa}
-.logo img{width:108px;filter:grayscale(1) contrast(1.35);mix-blend-mode:screen}
-h1{font-family:"Anton","Barlow Condensed",Impact,sans-serif;font-size:clamp(68px,12vw,150px);letter-spacing:-.045em;line-height:.78;text-shadow:5px 5px 0 #a10d19,-2px -2px 0 #000;margin:22px 0 10px}
-h1 span{-webkit-text-stroke:1px var(--cream);color:var(--red)}
-.tagline{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#ddd5c8;margin:13px 0}
-.header-stamp{background:var(--red);border:1px solid var(--cream);box-shadow:4px 4px 0 #000;transform:rotate(-2deg);font-size:9px}
-nav{justify-content:flex-start;padding:8px max(18px,calc((100vw - 1160px)/2));gap:8px;border-top:1px solid #5a5147;border-bottom:3px solid var(--red)}
-nav a{font:800 16px "Barlow Condensed";letter-spacing:.15em;padding:9px 12px}
-main{max-width:1160px;padding:0 22px 70px;margin:0 auto;display:flex;flex-direction:column;gap:0}
-main>.hero{order:0;margin:0 -22px 34px;display:block;position:relative;min-height:510px;background:#171311 url("https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1800&q=85") center 44%/cover no-repeat;border-bottom:8px solid var(--red)}
-.hero-main{min-height:510px;padding:clamp(30px,7vw,82px);border:0;box-shadow:none;background:linear-gradient(90deg,rgba(0,0,0,.91) 0%,rgba(0,0,0,.62) 48%,rgba(0,0,0,.08) 100%);justify-content:flex-end}
-.hero-main:after{content:"NOISE";font:900 clamp(130px,25vw,340px)/.8 Anton;color:rgba(255,255,255,.12);right:-10px;top:12px;transform:rotate(-8deg)}
-.hero-main:before{content:"INDEPENDENT RADIO · EST. RADIKAL";position:absolute;left:clamp(30px,7vw,82px);top:34px;background:var(--red);color:white;padding:7px 11px;font:900 10px "DM Sans";letter-spacing:.2em;transform:rotate(-2deg)}
-.hero-main h2{font:900 clamp(65px,10vw,126px)/.82 Anton,"Barlow Condensed";letter-spacing:-.035em;max-width:850px;text-shadow:5px 5px 0 var(--red);transform:none}
-.hero-main p{font-size:15px;max-width:520px;color:#f0e9df}
-.kicker{font-size:11px;letter-spacing:.22em}
-.hero-side{position:absolute;right:24px;bottom:24px;display:flex;gap:10px;max-width:490px}
-.sidebox{background:rgba(8,8,8,.88);border:1px solid #eee2d0;padding:15px 18px;min-width:190px;box-shadow:5px 5px 0 var(--red)}
-.sidebox:nth-child(2){transform:rotate(0);border-color:#eee2d0}
-.sidebox strong{font:800 23px "Barlow Condensed"}
-section{order:10;background:transparent;border:0;border-top:1px solid #51483f;box-shadow:none;margin:0;padding:38px 0;scroll-margin-top:70px}
-.section-head{border:0;margin:0 0 22px;padding:0;align-items:baseline}
-.section-head h2{font:900 clamp(42px,7vw,76px)/.86 Anton,"Barlow Condensed";letter-spacing:-.025em;text-shadow:3px 3px 0 #8f101b}
-.section-head small{background:var(--red);color:white;padding:5px 9px;transform:rotate(-2deg);font-size:9px}
-#radio{order:1;background:var(--red);color:#090909;margin:0 -22px;padding:38px 22px 42px;border:0}
-#radio .section-head{max-width:1116px;margin:0 auto 22px}
-#radio .section-head h2{font-size:clamp(55px,9vw,104px);color:#090909;text-shadow:3px 3px 0 #f5efe4}
-#radio .section-head small{background:#090909;color:white}
-.radio-grid{max-width:1116px;margin:auto;grid-template-columns:1.15fr .85fr;gap:0;border:3px solid #090909;box-shadow:8px 8px 0 rgba(0,0,0,.35)}
-.radio-card{background:#090909;color:var(--cream);border:0;padding:clamp(20px,4vw,38px);box-shadow:none}
-.radio-card+ .radio-card{border-left:1px solid #5c5148}
-.radio-card h3{font:900 clamp(32px,5vw,54px)/.9 Anton,"Barlow Condensed";text-transform:uppercase;color:var(--cream)}
-.radio-card p{color:#c9c0b4}
-#play{font:900 18px "Barlow Condensed";letter-spacing:.13em;padding:16px 24px;background:var(--red);border:2px solid var(--cream);box-shadow:4px 4px 0 #5c1118}
-audio{accent-color:var(--red)}
-#proximamente{order:2}
-.upcoming{background:transparent}
-.upcoming-art{box-shadow:8px 8px 0 var(--red)}
-#quienes-somos{order:8}
-#noticias{order:3}
-#noticias .section-head{margin-bottom:10px}
-#noticias>p.small:first-of-type{max-width:630px;font-size:14px;color:#d4cabc}
-#news-list{list-style:none;padding:0;margin:26px 0 12px;display:grid;grid-template-columns:1.25fr .75fr .75fr;gap:0;align-items:stretch}
-#news-list li{position:relative;min-height:220px;padding:165px 18px 20px 0;border:0;border-top:1px solid #665c50;margin:0 18px 0 0;display:flex;flex-direction:column;justify-content:flex-end}
-#news-list li:before{content:"";position:absolute;top:0;left:0;right:12px;height:150px;background:#211 url("https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=900&q=80") center/cover no-repeat;filter:grayscale(1) contrast(1.12)}
-#news-list li:nth-child(2):before{background-image:url("https://images.unsplash.com/photo-152436	b?auto=format&fit=crop&w=900&q=80")}
-#news-list li:nth-child(3):before{background-image:url("https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=900&q=80")}
-#news-list li:nth-child(4):before{background-image:url("https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=80")}
-#news-list li:nth-child(5):before{background-image:url("https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=900&q=80")}
-#news-list li a{font:800 25px/1.02 "Barlow Condensed";text-transform:uppercase;text-decoration:none;color:var(--cream);max-width:440px}
-#news-list li:first-child a{font:900 clamp(33px,4vw,48px)/.94 Anton,"Barlow Condensed";color:white}
-#news-list li p{font-size:12px!important;line-height:1.5}
-#news-list li .small{font-size:9px}
-#conciertos{order:4}
-#concert-news-list{background:transparent}
-#videos{order:5}
-#spotify{order:6}
-#contacto{order:9}
-#conciertos .concert-card{box-shadow:5px 5px 0 #6d1018}
-#videos .video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-#videos .video-grid li{padding:20px;background:#141414;border:1px solid #554b40;min-height:90px}
-#videos .video-grid a{font:800 22px/1 "Barlow Condensed";text-transform:uppercase;text-decoration:none}
-#spotify .spot{max-width:720px;min-height:250px}
-#spotify .spot iframe{height:250px}
-#contacto .box,#conciertos .box{background:#111;border:1px solid #554b40;box-shadow:5px 5px 0 #6d1018}
-footer{background:#f4efe5;color:#090909;border:0;padding:28px 15px;font:900 12px "DM Sans";letter-spacing:.2em}
-@media(max-width:700px){
- header{grid-template-columns:65px 1fr;padding:22px 14px 20px;column-gap:12px}
- header:after{display:none}.logo img{width:64px}
- h1{font-size:clamp(48px,13vw,78px);margin:16px 0 7px}
- .tagline{font-size:9px;letter-spacing:.1em}
- nav{overflow-x:auto;flex-wrap:nowrap;padding:7px 10px}
- nav a{white-space:nowrap;font-size:15px;padding:8px 10px}
- main{padding:0 14px 45px}
- main>.hero{margin:0 -14px 25px;min-height:530px}
- .hero-main{min-height:530px;padding:30px 22px 165px;background:linear-gradient(0deg,rgba(0,0,0,.95),rgba(0,0,0,.24) 100%)}
- .hero-main:before{left:22px;top:22px;font-size:8px}
- .hero-main h2{font-size:clamp(57px,15vw,86px)}
- .hero-side{left:18px;right:18px;bottom:18px;max-width:none;gap:7px}
- .sidebox{min-width:0;flex:1;padding:11px}.sidebox strong{font-size:19px}.sidebox p{font-size:10px}
- #radio{margin:0 -14px;padding:30px 14px}
- .radio-grid{grid-template-columns:1fr}
- .radio-card+.radio-card{border-left:0;border-top:1px solid #5c5148}
- section{padding:30px 0}
- #news-list{grid-template-columns:1fr 1fr;gap:0}
- #news-list li{margin-right:12px;min-height:205px;padding-top:145px}
- #news-list li:before{height:130px}
- #news-list li a{font-size:21px}
- #news-list li:first-child{grid-column:1/-1;min-height:270px;padding-top:180px}
- #news-list li:first-child:before{height:165px;right:0}
- #news-list li:first-child a{font-size:40px}
- #videos .video-grid{grid-template-columns:1fr 1fr}
- .upcoming-feature{grid-template-columns:1fr}
-}
-@media(max-width:390px){
- .hero-side{display:grid;grid-template-columns:1fr 1fr}
- .sidebox strong{font-size:17px}
- #news-list{grid-template-columns:1fr}
- #news-list li:first-child{grid-column:auto}
- #videos .video-grid{grid-template-columns:1fr}
-}
-
 </style>
-
-<!-- RADIKAL SONORO · REDISEÑO EDITORIAL REVISTA UNDERGROUND -->
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style id="radikal-editorial-redesign">
-:root{--bg:#090909;--panel:#111;--panel2:#191919;--red:#ef233c;--cream:#f3eee4;--muted:#aaa49a;--line:#4b443d;--acid:#d6ef35}
-html{scroll-padding-top:76px}
-body{background:var(--bg);color:var(--cream);font-family:"DM Sans",sans-serif;line-height:1.45}
-body:before{opacity:.12;background-size:4px 4px}
-.topline{height:8px;background:linear-gradient(90deg,var(--red) 0 68%,var(--acid) 68% 70%,var(--cream) 70% 100%)}
-header{max-width:1380px;display:grid;grid-template-columns:120px 1fr;gap:8px 24px;text-align:left;align-items:center;padding:25px 30px 20px;border-bottom:1px solid #39332e}
-header:after{content:"RADIO LIBRE / ESCENA INDEPENDIENTE / DESDE EL SUBSUELO";font:500 9px "DM Mono";letter-spacing:.13em;color:#a69d90;right:30px;top:18px}
-.logo{grid-column:1;grid-row:1/4;margin:0}
-.logo img{width:118px;filter:grayscale(1) contrast(1.3);mix-blend-mode:screen}
-h1{grid-column:2;font:400 clamp(64px,10vw,132px)/.78 "Anton",Impact,sans-serif;letter-spacing:-.045em;text-align:left;margin:15px 0 5px;text-shadow:3px 3px 0 var(--red)}
-h1 span{color:var(--red);-webkit-text-stroke:0}
-.tagline{grid-column:2;text-align:left;margin:7px 0 8px;max-width:none;font:500 11px "DM Mono";letter-spacing:.09em;text-transform:uppercase;color:#d2c9bc}
-.header-stamp{grid-column:2;justify-self:start;background:var(--acid);color:#101010;border:0;box-shadow:none;transform:none;font:500 9px "DM Mono";letter-spacing:.1em;padding:5px 9px}
-nav{justify-content:flex-start;gap:0;padding:0 max(20px,calc((100vw - 1320px)/2));border:0;border-bottom:1px solid #48413a;background:#090909}
-nav a{font:500 12px "DM Mono";letter-spacing:.08em;padding:15px 14px;color:#d7d0c5}
-nav a:hover{background:var(--red);transform:none;box-shadow:none}
-main{max-width:1380px;padding:20px 28px 65px;margin:0 auto}
-.hero{grid-template-columns:minmax(0,1.65fr) minmax(270px,.8fr);gap:0;margin:0 0 30px}
-.hero-main{min-height:510px;padding:clamp(28px,5vw,66px);border:0;box-shadow:none;background:linear-gradient(90deg,rgba(0,0,0,.86),rgba(0,0,0,.14)),linear-gradient(0deg,rgba(0,0,0,.68),transparent 70%),url("https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1800&q=85") center 45%/cover}
-.hero-main:after{content:"VOL. 01";font:400 18px "DM Mono";letter-spacing:.18em;color:var(--acid);right:25px;top:25px;transform:none}
-.hero-main:before{content:"PUNK · HARDCORE · SKA · METAL";position:absolute;left:clamp(28px,5vw,66px);bottom:24px;font:500 10px "DM Mono";letter-spacing:.16em;color:var(--cream)}
-.hero-main h2{font:400 clamp(64px,9vw,126px)/.82 "Anton",Impact,sans-serif;letter-spacing:-.025em;max-width:800px;text-shadow:4px 4px 0 var(--red);transform:none;margin:20px 0}
-.hero-main p{font-size:15px;max-width:440px;color:#eee5da}
-.kicker{background:var(--red);padding:6px 10px;transform:none;font:500 10px "DM Mono";letter-spacing:.16em}
-.cta{background:var(--acid);color:#111;border:0;box-shadow:none;transform:none;font:500 11px "DM Mono";letter-spacing:.08em;padding:14px 18px}
-.cta:hover{background:var(--red);color:white}
-.hero-side{display:flex;flex-direction:column;gap:0;background:var(--red)}
-.sidebox{flex:1;justify-content:center;padding:28px;border:0;border-bottom:1px solid rgba(255,255,255,.3);background:transparent;box-shadow:none;transform:none}
-.sidebox:nth-child(2){transform:none;border-color:rgba(255,255,255,.3)}
-.sidebox .redline{background:var(--acid);margin-bottom:18px}
-.sidebox strong{font:400 clamp(30px,4vw,48px)/.92 "Anton";color:#fff}
-.sidebox p{color:#ffe1df;font-size:12px}
-section{margin:0;padding:48px 0;border:0;border-top:1px solid #50483f;box-shadow:none;background:transparent;scroll-margin-top:65px}
-.section-head{align-items:baseline;border-bottom:1px solid #6a6054;padding-bottom:12px;margin-bottom:25px}
-.section-head h2{font:400 clamp(42px,6vw,72px)/.9 "Anton";letter-spacing:-.02em;text-shadow:none}
-.section-head small{background:var(--acid);color:#111;padding:5px 8px;transform:none;font:500 9px "DM Mono";letter-spacing:.12em}
-#radio{margin:0 -28px;padding:38px 28px 42px;background:var(--red);border:0}
-#radio .section-head{border-color:rgba(255,255,255,.4)}
-#radio .section-head h2{color:#fff;font-size:clamp(48px,7vw,86px)}
-#radio .section-head small{background:var(--acid)}
-.radio-grid{grid-template-columns:1.2fr .8fr;gap:0}
-.radio-card{background:#0b0b0b;color:var(--cream);border:0;padding:26px 28px;box-shadow:none}
-.radio-card:first-child{border-right:1px solid #403a34}
-.radio-card h3{font:400 clamp(30px,4vw,46px)/.95 "Anton";margin:0 0 10px}
-.radio-card p{font-size:12px;color:#bdb5aa}
-.radio-card button{background:var(--acid);color:#111;border:0;box-shadow:none;transform:none;font:500 11px "DM Mono"}
-audio{accent-color:var(--red)}
-#directo{padding:20px 0;border-top:0}
-#directo .section-head{display:none}
-#directo .box{display:flex;align-items:center;gap:20px;background:#171717;border:1px solid #4c433b;padding:16px 20px;box-shadow:none}
-#directo .box strong{font:400 23px "Anton";text-transform:uppercase}
-#directo .box p{margin:0;color:#c4b9aa;font-size:12px}
-#proximamente .upcoming-feature{display:grid;grid-template-columns:1fr 1fr;gap:0;background:#171717}
-#proximamente .upcoming-art{min-height:300px;background:linear-gradient(135deg,rgba(0,0,0,.18),rgba(0,0,0,.78)),url("https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1200&q=80") center/cover}
-#proximamente .upcoming-copy{padding:clamp(24px,4vw,48px)}
-#proximamente .upcoming-copy h3{font:400 clamp(32px,5vw,58px)/.94 "Anton";text-transform:uppercase}
-#proximamente .upcoming-kicker,.upcoming-note{font:500 10px "DM Mono";letter-spacing:.1em;color:var(--acid);text-transform:uppercase}
-#quienes-somos .box{max-width:900px;background:#171717;border:0;border-left:4px solid var(--red);padding:28px;box-shadow:none}
-#noticias{background:var(--cream);color:#111;margin:0 -28px;padding:48px 28px}
-#noticias .section-head{border-color:#aaa094}
-#noticias .section-head h2{color:#111}
-#noticias .section-head small{background:var(--red);color:#fff}
-#noticias>p.small{color:#514a42}
-#news-status{font:500 10px "DM Mono";color:#645b51;text-transform:uppercase;letter-spacing:.08em}
-#news-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 34px;list-style:none;padding:0;margin:0}
-#news-list li{border:0;border-top:1px solid #b7ada0;padding:18px 0;background:transparent}
-#news-list li:first-child{grid-column:1/-1;min-height:250px;padding:24px 28px 28px;background:#111;color:var(--cream);display:flex;flex-direction:column;justify-content:end;position:relative;overflow:hidden}
-#news-list li:first-child:before{content:"EN PORTADA";font:500 10px "DM Mono";letter-spacing:.15em;color:var(--acid);margin-bottom:auto}
-#news-list li a{font:400 27px/1.02 "Anton";text-transform:uppercase;text-decoration:none;color:inherit;display:block;max-width:760px}
-#news-list li:first-child a{font-size:clamp(42px,6vw,76px);max-width:850px}
-#news-list li p{font-size:12px!important;color:#635a50!important;line-height:1.5}
-#news-list li:first-child p{color:#d0c7ba!important;max-width:700px}
-#news-list li .small{font:500 9px "DM Mono";letter-spacing:.08em;color:#81766a}
-#news-list li:first-child .small{color:#b6aa9c}
-#conciertos{background:#111;margin:0 -28px;padding:48px 28px}
-#conciertos .section-head{border-color:#5a5148}
-#conciertos .section-head h2{color:var(--cream)}
-#conciertos .section-head small{background:var(--red);color:#fff}
-#conciertos>p.small{color:#c2b8ab}
-.concert-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
-.concert-card{background:#090909;border:0;border-bottom:3px solid var(--red);box-shadow:none;transition:transform .2s}
-.concert-card:hover{transform:translateY(-5px);box-shadow:none}
-.concert-poster,.concert-placeholder{height:260px;min-height:260px;aspect-ratio:auto}
-.concert-card-body{padding:13px 12px 17px}
-.concert-card-body>a:not(.concert-more){font:400 22px/1 "Anton";color:var(--cream)}
-.concert-date{font:500 10px "DM Mono";transform:none;box-shadow:none}
-.concert-more{background:var(--acid);border:0;box-shadow:none;font:500 9px "DM Mono"}
-#videos .video-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
-#videos .video-grid li{background:#171717;border:0;border-top:2px solid var(--red);box-shadow:none}
+<style id="radikal-revista-editorial">
+:root{--mag-red:#ed1724;--mag-paper:#f1eadf;--mag-ink:#090909}
+body{background-color:#080808;background-image:linear-gradient(120deg,rgba(237,23,36,.055),transparent 42%),radial-gradient(#f5f0e6 .5px,transparent .7px);background-size:auto,5px 5px}
+.topline{height:7px}
+header{padding-top:24px;padding-bottom:22px}
+h1{font-family:"Anton","Barlow Condensed",Impact,sans-serif;letter-spacing:-.045em;font-size:clamp(58px,10vw,112px);text-shadow:2px 2px 0 #ed1724}
+.tagline{font-family:"DM Mono",monospace;text-transform:uppercase;letter-spacing:.07em;font-size:11px}
+.header-stamp{font-family:"DM Mono",monospace;transform:rotate(-1deg);border:1px solid var(--mag-paper);box-shadow:3px 3px 0 var(--mag-red)}
+nav{justify-content:center;gap:0;border-top:1px solid #63594e;border-bottom:2px solid var(--mag-red)}
+nav a{font-family:"DM Mono",monospace;font-size:11px;letter-spacing:.06em;padding:12px 13px}
+main{max-width:1180px;margin-top:22px}
+.hero{grid-template-columns:minmax(0,1.4fr) minmax(260px,.6fr);gap:14px;margin-bottom:18px}
+.hero-main{min-height:390px;border:1px solid #eee5d8;background:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.18)),linear-gradient(0deg,rgba(0,0,0,.45),transparent 60%),url("https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1600&q=85") center 45%/cover;box-shadow:6px 6px 0 var(--mag-red)}
+.hero-main:after{content:"RADIO · ESCENA · CULTURA";font:500 9px "DM Mono";letter-spacing:.18em;color:#f5f0e6;right:16px;top:16px;transform:none}
+.hero-main h2{font-family:"Anton",Impact,sans-serif;font-size:clamp(52px,7.5vw,88px);line-height:.88;letter-spacing:-.025em;text-shadow:3px 3px 0 var(--mag-red);transform:none}
+.hero-main p{max-width:420px;font-size:14px;color:#f1eadf}
+.hero-main .kicker{font:500 10px "DM Mono";letter-spacing:.15em;transform:rotate(-1deg)}
+.hero-side{gap:12px}
+.sidebox{background:#151515;border:1px solid #675c50;box-shadow:3px 3px 0 #000;padding:20px}
+.sidebox strong{font-family:"Anton",Impact,sans-serif;font-size:32px;line-height:.95}
+.sidebox p{font-size:12px}
+section{border:1px solid #544b41;box-shadow:4px 4px 0 rgba(237,23,36,.42);padding:clamp(20px,3vw,30px);margin:20px 0;background:linear-gradient(145deg,#151515,#0c0c0c)}
+.section-head{border-bottom:1px solid #695e51;padding-bottom:14px}
+.section-head h2{font-family:"Anton",Impact,sans-serif;font-weight:400;font-size:clamp(36px,5vw,54px);letter-spacing:-.015em;text-shadow:2px 2px 0 rgba(237,23,36,.55)}
+.section-head small{font:500 9px "DM Mono";letter-spacing:.13em;background:var(--mag-paper);color:#111;padding:5px 7px;transform:rotate(-1deg)}
+#proximamente .upcoming-art{border:1px solid #eee5d8;box-shadow:5px 5px 0 var(--mag-red)}
+#proximamente .upcoming-copy h3{font-family:"Anton",Impact,sans-serif;font-weight:400;font-size:clamp(34px,4vw,48px);line-height:.96}
+#directo{background:var(--mag-red);border-color:var(--mag-paper);box-shadow:5px 5px 0 #000}
+#directo .section-head{border-color:rgba(255,255,255,.45)}
+#directo .section-head h2,#directo .section-head small{color:#fff}
+#directo .section-head small{background:#111}
+#directo .box.live{background:#101010;border:0;border-left:5px solid var(--mag-paper);box-shadow:none}
+#directo .live strong{font:400 clamp(27px,4vw,42px) "Anton";color:#fff}
+#directo .live p{color:#d9d0c4}
+#radio{background:var(--mag-paper);color:#111;border:0;box-shadow:6px 6px 0 var(--mag-red)}
+#radio .section-head{border-color:#aaa094}
+#radio .section-head h2{color:#111;text-shadow:none}
+#radio .section-head small{background:var(--mag-red);color:#fff}
+#radio .radio-grid{gap:0;background:#111}
+#radio .radio-card{background:#111;color:var(--mag-paper);border:0;padding:clamp(20px,3vw,32px)}
+#radio .radio-card+ .radio-card{border-left:1px solid #554c42}
+#radio .radio-card h3{font:400 clamp(28px,3.6vw,42px)/.95 "Anton";letter-spacing:.01em}
+#radio .radio-card p{color:#c6bdb1}
+#radio .radio-card button{font:500 11px "DM Mono";letter-spacing:.1em;background:var(--mag-red);border:1px solid var(--mag-paper);box-shadow:3px 3px 0 #000}
+#noticias{background:var(--mag-paper);color:#111;border:0;box-shadow:6px 6px 0 #111}
+#noticias .section-head{border-color:#a89d90}
+#noticias .section-head h2{color:#111;text-shadow:none}
+#noticias .section-head small{background:#111;color:var(--mag-paper)}
+#noticias>p.small,#noticias #news-status{color:#5e554b}
+#news-list li{border-bottom:1px solid #b9ad9f;padding:17px 0;background:transparent}
+#news-list li a{font:400 25px/1.02 "Anton",Impact,sans-serif;color:#111;text-decoration:none;text-transform:uppercase}
+#news-list li p{color:#5a5148!important;font-size:12px!important;line-height:1.55}
+#news-list li .small{font:500 9px "DM Mono";letter-spacing:.06em;color:#75695d}
+#news-list li:first-child{padding:22px 24px;background:#111;color:var(--mag-paper);border:0;border-left:6px solid var(--mag-red);margin:4px 0 12px}
+#news-list li:first-child:before{content:"HISTORIA DESTACADA / EN LA ESCENA";display:block;color:#e9dfd2;font:500 9px "DM Mono";letter-spacing:.16em;margin-bottom:22px}
+#news-list li:first-child a{font-size:clamp(38px,5.5vw,64px);color:var(--mag-paper);max-width:850px}
+#news-list li:first-child p{color:#c9bfb2!important;max-width:740px}
+#news-list li:first-child .small{color:#aaa092}
+#conciertos{background:#101010;border:1px solid #62574a}
+#conciertos .section-head h2{font-size:clamp(40px,6vw,62px)}
+#conciertos .concert-grid{gap:12px}
+#conciertos .concert-card{background:#080808;border:1px solid #544a3e;border-bottom:4px solid var(--mag-red);box-shadow:3px 3px 0 #000}
+#conciertos .concert-poster{height:250px;object-fit:cover}
+#conciertos .concert-card-body>a{font:400 22px/1 "Anton";text-transform:uppercase;text-decoration:none}
+#conciertos .concert-date{font:500 9px "DM Mono";letter-spacing:.05em;transform:rotate(-1deg)}
+#videos .video-grid li{background:#101010;border:0;border-top:3px solid var(--mag-red);box-shadow:none}
 #videos .video-grid a{font:400 23px "Anton";text-transform:uppercase;text-decoration:none}
-#spotify .spot{max-width:900px;background:#111}
-#contacto .box{background:#171717;border:0;padding:28px;box-shadow:none}
-#contacto .chip{background:var(--red);color:#fff}
-footer{border-top:4px solid var(--red);font:500 9px "DM Mono";letter-spacing:.18em;padding:28px}
-@media(max-width:900px){.concert-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.concert-poster,.concert-placeholder{height:240px;min-height:240px}}
+#spotify .spot{border:1px solid #5d5246}
+.box{border-color:#4d443b}
+#contacto .box{border-left:4px solid var(--mag-red)}
+footer{border-top:3px solid var(--mag-red);font:500 9px "DM Mono";letter-spacing:.13em}
 @media(max-width:700px){
-header{grid-template-columns:64px 1fr;padding:22px 15px 18px;gap:6px 12px}header:after{display:none}.logo img{width:64px}h1{font-size:clamp(48px,12vw,74px);margin:9px 0 5px}.tagline{font-size:8px;letter-spacing:.02em}.header-stamp{font-size:8px;padding:5px 7px}
-nav{overflow-x:auto;justify-content:flex-start;padding:0 8px}nav a{white-space:nowrap;font-size:10px;padding:13px 11px}
-main{padding:12px 14px 45px}.hero{grid-template-columns:1fr}.hero-main{min-height:390px;padding:26px 22px}.hero-main h2{font-size:clamp(60px,15vw,92px)}.hero-main:before{left:22px;bottom:15px;font-size:8px}.hero-side{display:grid;grid-template-columns:1fr 1fr}.sidebox{padding:18px 14px}.sidebox strong{font-size:28px}
-section{padding:35px 0}.section-head h2{font-size:48px}
-#radio,#noticias,#conciertos{margin-left:-14px;margin-right:-14px;padding-left:14px;padding-right:14px}
-.radio-grid{grid-template-columns:1fr}.radio-card:first-child{border-right:0;border-bottom:1px solid #403a34}
-#directo .box{display:block}#directo .box p{margin-top:6px}
-#proximamente .upcoming-feature{grid-template-columns:1fr}#proximamente .upcoming-art{min-height:220px}
-#news-list{grid-template-columns:1fr;gap:0}#news-list li:first-child{grid-column:auto;min-height:250px;padding:20px}#news-list li:first-child a{font-size:48px}#news-list li a{font-size:25px}
-.concert-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.concert-poster,.concert-placeholder{height:220px;min-height:220px}.concert-card-body{padding:10px}.concert-card-body>a:not(.concert-more){font-size:19px}.concert-more{font-size:8px;padding:8px}
-#videos .video-grid{grid-template-columns:1fr 1fr}
+header{padding-top:20px}
+.hero{grid-template-columns:1fr}
+.hero-main{min-height:320px}
+.hero-main h2{font-size:clamp(52px,14vw,76px)}
+.hero-side{grid-template-columns:1fr 1fr}
+nav{justify-content:flex-start}
+nav a{font-size:10px;padding:11px 10px}
+#radio .radio-grid{grid-template-columns:1fr}
+#radio .radio-card+.radio-card{border-left:0;border-top:1px solid #554c42}
+#news-list li:first-child{padding:19px}
+#news-list li:first-child a{font-size:44px}
 }
-@media(max-width:390px){.hero-side{grid-template-columns:1fr}.concert-grid{grid-template-columns:1fr 1fr}.concert-poster,.concert-placeholder{height:185px;min-height:185px}}
+@media(max-width:420px){.hero-side{grid-template-columns:1fr}.hero-main{min-height:285px}}
 </style>
-
 </head>
 <body>
 <div class="topline"></div>
@@ -573,17 +435,4 @@ for(var k in REDES){if(REDES[k])r+='<a class="chip" href="'+encodeURI(REDES[k])+
 rl.innerHTML=r||'<span class="small">Aquí irán tus redes sociales.</span>';
 })();
 </script>
-
-<script>
-/* Orden editorial: primero la emisión, después la revista y la agenda. */
-(function(){
-  var main=document.querySelector("main");
-  if(!main)return;
-  var hero=main.querySelector(".hero");
-  var ids=["radio","directo","proximamente","noticias","conciertos","videos","spotify","quienes-somos","contacto"];
-  if(hero)main.insertBefore(hero,main.firstChild);
-  ids.forEach(function(id){var el=document.getElementById(id);if(el)main.appendChild(el);});
-})();
-</script>
-
 </body></html>
