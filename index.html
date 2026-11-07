@@ -118,6 +118,22 @@ footer{border-top:3px solid var(--red);font-weight:800;letter-spacing:.16em}
 @media(max-width:520px){.concert-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.concert-poster,.concert-placeholder{height:220px;min-height:220px}.concert-card-body{padding:12px}.concert-card-body>a:not(.concert-more){font-size:18px}.concert-date{font-size:15px;padding:6px 8px}.concert-more{font-size:10px;padding:8px}.concert-placeholder strong{font-size:27px}}
 @media(max-width:350px){.concert-grid{grid-template-columns:1fr}.concert-poster,.concert-placeholder{height:290px;min-height:290px}}
 
+
+/* PRÓXIMAMENTE · ENTREVISTAS Y ESPECIALES */
+.upcoming{background:linear-gradient(115deg,rgba(237,23,36,.13),transparent 55%),#101010;overflow:hidden}
+.upcoming-feature{display:grid;grid-template-columns:minmax(230px,.85fr) 1.15fr;gap:clamp(20px,4vw,42px);align-items:stretch}
+.upcoming-art{min-height:270px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;background:repeating-linear-gradient(135deg,#282321 0 3px,#101010 3px 10px);border:3px solid var(--cream);box-shadow:7px 7px 0 var(--red);transform:rotate(-1deg)}
+.upcoming-art:after{content:"RS";position:absolute;right:-10px;top:28px;font:900 190px/.8 "Barlow Condensed";color:rgba(237,23,36,.22);transform:rotate(-12deg)}
+.upcoming-art strong{position:relative;z-index:1;font:900 clamp(42px,6vw,68px)/.86 "Barlow Condensed";letter-spacing:-.025em;text-shadow:4px 4px 0 var(--red)}
+.upcoming-stamp,.upcoming-bottom{position:relative;z-index:1;width:max-content;max-width:100%;font-size:10px;font-weight:900;letter-spacing:.15em;background:var(--red);color:#fff;padding:7px 9px;transform:rotate(-2deg)}
+.upcoming-bottom{background:var(--cream);color:#111;font-size:8px}
+.upcoming-copy{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:8px 0}
+.upcoming-kicker{background:var(--cream);color:#111;padding:5px 9px;font-size:10px;font-weight:900;letter-spacing:.17em;text-transform:uppercase;transform:rotate(-2deg)}
+.upcoming-copy h3{font:900 clamp(31px,4vw,46px)/.95 "Barlow Condensed";text-transform:uppercase;margin:17px 0 10px}
+.upcoming-copy p{color:#c8c0b5;font-size:14px;max-width:570px}
+.upcoming-copy .upcoming-note{color:#ff747a;font-size:12px;font-weight:800;letter-spacing:.04em}
+.upcoming-copy .cta{margin-top:8px}
+@media(max-width:650px){.upcoming-feature{grid-template-columns:1fr;gap:24px}.upcoming-art{min-height:220px}.upcoming-art strong{font-size:55px}.upcoming-copy{padding:0 3px}}
 </style>
 </head>
 <body>
@@ -130,13 +146,26 @@ footer{border-top:3px solid var(--red);font-weight:800;letter-spacing:.16em}
 <div class="header-stamp">HECHO POR LA ESCENA · PARA LA ESCENA</div>
 </header>
 <nav aria-label="Navegación principal">
-<a href="#quienes-somos">Quiénes somos</a><a href="#radio">Radio</a><a href="#noticias">Noticias</a><a href="#conciertos">Conciertos</a><a href="#videos">Vídeos</a><a href="#spotify">Podcasts</a><a href="#contacto">Contacto</a>
+<a href="#proximamente">Próximamente</a><a href="#quienes-somos">Quiénes somos</a><a href="#radio">Radio</a><a href="#noticias">Noticias</a><a href="#conciertos">Conciertos</a><a href="#videos">Vídeos</a><a href="#spotify">Podcasts</a><a href="#contacto">Contacto</a>
 </nav>
 <main>
 <div class="hero">
 <div class="hero-main"><div class="kicker">No hay silencio</div><h2>Sube el volumen.<br>Rompe la norma.</h2><p>Tu punto de encuentro con el punk, hardcore, ska, metal y toda la cultura que se mueve al margen.</p><a class="cta" href="#radio">▶ Escucha Radikal Sonoro</a></div>
 <div class="hero-side"><div class="sidebox"><div class="redline"></div><strong>Radio 24 horas</strong><p>Emisión online para escuchar la escena estés donde estés.</p></div><div class="sidebox"><div class="redline"></div><strong>Miércoles · 20:00–22:00</strong><p>Radikal Sonoro en Ágora Sol Radio. Directo, invitados y mucho ruido.</p></div></div>
 </div>
+<section id="proximamente" class="upcoming">
+<div class="section-head"><h2>Próximamente</h2><small>Radikal Sonoro presenta</small></div>
+<div class="upcoming-feature">
+  <div class="upcoming-art" aria-hidden="true"><span class="upcoming-stamp">RS · RADIO SHOW</span><strong>ENTREVISTAS<br>&amp; ESPECIALES</strong><span class="upcoming-bottom">RUIDO · RESISTENCIA · AUTOGESTIÓN</span></div>
+  <div class="upcoming-copy">
+    <span class="upcoming-kicker">En preparación</span>
+    <h3>La escena tiene mucho que contar.</h3>
+    <p>Muy pronto anunciaremos aquí nuestras próximas entrevistas a bandas, colectivos y sellos independientes, además de programas especiales dedicados a la cultura underground.</p>
+    <p class="upcoming-note">Vuelve pronto para conocer a nuestros próximos invitados.</p>
+    <a class="cta" href="#spotify">▶ Escucha nuestros podcasts</a>
+  </div>
+</div>
+</section>
 <section id="quienes-somos"><div class="section-head"><h2>Quiénes somos</h2><small>Ruido · Resistencia · Autogestión</small></div><div class="box"><p><strong>Radikal Sonoro es un espacio de radio y cultura underground hecho por y para quienes viven la música al margen de lo comercial.</strong></p><p>Desde aquí damos voz a la escena punk, hardcore, ska y metal: difundimos bandas, compartimos noticias, descubrimos nuevos sonidos y ponemos en el mapa conciertos y festivales.</p><p>Creemos en la música libre, la autogestión y la fuerza de una escena que se mantiene viva gracias a las bandas, salas, colectivos y personas que la hacen posible.</p><p><strong>Esto es Radikal Sonoro: apoyo a la escena, pasión por la música y ruido sin permiso.
         <p><strong>Dirigido por:</strong><br>David Radikal (Director / Productor)<br>Milton Bullarkia (Locutor / Productor)<br>José Suburbia (Colaborador)</p></strong></p></div></section>
 <section id="directo"><div class="section-head"><h2>En directo</h2><small>La escena no se calla</small></div><div class="box live"><strong>Todos los miércoles · 20:00 a 22:00 h</strong><p id="livestate" role="status">Programa en vivo con música, invitados y mucho ruido.</p></div></section>
