@@ -983,6 +983,26 @@ footer{background:#050505;color:#eee;border-top:4px solid var(--rs-red)}
 }
 </style>
 
+
+<style id="radikal-layout-polish">
+.team-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:20px}
+.team-card{padding:16px 14px;background:#090909;border-left:5px solid var(--rs-red);box-shadow:3px 3px #050505;display:flex;flex-direction:column;gap:4px}
+.team-card strong{font:900 25px/1 "Barlow Condensed";text-transform:uppercase;color:#fff}
+.team-card span{font-size:11px;font-weight:800;letter-spacing:.08em;color:var(--rs-yellow);text-transform:uppercase}
+#conciertos>p.small,#noticias>p.small{font-size:11px;line-height:1.45}
+#noticias #news-list{list-style:none;padding:0;margin:12px 0 0}
+#noticias #news-list li{list-style:none}
+#noticias #news-list li a{display:block}
+#conciertos #concert-news-list{list-style:none;padding:0;margin:12px 0}
+#conciertos #concert-news-list>li{list-style:none}
+#conciertos .concert-card{overflow:hidden}
+#conciertos .concert-card-body{min-width:0;display:flex;flex-direction:column;gap:6px}
+#conciertos .concert-card-body>a{overflow-wrap:anywhere}
+#radio .radio-card button{padding:12px 15px;font-weight:900;cursor:pointer}
+#radio audio{display:block;max-width:100%;margin:10px 0}
+#directo .live{border-left:5px solid var(--rs-red)}
+@media(max-width:560px){.team-grid{grid-template-columns:1fr}.team-card{padding:13px}#conciertos .concert-card{grid-template-columns:90px minmax(0,1fr)}}
+</style>
 </head>
 <body id="inicio">
 <div class="topline"></div>
@@ -1014,8 +1034,7 @@ footer{background:#050505;color:#eee;border-top:4px solid var(--rs-red)}
   </div>
 </div>
 </section>
-<section id="quienes-somos"><div class="section-head"><h2>Quiénes somos</h2><small>Ruido · Resistencia · Autogestión</small></div><div class="box"><p><strong>Radikal Sonoro es un espacio de radio y cultura underground hecho por y para quienes viven la música al margen de lo comercial.</strong></p><p>Desde aquí damos voz a la escena punk, hardcore, ska y metal: difundimos bandas, compartimos noticias, descubrimos nuevos sonidos y ponemos en el mapa conciertos y festivales.</p><p>Creemos en la música libre, la autogestión y la fuerza de una escena que se mantiene viva gracias a las bandas, salas, colectivos y personas que la hacen posible.</p><p><strong>Esto es Radikal Sonoro: apoyo a la escena, pasión por la música y ruido sin permiso.
-        <p><strong>Dirigido por:</strong><br>David Radikal (Director / Productor)<br>Milton Bullarkia (Locutor / Productor)<br>José Suburbia (Colaborador)</p></strong></p></div></section>
+<section id="quienes-somos"><div class="section-head"><h2>Quiénes somos</h2><small>Ruido · Resistencia · Autogestión</small></div><div class="box"><p><strong>Radikal Sonoro es un espacio de radio y cultura underground hecho por y para quienes viven la música al margen de lo comercial.</strong></p><p>Desde aquí damos voz a la escena punk, hardcore, ska y metal: difundimos bandas, compartimos noticias, descubrimos nuevos sonidos y ponemos en el mapa conciertos y festivales.</p><p>Creemos en la música libre, la autogestión y la fuerza de una escena que se mantiene viva gracias a las bandas, salas, colectivos y personas que la hacen posible.</p><p><strong>Esto es Radikal Sonoro: apoyo a la escena, pasión por la música y ruido sin permiso.</strong></p><div class="team-grid"><article class="team-card"><strong>Milton Bullarkia</strong><span>Locutor / Productor</span></article><article class="team-card"><strong>David Radikal</strong><span>Director / Productor</span></article><article class="team-card"><strong>José Suburbia</strong><span>Colaborador</span></article></div></div></section>
 <section id="directo"><div class="section-head"><h2>En directo</h2><small>La escena no se calla</small></div><div class="box live"><strong>Todos los miércoles · 20:00 a 22:00 h</strong><p id="livestate" role="status">Programa en vivo con música, invitados y mucho ruido.</p></div></section>
 <section id="radio"><div class="section-head"><h2>En directo</h2><small>24 horas de música independiente</small></div><div class="radio-grid"><div class="radio-card"><h3>Radikal Sonoro · 24h</h3><p>Nuestra señal online. Dale al play y acompaña la resistencia sonora.</p><button id="play" type="button">▶ Escuchar en vivo</button><audio id="audio" controls preload="none"></audio><p class="msg" id="msg" role="status"></p></div><div class="radio-card" id="agora"><h3>Ágora Sol Radio</h3><p>Escucha la emisión en directo de Ágora Sol Radio.</p><audio controls preload="none" src="https://cervera.eldialdigital.com:23141/stream">Tu navegador no admite el reproductor de audio.</audio><p class="small">Radikal Sonoro: miércoles de 20:00 a 22:00 h.</p><a href="https://www.agorasolradio.org/directo/" target="_blank" rel="noopener">Abrir la web de Ágora Sol Radio ↗</a></div></div></section>
 <section id="noticias"><div class="section-head"><h2>Últimas noticias</h2><small>Underground · Aquí y fuera</small></div><p class="small">Selección de hasta 5 noticias recientes de punk, hardcore, ska y metal independiente. Enlaces a las fuentes originales.</p><div id="news-status" role="status" aria-live="polite">Buscando noticias recientes…</div><ul class="list" id="news-list"><li>Conectando con las fuentes…</li></ul><p class="small">Fuentes: Google News RSS. Los artículos pertenecen a sus medios originales.</p></section>
@@ -1029,7 +1048,7 @@ footer{background:#050505;color:#eee;border-top:4px solid var(--rs-red)}
 <script>
 // ===== CONFIGURA AQUÍ =====
 var STREAM_URL = "https://stream.zeno.fm/pxp41f9kwzzuv";          // URL de tu radio (Zeno.fm o AzuraCast), termina en /stream o .mp3
-var CONTACT_EMAIL = "radikalsonororadio@gmail.com";       // Tu correo
+var CONTACT_EMAIL = "contacto@radikalsonoro.es";       // Tu correo
 var REDES = {Facebook:"https://www.facebook.com/profile.php?id=100001253785777",Instagram:"https://www.instagram.com/radikalsonoro/",TikTok:"",YouTube:"",Spotify:"",X:""};  // Pega el enlace de cada red; las vacías no se muestran
 var SHOW_TZ = "";             // Zona horaria del programa, ej. "Europe/Madrid" o "America/Mexico_City". Vacío = hora de cada visitante
 var SPOTIFY_URL = "https://open.spotify.com/show/3ZeFOmui57GFb4Ufwgxrr3?si=PHO--gEkSKmeJ749X8ZDeg&utm_source=copy-link";         // Enlace de tu playlist, artista o álbum de Spotify
