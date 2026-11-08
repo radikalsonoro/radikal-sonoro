@@ -1,1 +1,57 @@
-[]
+[
+  {
+    "fecha": "2026-11-14",
+    "hora": "21:00",
+    "evento": "Underground Force Festival #4",
+    "artistas": "The Dogs + Plastic Meat + Tümba + Time And Punishment + Couture",
+    "sala": "Kafe Antzokia",
+    "ciudad": "Bermeo",
+    "pais": "España",
+    "url": "https://www.europapress.es/euskadi/noticia-underground-force-festival-reunira-cinco-potentes-bandas-escena-subterranea-14-noviembre-bermeo-20261104181447.html",
+    "cartel": ""
+  },
+  {
+    "fecha": "2026-11-14",
+    "hora": "18:00",
+    "evento": "Metal United Fest 2026",
+    "artistas": "Azrael + BudaSam + Mandrágora Negra + Mala Decisión",
+    "sala": "D8 Sorkuntza Faktoria",
+    "ciudad": "Bilbao",
+    "pais": "España",
+    "url": "https://entradium.com/events/metal-united-festival-azrael-budasan-mandragora-negra-y-mala-decision",
+    "cartel": "https://backend-v2.artsmallorca.com/uploaded_files/1791808673135-905039842.jpg"
+  },
+  {
+    "fecha": "2026-11-20",
+    "hora": "20:00",
+    "evento": "November Metal Fest 2026",
+    "artistas": "Skeletoon + Crusade Of Bards + Alien Steel",
+    "sala": "Urban Rock Concept",
+    "ciudad": "Vitoria-Gasteiz",
+    "pais": "España",
+    "url": "https://www.euskadi.eus/gobierno-vasco/-/evento/2026/11/20/november-metal-fest-2026-skeletoon-%2B-crusade-of-bards-%2B-alien-steel/",
+    "cartel": ""
+  },
+  {
+    "fecha": "2026-11-21",
+    "hora": "19:30",
+    "evento": "GBH + Deaf Devils + The Capaces",
+    "artistas": "GBH + Deaf Devils + The Capaces",
+    "sala": "Jimmy Jazz Gasteiz",
+    "ciudad": "Vitoria-Gasteiz",
+    "pais": "España",
+    "url": "https://conciertos.club/alava-vitoria-gasteiz/conciertos/119908-gbh-deaf-devils-the-capaces",
+    "cartel": ""
+  },
+  {
+    "fecha": "2026-11-28",
+    "hora": "16:00",
+    "evento": "Obon Fest 2026",
+    "artistas": "Imperial Triumphant + Numen + The Great Old Ones + Foscor + Knoll",
+    "sala": "D8 Sorkuntza Faktoria",
+    "ciudad": "Bilbao",
+    "pais": "España",
+    "url": "https://www.d8sf.eus/agenda/",
+    "cartel": "https://www.d8sf.eus/wp-content/uploads/2026/08/obonFest-930x620.jpeg"
+  }
+]
