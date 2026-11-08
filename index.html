@@ -412,7 +412,7 @@ header .kicker{grid-area:kicker;z-index:2;color:var(--rs-paper);font:900 12px/1 
 header h1{grid-area:title;z-index:2;margin:0;color:#f4f0e8;font:900 clamp(58px,8vw,118px)/.78 Impact,"Arial Narrow",sans-serif;letter-spacing:-.055em;text-transform:uppercase;text-shadow:3px 3px 0 var(--rs-red)}
 header h1 span{color:var(--rs-red);-webkit-text-stroke:1px #eee}
 header .tagline{grid-area:tagline;z-index:2;max-width:300px;margin:0 0 0 auto;color:#fff;font:900 clamp(18px,2.1vw,29px)/1.05 "Barlow Condensed",Impact,sans-serif;letter-spacing:.04em;text-align:right;text-transform:uppercase}
-header .tagline: first-line{color:var(--rs-red)}
+header .tagline::first-line{color:var(--rs-red)}
 header .header-stamp{grid-area:stamp;z-index:2;justify-self:start;margin:0;padding:5px 9px;background:var(--rs-red);color:#fff;border:1px solid #eee;font:900 10px Arial,sans-serif;letter-spacing:.16em;transform:rotate(-2deg)}
 nav{position:sticky;top:0;z-index:30;display:flex;justify-content:center;flex-wrap:wrap;gap:0;padding:0 10px;background:#080808;border:0;border-bottom:3px solid var(--rs-red);box-shadow:0 4px 0 rgba(0,0,0,.7)}
 nav a{padding:13px 14px;color:#f4f0e8!important;border-right:1px solid #393431;text-decoration:none;font:900 16px/1 "Barlow Condensed",Impact,sans-serif;letter-spacing:.1em;text-transform:uppercase}
