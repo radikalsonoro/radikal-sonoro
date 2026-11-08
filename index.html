@@ -398,6 +398,135 @@ footer{background:#eee9dc;color:#111;border-top:8px solid var(--red);padding:28p
 }
 
 </style>
+<style>
+
+/* === RADIKAL SONORO / PORTADA REVISTA DIY === */
+:root{--paper:#eee8dc;--ink:#101010;--blood:#d71925;--yellow:#f1d34a;--line:#6b6258}
+html{background:#090909}
+body{background:#0b0b0b;color:var(--paper);font-family:"DM Sans",Arial,sans-serif}
+body:before{opacity:.12;background-image:radial-gradient(#eee8dc .55px,transparent .7px);background-size:4px 4px}
+.topline{height:12px;background:repeating-linear-gradient(135deg,var(--blood) 0 18px,var(--paper) 18px 21px,#090909 21px 39px)}
+header{max-width:1280px;padding:24px 28px 22px;display:grid;grid-template-columns:120px 1fr;gap:0 22px;text-align:left;position:relative;background:var(--paper);color:var(--ink);border-bottom:8px solid var(--blood)}
+header:before{content:"FANZINE · RADIO LIBRE · ESCENA INDEPENDIENTE";position:absolute;right:25px;top:13px;font:900 9px "DM Sans";letter-spacing:.18em;color:#4d4841;transform:rotate(2deg)}
+header:after{content:"Ⓐ";position:absolute;right:25px;bottom:-45px;font:900 150px/.8 Arial;color:rgba(215,25,37,.12);pointer-events:none}
+.logo{grid-column:1;grid-row:1/5;margin:0;align-self:center;justify-content:flex-start;z-index:1}
+.logo img{width:112px;filter:grayscale(1) contrast(1.35);mix-blend-mode:multiply}
+header .kicker{grid-column:2;align-self:end;margin-top:22px;background:var(--blood);color:white;padding:4px 8px;width:max-content;font-size:10px;letter-spacing:.2em;transform:rotate(-1deg)}
+header h1{grid-column:2;color:var(--ink);font-size:clamp(58px,10vw,124px);line-height:.78;letter-spacing:-.06em;margin:10px 0 7px;text-shadow:3px 3px 0 var(--blood)}
+header h1 span{color:var(--blood);-webkit-text-stroke:1px var(--ink)}
+header .tagline{grid-column:2;color:#26221e;margin:5px 0 12px;font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.header-stamp{grid-column:2;justify-self:start;background:var(--yellow);color:#111;border:2px solid #111;box-shadow:3px 3px 0 var(--blood);font-size:9px;padding:5px 9px;transform:rotate(-2deg)}
+nav{background:#090909;border-top:2px solid var(--paper);border-bottom:4px solid var(--blood);justify-content:flex-start;gap:0;padding:5px max(16px,calc((100vw - 1220px)/2));}
+nav a{font-size:18px;padding:9px 13px;letter-spacing:.1em;border-right:1px solid #49413a}
+nav a:hover{background:var(--yellow);color:#111;transform:rotate(-1deg)}
+main{max-width:1280px;padding:0 24px 65px;margin:0 auto}
+.hero{grid-template-columns:minmax(0,1.55fr) minmax(220px,.65fr);gap:0;margin:28px 0 22px;align-items:stretch}
+.hero-main{min-height:440px;padding:clamp(28px,5vw,65px);border:0;border-left:9px solid var(--blood);box-shadow:8px 8px 0 var(--blood);background:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.25)),url("https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1500&q=85") center 42%/cover}
+.hero-main:after{content:"RUIDO";font-size:clamp(130px,22vw,280px);right:-18px;top:-22px;color:rgba(255,255,255,.13);transform:rotate(-8deg)}
+.hero-main:before{content:"Ⓐ";position:absolute;right:20px;bottom:5px;font:900 110px Arial;color:rgba(215,25,37,.7);transform:rotate(12deg)}
+.hero-main h2{font-size:clamp(58px,9vw,112px);line-height:.78;letter-spacing:-.04em;text-shadow:4px 4px 0 var(--blood);transform:rotate(-2deg);max-width:760px}
+.hero-main p{font-size:15px;max-width:430px;color:#f0e9dd}
+.kicker{background:var(--blood);color:#fff;padding:5px 9px;width:max-content;transform:rotate(-2deg);letter-spacing:.18em}
+.hero-side{gap:0;background:var(--paper);color:#111;border-top:4px solid var(--blood);border-bottom:4px solid var(--blood)}
+.sidebox{background:transparent;color:#111;border:0;border-bottom:1px solid #a9a093;box-shadow:none;padding:25px 22px}
+.sidebox:nth-child(2){transform:none}
+.sidebox strong{font-size:clamp(29px,3vw,40px);line-height:.9;color:#111}
+.sidebox p{color:#49423a}
+.redline{background:var(--blood)}
+.cta{background:var(--yellow);color:#111;border:2px solid #111;box-shadow:4px 4px 0 var(--blood);font-weight:1000;transform:rotate(-1deg)}
+.cta:hover{background:var(--blood);color:white}
+section{background:#111;border:0;border-top:2px solid #65594d;border-bottom:1px solid #65594d;box-shadow:none;margin:34px 0;padding:clamp(22px,3vw,38px);position:relative}
+.section-head{border-bottom:3px solid var(--blood);padding-bottom:12px;margin-bottom:22px}
+.section-head h2{font-size:clamp(38px,6vw,62px);letter-spacing:-.025em;text-shadow:3px 3px 0 #6c1015}
+.section-head small{background:var(--yellow);color:#111;padding:5px 8px;font-size:9px;transform:rotate(-2deg)}
+#radio{background:var(--blood);color:#fff;border:4px solid var(--paper);box-shadow:9px 9px 0 #050505;padding:clamp(22px,4vw,45px);margin:42px 0}
+#radio .section-head{border-color:#111}
+#radio .section-head h2{font-size:clamp(48px,8vw,88px);text-shadow:4px 4px 0 #111}
+#radio .section-head small{background:var(--yellow)}
+.radio-grid{grid-template-columns:1.15fr .85fr;gap:0;border:3px solid #111;background:#111}
+.radio-card{background:#111;border:0;padding:clamp(20px,3vw,34px);box-shadow:none}
+.radio-card:first-child{background:var(--paper);color:#111;border-right:3px solid #111}
+.radio-card:first-child h3,.radio-card:first-child p{color:#111}
+.radio-card h3{font-size:clamp(32px,4vw,48px);line-height:.9}
+.radio-card p{color:#d1c8bc}
+.radio-card:first-child button{background:var(--blood);color:#fff;border:2px solid #111;box-shadow:4px 4px 0 #111;font-size:15px;padding:15px 20px}
+audio{accent-color:var(--blood)}
+#directo{background:var(--yellow);color:#111;border:3px solid #111;box-shadow:6px 6px 0 var(--blood)}
+#directo .section-head{border-color:#111}
+#directo .section-head h2{color:#111;text-shadow:none}
+#directo .section-head small{background:#111;color:var(--yellow)}
+#directo .box{background:transparent;border:0;padding:0;box-shadow:none}
+#directo .live strong{font-size:clamp(30px,5vw,48px);color:#111}
+#directo .live p{color:#302a20}
+#proximamente{background:#e9e1d4;color:#111;border:0;box-shadow:8px 8px 0 var(--blood)}
+#proximamente .section-head h2{color:#111;text-shadow:3px 3px 0 var(--blood)}
+#proximamente .section-head{border-color:#111}
+.upcoming-feature{grid-template-columns:minmax(260px,.95fr) 1.05fr}
+.upcoming-art{border:4px solid #111;box-shadow:8px 8px 0 var(--blood);background:linear-gradient(140deg,rgba(0,0,0,.45),rgba(0,0,0,.8)),url("https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=1000&q=80") center/cover}
+.upcoming-copy h3{font-size:clamp(38px,5vw,58px);color:#111}
+.upcoming-copy p{color:#39332c}
+.upcoming-copy .upcoming-note{color:var(--blood)}
+#quienes-somos .box{background:#e9e1d4;color:#111;border:0;border-left:7px solid var(--blood);box-shadow:6px 6px 0 #050505;padding:25px 30px}
+#quienes-somos .box p{color:#28231e}
+#news-list{columns:2;column-gap:38px}
+#news-list li{break-inside:avoid;padding:17px 0;border-bottom:1px solid #6c6257}
+#news-list li a{font:800 25px/1.02 "Barlow Condensed";text-transform:uppercase;text-decoration:none;color:var(--paper)}
+#news-list li p{font-size:13px;line-height:1.5}
+#news-list li .small{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--yellow)}
+#conciertos{background:#e9e1d4;color:#111;border:0;box-shadow:8px 8px 0 var(--blood)}
+#conciertos .section-head{border-color:#111}
+#conciertos .section-head h2{color:#111;text-shadow:3px 3px 0 var(--blood)}
+#conciertos .section-head small{background:var(--blood);color:white}
+#conciertos>p.small{color:#39332c}
+#concert-news-status{background:#111;color:var(--yellow)}
+.concert-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.concert-card{background:#111;border:3px solid #111;border-bottom:7px solid var(--blood);box-shadow:6px 6px 0 #8e1720}
+.concert-poster,.concert-placeholder{height:290px;min-height:290px}
+.concert-card-body{color:#eee8dc}
+#concert-form{background:#111;color:#eee8dc;border:3px solid #111;box-shadow:6px 6px 0 var(--blood)}
+#videos .video-grid{columns:2;display:block}
+#videos .video-grid li{display:inline-block;width:calc(50% - 8px);margin:0 8px 12px 0;background:#e9e1d4;color:#111;border:0;border-left:5px solid var(--blood);box-shadow:4px 4px 0 #050505}
+#videos .video-grid li a{color:#111;font:800 24px "Barlow Condensed";text-transform:uppercase;text-decoration:none}
+#spotify .spot{border:3px solid var(--paper);box-shadow:7px 7px 0 var(--blood)}
+#contacto .box{background:#e9e1d4;color:#111;border:0;box-shadow:7px 7px 0 var(--blood);padding:clamp(20px,3vw,34px)}
+#contacto .box p,#contacto label{color:#171411}
+#contacto input,#contacto textarea,#contacto select{background:#fffaf0;color:#111;border:1px solid #4d463d}
+#contacto .small{color:#4a4239}
+footer{background:var(--paper);color:#111;border-top:8px solid var(--blood);font-size:11px;font-weight:1000;letter-spacing:.16em;padding:28px 15px}
+@media(max-width:720px){
+ header{grid-template-columns:68px 1fr;padding:20px 14px 18px;gap:0 12px}
+ header:before{display:none}.logo img{width:66px}
+ header h1{font-size:clamp(46px,13vw,76px);margin:8px 0}
+ header .kicker{font-size:8px;margin-top:12px}
+ header .tagline{font-size:9px;letter-spacing:.04em}
+ header:after{font-size:90px;right:5px;bottom:-25px}
+ .header-stamp{font-size:7px;padding:4px 6px}
+ nav{overflow-x:auto;flex-wrap:nowrap;padding:4px 8px}
+ nav a{white-space:nowrap;font-size:16px;padding:9px 11px}
+ main{padding:0 13px 45px}
+ .hero{grid-template-columns:1fr;margin-top:18px}
+ .hero-main{min-height:330px;padding:27px 22px}
+ .hero-main h2{font-size:clamp(54px,15vw,78px)}
+ .hero-side{grid-template-columns:1fr 1fr}
+ .sidebox{padding:18px 13px}
+ .sidebox strong{font-size:27px}
+ #radio .radio-grid{grid-template-columns:1fr}
+ .radio-card:first-child{border-right:0;border-bottom:3px solid #111}
+ .upcoming-feature{grid-template-columns:1fr}
+ .upcoming-art{min-height:230px}
+ #news-list{columns:1}
+ #videos .video-grid{columns:1}
+ #videos .video-grid li{width:100%}
+ .concert-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+ .concert-poster,.concert-placeholder{height:215px;min-height:215px}
+}
+@media(max-width:390px){
+ .hero-side{grid-template-columns:1fr}
+ .concert-grid{grid-template-columns:1fr}
+ .concert-poster,.concert-placeholder{height:285px;min-height:285px}
+}
+
+</style>
 </head>
 <body>
 <div class="topline"></div>
