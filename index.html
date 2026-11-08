@@ -776,24 +776,23 @@ var YT_PLAYLIST_ID = "";      // ID de tu lista de YouTube (empieza con PL...)
 // ==========================
 // Noticias automáticas desde Google News RSS, mediante RSS2JSON.
 async function loadNews(){
-  var list=document.getElementById("news-list");
-  var status=document.getElementById("news-status");
-  var items=[
-    ["4dziki reúne a Boikot, Kaos Urbano y Kamikazes en «Agarra este momento»","La banda polaca publica un tema en castellano con Juankar, SKU y Kata como invitados.","https://insonoro.com/noticia/127751/4dziki-reune-a-las-voces-de-boikot--kaos-urbano-y-kamikazes-en-_agarra-este-momento_","Insonoro · 6 noviembre 2026"],
-    ["Parfavar presenta «Incierto Peligro»","El dúo mezcla post-punk, new wave y electrónica en un EP de cuatro canciones.","https://insonoro.com/noticia/127748/parfavar-presentan-_incierto-peligro_--un-ep-sobre-los-monstruos-del-siglo-xxi","Insonoro · 6 noviembre 2026"],
-    ["Linn Youki regresa con «Futur personalitzat»","La banda vuelve tras trece años con un adelanto de su noveno álbum, entre garage, krautrock y noise.","https://insonoro.com/noticia/127745/linn-youki-regresan-despues-de-13-anos-con-_futur-personalitzat_--adelanto-de-su-nuevo-disco","Insonoro · 6 noviembre 2026"],
-    ["Exeria publica «Un musical de Broadway»","Nuevo adelanto de «En Órbita», el próximo EP de cuatro canciones de la banda.","https://insonoro.com/noticia/127743/exeria-presentan-_un-musical-de-broadway_--nuevo-adelanto-de-su-proximo-ep","Insonoro · 6 noviembre 2026"],
-    ["Obon Fest reivindica los festivales pequeños","El festival independiente reunirá el 28 de noviembre en Bilbao a Imperial Triumphant, Numen, The Great Old Ones, Foscor y Knoll.","https://insonoro.com/noticia/127742/obon-fest-reivindica-el-valor-de-los-festivales-pequenos-frente-a-los-grandes-eventos","Insonoro · 6 noviembre 2026"]
-  ];
-  list.innerHTML="";
-  items.forEach(function(n){
-    var li=document.createElement("li"),a=document.createElement("a"),summary=document.createElement("p"),meta=document.createElement("div");
-    a.href=n[2];a.target="_blank";a.rel="noopener noreferrer";a.textContent=n[0];
-    summary.textContent=n[1];summary.style.margin="6px 0";summary.style.color="#c4bdb2";summary.style.fontSize="13px";
-    meta.className="small";meta.textContent=n[3]+" · Fuente: Insonoro";
-    li.appendChild(a);li.appendChild(summary);li.appendChild(meta);list.appendChild(li);
-  });
-  status.textContent="5 noticias verificadas · Actualizado el 7 de noviembre de 2026.";
+  var list=document.getElementById("news-list"),status=document.getElementById("news-status");
+  try{
+    var response=await fetch("data/noticias.json?"+Date.now(),{cache:"no-store"});
+    if(!response.ok)throw new Error("No se pudo cargar la agenda editorial");
+    var items=await response.json();
+    items=Array.isArray(items)?items.filter(function(n){return n&&n.titulo&&n.url;}).slice(0,5):[];
+    list.innerHTML="";
+    if(!items.length){list.innerHTML="<li>No hay noticias verificadas disponibles hoy.</li>";status.textContent="0 noticias verificadas.";return;}
+    items.forEach(function(n){
+      var li=document.createElement("li"),a=document.createElement("a"),summary=document.createElement("p"),meta=document.createElement("div");
+      a.href=n.url;a.target="_blank";a.rel="noopener noreferrer";a.textContent=n.titulo;
+      summary.textContent=n.resumen||"Consulta la información completa en la fuente original.";summary.style.margin="6px 0";summary.style.fontSize="13px";
+      meta.className="small";meta.textContent=(n.fecha||"Fecha no indicada")+" · "+(n.fuente||"Fuente original");
+      li.appendChild(a);li.appendChild(summary);li.appendChild(meta);list.appendChild(li);
+    });
+    status.textContent=items.length+" noticias verificadas · Actualizado: "+(new Date()).toLocaleDateString("es-ES");
+  }catch(error){status.textContent="No se han podido cargar las noticias. Se actualizará en la próxima revisión.";list.innerHTML="<li>Noticias temporalmente no disponibles.</li>";}
 }
 // Detecta fechas futuras explícitas en el anuncio (no confunde publicación con fecha del evento).
 function getConcertDate(item){
@@ -809,43 +808,40 @@ function getConcertDate(item){
 }
 // Anuncios automáticos de conciertos: enlaces recientes de fuentes públicas.
 async function loadConcertNews(){
-  var list=document.getElementById("concert-news-list");
-  var status=document.getElementById("concert-news-status");
+  var list=document.getElementById("concert-news-list"),status=document.getElementById("concert-news-status");
   if(!list||!status)return;
-  var sourceEvents=[
-    {iso:"2026-11-07",date:"07 NOV 2026 · 19:00",name:"Etxale + Desklate",place:"La Trinchera · Vallecas, Madrid",url:"https://primeralineavkbar.com/index.php/2026/10/20/sabado-07-de-noviembre-etxale-desklate/",image:"https://primeralineavkbar.com/wp-content/uploads/2026/10/07.11-SABADO-NOCHE-1-683x1024.jpeg"},
-    {iso:"2026-11-07",date:"07 NOV 2026 · 22:00",name:"Porco Bravo + Kodigo Punk",place:"CSA La Ratonera · Venta de Baños (Palencia)",url:"https://www.gazpatxofestcultura.com/eventos/porco-bravo-la-ratonera",image:"https://static.wixstatic.com/media/6abf34_da9ff67192b149139dd1b0af5d8343f1~mv2.png/v1/fill/w_394%2Ch_492%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/6abf34_da9ff67192b149139dd1b0af5d8343f1~mv2.png"},
-    {iso:"2026-11-07",date:"07 NOV 2026",name:"El Reno Renardo",place:"Sala Salamandra · L'Hospitalet de Llobregat (Barcelona)",url:"https://www.gazpatxofestcultura.com/eventos/reno-barcelona-2026",image:"https://static.wixstatic.com/media/6abf34_55a0e4c093d4490d9211491061f1b88d~mv2.jpg/v1/fill/w_394%2Ch_492%2Cal_c%2Cq_80%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/6abf34_55a0e4c093d4490d9211491061f1b88d~mv2.jpg"},
-    {iso:"2026-11-08",date:"08 NOV 2026 · 20:00",name:"Samuel y Los Rezagados",place:"Rock Beer The New · Santander",url:"https://insonoro.com/noticia/127744/rock-beer-the-new-reserva-el-domingo-para-el-directo-de-samuel-y-los-rezagados",image:""},
-    {iso:"2026-11-12",date:"12 NOV 2026 · 21:00",name:"I Hate Bouncers + Ferrocentro",place:"Wurlitzer Ballroom · Madrid",url:"https://wurlitzerballroom.com/concierto/i-hate-bouncers-2026-11-12"}
-  ];
-  var today=new Date();today.setHours(0,0,0,0);
-  var upcoming=sourceEvents.filter(function(ev){
-    var p=ev.iso.split("-"),d=new Date(+p[0],+p[1]-1,+p[2]);
-    return d.getTime()>=today.getTime();
-  }).slice(0,5);
-  list.innerHTML="";list.className="concert-grid";
-  if(!upcoming.length){status.textContent="No hay próximos conciertos confirmados en esta selección.";return;}
-  upcoming.forEach(function(ev,index){
-    var card=document.createElement("article"),body=document.createElement("div");
-    card.className="concert-card";card.setAttribute("data-number",String(index+1).padStart(2,"0"));
-    if(ev.image){
-      var img=document.createElement("img");img.className="concert-poster";img.src=ev.image;img.alt="Cartel del concierto: "+ev.name;img.loading="lazy";
-      img.onerror=function(){var ph=document.createElement("div"),tag=document.createElement("span"),name=document.createElement("strong");ph.className="concert-placeholder";tag.textContent="RADIKAL SONORO · AGENDA";name.textContent=ev.name;ph.appendChild(tag);ph.appendChild(name);this.parentNode.replaceChild(ph,this);};
-      card.appendChild(img);
-    }else{
-      var ph=document.createElement("div"),tag=document.createElement("span"),name=document.createElement("strong");ph.className="concert-placeholder";tag.textContent="RADIKAL SONORO · AGENDA";name.textContent=ev.name;ph.appendChild(tag);ph.appendChild(name);card.appendChild(ph);
-    }
-    body.className="concert-card-body";
-    var date=document.createElement("div"),small=document.createElement("small"),title=document.createElement("a"),meta=document.createElement("div"),more=document.createElement("a");
-    date.className="concert-date";small.textContent="FECHA DEL EVENTO";date.appendChild(small);date.appendChild(document.createTextNode(ev.date));
-    title.href=ev.url;title.target="_blank";title.rel="noopener noreferrer";title.textContent=ev.name;
-    meta.className="small";meta.textContent=ev.place;
-    more.className="concert-more";more.href=ev.url;more.target="_blank";more.rel="noopener noreferrer";more.textContent="INFORMACIÓN Y ENTRADAS ↗";
-    body.appendChild(date);body.appendChild(title);body.appendChild(meta);body.appendChild(more);
-    card.appendChild(body);list.appendChild(card);
-  });
-  status.textContent="5 conciertos con fecha y lugar contrastados. Carteles oficiales cuando están disponibles.";
+  try{
+    var response=await fetch("data/conciertos.json?"+Date.now(),{cache:"no-store"});
+    if(!response.ok)throw new Error("No se pudo cargar la agenda");
+    var events=await response.json(),today=new Date();today.setHours(0,0,0,0);
+    events=(Array.isArray(events)?events:[]).filter(function(ev){
+      if(!ev||!ev.fecha||!ev.url)return false;
+      var d=new Date(ev.fecha+"T00:00:00");return !isNaN(d.getTime())&&d>=today;
+    }).sort(function(a,b){return a.fecha.localeCompare(b.fecha);}).slice(0,5);
+    list.innerHTML="";list.className="concert-grid";
+    if(!events.length){status.textContent="No hay próximos conciertos con fecha y fuente verificadas.";list.innerHTML="<li>No hay eventos confirmados en este momento.</li>";return;}
+    events.forEach(function(ev,index){
+      var card=document.createElement("article"),body=document.createElement("div");
+      card.className="concert-card";card.setAttribute("data-number",String(index+1).padStart(2,"0"));
+      if(ev.cartel){
+        var img=document.createElement("img");img.className="concert-poster";img.src=ev.cartel;img.alt="Cartel oficial: "+(ev.evento||ev.artistas||"concierto");img.loading="lazy";
+        img.onerror=function(){var ph=document.createElement("div");ph.className="concert-placeholder";ph.textContent="No se ha podido cargar el cartel oficial";this.parentNode.replaceChild(ph,this);};
+        card.appendChild(img);
+      }else{
+        var ph=document.createElement("div"),tag=document.createElement("span"),name=document.createElement("strong");
+        ph.className="concert-placeholder";tag.textContent="SIN CARTEL VERIFICADO";name.textContent=ev.evento||ev.artistas||"Concierto";ph.appendChild(tag);ph.appendChild(name);card.appendChild(ph);
+      }
+      body.className="concert-card-body";
+      var date=document.createElement("div"),small=document.createElement("small"),title=document.createElement("a"),meta=document.createElement("div"),more=document.createElement("a");
+      date.className="concert-date";small.textContent="FECHA DEL EVENTO";date.appendChild(small);
+      date.appendChild(document.createTextNode(new Date(ev.fecha+"T00:00:00").toLocaleDateString("es-ES",{day:"2-digit",month:"short",year:"numeric"})+(ev.hora?" · "+ev.hora:"")));
+      title.href=ev.url;title.target="_blank";title.rel="noopener noreferrer";title.textContent=ev.evento||ev.artistas||"Concierto";
+      meta.className="small";meta.textContent=[ev.artistas,ev.sala,ev.ciudad,ev.pais].filter(Boolean).join(" · ");
+      more.className="concert-more";more.href=ev.url;more.target="_blank";more.rel="noopener noreferrer";more.textContent="INFORMACIÓN Y ENTRADAS ↗";
+      body.appendChild(date);body.appendChild(title);body.appendChild(meta);body.appendChild(more);card.appendChild(body);list.appendChild(card);
+    });
+    status.textContent=events.length+" próximos eventos verificados · Carteles oficiales cuando están disponibles.";
+  }catch(error){status.textContent="Agenda temporalmente no disponible; se actualizará en la próxima revisión.";list.innerHTML="<li>No se ha podido cargar la agenda.</li>";}
 }
 (function(){
 loadNews();
