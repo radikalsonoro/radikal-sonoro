@@ -487,6 +487,12 @@ header .logo img{display:block!important;width:145px!important;height:145px!impo
 }
 </style>
 
+
+<style id="radikal-fechas-conciertos">
+#conciertos .concert-date{display:block!important;width:fit-content;max-width:100%;padding:7px 10px!important;margin:0 0 9px!important;background:#e51b2b!important;color:#fff!important;font:900 17px/1.15 "Barlow Condensed",sans-serif!important;text-transform:uppercase;letter-spacing:.035em;overflow-wrap:anywhere}
+#conciertos .concert-date small{display:block!important;margin-bottom:3px;color:#fff!important;font:800 8px/1.2 "DM Sans",sans-serif!important;letter-spacing:.14em}
+@media(max-width:600px){#conciertos .concert-date{font-size:15px!important;padding:6px 8px!important}}
+</style>
 </head>
 <body id="inicio">
 <div class="topline"></div>
@@ -599,7 +605,7 @@ async function loadConcertNews(){
       body.className="concert-card-body";
       var date=document.createElement("div"),small=document.createElement("small"),title=document.createElement("a"),meta=document.createElement("div"),more=document.createElement("a");
       date.className="concert-date";small.textContent="FECHA DEL EVENTO";date.appendChild(small);
-      date.appendChild(document.createTextNode(new Date(ev.fecha+"T00:00:00").toLocaleDateString("es-ES",{day:"2-digit",month:"short",year:"numeric"})+(ev.hora?" · "+ev.hora:"")));
+      date.appendChild(document.createTextNode(new Date(ev.fecha+"T00:00:00").toLocaleDateString("es-ES",{weekday:"short",day:"2-digit",month:"long",year:"numeric"})+(ev.hora?" · "+ev.hora:"")));
       title.href=ev.url;title.target="_blank";title.rel="noopener noreferrer";title.textContent=ev.evento||ev.artistas||"Concierto";
       meta.className="small";meta.textContent=[ev.artistas,ev.sala,ev.ciudad,ev.pais].filter(Boolean).join(" · ");
       more.className="concert-more";more.href=ev.url;more.target="_blank";more.rel="noopener noreferrer";more.textContent="INFORMACIÓN Y ENTRADAS ↗";
