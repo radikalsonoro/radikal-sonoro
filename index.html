@@ -284,6 +284,119 @@ section{box-shadow:3px 3px 0 rgba(237,23,36,.3)}
  #news-list li:first-child,#news-list li:nth-child(2),#news-list li:nth-child(3),#news-list li:nth-child(4),#news-list li:nth-child(5){grid-column:1}
 }
 
+
+/* REDISEÑO RADIKAL SONORO · REVISTA PUNK DIY · NOV 2026 */
+:root{--bg:#090909;--panel:#111;--paper:#eee9dc;--ink:#111;--red:#e21d2b;--yellow:#f2d52e;--muted:#bdb6aa;--line:#5b554d}
+html{scroll-behavior:smooth}
+body{background:#080808;color:var(--paper);font-family:Arial,sans-serif}
+.topline{height:7px;background:repeating-linear-gradient(135deg,var(--red) 0 13px,#080808 13px 21px)}
+header{position:relative;max-width:none;padding:25px max(5vw,20px) 30px;background:#eee9dc;color:#111;overflow:hidden;border-bottom:8px solid var(--red)}
+header:after{content:"Ⓐ";position:absolute;right:5vw;top:-65px;font:900 clamp(190px,30vw,390px)/1 Arial;color:rgba(220,25,38,.12);pointer-events:none}
+header .logo,header .kicker,header h1,header .tagline,header .header-stamp{position:relative;z-index:1}
+header .logo img{width:clamp(100px,13vw,165px);height:auto;filter:grayscale(1);mix-blend-mode:multiply}
+header .kicker{font:900 12px/1.2 Arial,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#c71927;margin-top:10px}
+header h1{font-family:Impact,"Arial Narrow",sans-serif;font-size:clamp(64px,12vw,150px);line-height:.76;letter-spacing:-.055em;text-transform:uppercase;margin:17px 0 14px;color:#090909;text-shadow:3px 3px 0 var(--red)}
+header h1 span{color:var(--red)}
+header .tagline{font-weight:900;text-transform:uppercase;letter-spacing:.06em;font-size:clamp(12px,1.6vw,17px);max-width:620px}
+.header-stamp{display:inline-block;margin-top:18px;background:var(--yellow);padding:8px 12px;font:900 11px Arial;letter-spacing:.13em;transform:rotate(-2deg);border:2px solid #111}
+nav{position:sticky;top:0;z-index:20;display:flex;justify-content:center;flex-wrap:wrap;gap:0;background:#080808;border:0;border-bottom:3px solid var(--red);padding:0 10px;box-shadow:0 5px 0 rgba(0,0,0,.6)}
+nav a{padding:15px 13px;color:#f3eee3!important;font:900 13px "Barlow Condensed",Impact,sans-serif;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border-right:1px solid #34302c}
+nav a:hover{background:var(--yellow);color:#090909!important}
+main{max-width:1280px;padding:0 20px}
+.hero{margin:25px 0 38px;display:grid;grid-template-columns:minmax(0,1.6fr) minmax(250px,.7fr);gap:0;background:#eee9dc;color:#111;border:0;box-shadow:8px 8px 0 var(--red);transform:rotate(-.25deg)}
+.hero-main{position:relative;min-height:410px;padding:clamp(28px,5vw,65px);display:flex;flex-direction:column;justify-content:center;background:linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.22)),repeating-linear-gradient(135deg,#292929 0 2px,#111 2px 8px);color:#fff;border:0;overflow:hidden}
+.hero-main:after{content:"Ⓐ";position:absolute;right:2%;top:-40px;font:900 clamp(170px,24vw,300px)/1 Arial;color:rgba(226,29,43,.24);transform:rotate(-13deg)}
+.hero-main>*{position:relative;z-index:1}
+.hero-main .kicker{color:var(--yellow);font:900 12px Arial;letter-spacing:.22em;text-transform:uppercase}
+.hero-main h2{font:900 clamp(58px,8.5vw,112px)/.8 Impact,"Arial Narrow",sans-serif;letter-spacing:-.035em;text-transform:uppercase;margin:18px 0;color:#fff;text-shadow:4px 4px 0 var(--red)}
+.hero-main p{max-width:470px;font-size:16px;line-height:1.5;color:#eee}
+.cta{align-self:flex-start;background:var(--yellow);color:#111!important;border:3px solid #111;padding:12px 17px;font:900 13px Arial;text-transform:uppercase;text-decoration:none;box-shadow:4px 4px 0 var(--red);transform:rotate(-1deg)}
+.hero-side{display:flex;flex-direction:column;gap:0;background:#eee9dc;color:#111}
+.sidebox{flex:1;padding:27px 24px;border:0;border-bottom:2px solid #111;box-shadow:none;background:transparent}
+.sidebox:last-child{background:var(--yellow);border-bottom:0}
+.sidebox .redline{width:55px;height:6px;background:var(--red);margin-bottom:18px}
+.sidebox strong{display:block;font:900 clamp(28px,3.2vw,42px)/.88 Impact,"Arial Narrow",sans-serif;text-transform:uppercase}
+.sidebox p{font-size:13px;line-height:1.4;font-weight:700}
+section{position:relative;margin:38px 0;padding:clamp(20px,3vw,38px);background:#111;color:var(--paper);border:0;border-top:5px solid var(--red);border-bottom:1px solid #5b554d;box-shadow:7px 7px 0 #020202;scroll-margin-top:75px}
+.section-head{display:flex;justify-content:space-between;gap:15px;align-items:end;border:0;border-bottom:2px solid #5b554d;padding:0 0 13px;margin-bottom:22px}
+.section-head h2{font:900 clamp(43px,6vw,76px)/.82 Impact,"Arial Narrow",sans-serif;letter-spacing:-.025em;text-transform:uppercase;color:#fff;margin:0;text-shadow:3px 3px 0 var(--red)}
+.section-head small{background:var(--yellow);color:#111;padding:6px 9px;font:900 10px Arial;letter-spacing:.1em;text-transform:uppercase;transform:rotate(-2deg)}
+.box{background:#eee9dc;color:#111;border:2px solid #111;box-shadow:5px 5px 0 var(--red);border-radius:0}
+#proximamente{background:#eee9dc;color:#111;border-top:8px solid var(--yellow)}
+#proximamente .section-head h2{color:#111;text-shadow:3px 3px 0 var(--red)}
+.upcoming-feature{display:grid;grid-template-columns:minmax(230px,.8fr) minmax(0,1.2fr);gap:28px;align-items:center}
+.upcoming-art{min-height:310px;background:repeating-linear-gradient(135deg,#171717 0 3px,#242424 3px 8px);color:#fff;border:5px solid #111;box-shadow:8px 8px 0 var(--red);transform:rotate(-2deg)}
+.upcoming-art strong{font:900 clamp(38px,5vw,62px)/.82 Impact,sans-serif;color:var(--yellow)}
+.upcoming-copy h3{font:900 clamp(38px,5vw,60px)/.88 Impact,sans-serif;text-transform:uppercase;color:#111}
+.upcoming-copy p{color:#292929;font-weight:600;line-height:1.55}
+#radio{background:#bd1724;color:#fff;border:0;border-top:9px solid var(--yellow);padding:clamp(22px,4vw,48px)}
+#radio .section-head{border:0}
+#radio .section-head h2{font-size:clamp(55px,8vw,100px);text-shadow:4px 4px 0 #111}
+#radio .section-head small{background:#111;color:var(--yellow)}
+#radio .radio-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:0}
+#radio .radio-card{background:#111;color:#f4eee3;border:2px solid #eee9dc;border-radius:0;padding:clamp(22px,3vw,38px);box-shadow:7px 7px 0 #080808}
+#radio .radio-card:first-child{background:var(--yellow);color:#111;border-color:#111}
+#radio .radio-card:first-child h3{font:900 clamp(38px,5vw,66px)/.85 Impact,sans-serif;text-transform:uppercase;color:#111}
+#radio .radio-card:first-child p{color:#111;font-weight:700}
+#radio .radio-card:first-child button{background:#111;color:#fff;border:2px solid #111;border-radius:0;padding:13px 18px;font-weight:900}
+#radio audio{width:100%;margin-top:14px}
+#noticias{background:#eee9dc;color:#111;border-top:9px solid #111}
+#noticias .section-head h2{color:#111}
+#noticias .section-head small{background:var(--red);color:#fff}
+#noticias>p.small:first-of-type{color:#333;font-weight:700}
+#news-status{background:var(--yellow);color:#111;padding:7px 10px;font-weight:900}
+#news-list{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0 22px;list-style:none;padding:0;margin:12px 0 0}
+#news-list li{border:0;border-top:2px solid #111;padding:17px 0;min-width:0}
+#news-list li:first-child{grid-column:span 7;grid-row:span 2;border-top:0;padding:0 20px 22px 0}
+#news-list li:nth-child(2){grid-column:span 5;border-top:0}
+#news-list li:nth-child(3){grid-column:span 5}
+#news-list li:nth-child(4),#news-list li:nth-child(5){grid-column:span 6}
+#news-list li a{font:900 clamp(22px,3vw,34px)/.94 Impact,"Arial Narrow",sans-serif;color:#111;text-transform:uppercase;text-decoration:none}
+#news-list li:first-child a{font-size:clamp(40px,5.5vw,70px);line-height:.85;color:#bd1724}
+#news-list li p{font-size:13px;line-height:1.5;color:#333!important}
+#news-list li .small{font:900 10px Arial;color:#bd1724;letter-spacing:.12em;text-transform:uppercase}
+#conciertos{background:#111}
+#conciertos .section-head h2{color:#fff}
+#conciertos .concert-card{border:2px solid #eee9dc;border-radius:0;background:#eee9dc;color:#111;box-shadow:6px 6px 0 var(--red)}
+#conciertos .concert-card-body{color:#111}
+#conciertos .concert-date{background:var(--yellow);color:#111;border:2px solid #111;border-radius:0}
+#conciertos .concert-more{background:#bd1724;color:#fff;border-radius:0}
+#videos .video-grid li{border:2px solid #eee9dc;border-radius:0;background:#171717;box-shadow:5px 5px 0 var(--red)}
+#spotify{background:#eee9dc;color:#111;border-top:8px solid var(--yellow)}
+#spotify .section-head h2{color:#111}
+#contacto .box{padding:25px}
+input,select,textarea{border:2px solid #111!important;border-radius:0!important;background:#fff!important;color:#111!important}
+button.chip{border-radius:0!important;background:var(--red)!important;color:#fff!important;border:2px solid #111!important;font-weight:900}
+footer{background:#eee9dc;color:#111;border-top:8px solid var(--red);padding:28px 15px;font:900 12px Arial;letter-spacing:.15em}
+@media(max-width:700px){
+ header{padding:20px 18px 24px}
+ header:after{right:-25px;top:0;font-size:180px}
+ header h1{font-size:clamp(58px,17vw,94px)}
+ nav{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap}
+ nav a{white-space:nowrap;padding:13px 11px;font-size:12px}
+ main{padding:0 12px}
+ .hero{grid-template-columns:1fr;margin:18px 0 30px;transform:none}
+ .hero-main{min-height:330px;padding:28px 23px}
+ .hero-main h2{font-size:clamp(55px,14vw,82px)}
+ .hero-side{display:grid;grid-template-columns:1fr 1fr}
+ .sidebox{padding:18px 14px}
+ .sidebox strong{font-size:28px}
+ .upcoming-feature{grid-template-columns:1fr}
+ .upcoming-art{min-height:240px}
+ #radio .radio-grid{grid-template-columns:1fr;gap:12px}
+ #news-list{grid-template-columns:1fr 1fr;gap:0 14px}
+ #news-list li:first-child{grid-column:1/-1;grid-row:auto;padding:0 0 18px}
+ #news-list li:nth-child(2),#news-list li:nth-child(3),#news-list li:nth-child(4),#news-list li:nth-child(5){grid-column:span 1}
+ #news-list li:first-child a{font-size:clamp(42px,12vw,62px)}
+ #news-list li a{font-size:25px}
+ .section-head{align-items:flex-start;flex-direction:column}
+}
+@media(max-width:420px){
+ .hero-side{grid-template-columns:1fr}
+ #news-list{grid-template-columns:1fr}
+ #news-list li:first-child,#news-list li:nth-child(2),#news-list li:nth-child(3),#news-list li:nth-child(4),#news-list li:nth-child(5){grid-column:1}
+}
+
 </style>
 </head>
 <body>
