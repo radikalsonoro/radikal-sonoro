@@ -397,6 +397,144 @@ footer{background:#eee9dc;color:#111;border-top:8px solid var(--red);padding:28p
  #news-list li:first-child,#news-list li:nth-child(2),#news-list li:nth-child(3),#news-list li:nth-child(4),#news-list li:nth-child(5){grid-column:1}
 }
 
+
+/* === RADIKAL SONORO · MAQUETA FIEL A LA REFERENCIA RADIO PUNK UNDERGROUND === */
+:root{--rs-red:#e21d2b;--rs-paper:#eeeae1;--rs-yellow:#f2d52e;--rs-black:#080808}
+body{background:#080808;color:var(--rs-paper);font-family:"Barlow Condensed","Arial Narrow",Arial,sans-serif}
+body:before{opacity:.24;background-image:radial-gradient(#eee 0.55px,transparent .7px);background-size:4px 4px;mix-blend-mode:screen}
+.topline{height:8px;background:repeating-linear-gradient(135deg,var(--rs-red) 0 13px,#eee 13px 16px,#080808 16px 28px)}
+header{max-width:none;width:100%;min-height:190px;padding:22px clamp(16px,3vw,48px);display:grid;grid-template-columns:clamp(100px,14vw,180px) minmax(0,1fr) minmax(210px,.65fr);grid-template-rows:auto auto auto;grid-template-areas:"logo kicker tagline" "logo title tagline" "logo stamp tagline";align-items:center;gap:5px 24px;text-align:left;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(0,0,0,.9),rgba(0,0,0,.55)),repeating-linear-gradient(135deg,#262626 0 2px,#080808 2px 8px);color:#fff;border-bottom:5px solid var(--rs-paper)}
+header:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.32;background:radial-gradient(ellipse at 55% 110%,#aaa 0 1%,transparent 25%),radial-gradient(ellipse at 64% 100%,#777 0 2%,transparent 27%),radial-gradient(ellipse at 72% 100%,#aaa 0 1%,transparent 23%),repeating-linear-gradient(90deg,transparent 0 35px,rgba(255,255,255,.07) 36px 38px,transparent 39px 70px)}
+header:after{content:"Ⓐ";position:absolute;right:28%;top:-72px;font:900 clamp(180px,24vw,320px)/1 Arial;color:rgba(226,29,43,.13);pointer-events:none}
+header .logo{grid-area:logo;display:flex;justify-content:center;align-items:center;margin:0;z-index:2}
+header .logo img{width:100%;max-width:180px;filter:grayscale(1) contrast(1.35) drop-shadow(4px 4px 0 var(--rs-red));mix-blend-mode:screen}
+header .kicker{grid-area:kicker;z-index:2;color:var(--rs-paper);font:900 12px/1 Arial,sans-serif;letter-spacing:.22em;text-transform:uppercase}
+header h1{grid-area:title;z-index:2;margin:0;color:#f4f0e8;font:900 clamp(58px,8vw,118px)/.78 Impact,"Arial Narrow",sans-serif;letter-spacing:-.055em;text-transform:uppercase;text-shadow:3px 3px 0 var(--rs-red)}
+header h1 span{color:var(--rs-red);-webkit-text-stroke:1px #eee}
+header .tagline{grid-area:tagline;z-index:2;max-width:300px;margin:0 0 0 auto;color:#fff;font:900 clamp(18px,2.1vw,29px)/1.05 "Barlow Condensed",Impact,sans-serif;letter-spacing:.04em;text-align:right;text-transform:uppercase}
+header .tagline: first-line{color:var(--rs-red)}
+header .header-stamp{grid-area:stamp;z-index:2;justify-self:start;margin:0;padding:5px 9px;background:var(--rs-red);color:#fff;border:1px solid #eee;font:900 10px Arial,sans-serif;letter-spacing:.16em;transform:rotate(-2deg)}
+nav{position:sticky;top:0;z-index:30;display:flex;justify-content:center;flex-wrap:wrap;gap:0;padding:0 10px;background:#080808;border:0;border-bottom:3px solid var(--rs-red);box-shadow:0 4px 0 rgba(0,0,0,.7)}
+nav a{padding:13px 14px;color:#f4f0e8!important;border-right:1px solid #393431;text-decoration:none;font:900 16px/1 "Barlow Condensed",Impact,sans-serif;letter-spacing:.1em;text-transform:uppercase}
+nav a.active,nav a:hover{background:var(--rs-red);color:#fff!important}
+main{max-width:1500px;padding:0 clamp(10px,2vw,26px) 34px;display:grid;grid-template-columns:minmax(0,1.65fr) minmax(300px,.85fr);gap:0 22px;align-items:start}
+main>.hero{display:none}
+main>section{min-width:0;margin:18px 0 20px;padding:clamp(17px,2.2vw,28px);background:#101010;color:var(--rs-paper);border:0;border-top:4px solid var(--rs-red);border-bottom:1px solid #504942;border-radius:0;box-shadow:none}
+#radio{grid-column:1;grid-row:1;background:linear-gradient(120deg,rgba(226,29,43,.18),transparent 60%),#151515;border-top:8px solid var(--rs-yellow);padding:clamp(18px,2.4vw,30px)}
+#radio .section-head{border:0;margin-bottom:15px}
+#radio .section-head h2{font:900 clamp(46px,6vw,78px)/.82 Impact,"Arial Narrow",sans-serif;text-shadow:3px 3px 0 #111}
+#radio .section-head small{background:var(--rs-yellow);color:#111;padding:5px 8px}
+#radio .radio-grid{grid-template-columns:minmax(0,1.5fr) minmax(180px,.8fr);gap:0}
+#radio .radio-card{min-width:0;padding:clamp(15px,2vw,25px);background:#080808;border:1px solid #d4cfc5;border-radius:0;box-shadow:none}
+#radio .radio-card:first-child{background:linear-gradient(130deg,#9e111b,#e21d2b 72%,#6c0c13);border:0}
+#radio .radio-card h3{font:900 clamp(27px,3vw,42px)/.9 Impact,"Arial Narrow",sans-serif;text-transform:uppercase}
+#radio .radio-card:first-child h3{font-size:clamp(32px,4vw,53px);color:#fff}
+#radio .radio-card p{font-size:13px;line-height:1.4}
+#radio .radio-card:first-child p{color:#fff}
+#radio .radio-card button{background:#080808;color:#fff;border:2px solid #fff;border-radius:0;box-shadow:none;font:900 12px Arial,sans-serif}
+#radio audio{width:100%;margin:12px 0}
+#radio .radio-card .small{font-size:11px}
+#conciertos{grid-column:2;grid-row:1 / span 2;background:#111;border-top:8px solid var(--rs-yellow);padding:clamp(15px,1.8vw,23px)}
+#conciertos .section-head{border:0;border-bottom:2px solid #eee;padding-bottom:12px}
+#conciertos .section-head h2{font:900 clamp(35px,4vw,54px)/.85 Impact,"Arial Narrow",sans-serif;color:#fff;text-shadow:3px 3px 0 var(--rs-red)}
+#conciertos .section-head small{background:var(--rs-yellow);color:#111;padding:5px 7px}
+#conciertos>p.small:first-of-type{font-size:12px;line-height:1.45;color:#d0c9bd}
+#conciertos>p.small:nth-of-type(2){font-size:11px}
+#concert-news-status{display:block;width:max-content;max-width:100%;margin:12px 0;padding:6px 8px;background:var(--rs-yellow);color:#111;font:900 10px Arial,sans-serif;letter-spacing:.08em}
+#conciertos .concert-grid{display:grid;grid-template-columns:1fr;gap:11px;margin:15px 0}
+#conciertos .concert-card{display:grid;grid-template-columns:100px minmax(0,1fr);align-items:stretch;position:relative;min-width:0;background:#eeeae1;color:#111;border:1px solid #fff;border-bottom:3px solid var(--rs-red);box-shadow:none;overflow:hidden}
+#conciertos .concert-card:before{top:5px;left:5px;font-size:13px}
+#conciertos .concert-poster,#conciertos .concert-placeholder{width:100%;height:100%;min-height:135px;max-height:180px;object-fit:cover;border:0;border-right:3px solid var(--rs-red)}
+#conciertos .concert-placeholder{padding:10px;background:repeating-linear-gradient(135deg,#333 0 2px,#111 2px 7px);color:#fff}
+#conciertos .concert-placeholder span{font-size:8px}
+#conciertos .concert-placeholder strong{font-size:21px}
+#conciertos .concert-card-body{min-width:0;padding:10px 11px 12px;color:#111}
+#conciertos .concert-date{margin:0 0 7px;padding:5px 7px;background:var(--rs-red);color:#fff;font:900 13px Arial,sans-serif;box-shadow:none;transform:none}
+#conciertos .concert-date small{font-size:7px}
+#conciertos .concert-card-body>a:not(.concert-more){font:900 21px/.95 Impact,"Arial Narrow",sans-serif;color:#111;text-decoration:none}
+#conciertos .concert-card-body .small{margin-top:7px;font:700 10px/1.3 Arial,sans-serif;color:#333}
+#conciertos .concert-more{margin-top:8px;padding:6px 8px;background:#111;color:#fff!important;border:0;font:900 9px Arial,sans-serif;box-shadow:none}
+#conciertos #concert-form{margin-top:18px}
+#proximamente{grid-column:1;grid-row:2;background:#eeeae1;color:#111;border-top:7px solid #111;padding:clamp(18px,2.4vw,30px)}
+#proximamente .section-head{border-bottom:2px solid #111}
+#proximamente .section-head h2{color:#111;font:900 clamp(43px,6vw,76px)/.82 Impact,"Arial Narrow",sans-serif;text-shadow:3px 3px 0 var(--rs-red)}
+#proximamente .section-head small{background:var(--rs-red);color:#fff}
+#proximamente .upcoming-feature{grid-template-columns:minmax(200px,.85fr) minmax(0,1.15fr);gap:22px}
+#proximamente .upcoming-art{min-height:270px;border:4px solid #111;background:repeating-linear-gradient(135deg,#282828 0 3px,#101010 3px 9px);box-shadow:6px 6px 0 var(--rs-red);transform:rotate(-1deg)}
+#proximamente .upcoming-art strong{font:900 clamp(38px,5vw,65px)/.82 Impact,sans-serif;color:var(--rs-yellow)}
+#proximamente .upcoming-copy h3{font:900 clamp(35px,4.5vw,57px)/.88 Impact,sans-serif;color:#111}
+#proximamente .upcoming-copy p{color:#302d29;font:700 13px/1.5 Arial,sans-serif}
+#proximamente .upcoming-kicker{background:var(--rs-red);color:#fff}
+#proximamente .upcoming-note{color:#b31320}
+#proximamente .cta{background:var(--rs-red);color:#fff!important;border:2px solid #111;box-shadow:3px 3px 0 #111}
+#noticias{grid-column:1;grid-row:3;background:#eeeae1;color:#111;border-top:7px solid #111;padding:clamp(17px,2vw,25px)}
+#noticias .section-head{border-bottom:2px solid #111}
+#noticias .section-head h2{color:#111;font:900 clamp(40px,5vw,66px)/.85 Impact,sans-serif;text-shadow:3px 3px 0 var(--rs-red)}
+#noticias .section-head small{background:var(--rs-yellow);color:#111}
+#noticias>p.small:first-of-type,#noticias>p.small:last-of-type{color:#333;font:700 11px/1.45 Arial,sans-serif}
+#news-status{display:inline-block;background:var(--rs-red);color:#fff;padding:6px 9px;font:900 10px Arial,sans-serif}
+#news-list{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0 18px;list-style:none;padding:0;margin:12px 0}
+#news-list li{min-width:0;padding:13px 0;border-top:2px solid #111}
+#news-list li:first-child{grid-column:span 7;grid-row:span 2;border-top:0;padding:0 16px 18px 0}
+#news-list li:nth-child(2){grid-column:span 5;border-top:0}
+#news-list li:nth-child(3){grid-column:span 5}
+#news-list li:nth-child(4),#news-list li:nth-child(5){grid-column:span 6}
+#news-list li a{display:block;color:#111;font:900 clamp(22px,2.7vw,34px)/.95 Impact,"Arial Narrow",sans-serif;text-decoration:none;text-transform:uppercase}
+#news-list li:first-child a{font-size:clamp(36px,4.5vw,60px);color:#b91522}
+#news-list li p{color:#39332e!important;font:12px/1.45 Arial,sans-serif}
+#news-list li .small{color:#b91522;font:900 9px Arial,sans-serif;letter-spacing:.1em}
+#spotify{grid-column:2;grid-row:3;background:#171717;border-top:7px solid var(--rs-yellow)}
+#spotify .section-head h2{font:900 clamp(42px,5vw,64px)/.85 Impact,sans-serif}
+#spotify .section-head small{background:var(--rs-yellow);color:#111}
+#spotify .spot iframe{width:100%;height:300px;border:0}
+#videos{grid-column:1;grid-row:4;background:#111}
+#videos .section-head h2{font:900 clamp(40px,5vw,60px)/.85 Impact,sans-serif}
+#contacto{grid-column:2;grid-row:4;background:#eeeae1;color:#111;border-top:7px solid var(--rs-red)}
+#contacto .section-head h2{color:#111;text-shadow:3px 3px 0 var(--rs-red)}
+#contacto .section-head small{background:#111;color:#fff}
+#contacto .box{background:transparent;color:#111;border:0;box-shadow:none;padding:0}
+#contacto .box p,#contacto .box label{color:#111}
+#contacto input,#contacto select,#contacto textarea{background:#fff!important;color:#111!important;border:2px solid #111!important}
+#contacto .chip{background:var(--rs-red)!important;color:#fff!important}
+#directo,#quienes-somos{grid-column:1/-1;background:#171717}
+#directo .section-head h2,#quienes-somos .section-head h2{font:900 clamp(36px,5vw,58px)/.9 Impact,sans-serif}
+footer{background:#080808;color:#eee;border-top:4px solid var(--rs-red);font:900 11px Arial,sans-serif;letter-spacing:.16em}
+@media(max-width:850px){
+ header{grid-template-columns:100px minmax(0,1fr);grid-template-areas:"logo kicker" "logo title" "logo tagline" "logo stamp";gap:7px 14px;min-height:0}
+ header .tagline{margin:0;text-align:left;max-width:none;font-size:17px}
+ header:after{right:-35px;top:-45px}
+ main{display:block;padding:0 12px}
+ main>section{margin:17px 0}
+ #conciertos .concert-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #conciertos .concert-card{grid-template-columns:82px minmax(0,1fr)}
+ #conciertos .concert-poster,#conciertos .concert-placeholder{min-height:130px;max-height:160px}
+ #conciertos .concert-card-body>a:not(.concert-more){font-size:18px}
+ #radio .radio-grid{grid-template-columns:1.25fr .75fr}
+ #proximamente .upcoming-feature{grid-template-columns:.8fr 1.2fr}
+}
+@media(max-width:560px){
+ header{grid-template-columns:68px minmax(0,1fr);padding:18px 13px}
+ header .logo img{width:68px}
+ header h1{font-size:clamp(43px,12vw,68px)}
+ header .tagline{font-size:14px;line-height:1.1}
+ header .kicker{font-size:9px}
+ header .header-stamp{font-size:8px}
+ nav{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto}
+ nav a{white-space:nowrap;padding:12px 10px;font-size:14px}
+ #radio .radio-grid{grid-template-columns:1fr}
+ #conciertos .concert-grid{grid-template-columns:1fr}
+ #conciertos .concert-card{grid-template-columns:105px minmax(0,1fr)}
+ #conciertos .concert-poster,#conciertos .concert-placeholder{min-height:140px;max-height:170px}
+ #proximamente .upcoming-feature{grid-template-columns:1fr}
+ #proximamente .upcoming-art{min-height:220px}
+ #news-list{grid-template-columns:1fr 1fr;gap:0 12px}
+ #news-list li:first-child{grid-column:1/-1;grid-row:auto;padding:0 0 16px}
+ #news-list li:nth-child(2),#news-list li:nth-child(3),#news-list li:nth-child(4),#news-list li:nth-child(5){grid-column:span 1}
+ #news-list li:first-child a{font-size:clamp(38px,10vw,54px)}
+ #news-list li a{font-size:22px}
+}
+@media(max-width:380px){#news-list{grid-template-columns:1fr}#news-list li:first-child,#news-list li:nth-child(2),#news-list li:nth-child(3),#news-list li:nth-child(4),#news-list li:nth-child(5){grid-column:1}}
+
 </style>
 <style>
 
@@ -758,7 +896,7 @@ footer{background:#050505;border-top:4px solid #d71925}
 <section id="directo"><div class="section-head"><h2>En directo</h2><small>La escena no se calla</small></div><div class="box live"><strong>Todos los miércoles · 20:00 a 22:00 h</strong><p id="livestate" role="status">Programa en vivo con música, invitados y mucho ruido.</p></div></section>
 <section id="radio"><div class="section-head"><h2>En directo</h2><small>24 horas de música independiente</small></div><div class="radio-grid"><div class="radio-card"><h3>Radikal Sonoro · 24h</h3><p>Nuestra señal online. Dale al play y acompaña la resistencia sonora.</p><button id="play" type="button">▶ Escuchar en vivo</button><audio id="audio" controls preload="none"></audio><p class="msg" id="msg" role="status"></p></div><div class="radio-card" id="agora"><h3>Ágora Sol Radio</h3><p>Escucha la emisión en directo de Ágora Sol Radio.</p><audio controls preload="none" src="https://cervera.eldialdigital.com:23141/stream">Tu navegador no admite el reproductor de audio.</audio><p class="small">Radikal Sonoro: miércoles de 20:00 a 22:00 h.</p><a href="https://www.agorasolradio.org/directo/" target="_blank" rel="noopener">Abrir la web de Ágora Sol Radio ↗</a></div></div></section>
 <section id="noticias"><div class="section-head"><h2>Últimas noticias</h2><small>Underground · Aquí y fuera</small></div><p class="small">Selección de hasta 5 noticias recientes de punk, hardcore, ska y metal independiente. Enlaces a las fuentes originales.</p><div id="news-status" role="status" aria-live="polite">Buscando noticias recientes…</div><ul class="list" id="news-list"><li>Conectando con las fuentes…</li></ul><p class="small">Fuentes: Google News RSS. Los artículos pertenecen a sus medios originales.</p></section>
-<section id="conciertos"><div class="section-head"><h2>Agenda de conciertos</h2><small>Próximas fechas</small></div><p class="small">Hasta 5 próximos conciertos con fecha futura detectada. Carteles cuando están disponibles; confirma siempre sala y entradas con la organización.</p><p class="small">Agenda colaboradora: <a href="https://primeralineavkbar.com/index.php/trinchera/" target="_blank" rel="noopener noreferrer">La Trinchera · Primera Línea VK Bar</a>.</p><div id="concert-news-status" role="status" aria-live="polite">Buscando anuncios de conciertos…</div><ul class="list" id="concert-news-list"><li>Conectando con las fuentes…</li></ul><p class="small">¿Organizas un concierto o tocas en una banda? Envíanos la información para revisarla.</p>
+<section id="conciertos"><div class="section-head"><h2>Agenda de conciertos</h2><small>Próximas fechas</small></div><p class="small">Hasta 6 conciertos. Madrid y alrededores primero; después, el resto de la escena estatal. Carteles cuando estén disponibles y verificados.</p><p class="small">Agenda colaboradora: <a href="https://primeralineavkbar.com/index.php/trinchera/" target="_blank" rel="noopener noreferrer">La Trinchera · Primera Línea VK Bar</a>.</p><div id="concert-news-status" role="status" aria-live="polite">Buscando anuncios de conciertos…</div><ul class="list" id="concert-news-list"><li>Conectando con las fuentes…</li></ul><p class="small">¿Organizas un concierto o tocas en una banda? Envíanos la información para revisarla.</p>
 <form class="box" id="concert-form" name="concert-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" action="/gracias.html"><input type="hidden" name="form-name" value="concert-form"><p hidden><label>No rellenes este campo: <input name="bot-field"></label></p><label>Grupo o artista *<input name="grupo" required></label><label>Nombre del concierto o festival *<input name="evento" required></label><div class="formrow"><label>Fecha *<input type="date" name="fecha" required></label><label>Hora<input type="time" name="hora"></label></div><label>Sala o recinto *<input name="sala" required></label><div class="formrow"><label>Ciudad *<input name="ciudad" required></label><label>País<input name="pais"></label></div><label>Estilo musical<input name="estilo" placeholder="Punk, hardcore, ska, metal…"></label><label>Precio de entrada<input name="precio"></label><label>Enlace de entradas o evento<input type="url" name="enlace" placeholder="https://…"></label><label>Cartel del concierto<input type="file" name="cartel" accept="image/*,.pdf"></label><label>Información adicional<textarea name="info" rows="4"></textarea></label><label>Correo de contacto<input type="email" name="email" required></label><button class="chip" type="submit">Enviar concierto</button><p class="small" id="concert-msg" role="status">Se abrirá tu correo para enviar los datos a Radikal Sonoro. Recuerda adjuntar el cartel si lo tienes.</p></form></section>
 <section id="videos"><div class="section-head"><h2>Bandas libres</h2><small>Directos · Videoclips · Sesiones</small></div><ul class="list video-grid" id="video-list"><li>Preparando vídeos…</li></ul><p class="small">Los enlaces abren YouTube; Radikal Sonoro no aloja los vídeos.</p></section>
 <section id="spotify"><div class="section-head"><h2>Podcasts</h2><small>Programas · Sesiones · Archivo</small></div><div class="spot" id="sbox"></div><p class="small">Escucha y sigue los programas de Radikal Sonoro en Spotify.</p><div class="box" style="margin-top:14px"><strong style="font:800 25px Barlow Condensed;text-transform:uppercase">Radikal Sonoro en Ágora Sol Radio</strong><p class="small">Aquí puedes escuchar los podcasts de nuestros programas emitidos en Ágora Sol Radio.</p><a class="chip" href="https://www.agorasolradio.org/podcast/radikalsonoro/" target="_blank" rel="noopener noreferrer">▶ Escuchar podcasts en Ágora Sol ↗</a></div></section>
@@ -817,7 +955,7 @@ async function loadConcertNews(){
     events=(Array.isArray(events)?events:[]).filter(function(ev){
       if(!ev||!ev.fecha||!ev.url)return false;
       var d=new Date(ev.fecha+"T00:00:00");return !isNaN(d.getTime())&&d>=today;
-    }).sort(function(a,b){return a.fecha.localeCompare(b.fecha);}).slice(0,5);
+    }).slice(0,6);
     list.innerHTML="";list.className="concert-grid";
     if(!events.length){status.textContent="No hay próximos conciertos con fecha y fuente verificadas.";list.innerHTML="<li>No hay eventos confirmados en este momento.</li>";return;}
     events.forEach(function(ev,index){
