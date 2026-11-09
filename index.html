@@ -813,18 +813,22 @@ if(m){
 }
 
 var ls=document.getElementById("livestate");
-function nowIn(){
-  var o={weekday:"short",hour:"numeric",minute:"numeric",hourCycle:"h23"};
-  if(SHOW_TZ)o.timeZone=SHOW_TZ;
-  var p=new Intl.DateTimeFormat("en-US",o).formatToParts(new Date()),r={};
-  p.forEach(function(x){r[x.type]=x.value;});
-  return {d:["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(r.weekday),m:(+r.hour)*60+(+r.minute)};
-}
 function tick(){
   try{
-    var n=nowIn();
-    if(n.d===3&&n.m>=1200&&n.m<1320){ls.innerHTML='<span class="badge">En vivo ahora</span>Estamos al aire. Dale al botón de la radio.';return;}
-    var diff=((3-n.d)*1440+1200-n.m+10080)%10080;if(diff===0)diff=10080;var d=Math.floor(diff/1440),h=Math.floor(diff%1440/60),mi=diff%60;
+    // Cuenta atrás hasta la próxima emisión anunciada: miércoles 25 de noviembre de 2026, 20:00 h.
+    var target=new Date(2026,10,25,20,0,0);
+    var now=new Date();
+    var diff=target.getTime()-now.getTime();
+    if(diff<=0){
+      if(diff>-2*60*60*1000){
+        ls.innerHTML='<span class="badge">En vivo ahora</span>Estamos al aire. Dale al botón de la radio.';
+      }else{
+        ls.textContent="La emisión del miércoles 25 de noviembre ya ha finalizado.";
+      }
+      return;
+    }
+    var total=Math.floor(diff/60000);
+    var d=Math.floor(total/1440),h=Math.floor(total%1440/60),mi=total%60;
     ls.textContent="Próxima emisión en "+(d?d+(d===1?" día, ":" días, "):"")+h+" h "+mi+" min.";
   }catch(e){ls.textContent="Programa en vivo con música, invitados y mucho ruido.";}
 }
