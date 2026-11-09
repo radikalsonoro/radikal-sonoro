@@ -12,579 +12,145 @@
 
 
 
-<style id="radikal-revista-2026">
-:root{--bg:#090909;--panel:#111;--panel2:#191919;--red:#ed1724;--cream:#f4efe5;--muted:#b8b0a5;--line:#514941}
-html{scroll-padding-top:72px}body{background:#090909;color:var(--cream);font-family:"DM Sans",Arial,sans-serif}
-body:before{opacity:.17;background-image:radial-gradient(#fff .65px,transparent .8px);background-size:4px 4px}
-.topline{height:8px;background:repeating-linear-gradient(-12deg,#ed1724 0 24px,#f4efe5 24px 27px,#080808 27px 48px)}
-header{max-width:1500px;min-height:218px;padding:22px 28px;display:grid;grid-template-columns:170px 1fr;grid-template-rows:auto auto auto;gap:5px 24px;text-align:left;align-items:center;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.55)),radial-gradient(ellipse at 70% 45%,#555 0,#222 24%,#090909 68%)}
-header:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.28;background:repeating-linear-gradient(125deg,transparent 0 18px,rgba(255,255,255,.12) 19px 20px,transparent 21px 42px)}
-header:after{content:"24H DE MÚSICA\\A INDEPENDIENTE\\A PUNK · HARDCORE · SKA\\A METAL · ALTERNATIVA";white-space:pre;position:absolute;right:3%;top:25px;color:#f4efe5;font:italic 900 clamp(17px,2vw,27px)/1.18 "Barlow Condensed";text-align:right;letter-spacing:.04em;transform:rotate(-3deg);text-shadow:2px 2px #000}
-.logo{grid-column:1;grid-row:1/4;z-index:1;margin:0}.logo img{width:min(170px,100%);filter:drop-shadow(5px 4px 0 #ed1724) grayscale(1) contrast(1.2)}
-header .kicker,header h1,header .tagline,header .header-stamp{grid-column:2;position:relative;z-index:1;margin-left:0;margin-right:0;text-align:left}
-header .kicker{width:max-content;background:#ed1724;color:#fff;padding:5px 10px;font-size:11px;letter-spacing:.18em;transform:rotate(-2deg)}
-header h1{font:900 clamp(58px,9vw,112px)/.78 "Barlow Condensed",Impact,sans-serif;letter-spacing:-.045em;text-shadow:4px 4px #750d13;margin:7px 0}
-header h1 span{color:#ed1724;-webkit-text-stroke:1px #f4efe5}
-header .tagline{max-width:650px;color:#f4efe5;font:800 12px/1.3 "DM Sans";letter-spacing:.09em;text-transform:uppercase;margin:2px 0 7px}
-.header-stamp{justify-self:start;background:#f4efe5;color:#111;border:0;box-shadow:4px 4px #ed1724;padding:5px 9px;font-size:9px;letter-spacing:.16em;transform:rotate(-2deg)}
-nav{position:sticky;top:0;z-index:50;justify-content:space-around;gap:0;padding:7px 10px;background:#050505;border-top:2px solid #f4efe5;border-bottom:3px solid #ed1724}
-nav a{font:900 17px "Barlow Condensed";letter-spacing:.09em;padding:8px 13px;color:#eee;text-decoration:none}
-nav a.active,nav a:hover{background:#ed1724;color:white;transform:rotate(-1deg)}
-main{max-width:1500px;padding:0 18px 48px;display:grid;grid-template-columns:minmax(0,1.65fr) minmax(290px,.85fr);gap:0 18px;align-items:start}
-.hero{grid-column:1;grid-row:1;display:block;margin:18px 0 0}
-.hero-main{min-height:190px;padding:25px 30px 27px;border:0;border-left:7px solid #ed1724;box-shadow:none;background:linear-gradient(100deg,rgba(0,0,0,.88),rgba(0,0,0,.34)),repeating-linear-gradient(135deg,#272727 0 2px,#101010 2px 9px)}
-.hero-main:after{content:"RADIKAL";font:900 clamp(90px,15vw,190px)/.8 "Barlow Condensed";right:-8px;top:0;color:rgba(237,23,36,.18);transform:rotate(-8deg)}
-.hero-main:before{display:none}.hero-main h2{max-width:680px;font:900 clamp(48px,7vw,82px)/.84 "Barlow Condensed";text-shadow:3px 3px #a10e17;transform:rotate(-1deg)}
-.hero-main p{max-width:560px;color:#ddd;font-size:14px}.hero-side{display:none}
-main>section{margin:15px 0;padding:20px 22px;border:0;border-top:2px solid #eee4d5;border-bottom:3px solid #ed1724;box-shadow:5px 5px 0 #080808;background:#111;min-width:0}
-main>#radio{grid-column:1;grid-row:2;margin-top:12px;background:linear-gradient(100deg,rgba(237,23,36,.18),transparent 50%),#111}
-main>#conciertos{grid-column:2;grid-row:1 / span 3;margin-top:18px;background:linear-gradient(140deg,rgba(237,23,36,.15),transparent 40%),#101010}
-main>#proximamente{grid-column:1;grid-row:3}
-main>#noticias{grid-column:1;grid-row:4}
-main>#spotify{grid-column:2;grid-row:4}
-main>#directo{grid-column:1 / -1;grid-row:5}
-main>#quienes-somos{grid-column:1 / -1;grid-row:6}
-main>#videos{grid-column:1;grid-row:7}
-main>#contacto{grid-column:2;grid-row:7}
-.section-head{border-bottom:2px solid #ed1724;padding-bottom:10px;margin-bottom:15px;align-items:center}
-.section-head h2{font:900 clamp(32px,4vw,48px)/.9 "Barlow Condensed";letter-spacing:.01em;text-shadow:2px 2px #6d0d12}
-.section-head small{background:#f4efe5;color:#111;padding:4px 7px;font-size:9px;letter-spacing:.13em;transform:rotate(-2deg)}
-.radio-grid{grid-template-columns:1.1fr .9fr;gap:10px}.radio-card{background:#090909;border:1px solid #554b42;padding:15px;box-shadow:3px 3px #050505}
-.radio-card h3{font:900 27px "Barlow Condensed";text-transform:uppercase}.radio-card p{font-size:12px}
-.radio button,.chip{background:#ed1724;border:1px solid #f4efe5;box-shadow:3px 3px #050505;border-radius:0;transform:rotate(-1deg);font:900 12px "DM Sans";letter-spacing:.08em}
-audio{accent-color:#ed1724}
-.upcoming{background:linear-gradient(120deg,rgba(255,255,255,.04),transparent),#111}
-.upcoming-feature{grid-template-columns:.8fr 1.2fr;gap:20px}
-.upcoming-art{min-height:220px;border:2px solid #f4efe5;box-shadow:6px 6px #ed1724;background:radial-gradient(ellipse at 70% 25%,#777 0,#292929 24%,transparent 60%),repeating-linear-gradient(135deg,#282828 0 2px,#090909 2px 8px)}
-.upcoming-art strong{font:900 clamp(36px,5vw,58px)/.84 "Barlow Condensed";text-shadow:3px 3px #ed1724}
-.upcoming-copy h3{font:900 clamp(28px,3.5vw,40px)/.92 "Barlow Condensed";text-transform:uppercase}
-.upcoming-copy p{font-size:13px}
-#conciertos .concert-grid{grid-template-columns:1fr;gap:12px}
-#conciertos .concert-card{display:grid;grid-template-columns:minmax(90px,.7fr) 1fr;border:1px solid #eee4d5;border-bottom:4px solid #ed1724;box-shadow:3px 3px #050505}
-#conciertos .concert-poster,#conciertos .concert-placeholder{height:100%;min-height:150px;max-height:190px;aspect-ratio:3/4}
-#conciertos .concert-card-body{padding:12px}
-#conciertos .concert-card-body>a:not(.concert-more){font-size:20px}
-#conciertos .concert-date{font-size:15px}
-#news-list li{padding:12px 0;border-bottom:1px dashed #675d53}
-#news-list li>a{font:800 20px/1.05 "Barlow Condensed";text-transform:uppercase;text-decoration:none}
-#news-list li p{font-size:12px!important;line-height:1.35}
-#news-status,#concert-news-status{background:#f4efe5;color:#111;padding:6px 8px;font-size:9px;font-weight:900;letter-spacing:.1em}
-.spot iframe{height:300px}
-footer{border-top:3px solid #ed1724;background:#050505;color:#eee}
-@media(max-width:800px){
- header{grid-template-columns:90px 1fr;min-height:160px;padding:18px 14px;gap:5px 13px}
- .logo img{width:90px}header:after{font-size:14px;right:10px;top:12px;opacity:.7}
- header h1{font-size:clamp(48px,11vw,72px)}header .tagline{max-width:500px;font-size:9px}
- nav{justify-content:flex-start;overflow-x:auto}nav a{white-space:nowrap;font-size:16px;padding:8px 12px}
- main{display:block;padding:0 12px 35px}.hero{margin-top:13px}
- main>section{margin:13px 0;padding:17px}
- .hero-main{min-height:200px;padding:23px 20px}.hero-main h2{font-size:clamp(48px,12vw,70px)}
- .radio-grid{grid-template-columns:1fr}.upcoming-feature{grid-template-columns:1fr}
- #conciertos .concert-grid{grid-template-columns:1fr}
- #conciertos .concert-card{grid-template-columns:110px 1fr}
-}
-@media(max-width:430px){
- header{grid-template-columns:62px 1fr;padding:15px 10px}.logo img{width:62px}
- header:after{display:none}header h1{font-size:46px}
- header .tagline{font-size:8px;letter-spacing:.03em}
- .hero-main h2{font-size:48px}.section-head{align-items:flex-start;flex-direction:column}
- #conciertos .concert-card{grid-template-columns:95px 1fr}
-}
-</style>
-
-<style id="radikal-reference-layout">
-/* Composición de portada inspirada en la referencia aprobada */
-:root{--paper:#eee9df;--black:#080808;--red:#e51b2b;--yellow:#f4d52f}
-body{background:#080808;color:var(--paper)}
-body:before{opacity:.22;background-image:radial-gradient(#eee .7px,transparent .8px);background-size:4px 4px}
-.topline{height:9px;background:repeating-linear-gradient(135deg,#eee 0 2px,#080808 2px 13px,#d71925 13px 30px)}
-header{max-width:none;width:100%;min-height:225px;margin:0;padding:22px 3.5%;display:grid;grid-template-columns:155px minmax(0,1fr);grid-template-rows:auto auto auto auto;gap:3px 22px;text-align:left;align-items:center;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(0,0,0,.8),rgba(0,0,0,.48)),url("https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1800&q=85") center 42%/cover;border-bottom:5px solid #eee}
-header:before{content:"";position:absolute;inset:0;opacity:.3;pointer-events:none;background:repeating-linear-gradient(125deg,transparent 0 22px,rgba(255,255,255,.18) 23px 24px,transparent 25px 48px)}
-header:after{content:"24H DE MÚSICA\\A INDEPENDIENTE\\A PUNK · HARDCORE · SKA\\A METAL · ALTERNATIVA";white-space:pre;position:absolute;right:3%;top:22px;color:#fff;font:italic 900 clamp(18px,2.4vw,32px)/1.08 "Barlow Condensed";text-align:right;transform:rotate(-3deg);text-shadow:3px 3px #000}
-.logo{grid-column:1;grid-row:1/5;z-index:2;align-self:center;margin:0}.logo img{width:150px;filter:grayscale(1) contrast(1.3) drop-shadow(5px 4px 0 #d71925)}
-header .kicker,header h1,header .tagline,header .header-stamp{grid-column:2;position:relative;z-index:2;text-align:left;margin-left:0;margin-right:0}
-header .kicker{width:max-content;background:#d71925;color:#fff;padding:4px 9px;font-size:10px;letter-spacing:.17em;transform:rotate(-2deg)}
-header h1{font:1000 clamp(58px,9vw,120px)/.76 "Barlow Condensed",Impact,sans-serif;letter-spacing:-.055em;color:#fff;margin:8px 0;text-shadow:4px 4px #111}
-header h1 span{color:#e51b2b;-webkit-text-stroke:1px #eee}
-header .tagline{max-width:660px;color:#fff;font:900 12px/1.25 "DM Sans";letter-spacing:.09em;text-transform:uppercase;margin:3px 0 8px}
-.header-stamp{justify-self:start;background:#eee;color:#111;border:0;box-shadow:4px 4px #d71925;padding:5px 9px;font-size:9px;letter-spacing:.14em;transform:rotate(-2deg)}
-nav{position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;gap:0;flex-wrap:nowrap;overflow-x:auto;padding:6px 2%;background:#050505;border-top:2px solid #eee;border-bottom:4px solid #d71925}
-nav a{white-space:nowrap;font:900 17px "Barlow Condensed";letter-spacing:.08em;padding:8px 12px;color:#eee;border-right:1px solid #49433c}
-nav a.active,nav a:hover{background:#d71925;color:#fff;transform:rotate(-1deg)}
-main{max-width:1600px;margin:0 auto;padding:0 18px 45px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0 14px;align-items:start}
-.hero{display:none}
-main>section{min-width:0;margin:13px 0;padding:18px 20px;background:#111;border:0;border-top:2px solid #eee;border-bottom:3px solid #d71925;box-shadow:4px 5px 0 #020202;position:relative}
-.section-head{border:0;margin:0 0 14px;padding:0 0 9px;border-bottom:3px solid #d71925;align-items:center}
-.section-head h2{font:1000 clamp(30px,3.6vw,48px)/.88 "Barlow Condensed";text-transform:uppercase;letter-spacing:-.015em;text-shadow:2px 2px #6b0d14}
-.section-head small{background:#f4d52f;color:#111;padding:4px 8px;font-size:9px;font-weight:1000;letter-spacing:.12em;transform:rotate(-2deg)}
-/* Radio y agenda: primera franja de portada */
-main>#radio{grid-column:1/9;grid-row:1;background:linear-gradient(100deg,rgba(209,18,31,.65),rgba(0,0,0,.75)),url("https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&q=80") center/cover;border:2px solid #eee;box-shadow:5px 6px #050505;margin-top:16px;padding:17px 20px}
-#radio .section-head h2{font-size:clamp(42px,5.5vw,68px);color:#f4d52f;text-shadow:3px 3px #111}
-#radio .radio-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:0;background:rgba(0,0,0,.78);border:1px solid #777}
-#radio .radio-card{background:transparent;border:0;padding:16px}
-#radio .radio-card h3{font:900 25px/1 "Barlow Condensed";color:#fff}
-#radio .radio-card p{color:#ddd;font-size:12px}
-#radio audio{width:100%;accent-color:#e51b2b}
-#radio .radio button,#radio .chip{background:#e51b2b;border:1px solid #eee;border-radius:0;box-shadow:3px 3px #050505}
-/* Agenda vertical a la derecha */
-main>#conciertos{grid-column:9/13;grid-row:1/3;margin-top:16px;background:#111 url("https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=900&q=80") center top/100% auto no-repeat;background-blend-mode:soft-light}
-#conciertos .section-head h2{background:#f4d52f;color:#111;text-shadow:none;padding:6px 9px;transform:rotate(-1deg)}
-#conciertos .concert-grid{display:grid;grid-template-columns:1fr;gap:10px}
-#conciertos .concert-card{display:grid;grid-template-columns:76px minmax(0,1fr);min-height:128px;background:#090909;border:1px solid #eee;border-bottom:3px solid #d71925;box-shadow:3px 3px #050505}
-#conciertos .concert-poster,#conciertos .concert-placeholder{height:100%;min-height:125px;max-height:170px;aspect-ratio:3/4}
-#conciertos .concert-card-body{padding:9px}
-#conciertos .concert-card-body>a:not(.concert-more){font:900 19px/1 "Barlow Condensed";text-transform:uppercase}
-#conciertos .concert-date{font:900 26px "Barlow Condensed";color:#e51b2b}
-#conciertos .concert-more{color:#e51b2b;font-weight:900}
-#conciertos form,#conciertos .concert-submit{font-size:12px}
-/* Entrevista destacada ocupa el gran espacio editorial */
-main>#proximamente{grid-column:1/9;grid-row:2;min-height:330px;margin-top:12px;padding:22px 25px;overflow:hidden;background:linear-gradient(90deg,rgba(0,0,0,.92) 0%,rgba(0,0,0,.76) 42%,rgba(0,0,0,.15) 100%),url("https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=1500&q=85") center 38%/cover;border-top:5px solid #eee;border-bottom:5px solid #eee}
-#proximamente:before{content:"ENTREVISTA EXCLUSIVA";display:inline-block;background:#d71925;color:#fff;padding:5px 10px;font:900 17px "Barlow Condensed";transform:rotate(-2deg)}
-#proximamente .section-head{display:none}
-#proximamente .upcoming-feature{display:block;max-width:64%;margin-top:12px}
-#proximamente .upcoming-art{display:none}
-#proximamente .upcoming-copy h3{font:1000 clamp(40px,6vw,76px)/.82 "Barlow Condensed";text-transform:uppercase;text-shadow:3px 3px #111;margin:8px 0}
-#proximamente .upcoming-copy p{font-size:14px;color:#eee}
-#proximamente .upcoming-kicker{color:#f4d52f;font:italic 900 24px "Barlow Condensed"}
-/* Franja editorial inferior */
-main>#noticias{grid-column:1/5;grid-row:3}
-main>#spotify{grid-column:5/9;grid-row:3}
-main>#directo{grid-column:9/13;grid-row:3}
-#noticias{background:#e8e3d9;color:#111;border:0;box-shadow:4px 5px #050505}
-#noticias .section-head{border-color:#111}
-#noticias .section-head h2{color:#111;text-shadow:none}
-#noticias .section-head small{background:#d71925;color:#fff}
-#noticias #news-list li{border-bottom:1px dashed #777;padding:10px 0}
-#noticias #news-list li>a{font:900 19px/1 "Barlow Condensed";text-transform:uppercase;color:#111}
-#noticias #news-list li p{font-size:12px!important;color:#333}
-#noticias #news-status{color:#333}
-main>#quienes-somos{grid-column:1/13;grid-row:4}
-main>#videos{grid-column:1/8;grid-row:5}
-main>#contacto{grid-column:8/13;grid-row:5}
-main>#quienes-somos .section-head h2,main>#videos .section-head h2,main>#contacto .section-head h2{font-size:clamp(32px,4vw,48px)}
-main>#spotify{background:#101010}
-main>#directo{background:#101010}
-footer{background:#050505;border-top:4px solid #d71925}
-@media(max-width:850px){
- header{grid-template-columns:82px 1fr;min-height:160px;padding:15px 12px;gap:4px 12px}
- .logo img{width:80px}header:after{font-size:14px;right:10px;top:12px;opacity:.85}
- header h1{font-size:clamp(43px,9vw,70px)}
- header .tagline{font-size:9px;max-width:90%}
- nav{justify-content:flex-start}
- main{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0 10px;padding:0 10px 35px}
- main>#radio{grid-column:1/7;grid-row:1}
- main>#conciertos{grid-column:4/7;grid-row:2/4}
- main>#proximamente{grid-column:1/4;grid-row:2;min-height:300px}
- main>#noticias{grid-column:1/4;grid-row:3}
- main>#spotify{grid-column:1/4;grid-row:4}
- main>#directo{grid-column:4/7;grid-row:4}
- main>#quienes-somos{grid-column:1/7;grid-row:5}
- main>#videos{grid-column:1/4;grid-row:6}
- main>#contacto{grid-column:4/7;grid-row:6}
- #proximamente .upcoming-feature{max-width:100%}
-}
-@media(max-width:560px){
- header{grid-template-columns:58px 1fr;min-height:132px;padding:12px 9px;gap:4px 9px}
- .logo img{width:56px}header:after{display:none}
- header h1{font-size:clamp(36px,10vw,52px);line-height:.8}
- header .tagline{font-size:8px;letter-spacing:.03em}
- nav a{font-size:15px;padding:8px 10px}
- main{display:flex;flex-direction:column;gap:0;padding:0 9px 30px}
- main>section{width:100%;margin:10px 0;padding:16px}
- main>#radio{order:1}
- main>#conciertos{order:3}
- main>#proximamente{order:2;min-height:300px}
- main>#noticias{order:4}
- main>#spotify{order:5}
- main>#directo{order:6}
- main>#quienes-somos{order:7}
- main>#videos{order:8}
- main>#contacto{order:9}
- #radio .radio-grid{grid-template-columns:1fr}
- #proximamente .upcoming-feature{max-width:100%}
- #proximamente .upcoming-copy h3{font-size:48px}
- #conciertos .concert-card{grid-template-columns:88px 1fr}
-}
-</style>
 
 
-<style>
-:root{--ink:#090909;--paper:#f1eee5;--red:#e21d2b;--yellow:#f2d12e;--grey:#b9b2a7;--line:#48423b;--panel:#151515}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:78px}
-body{margin:0;background:var(--ink);color:var(--paper);font:16px/1.55 "DM Sans",Arial,sans-serif;background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.018) 0 1px,transparent 1px 5px)}
-a{color:inherit;text-decoration-color:var(--red);text-underline-offset:4px}
-a:hover{color:var(--yellow)}
-.topline{height:8px;background:repeating-linear-gradient(115deg,var(--red) 0 28px,var(--paper) 28px 32px,var(--ink) 32px 55px)}
-header{max-width:1280px;margin:auto;min-height:190px;padding:24px 28px 22px 178px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;position:relative;overflow:hidden;background:linear-gradient(100deg,#24211e,#0b0b0b 70%);border-bottom:5px solid var(--red)}
-header:before{content:"Ⓐ";position:absolute;left:22px;top:14px;font:900 145px/.95 Arial,sans-serif;color:var(--red);text-shadow:4px 4px 0 #000,-2px -2px 0 var(--paper);transform:rotate(-9deg)}
-.logo{position:absolute;right:26px;top:20px;margin:0;z-index:1}
-.logo img{width:92px;height:92px;object-fit:contain;filter:grayscale(1) contrast(1.2);border:2px solid var(--paper)}
-.kicker{display:inline-block;background:var(--red);color:#fff;padding:4px 9px;font-size:10px;font-weight:900;letter-spacing:.18em;text-transform:uppercase;transform:rotate(-1deg)}
-header h1{margin:12px 120px 7px 0;font:900 clamp(62px,9vw,112px)/.78 "Barlow Condensed",Impact,sans-serif;letter-spacing:-.055em;text-transform:uppercase;color:var(--paper);text-shadow:4px 4px 0 #741019}
-header h1 span{color:var(--red);-webkit-text-stroke:1px var(--paper)}
-header .tagline{margin:8px 120px 10px 0;color:var(--paper);font-size:clamp(9px,1.2vw,13px);font-weight:900;letter-spacing:.12em}
-.header-stamp{display:inline-block;background:var(--yellow);color:#111;padding:5px 9px;font-size:9px;font-weight:900;letter-spacing:.16em;transform:rotate(-2deg)}
-nav{position:sticky;top:0;z-index:30;display:flex;justify-content:center;gap:0;flex-wrap:wrap;background:#080808;border-top:1px solid #625a50;border-bottom:3px solid var(--red);padding:5px 12px}
-nav a{padding:9px 13px;text-decoration:none;font:900 17px/1 "Barlow Condensed",Impact,sans-serif;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap}
-nav a:hover,nav a.active{background:var(--yellow);color:#111}
-main{max-width:1280px;margin:auto;padding:0 24px 52px}
-.hero{display:grid;grid-template-columns:1.35fr .65fr;gap:14px;margin:22px 0 28px}
-.hero-main{min-height:330px;padding:clamp(24px,5vw,54px);display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;position:relative;overflow:hidden;border:2px solid var(--paper);border-left:8px solid var(--red);background:linear-gradient(110deg,rgba(0,0,0,.92),rgba(0,0,0,.48)),repeating-linear-gradient(135deg,#34302b 0 2px,#111 2px 9px);box-shadow:7px 7px 0 var(--red)}
-.hero-main:after{content:"PUNK!";position:absolute;right:-12px;top:2px;font:900 clamp(120px,19vw,245px)/.8 "Barlow Condensed";color:rgba(226,29,43,.2);transform:rotate(-12deg);pointer-events:none}
-.hero-main>*{position:relative;z-index:1}
-.hero-main h2{margin:14px 0;font:900 clamp(52px,7vw,88px)/.82 "Barlow Condensed",Impact,sans-serif;text-transform:uppercase;letter-spacing:-.04em;text-shadow:4px 4px 0 var(--red)}
-.hero-main p{max-width:440px;color:#eee5d9}
-.hero-side{display:grid;gap:12px}
-.sidebox{padding:22px;background:#191715;border:1px solid #655b50;border-left:5px solid var(--yellow)}
-.sidebox strong{font:900 30px/.95 "Barlow Condensed";text-transform:uppercase}
-.sidebox p{margin:8px 0 0;color:var(--grey);font-size:13px}
-.redline{height:4px;width:42px;background:var(--red);margin-bottom:12px}
-.cta,.chip,button{display:inline-flex;align-items:center;justify-content:center;border:0;background:var(--red);color:#fff!important;padding:11px 15px;font-size:11px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;cursor:pointer;box-shadow:3px 3px 0 #000}
-.cta:hover,.chip:hover,button:hover{background:var(--yellow);color:#111!important}
-section{min-width:0;margin:24px 0;padding:clamp(18px,2.5vw,28px);background:#121212;border-top:3px solid var(--paper);border-bottom:1px solid var(--line);scroll-margin-top:76px}
-.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:0 0 17px;padding:0 0 12px;border-bottom:2px solid var(--red)}
-.section-head h2{margin:0;font:900 clamp(34px,5vw,50px)/.9 "Barlow Condensed",Impact,sans-serif;text-transform:uppercase;letter-spacing:-.02em}
-.section-head small{display:inline-block;background:var(--yellow);color:#111;padding:4px 7px;font-size:9px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
-.box,.radio-card,.video-grid li{min-width:0;background:#090909;border:1px solid #4a443d;padding:16px}
-.magazine-top{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(290px,.8fr);gap:18px;align-items:start;margin:22px 0 26px}
-.magazine-top #radio,.magazine-top #conciertos{margin:0;min-width:0}
-#radio{background:var(--red);color:#fff;border:3px solid var(--paper);box-shadow:7px 7px 0 #000;padding:clamp(18px,3vw,30px)}
-#radio .section-head{border-color:#111}
-#radio .section-head h2{font-size:clamp(42px,6vw,70px);text-shadow:3px 3px 0 #111}
-#radio .section-head small{background:var(--yellow);color:#111}
-.radio-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.radio-card{background:#090909;color:var(--paper);border:1px solid #5c5147;padding:15px}
-.radio-card h3{margin:0 0 7px;font:900 27px/.95 "Barlow Condensed";text-transform:uppercase}
-.radio-card p{font-size:12px;color:#c8c0b6}
-.radio-card audio{width:100%;margin:8px 0;accent-color:var(--red)}
-.radio-card button{width:100%;min-height:42px}
-.msg,.small{font-size:11px;color:var(--grey)}
-#conciertos{background:#e9e2d7;color:#111;border:0;border-top:5px solid var(--yellow);box-shadow:7px 7px 0 var(--red);padding:20px}
-#conciertos .section-head{border-color:#111}
-#conciertos .section-head h2{color:#111;font-size:clamp(36px,4.5vw,52px)}
-#conciertos .section-head small{background:var(--red);color:white}
-#conciertos>p.small{color:#38332d;line-height:1.4}
-#concert-news-status{display:inline-block;background:var(--yellow);color:#111;padding:6px 8px;font-size:9px;font-weight:900;text-transform:uppercase}
-.concert-grid{display:grid;grid-template-columns:1fr;gap:11px;margin:14px 0}
-.concert-card{display:grid;grid-template-columns:88px minmax(0,1fr);min-width:0;background:#fff;border:1px solid #aaa;border-bottom:3px solid var(--red);box-shadow:none;overflow:hidden}
-.concert-card:before{display:none}
-.concert-poster,.concert-placeholder{width:100%;height:100%;min-height:115px;max-height:155px;object-fit:cover;background:#211}
-.concert-placeholder{padding:10px;display:flex;flex-direction:column;justify-content:end;background:repeating-linear-gradient(135deg,#333 0 2px,#111 2px 8px);color:white}
-.concert-placeholder span{font-size:8px;color:var(--yellow);font-weight:900}
-.concert-placeholder strong{font:900 18px/.95 "Barlow Condensed";overflow-wrap:anywhere}
-.concert-card-body{padding:10px;min-width:0}
-.concert-date{display:inline-flex;flex-direction:column;background:var(--red);color:#fff;padding:5px 7px;font:900 13px/1.1 "Barlow Condensed";margin:0 0 6px}
-.concert-date small{font:800 7px Arial;letter-spacing:.1em}
-.concert-card-body>a:not(.concert-more){display:block;color:#111;font:900 18px/1 "Barlow Condensed";text-transform:uppercase;text-decoration:none;overflow-wrap:anywhere;margin:3px 0 6px}
-.concert-card-body .small{color:#514a42;font-size:9px}
-.concert-more{display:inline-block;margin-top:7px;padding:6px 8px;background:#111;color:#fff!important;font-size:8px;font-weight:900;text-decoration:none}
-#concert-form{margin-top:18px}
-#concert-form label,#contact-form label{display:grid;gap:5px;margin:8px 0;font-size:12px;font-weight:800}
-input,select,textarea{width:100%;min-width:0;padding:11px;background:#090909;color:var(--paper);border:1px solid #61584e;font:inherit}
-input:focus,select:focus,textarea:focus{outline:2px solid var(--red)}
-.formrow{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-#proximamente{margin:0 0 26px;background:#171513;border:2px solid var(--paper);box-shadow:7px 7px 0 var(--red)}
-.upcoming-feature{display:grid;grid-template-columns:minmax(230px,.85fr) 1.15fr;gap:28px;align-items:stretch}
-.upcoming-art{min-height:260px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;background:repeating-linear-gradient(135deg,#332e29 0 3px,#111 3px 10px);border:2px solid var(--yellow);box-shadow:5px 5px 0 #000}
-.upcoming-art:after{content:"Ⓐ";position:absolute;right:-10px;top:15px;font:900 170px/.9 Arial;color:rgba(226,29,43,.24);transform:rotate(-10deg)}
-.upcoming-art strong{position:relative;z-index:1;font:900 clamp(38px,5vw,64px)/.86 "Barlow Condensed";text-shadow:3px 3px 0 var(--red)}
-.upcoming-stamp,.upcoming-bottom{position:relative;z-index:1;width:max-content;max-width:100%;padding:6px 8px;background:var(--red);color:white;font-size:9px;font-weight:900;letter-spacing:.12em}
-.upcoming-bottom{background:var(--yellow);color:#111}
-.upcoming-copy{display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
-.upcoming-kicker{background:var(--yellow);color:#111;padding:4px 7px;font-size:9px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
-.upcoming-copy h3{margin:14px 0 8px;font:900 clamp(30px,4vw,44px)/.95 "Barlow Condensed";text-transform:uppercase}
-.upcoming-copy p{color:#c8c0b5;font-size:13px}
-.upcoming-note{color:#ff737b!important;font-weight:800}
-.magazine-bottom{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:start}
-.magazine-bottom #noticias,.magazine-bottom #spotify{margin:0;min-width:0}
-#noticias{background:var(--paper);color:#111;border-top:5px solid var(--red)}
-#noticias .section-head{border-color:#aaa}
-#noticias .section-head h2{color:#111}
-#noticias .section-head small{background:var(--yellow)}
-#news-status{font-size:10px;font-weight:800;color:#5d554c}
-#news-list{display:grid;grid-template-columns:1fr 1fr;gap:0 14px;padding:0;margin:0;list-style:none}
-#news-list li{padding:12px 0;border-bottom:1px solid #c9c1b5;min-width:0}
-#news-list li a{color:#111;font:900 19px/1.05 "Barlow Condensed";text-decoration:none}
-#news-list li p{color:#39342e!important;font-size:11px!important}
-#news-list li .small{color:#625a51}
-#news-list li:first-child{grid-column:1/-1}
-#spotify{border-top:5px solid var(--yellow)}
-#spotify .section-head small{background:var(--yellow)}
-.spot{width:100%;min-height:180px;background:#000}
-.spot iframe{width:100%;height:300px;border:0}
-.video-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
-.video-grid li{list-style:none;padding:14px}
-#videos{border-top:4px solid var(--red)}
-#quienes-somos,#directo,#contacto{border-top:4px solid var(--red)}
-#contacto .box{padding:18px}
-.socials{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-ul.list{list-style:none;padding:0;margin:0}
-footer{background:#050505;border-top:4px solid var(--red);padding:24px 12px;text-align:center;color:#c3bcb1;font-size:10px;font-weight:900;letter-spacing:.15em}
-@media(max-width:900px){
- header{padding-left:150px}
- header:before{font-size:120px}
- .magazine-top{grid-template-columns:1fr}
- #conciertos .concert-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
- #conciertos .concert-card{display:block}
- #conciertos .concert-poster,#conciertos .concert-placeholder{height:170px;min-height:170px}
- #conciertos .concert-card-body{padding:11px}
- .magazine-bottom{grid-template-columns:1fr}
-}
-@media(max-width:640px){
- header{min-height:150px;padding:17px 12px 17px 94px}
- header:before{left:7px;top:31px;font-size:78px}
- .logo{right:10px;top:10px}
- .logo img{width:54px;height:54px}
- header h1{font-size:clamp(43px,12vw,68px);margin:10px 62px 7px 0}
- header .tagline{font-size:8px;letter-spacing:.06em;margin-right:0;line-height:1.4}
- .header-stamp{font-size:7px;letter-spacing:.08em}
- nav{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;padding:5px 7px}
- nav a{font-size:15px;padding:10px 11px}
- main{padding:0 11px 38px}
- .hero{grid-template-columns:1fr;margin:15px 0 22px}
- .hero-main{min-height:260px;padding:24px}
- .hero-main h2{font-size:clamp(48px,13vw,66px)}
- .hero-side{grid-template-columns:1fr 1fr}
- .magazine-top{margin:14px 0 22px;gap:16px}
- #radio{padding:15px}
- #radio .section-head h2{font-size:42px}
- .radio-grid{grid-template-columns:1fr}
- #conciertos{padding:14px}
- #conciertos .concert-grid{grid-template-columns:1fr 1fr;gap:9px}
- #conciertos .concert-card{display:block}
- #conciertos .concert-poster,#conciertos .concert-placeholder{height:135px;min-height:135px}
- #conciertos .concert-card-body{padding:8px}
- #conciertos .concert-card-body>a:not(.concert-more){font-size:16px}
- #conciertos .concert-more{font-size:7px;padding:6px}
- .upcoming-feature{grid-template-columns:1fr;gap:18px}
- .upcoming-art{min-height:190px}
- .magazine-bottom{grid-template-columns:1fr}
- #news-list{grid-template-columns:1fr}
- #news-list li:first-child{grid-column:1}
- .video-grid{grid-template-columns:1fr 1fr}
- .formrow{grid-template-columns:1fr}
- section{padding:16px}
- .section-head{align-items:flex-start;flex-direction:column}
-}
-@media(max-width:380px){
- header h1{font-size:43px}
- .hero-side{grid-template-columns:1fr}
- #conciertos .concert-grid{grid-template-columns:1fr}
- #conciertos .concert-card{display:grid;grid-template-columns:92px minmax(0,1fr)}
- #conciertos .concert-poster,#conciertos .concert-placeholder{height:100%;min-height:135px}
- .video-grid{grid-template-columns:1fr}
-}
-</style>
 
-<style id="radikal-fanzine-final">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style id="radikal-sonoro-editorial">
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Mono:wght@400;500&family=Inter:wght@400;600;700;800;900&display=swap');
-:root{--paper:#f0ece2;--ink:#080808;--red:#e51b2b;--yellow:#f4d52f;--display:'Anton','Barlow Condensed',Impact,sans-serif;--body:'Inter',Arial,sans-serif;--mono:'DM Mono',monospace}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:68px}
-body{margin:0;background:var(--ink);color:var(--paper);font-family:var(--body);background-image:radial-gradient(#fff8 .65px,transparent .8px);background-size:5px 5px}
-a{color:inherit;text-underline-offset:4px;text-decoration-color:var(--red)}a:hover{color:var(--yellow)}
-.topline{height:10px;background:repeating-linear-gradient(135deg,var(--red) 0 24px,var(--paper) 24px 27px,#080808 27px 48px)}
-header{max-width:none;width:100%;min-height:220px;padding:25px 25px 25px 190px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;position:relative;overflow:hidden;background:linear-gradient(100deg,#050505f5,#0505059c),repeating-linear-gradient(135deg,#333 0 2px,#090909 2px 10px);border-bottom:5px solid var(--paper)}
-header:before{content:"Ⓐ";position:absolute;left:22px;top:15px;font:900 155px/.95 Arial;color:var(--red);text-shadow:4px 4px #000,-2px -2px var(--paper);transform:rotate(-9deg)}
-header:after{content:"RADIO LIBRE · CULTURA SUBTERRÁNEA · SIN PERMISO";position:absolute;right:20px;bottom:13px;color:var(--yellow);font:500 10px var(--mono);letter-spacing:.13em;transform:rotate(-2deg)}
-.logo{position:absolute;right:24px;top:18px;z-index:2;margin:0}.logo img{width:78px;height:78px;object-fit:contain;filter:grayscale(1) contrast(1.3);border:2px solid var(--paper);background:#111}
-header .kicker{display:inline-block;background:var(--red);color:#fff;padding:5px 10px;font:500 10px var(--mono);letter-spacing:.16em;transform:rotate(-2deg)}
-header h1{margin:12px 100px 6px 0;font:900 clamp(62px,9vw,118px)/.78 var(--display);letter-spacing:-.035em;text-transform:uppercase;color:var(--paper);text-shadow:5px 5px var(--red)}
+:root{--paper:#eeeae1;--ink:#080808;--red:#d7192d;--yellow:#f4d52f;--display:'Anton','Barlow Condensed',Impact,sans-serif;--body:'Inter',Arial,sans-serif;--mono:'DM Mono',monospace}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:72px;background:var(--ink)}
+body{margin:0;background:var(--ink);color:var(--paper);font-family:var(--body);line-height:1.5}
+body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.16;background-image:radial-gradient(#fff .65px,transparent .8px);background-size:4px 4px}
+a{color:inherit;text-decoration-color:var(--red);text-underline-offset:4px}a:hover{color:var(--yellow)}
+.topline{height:10px;background:repeating-linear-gradient(135deg,var(--red) 0 24px,var(--paper) 24px 27px,var(--ink) 27px 48px)}
+header{width:100%;max-width:none;min-height:238px;margin:0;padding:24px 28px 22px 190px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;position:relative;overflow:hidden;color:var(--paper);background:linear-gradient(90deg,rgba(0,0,0,.9),rgba(0,0,0,.55)),url("https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1800&q=85") center 42%/cover;border-bottom:6px solid var(--paper)}
+header:before{content:none!important;display:none!important}
+header:after{content:"24H DE MÚSICA\A INDEPENDIENTE\A PUNK · HARDCORE · SKA\A METAL · ALTERNATIVA";white-space:pre;position:absolute;right:3%;top:16px;color:#fff;font:italic 900 clamp(17px,2.1vw,29px)/1.08 "Barlow Condensed";text-align:right;letter-spacing:.04em;transform:rotate(-3deg);text-shadow:3px 3px #000}
+.logo{position:absolute;left:22px;top:16px;z-index:4;margin:0;display:block}.logo img{display:block;width:145px;height:145px;max-width:none;object-fit:contain;filter:grayscale(1) contrast(1.25) drop-shadow(5px 4px 0 var(--red))}
+header .kicker{display:inline-block;width:max-content;max-width:100%;background:var(--red);color:#fff;padding:5px 10px;font:800 10px var(--mono);letter-spacing:.16em;transform:rotate(-2deg)}
+header h1{margin:10px 190px 6px 0;color:#fff;font:900 clamp(60px,8.5vw,112px)/.8 var(--display);letter-spacing:-.035em;text-transform:uppercase;text-shadow:5px 5px var(--red)}
 header h1 span{color:var(--red);-webkit-text-stroke:1px var(--paper)}
-header .tagline{margin:9px 100px 7px 0;color:var(--paper);font-size:11px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
-.header-stamp{display:inline-block;background:var(--yellow);color:#111;padding:5px 9px;font:500 9px var(--mono);letter-spacing:.13em;transform:rotate(1deg)}
-nav{position:sticky;top:0;z-index:50;display:flex;justify-content:flex-start;gap:0;flex-wrap:nowrap;overflow-x:auto;background:#050505;border-top:1px solid #777;border-bottom:4px solid var(--red);padding:5px 10px;scrollbar-width:thin}
-nav a{flex:0 0 auto;padding:10px 13px;text-decoration:none;font:900 17px/1 var(--display);letter-spacing:.07em;text-transform:uppercase;white-space:nowrap;border-right:1px solid #34302b}
-nav a:hover,nav a.active{background:var(--yellow);color:#111}
-main{max-width:1440px;margin:auto;padding:0 22px 55px;display:block}
-.magazine-top{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(300px,.9fr);gap:16px;align-items:stretch;margin:18px 0}
+header .tagline{max-width:650px;margin:8px 170px 7px 0;color:#fff;font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.header-stamp{display:inline-block;background:var(--yellow);color:#111;padding:5px 9px;font:500 9px var(--mono);letter-spacing:.13em;transform:rotate(1deg);box-shadow:4px 4px var(--red)}
+nav{position:sticky;top:0;z-index:50;display:flex;justify-content:flex-start;gap:0;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin;background:#050505;border-top:2px solid var(--paper);border-bottom:5px solid var(--red);padding:5px 10px}
+nav a{flex:0 0 auto;white-space:nowrap;padding:10px 13px;color:var(--paper);border-right:1px solid #49433c;text-decoration:none;font:900 17px/1 var(--display);letter-spacing:.07em;text-transform:uppercase}
+nav a:hover,nav a.active{background:var(--red);color:#fff;transform:rotate(-1deg)}
+main{max-width:1440px;margin:0 auto;padding:0 22px 52px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px;align-items:start}
+.hero{display:none!important}
+.magazine-top{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.55fr) minmax(300px,.9fr);gap:16px;align-items:stretch;margin:18px 0 0}
 .magazine-left{min-width:0;display:flex;flex-direction:column}
-main>section,.magazine-top section{min-width:0;margin:0 0 16px;padding:21px;background:#151515;border:1px solid #4b443b;border-top:3px solid var(--paper);border-bottom:4px solid var(--red);box-shadow:5px 5px 0 #000}
-.magazine-top #radio{flex:1;margin:0;background:linear-gradient(125deg,#e51b2be8,#53080ee8),repeating-linear-gradient(135deg,#222 0 2px,#111 2px 9px);border:2px solid var(--paper);box-shadow:7px 7px #000}
-.section-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 15px;padding:0 0 11px;border-bottom:3px solid var(--red)}
-.section-head h2{margin:0;font:900 clamp(32px,4vw,52px)/.9 var(--display);letter-spacing:.01em;text-transform:uppercase}
+main>section,.magazine-top section{min-width:0;margin:0;padding:20px;background:#151515;color:var(--paper);border:1px solid #51483e;border-top:3px solid var(--paper);border-bottom:5px solid var(--red);box-shadow:5px 5px #000}
+.section-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 15px;padding:0 0 10px;border-bottom:3px solid var(--red)}
+.section-head h2{margin:0;color:var(--paper);font:900 clamp(32px,4vw,52px)/.9 var(--display);letter-spacing:.01em;text-transform:uppercase}
 .section-head small{flex:0 0 auto;background:var(--yellow);color:#111;padding:5px 8px;font:500 9px var(--mono);letter-spacing:.08em;text-transform:uppercase;transform:rotate(-2deg)}
-#radio .section-head{border-color:var(--yellow)}#radio .section-head h2{font-size:clamp(42px,5vw,68px);color:var(--yellow);text-shadow:3px 3px #111}
-#radio .section-head small{background:var(--paper)}
-.radio-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:0;background:#080808d9;border:1px solid #ffffff73}
-.radio-card{padding:17px;min-width:0}.radio-card+.radio-card{border-left:1px solid #655}
-.radio-card h3{margin:0 0 8px;font:900 28px/1 var(--display);text-transform:uppercase}.radio-card p{font-size:12px;color:#e6e0d8}
-audio{width:100%;max-width:100%;accent-color:var(--red)}
-button,.chip,.cta{display:inline-flex;align-items:center;justify-content:center;background:var(--red);color:#fff!important;border:1px solid var(--paper);border-radius:0;padding:10px 13px;font:900 11px var(--mono);letter-spacing:.07em;text-transform:uppercase;box-shadow:3px 3px #000;cursor:pointer}
-button:hover,.chip:hover{background:var(--yellow);color:#111!important}
-#conciertos{height:100%;background:linear-gradient(180deg,#0004,#111 180px),repeating-linear-gradient(135deg,#272727 0 2px,#111 2px 9px)}
-#conciertos .section-head h2{font-size:clamp(31px,3.5vw,44px)}
+.small{font-size:11px;line-height:1.45}
+#radio,.magazine-top #radio{flex:1;margin:0;padding:18px;background:linear-gradient(110deg,rgba(180,10,25,.84),rgba(0,0,0,.83)),url("https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&q=80") center/cover;border:3px solid var(--paper);box-shadow:8px 8px #000}
+#radio .section-head{border-color:var(--yellow)}#radio .section-head h2{font-size:clamp(42px,5vw,68px);color:var(--yellow);text-shadow:3px 3px #111}#radio .section-head small{background:var(--paper);color:#111}
+.radio-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:0;background:#080808df;border:1px solid #ffffff80}
+.radio-card{min-width:0;padding:17px;color:var(--paper)}.radio-card+.radio-card{border-left:1px solid #655}
+.radio-card h3{margin:0 0 8px;color:#fff;font:900 27px/1 var(--display);text-transform:uppercase}.radio-card p{font-size:12px;color:#e6e0d8}
+audio{display:block;width:100%;max-width:100%;accent-color:var(--red)}
+button,.chip,.cta{display:inline-flex;align-items:center;justify-content:center;background:var(--red);color:#fff!important;border:2px solid var(--paper);border-radius:0;padding:10px 13px;font:900 11px var(--mono);letter-spacing:.07em;text-transform:uppercase;box-shadow:4px 4px #000;cursor:pointer;text-decoration:none}
+button:hover,.chip:hover,.cta:hover{background:var(--yellow);color:#111!important}#radio button{margin:5px 0 10px}
+#conciertos{height:100%;padding:18px;background:linear-gradient(180deg,#0008,#111 190px),repeating-linear-gradient(135deg,#272727 0 2px,#111 2px 9px);border:3px solid var(--paper);box-shadow:8px 8px var(--red)}
+#conciertos .section-head{border-color:var(--yellow)}#conciertos .section-head h2{font-size:clamp(30px,3.5vw,43px);color:#111;background:var(--yellow);padding:6px 9px;transform:rotate(-1deg);text-shadow:none}
+#conciertos p,#conciertos .small{color:var(--paper)}
 #conciertos .concert-grid{display:grid;grid-template-columns:1fr;gap:10px}
-#conciertos .concert-card{display:grid;grid-template-columns:92px minmax(0,1fr);min-height:126px;background:#080808;border:1px solid #ddd;border-bottom:3px solid var(--red);box-shadow:3px 3px #000}
+#conciertos .concert-card{display:grid;grid-template-columns:92px minmax(0,1fr);min-height:126px;background:var(--paper);color:#111;border:2px solid #090909;border-bottom:5px solid var(--red);box-shadow:4px 4px #000;overflow:hidden}
 #conciertos .concert-poster,#conciertos .concert-placeholder{width:100%;height:100%;min-height:126px;max-height:170px;object-fit:cover;aspect-ratio:3/4}
 #conciertos .concert-placeholder{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:8px;background:repeating-linear-gradient(135deg,#333 0 2px,#090909 2px 8px);color:var(--yellow)}
-#conciertos .concert-placeholder strong{font:900 21px/.95 var(--display);color:#fff}#conciertos .concert-placeholder span{font:9px var(--mono)}
-#conciertos .concert-card-body{padding:10px}#conciertos .concert-date{font:900 22px/1 var(--display);color:var(--red)}
-#conciertos .concert-date small{display:block;font:9px var(--mono);color:var(--yellow)}
-#conciertos .concert-card-body>a:not(.concert-more){display:block;margin:5px 0;font:900 20px/1 var(--display);text-transform:uppercase;text-decoration:none}
-#conciertos .concert-card-body .small{font-size:10px}#conciertos .concert-more{display:inline-block;margin-top:6px;color:var(--yellow);font:10px var(--mono);text-decoration:none}
-#conciertos .box,#conciertos form{margin-top:16px}
-#conciertos form label,#contacto label{display:block;margin:10px 0;font-size:12px;font-weight:700}
-input,select,textarea{display:block;width:100%;margin-top:5px;padding:10px;background:#080808;color:var(--paper);border:1px solid #62594e;border-radius:0;font:13px var(--body)}
-input:focus,select:focus,textarea:focus{outline:2px solid var(--red);outline-offset:1px}
-.formrow{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.magazine-interview{margin:16px 0}
-#proximamente{min-height:300px;padding:25px;background:linear-gradient(100deg,#000f,#0008),repeating-linear-gradient(135deg,#292929 0 2px,#101010 2px 9px);border:2px solid var(--paper);border-left:9px solid var(--red);position:relative;overflow:hidden}
-#proximamente:after{content:"DIY";position:absolute;right:15px;bottom:-30px;font:900 clamp(100px,20vw,230px)/1 var(--display);color:#e51b2b29;pointer-events:none}
-#proximamente .section-head{display:none}
-#proximamente:before{content:"FANZINE · ENTREVISTAS · CULTURA";display:inline-block;background:var(--red);padding:6px 10px;color:white;font:500 10px var(--mono);letter-spacing:.1em;transform:rotate(-2deg)}
+#conciertos .concert-placeholder strong{font:900 20px/.95 var(--display);color:#fff}#conciertos .concert-placeholder span{font:9px var(--mono)}
+#conciertos .concert-card-body{min-width:0;padding:10px;display:flex;flex-direction:column;gap:5px}
+#conciertos .concert-date{display:block;width:fit-content;max-width:100%;margin:0 0 4px;padding:6px 9px;background:var(--red);color:#fff;font:900 16px/1.15 "Barlow Condensed";letter-spacing:.03em;overflow-wrap:anywhere}
+#conciertos .concert-date small{display:block;margin-bottom:3px;color:#fff;font:800 8px/1.2 var(--body);letter-spacing:.12em}
+#conciertos .concert-card-body>a:not(.concert-more){display:block;margin:2px 0;color:#111;font:900 21px/1 var(--display);text-transform:uppercase;text-decoration:none;overflow-wrap:anywhere}
+#conciertos .concert-card-body .small{color:#333;font-size:10px}
+#conciertos .concert-more{display:inline-block;align-self:flex-start;margin-top:4px;background:#090909;color:#fff;padding:6px 8px;font:10px var(--mono);text-decoration:none}
+#conciertos form{margin-top:16px}
+.magazine-interview{grid-column:1/-1;margin:0}
+#proximamente{grid-column:1/-1;min-height:300px;margin:0;padding:24px;background:linear-gradient(90deg,rgba(0,0,0,.94),rgba(0,0,0,.68) 52%,rgba(0,0,0,.24)),url("https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=1500&q=85") center 38%/cover;border:3px solid var(--paper);border-left:9px solid var(--red);box-shadow:8px 8px #000;position:relative;overflow:hidden}
+#proximamente:after{content:"DIY";position:absolute;right:15px;bottom:-30px;color:#e51b2b29;font:900 clamp(100px,20vw,230px)/1 var(--display);pointer-events:none}
+#proximamente .section-head{display:none}#proximamente:before{content:"ENTREVISTAS · CULTURA · ESCENA";display:inline-block;background:var(--red);padding:6px 10px;color:#fff;font:500 10px var(--mono);letter-spacing:.1em;transform:rotate(-2deg)}
 #proximamente .upcoming-feature{display:grid;grid-template-columns:minmax(160px,.7fr) minmax(0,1.3fr);gap:22px;align-items:center;margin-top:18px;position:relative;z-index:1}
-#proximamente .upcoming-art{min-height:205px;border:2px solid var(--paper);box-shadow:6px 6px var(--red);background:repeating-linear-gradient(135deg,#444 0 2px,#111 2px 8px);display:flex;align-items:center;justify-content:center}
-#proximamente .upcoming-art strong{font:900 50px/.85 var(--display);text-align:center;color:var(--yellow);text-shadow:3px 3px #000}
-#proximamente .upcoming-copy h3{font:900 clamp(36px,5vw,64px)/.88 var(--display);text-transform:uppercase;margin:5px 0 12px}
-#proximamente .upcoming-copy p{color:#ddd;font-size:13px}
-.magazine-bottom{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;margin:16px 0}
-#noticias{background:var(--paper);color:#111;border:0;border-top:4px solid var(--red);box-shadow:5px 5px #000}
-#noticias .section-head{border-color:#111}#noticias .section-head h2{color:#111;text-shadow:none}
-#noticias .section-head small{background:var(--red);color:white}
-#news-list{list-style:none;margin:0;padding:0}#news-list li{padding:13px 0;border-bottom:1px dashed #888}
-#news-list li>a{display:block;color:#111;font:900 23px/1 var(--display);text-transform:uppercase;text-decoration:none}
-#news-list li p{margin:6px 0;color:#333;font-size:12px!important;line-height:1.45}
-#news-status,#concert-news-status{padding:7px 9px;background:var(--yellow);color:#111;font:500 9px var(--mono);letter-spacing:.06em}
-#spotify iframe{width:100%;min-height:300px;border:0}
-#quienes-somos .box,#contacto .box,#directo .box{background:#090909;border:1px solid #51483e;padding:17px}
-#videos .video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;list-style:none;padding:0}
-#videos .video-grid li{padding:14px;background:#090909;border-left:4px solid var(--red);font-weight:800}
-#videos .video-grid a{text-decoration:none}
-#contactlist,#redes{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0}
-footer{max-width:none;margin:0;padding:24px;text-align:center;background:#050505;border-top:5px solid var(--red);font:900 16px var(--display);letter-spacing:.12em}
-@media(max-width:850px){header{min-height:165px;padding:20px 110px 20px 120px}header:before{font-size:100px;left:12px;top:24px}header h1{font-size:clamp(48px,9vw,78px);margin-right:0}header .tagline{font-size:9px;margin-right:0}.logo{right:14px;top:16px}.logo img{width:72px;height:72px}nav{justify-content:flex-start}main{padding:0 13px 38px}.magazine-top{grid-template-columns:minmax(0,1.2fr) minmax(260px,.9fr);gap:11px}main>section,.magazine-top section{padding:16px}.radio-grid{grid-template-columns:1fr}.radio-card+.radio-card{border-left:0;border-top:1px solid #655}#conciertos .concert-card{grid-template-columns:78px minmax(0,1fr)}}
-@media(max-width:600px){header{min-height:130px;padding:14px 12px 16px 82px}header:before{font-size:68px;left:8px;top:26px}header:after{display:none}header h1{font-size:clamp(39px,11vw,56px);line-height:.83;margin:10px 0 4px}header .tagline{font-size:8px;letter-spacing:.06em;margin:6px 0}.logo{right:8px;top:8px}.logo img{width:45px;height:45px}nav a{font-size:15px;padding:9px 11px}main{padding:0 9px 28px}.magazine-top{display:flex;flex-direction:column;gap:11px;margin:11px 0}.magazine-left{display:contents}.magazine-top #radio{order:1}.magazine-top #conciertos{order:3}.magazine-interview{margin:11px 0}#proximamente{min-height:0;padding:18px}#proximamente .upcoming-feature{grid-template-columns:1fr;gap:14px}#proximamente .upcoming-art{min-height:150px}#proximamente .upcoming-copy h3{font-size:46px}.magazine-bottom{display:flex;flex-direction:column;gap:11px;margin:11px 0}main>section,.magazine-top section{margin:11px 0;padding:15px}.magazine-top #radio{margin:0}#conciertos .concert-card{grid-template-columns:88px minmax(0,1fr)}#conciertos .concert-poster,#conciertos .concert-placeholder{min-height:130px}.section-head{align-items:flex-start;flex-direction:column;gap:8px}.section-head h2{font-size:38px}#radio .section-head h2{font-size:48px}.formrow{grid-template-columns:1fr}#videos .video-grid{grid-template-columns:1fr}}
-@media(max-width:360px){header h1{font-size:37px}header{padding-left:72px}#conciertos .concert-card{grid-template-columns:76px minmax(0,1fr)}}
-</style>
-
-<style id="radikal-logo-identidad">
-/* La identidad es el logotipo de Radikal Sonoro, no el símbolo Ⓐ */
-header:before{content:none!important;display:none!important}
-.upcoming-art:after{content:none!important;display:none!important}
-.logo{display:flex;align-items:center;justify-content:center;position:relative;z-index:3}
-.logo img{display:block;width:min(170px,100%);height:auto;filter:drop-shadow(4px 4px 0 #e51b2b) contrast(1.08)!important;grayscale(0)}
-@media(max-width:850px){.logo img{width:80px}}
-@media(max-width:560px){.logo img{width:56px}}
-</style>
-
-
-<style id="radikal-logo-en-lugar-de-la-a">
-/* Coloca el logotipo exactamente en el espacio que ocupaba la A */
-header .logo{position:absolute!important;left:22px!important;top:15px!important;right:auto!important;bottom:auto!important;display:block!important;width:auto!important;height:auto!important;margin:0!important;padding:0!important;z-index:5!important}
-header .logo img{display:block!important;width:145px!important;height:145px!important;max-width:none!important;object-fit:contain!important;border:0!important;border-radius:0!important;background:transparent!important;filter:drop-shadow(4px 4px 0 #e51b2b) contrast(1.08)!important}
-@media(max-width:850px){
- header .logo{left:12px!important;top:24px!important}
- header .logo img{width:92px!important;height:92px!important}
+#proximamente .upcoming-art{min-height:205px;border:2px solid var(--paper);box-shadow:6px 6px var(--yellow);background:linear-gradient(0deg,#0009,#0004),url("https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=900&q=85") center/cover;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px}
+#proximamente .upcoming-stamp{align-self:flex-start;background:var(--red);color:#fff;padding:5px 8px;font:9px var(--mono)}
+#proximamente .upcoming-art strong{font:900 clamp(30px,4vw,50px)/.85 var(--display);text-align:center;color:#fff;text-shadow:3px 3px #000}
+#proximamente .upcoming-bottom{margin-top:10px;color:var(--yellow);font:9px var(--mono);text-align:center}
+#proximamente .upcoming-copy{max-width:650px}#proximamente .upcoming-kicker{color:var(--yellow);font:italic 900 21px "Barlow Condensed"}
+#proximamente .upcoming-copy h3{margin:5px 0 12px;color:#fff;font:900 clamp(36px,5vw,64px)/.88 var(--display);text-transform:uppercase;text-shadow:3px 3px #000}
+#proximamente .upcoming-copy p{color:#eee;font-size:13px}#proximamente .upcoming-note{font-style:italic}
+.magazine-bottom{grid-column:1/-1;display:grid;grid-template-columns:1.1fr .9fr;gap:16px;margin:0}
+#noticias{background:var(--paper);color:#111;border:0;border-top:5px solid var(--red);box-shadow:5px 5px #000}
+#noticias .section-head{border-color:#111}#noticias .section-head h2{color:#111;text-shadow:none}#noticias .section-head small{background:var(--yellow);color:#111}
+#noticias .small{color:#333}#news-list{list-style:none;margin:12px 0 0;padding:0}
+#news-list li{padding:13px 0;border-bottom:1px dashed #888}#news-list li>a{display:block;color:#111;font:900 22px/1 var(--display);text-transform:uppercase;text-decoration:none}
+#news-list li p{margin:6px 0;color:#333;font-size:12px!important;line-height:1.45}#news-list li .small{color:#444}
+#news-status,#concert-news-status{display:inline-block;padding:7px 9px;background:var(--yellow);color:#111;font:500 9px var(--mono);letter-spacing:.06em}
+#spotify{background:#101010;color:var(--paper)}#spotify .section-head small{background:var(--yellow);color:#111}
+#spotify iframe{display:block;width:100%;min-height:300px;border:0}
+#spotify .box,#quienes-somos .box,#contacto .box,#directo .box{background:#090909;color:var(--paper);border:1px solid #51483e;padding:17px}
+#quienes-somos{grid-column:1/-1}#quienes-somos .section-head small{background:var(--yellow);color:#111}#quienes-somos p{color:#eee}
+.team-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:20px}
+.team-card{min-width:0;padding:16px 14px;background:#111;border-left:5px solid var(--red);box-shadow:4px 4px #000;display:flex;flex-direction:column;gap:5px}
+.team-card strong{color:#fff;font:900 24px/1 var(--display);text-transform:uppercase}.team-card span{color:var(--yellow);font:10px var(--mono);letter-spacing:.08em;text-transform:uppercase}
+#directo{grid-column:1/-1}#directo .live{border-left:6px solid var(--red)}
+#videos{grid-column:1/7}#videos .video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;list-style:none;margin:0;padding:0}
+#videos .video-grid li{min-width:0;padding:14px;background:#090909;color:#fff;border-left:5px solid var(--red);font-weight:800;box-shadow:3px 3px #000}
+#videos .video-grid li a{color:#fff;text-decoration:none;font:900 21px/1.05 var(--display);text-transform:uppercase}
+#contacto{grid-column:7/-1}#contacto .box{background:var(--paper);color:#111;border:0;box-shadow:5px 5px var(--red)}
+#contacto .box p,#contacto label{color:#171411}
+#contacto input,#contacto textarea,#contacto select,#conciertos input,#conciertos textarea,#conciertos select{display:block;width:100%;margin-top:5px;padding:10px;background:#fff;color:#111;border:2px solid #111;border-radius:0;font:13px var(--body)}
+#contacto input:focus,#contacto textarea:focus,#contacto select:focus,#conciertos input:focus,#conciertos textarea:focus,#conciertos select:focus{outline:2px solid var(--red);outline-offset:1px}
+#conciertos form label,#contacto label{display:block;margin:10px 0;font-size:12px;font-weight:700}.formrow{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+#contactlist,#redes{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:12px 0 0;padding:0}#contactlist li{width:100%}
+#contacto .chip{margin:3px 4px 3px 0}
+footer{max-width:none;margin:0;padding:24px;text-align:center;background:#050505;color:var(--paper);border-top:6px solid var(--red);font:900 16px var(--display);letter-spacing:.12em}
+@media(max-width:900px){
+ header{min-height:205px;padding:20px 14px 20px 130px}.logo{left:14px;top:22px}.logo img{width:100px;height:100px}
+ header h1{font-size:clamp(52px,8vw,82px);margin-right:130px}header .tagline{font-size:9px;margin-right:120px}
+ .magazine-top{grid-template-columns:minmax(0,1.2fr) minmax(250px,.9fr);gap:12px}main{padding:0 13px 40px}
+ #conciertos{padding:14px}#conciertos .concert-card{grid-template-columns:82px minmax(0,1fr)}.team-card strong{font-size:20px}
 }
-@media(max-width:600px){
- header .logo{left:8px!important;top:26px!important}
- header .logo img{width:62px!important;height:62px!important}
+@media(max-width:680px){
+ header{min-height:148px;padding:15px 10px 15px 84px}.logo{left:8px;top:27px}.logo img{width:64px;height:64px}
+ header:after{display:none}header h1{font-size:clamp(38px,10vw,56px);line-height:.84;margin:7px 0 4px}
+ header .tagline{font-size:8px;letter-spacing:.045em;margin:5px 0}.header-stamp{font-size:8px}
+ nav{padding:4px 6px}nav a{font-size:15px;padding:9px 11px}
+ main{display:block;padding:0 9px 30px}.magazine-top{display:flex;flex-direction:column;gap:12px;margin:12px 0}.magazine-left{display:contents}
+ .magazine-top #radio{order:1}.magazine-top #conciertos{order:2}.magazine-interview{margin:12px 0}
+ .magazine-bottom{display:flex;flex-direction:column;gap:12px;margin:12px 0}
+ main>section,.magazine-top section{margin:12px 0;padding:15px}.magazine-top #radio{margin:0}
+ #radio .radio-grid{grid-template-columns:1fr}.radio-card+.radio-card{border-left:0;border-top:1px solid #655}
+ #proximamente{min-height:0;padding:18px}#proximamente .upcoming-feature{grid-template-columns:1fr;gap:14px}
+ #proximamente .upcoming-art{min-height:160px}#proximamente .upcoming-copy h3{font-size:46px}
+ #conciertos .concert-card{grid-template-columns:88px minmax(0,1fr)}#conciertos .concert-poster,#conciertos .concert-placeholder{min-height:125px}
+ .section-head{align-items:flex-start;flex-direction:column;gap:8px}.section-head h2{font-size:38px}#radio .section-head h2{font-size:46px}
+ #videos{margin-top:12px}#videos .video-grid{grid-template-columns:1fr}#contacto{margin-top:12px}
+ .formrow{grid-template-columns:1fr}.team-grid{grid-template-columns:1fr}
 }
 @media(max-width:360px){
- header .logo{left:7px!important;top:28px!important}
- header .logo img{width:54px!important;height:54px!important}
+ header{padding-left:74px}.logo{left:7px;top:31px}.logo img{width:55px;height:55px}
+ header h1{font-size:36px}#conciertos .concert-card{grid-template-columns:76px minmax(0,1fr)}#conciertos .concert-card-body{padding:8px}
 }
-</style>
-
-
-<style id="radikal-fechas-conciertos">
-#conciertos .concert-date{display:block!important;width:fit-content;max-width:100%;padding:7px 10px!important;margin:0 0 9px!important;background:#e51b2b!important;color:#fff!important;font:900 17px/1.15 "Barlow Condensed",sans-serif!important;text-transform:uppercase;letter-spacing:.035em;overflow-wrap:anywhere}
-#conciertos .concert-date small{display:block!important;margin-bottom:3px;color:#fff!important;font:800 8px/1.2 "DM Sans",sans-serif!important;letter-spacing:.14em}
-@media(max-width:600px){#conciertos .concert-date{font-size:15px!important;padding:6px 8px!important}}
-</style>
-
-<style id="radikal-paleta-blanco-negro-rojo">
-/* Nueva identidad cromática: blanco y negro; rojo solo como acento */
-:root{
- --ink:#090909!important;--black:#090909!important;--paper:#f3f3ef!important;
- --white:#f3f3ef!important;--red:#d32632!important;--yellow:#f3f3ef!important;
- --accent:#d32632!important;--muted:#bdbdb8!important;
-}
-html,body{background:#090909!important;color:#f3f3ef!important}
-body{background-image:none!important}
-.topline{background:#d32632!important}
-header{background:#090909!important;color:#f3f3ef!important;border-bottom:3px solid #d32632!important}
-header h1,header .tagline{color:#f3f3ef!important}
-nav{background:#090909!important;border-color:#d32632!important}
-nav a{color:#f3f3ef!important}
-nav a:hover,nav a:focus{background:#d32632!important;color:#fff!important}
-main>section,.magazine-top section,.magazine-interview section{
- background:#111!important;color:#f3f3ef!important;border:1px solid #555!important;
- border-top:2px solid #f3f3ef!important;border-bottom:4px solid #d32632!important;
-}
-.section-head{border-color:#d32632!important}
-.section-head h2{color:#f3f3ef!important}
-.section-head small{background:#d32632!important;color:#fff!important}
-#radio,.magazine-top #radio{
- background:#111!important;color:#f3f3ef!important;border:2px solid #f3f3ef!important;
- box-shadow:7px 7px #d32632!important
-}
-#radio .section-head h2{color:#fff!important;text-shadow:3px 3px #d32632!important}
-#radio .section-head small{background:#d32632!important;color:#fff!important}
-.radio-grid,.radio-card{background:#080808!important;color:#f3f3ef!important}
-#conciertos{background:#111!important;color:#f3f3ef!important}
-#conciertos .concert-card{background:#080808!important;border-color:#777!important;border-bottom-color:#d32632!important}
-#conciertos .concert-date{background:#d32632!important;color:#fff!important}
-#conciertos .concert-date small{color:#fff!important}
-#conciertos .concert-card-body>a:not(.concert-more){color:#fff!important}
-#conciertos .concert-more{color:#fff!important;text-decoration:underline!important;text-decoration-color:#d32632!important}
-#conciertos .concert-placeholder{background:#151515!important;color:#fff!important}
-#conciertos .concert-placeholder strong{color:#fff!important}
-#proximamente{background:#111!important;color:#f3f3ef!important;border-color:#d32632!important}
-#proximamente:before{background:#d32632!important;color:#fff!important}
-#proximamente:after{color:#d3263220!important}
-#proximamente .upcoming-art{background:#090909!important;border-color:#eee!important;box-shadow:6px 6px #d32632!important}
-#proximamente .upcoming-art strong{color:#fff!important}
-#proximamente .upcoming-copy h3{color:#fff!important}
-#noticias{background:#f3f3ef!important;color:#090909!important;border:0!important;border-top:4px solid #d32632!important}
-#noticias .section-head{border-color:#090909!important}
-#noticias .section-head h2{color:#090909!important}
-#noticias .section-head small{background:#d32632!important;color:#fff!important}
-#news-list li>a{color:#090909!important}
-#news-list li p,#noticias .small{color:#292929!important}
-#news-list li{border-color:#aaa!important}
-#news-status,#concert-news-status{background:#d32632!important;color:#fff!important}
-#spotify,#quienes-somos,#directo,#videos,#contacto{color:#f3f3ef!important}
-#spotify .section-head h2,#quienes-somos .section-head h2,#directo .section-head h2,#videos .section-head h2,#contacto .section-head h2{color:#fff!important}
-#quienes-somos .box,#contacto .box,#directo .box{background:#080808!important;border-color:#555!important}
-#videos .video-grid li{background:#080808!important;border-left-color:#d32632!important}
-a{ text-decoration-color:#d32632 }
-button,.chip,.cta{background:#d32632!important;color:#fff!important;border-color:#f3f3ef!important}
-button:hover,.chip:hover,.cta:hover{background:#f3f3ef!important;color:#090909!important}
-input,select,textarea{background:#080808!important;color:#f3f3ef!important;border-color:#777!important}
-input:focus,select:focus,textarea:focus{outline-color:#d32632!important}
-.badge{background:#d32632!important;color:#fff!important}
-footer{background:#050505!important;color:#f3f3ef!important;border-top-color:#d32632!important}
-@media(max-width:600px){
- nav a{color:#f3f3ef!important}
- #noticias{background:#f3f3ef!important;color:#090909!important}
-}
-</style>
-
-<style id="radikal-fanzine-callejero">
-:root{--paper:#eeeae1;--ink:#090909;--red:#d7192d}
-html,body{background:#090909!important;color:var(--paper)!important}body:before{opacity:.2!important;background-image:radial-gradient(#eee .55px,transparent .8px)!important;background-size:3px 3px!important}
-.topline{height:12px!important;background:repeating-linear-gradient(-8deg,#d7192d 0 18px,#eeeae1 18px 21px,#090909 21px 37px)!important}
-header{max-width:none!important;width:100%!important;min-height:250px!important;padding:25px clamp(14px,4vw,55px)!important;background:#eeeae1!important;color:#090909!important;border-bottom:9px solid #d7192d!important}
-header:before{opacity:.4!important;background:repeating-linear-gradient(0deg,transparent 0 4px,rgba(0,0,0,.12) 5px 6px)!important}
-header:after{content:"FANZINE INDEPENDIENTE · MADRID · SIN PERMISO"!important;top:auto!important;bottom:14px!important;right:3%!important;color:#fff!important;background:#d7192d!important;padding:5px 9px!important;font:900 13px "Barlow Condensed"!important;letter-spacing:.12em!important;transform:rotate(2deg)!important;text-shadow:none!important}
-header .logo img{filter:grayscale(1) contrast(1.3)!important;mix-blend-mode:multiply!important}header .kicker{background:#090909!important;color:#eeeae1!important;transform:rotate(-3deg)!important}
-header h1{color:#090909!important;font-size:clamp(64px,10vw,132px)!important;line-height:.78!important;text-shadow:4px 4px #d7192d!important}header h1 span{color:#d7192d!important;-webkit-text-stroke:1px #090909!important}header .tagline{color:#090909!important;font-weight:900!important}.header-stamp{background:#d7192d!important;color:#fff!important;box-shadow:4px 4px #090909!important}
-nav{background:#090909!important;border-top:3px solid #eeeae1!important;border-bottom:5px solid #d7192d!important}nav a{color:#eeeae1!important;font:900 18px "Barlow Condensed"!important;text-transform:uppercase!important}nav a.active,nav a:hover{background:#d7192d!important;color:#fff!important;transform:rotate(-2deg)!important}
-main>section{margin:19px 0!important;padding:20px 22px!important;background:#eeeae1!important;color:#090909!important;border:2px solid #090909!important;border-top:7px solid #090909!important;border-bottom:7px solid #d7192d!important;box-shadow:7px 7px #d7192d!important}main>section:nth-of-type(odd){transform:rotate(-.3deg)!important}main>section:nth-of-type(even){transform:rotate(.3deg)!important}
-.section-head{border-bottom:3px solid #090909!important;padding-bottom:11px!important}.section-head h2{color:#090909!important;font:900 clamp(36px,4.5vw,56px)/.86 "Barlow Condensed"!important;text-transform:uppercase!important;text-shadow:2px 2px #d7192d!important}.section-head small{background:#d7192d!important;color:#fff!important;font-weight:900!important;transform:rotate(-2deg)!important}main>section .small,main>section p{color:#262626!important}
-#radio{background:#090909!important;color:#eeeae1!important;border:4px solid #eeeae1!important;box-shadow:9px 9px #d7192d!important;transform:rotate(.3deg)!important}#radio .section-head{border-color:#d7192d!important}#radio .section-head h2{color:#fff!important;text-shadow:3px 3px #d7192d!important}#radio .section-head small{background:#eeeae1!important;color:#090909!important}#radio p,#radio .small{color:#eeeae1!important}#radio .radio-card{background:#eeeae1!important;color:#090909!important;border:2px dashed #090909!important;box-shadow:4px 4px #d7192d!important}#radio .radio-card p{color:#222!important}#radio .radio-card h3{color:#090909!important}#radio button{background:#d7192d!important;color:#fff!important;border:2px solid #090909!important;box-shadow:4px 4px #090909!important}
-#conciertos{background:#090909!important;color:#eeeae1!important;border:4px solid #eeeae1!important;box-shadow:9px 9px #d7192d!important}#conciertos .section-head{border-color:#d7192d!important}#conciertos .section-head h2{color:#fff!important;text-shadow:3px 3px #d7192d!important}#conciertos p,#conciertos .small{color:#eeeae1!important}#conciertos .concert-card{background:#eeeae1!important;color:#090909!important;border:2px solid #090909!important;border-bottom:6px solid #d7192d!important;box-shadow:4px 4px #333!important}#conciertos .concert-date{background:#d7192d!important;color:#fff!important;font-weight:900!important;padding:7px!important}#conciertos .concert-date small{color:#fff!important}#conciertos .concert-card-body>a:not(.concert-more){color:#090909!important;font:900 23px "Barlow Condensed"!important;text-transform:uppercase!important}#conciertos .concert-card-body .small{color:#333!important}#conciertos .concert-more{background:#090909!important;color:#fff!important;padding:7px!important}#conciertos .concert-placeholder{background:#d7192d!important;color:#fff!important}
-#noticias{background:#eeeae1!important;color:#090909!important}#noticias .section-head h2{color:#090909!important}#news-list li{border-bottom:2px dashed #777!important}#news-list li>a{color:#090909!important;font:900 24px/.95 "Barlow Condensed"!important;text-transform:uppercase!important}#news-list li p,#noticias .small{color:#292929!important}#news-status,#concert-news-status{display:inline-block!important;background:#d7192d!important;color:#fff!important;padding:7px 10px!important;font-weight:900!important}
-#proximamente{background:#d7192d!important;color:#fff!important;border:3px solid #090909!important;box-shadow:8px 8px #090909!important}#proximamente .section-head{border-color:#090909!important}#proximamente .section-head h2,#proximamente .upcoming-copy h3{color:#fff!important;text-shadow:3px 3px #090909!important}#proximamente .section-head small{background:#090909!important;color:#fff!important}#proximamente p{color:#fff!important}#proximamente .upcoming-art{background:#090909!important;border:3px solid #eeeae1!important;box-shadow:7px 7px #eeeae1!important}#proximamente .upcoming-art strong{color:#fff!important;text-shadow:3px 3px #d7192d!important}
-#spotify,#videos,#contacto,#quienes-somos,#directo{background:#eeeae1!important;color:#090909!important}#spotify .section-head h2,#videos .section-head h2,#contacto .section-head h2,#quienes-somos .section-head h2,#directo .section-head h2{color:#090909!important}#spotify .box,#contacto .box,#quienes-somos .box,#directo .box{background:#fff!important;color:#090909!important;border:2px dashed #090909!important;box-shadow:4px 4px #d7192d!important}#spotify .small,#videos .small,#contacto .small,#quienes-somos p,#directo p{color:#222!important}#videos li{background:#fff!important;color:#090909!important;border-left:6px solid #d7192d!important;padding:10px!important}#videos li a,#spotify a,#contacto a{color:#090909!important}
-#contacto input,#contacto select,#contacto textarea,#conciertos input,#conciertos textarea{background:#fff!important;color:#090909!important;border:2px solid #090909!important;border-radius:0!important}#contacto button,#conciertos button,.chip,.cta{background:#d7192d!important;color:#fff!important;border:2px solid #090909!important;border-radius:0!important;box-shadow:4px 4px #090909!important;font-weight:900!important}
-footer{background:#090909!important;color:#eeeae1!important;border-top:8px solid #d7192d!important;font:900 16px "Barlow Condensed"!important;letter-spacing:.12em!important}
-@media(max-width:800px){header{min-height:185px!important;padding:18px 12px!important;grid-template-columns:78px 1fr!important}header .logo img{width:78px!important}header h1{font-size:clamp(48px,11vw,76px)!important}header:after{font-size:10px!important;bottom:7px!important;right:8px!important}main{display:block!important;padding:0 12px 34px!important}main>section{margin:16px 0!important;padding:16px!important;transform:none!important}#conciertos .concert-card{grid-template-columns:100px minmax(0,1fr)!important}}
-@media(max-width:430px){header{grid-template-columns:55px 1fr!important;min-height:155px!important}header .logo img{width:55px!important}header h1{font-size:43px!important}header .tagline{font-size:8px!important}header:after{font-size:8px!important}}
-</style>
-</head>
+</style></head>
 <body id="inicio">
 <div class="topline"></div>
 <header>
@@ -615,8 +181,20 @@ footer{background:#090909!important;color:#eeeae1!important;border-top:8px solid
   </div>
 </div>
 </section>
-<section id="quienes-somos"><div class="section-head"><h2>Quiénes somos</h2><small>Ruido · Resistencia · Autogestión</small></div><div class="box"><p><strong>Radikal Sonoro es un espacio de radio y cultura underground hecho por y para quienes viven la música al margen de lo comercial.</strong></p><p>Desde aquí damos voz a la escena punk, hardcore, ska y metal: difundimos bandas, compartimos noticias, descubrimos nuevos sonidos y ponemos en el mapa conciertos y festivales.</p><p>Creemos en la música libre, la autogestión y la fuerza de una escena que se mantiene viva gracias a las bandas, salas, colectivos y personas que la hacen posible.</p><p><strong>Esto es Radikal Sonoro: apoyo a la escena, pasión por la música y ruido sin permiso.
-        <p><strong>Dirigido por:</strong><br>David Radikal (Director / Productor)<br>Milton Bullarkia (Locutor / Productor)<br>José Suburbia (Colaborador)</p></strong></p></div></section>
+<section id="quienes-somos">
+<div class="section-head"><h2>Quiénes somos</h2><small>Ruido · Resistencia · Autogestión</small></div>
+<div class="box">
+<p><strong>Radikal Sonoro es un espacio de radio y cultura underground hecho por y para quienes viven la música al margen de lo comercial.</strong></p>
+<p>Desde aquí damos voz a la escena punk, hardcore, ska y metal: difundimos bandas, compartimos noticias, descubrimos nuevos sonidos y ponemos en el mapa conciertos y festivales.</p>
+<p>Creemos en la música libre, la autogestión y la fuerza de una escena que se mantiene viva gracias a las bandas, salas, colectivos y personas que la hacen posible.</p>
+<p><strong>Esto es Radikal Sonoro: apoyo a la escena, pasión por la música y ruido sin permiso.</strong></p>
+<div class="team-grid">
+<article class="team-card"><strong>Milton Bullarkia</strong><span>Locutor / Productor</span></article>
+<article class="team-card"><strong>David Radikal</strong><span>Director / Productor</span></article>
+<article class="team-card"><strong>José Suburbia</strong><span>Colaborador</span></article>
+</div>
+</div>
+</section>
 <section id="directo"><div class="section-head"><h2>En directo</h2><small>La escena no se calla</small></div><div class="box live"><strong>Todos los miércoles · 20:00 a 22:00 h</strong><p id="livestate" role="status">Programa en vivo con música, invitados y mucho ruido.</p></div></section>
 <section id="radio"><div class="section-head"><h2>En directo</h2><small>24 horas de música independiente</small></div><div class="radio-grid"><div class="radio-card"><h3>Radikal Sonoro · 24h</h3><p>Nuestra señal online. Dale al play y acompaña la resistencia sonora.</p><button id="play" type="button">▶ Escuchar en vivo</button><audio id="audio" controls preload="none"></audio><p class="msg" id="msg" role="status"></p></div><div class="radio-card" id="agora"><h3>Ágora Sol Radio</h3><p>Escucha la emisión en directo de Ágora Sol Radio.</p><audio controls preload="none" src="https://cervera.eldialdigital.com:23141/stream">Tu navegador no admite el reproductor de audio.</audio><p class="small">Radikal Sonoro: miércoles de 20:00 a 22:00 h.</p><a href="https://www.agorasolradio.org/directo/" target="_blank" rel="noopener">Abrir la web de Ágora Sol Radio ↗</a></div></div></section>
 <section id="noticias"><div class="section-head"><h2>Últimas noticias</h2><small>Underground · Aquí y fuera</small></div><p class="small">Selección de hasta 5 noticias recientes de punk, hardcore, ska y metal independiente. Enlaces a las fuentes originales.</p><div id="news-status" role="status" aria-live="polite">Buscando noticias recientes…</div><ul class="list" id="news-list"><li>Conectando con las fuentes…</li></ul><p class="small">Fuentes: Google News RSS. Los artículos pertenecen a sus medios originales.</p></section>
@@ -630,7 +208,7 @@ footer{background:#090909!important;color:#eeeae1!important;border-top:8px solid
 <script>
 // ===== CONFIGURA AQUÍ =====
 var STREAM_URL = "https://stream.zeno.fm/pxp41f9kwzzuv";          // URL de tu radio (Zeno.fm o AzuraCast), termina en /stream o .mp3
-var CONTACT_EMAIL = "radikalsonororadio@gmail.com";       // Tu correo
+var CONTACT_EMAIL = "contacto@radikalsonoro.es";       // Tu correo
 var REDES = {Facebook:"https://www.facebook.com/profile.php?id=100001253785777",Instagram:"https://www.instagram.com/radikalsonoro/",TikTok:"",YouTube:"",Spotify:"",X:""};  // Pega el enlace de cada red; las vacías no se muestran
 var SHOW_TZ = "";             // Zona horaria del programa, ej. "Europe/Madrid" o "America/Mexico_City". Vacío = hora de cada visitante
 var SPOTIFY_URL = "https://open.spotify.com/show/3ZeFOmui57GFb4Ufwgxrr3?si=PHO--gEkSKmeJ749X8ZDeg&utm_source=copy-link";         // Enlace de tu playlist, artista o álbum de Spotify
@@ -679,7 +257,13 @@ async function loadConcertNews(){
     events=(Array.isArray(events)?events:[]).filter(function(ev){
       if(!ev||!ev.fecha||!ev.url)return false;
       var d=new Date(ev.fecha+"T00:00:00");return !isNaN(d.getTime())&&d>=today;
-    }).slice(0,6);
+    });
+    events.sort(function(a,b){
+      var aMadrid=/madrid/i.test([a.ciudad||"",a.sala||""].join(" "));
+      var bMadrid=/madrid/i.test([b.ciudad||"",b.sala||""].join(" "));
+      return (bMadrid-aMadrid)||String(a.fecha).localeCompare(String(b.fecha));
+    });
+    events=events.slice(0,6);
     list.innerHTML="";list.className="concert-grid";
     if(!events.length){status.textContent="No hay próximos conciertos con fecha y fuente verificadas.";list.innerHTML="<li>No hay eventos confirmados en este momento.</li>";return;}
     events.forEach(function(ev,index){
