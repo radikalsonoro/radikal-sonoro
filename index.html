@@ -644,6 +644,29 @@ header .header-stamp{grid-column:2!important;grid-row:4!important;justify-self:s
  header .kicker{font-size:8px!important;padding:3px 5px!important}
  header .header-stamp{font-size:7px!important;padding:3px 5px!important}
 }
+
+/* Ajuste tablet: evita la columna derecha larga y el hueco vacío bajo la radio */
+@media (min-width:601px) and (max-width:1100px){
+  .magazine-top{
+    grid-template-columns:minmax(0,1fr)!important;
+    align-items:start!important;
+    gap:14px!important;
+  }
+  .magazine-left{
+    display:block!important;
+    min-width:0!important;
+  }
+  .magazine-top #radio{
+    margin:0!important;
+    height:auto!important;
+    min-height:0!important;
+  }
+  .magazine-top #conciertos{
+    margin:0!important;
+    height:auto!important;
+    min-height:0!important;
+  }
+}
 </style>
 </head>
 <body id="inicio">
