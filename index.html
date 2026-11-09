@@ -247,13 +247,13 @@ footer{max-width:none;margin:0;padding:24px;text-align:center;background:#050505
 <form class="box" id="concert-form" name="concert-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" action="/gracias.html"><input type="hidden" name="form-name" value="concert-form"><p hidden><label>No rellenes este campo: <input name="bot-field"></label></p><label>Grupo o artista *<input name="grupo" required></label><label>Nombre del concierto o festival *<input name="evento" required></label><div class="formrow"><label>Fecha *<input type="date" name="fecha" required></label><label>Hora<input type="time" name="hora"></label></div><label>Sala o recinto *<input name="sala" required></label><div class="formrow"><label>Ciudad *<input name="ciudad" required></label><label>País<input name="pais"></label></div><label>Estilo musical<input name="estilo" placeholder="Punk, hardcore, ska, metal…"></label><label>Precio de entrada<input name="precio"></label><label>Enlace de entradas o evento<input type="url" name="enlace" placeholder="https://…"></label><label>Cartel del concierto<input type="file" name="cartel" accept="image/*,.pdf"></label><label>Información adicional<textarea name="info" rows="4"></textarea></label><label>Correo de contacto<input type="email" name="email" required></label><button class="chip" type="submit">Enviar concierto</button><p class="small" id="concert-msg" role="status">Se abrirá tu correo para enviar los datos a Radikal Sonoro. Recuerda adjuntar el cartel si lo tienes.</p></form></section>
 <section id="videos"><div class="section-head"><h2>Bandas libres</h2><small>Descubre · Escucha · Comparte</small></div><p class="bands-intro">Un espacio para descubrir y dar visibilidad a bandas independientes y autogestionadas. Aquí encontrarás búsquedas de videoclips, directos y sesiones de punk, hardcore, ska y metal underground. ¿Tienes una banda? Envíanos tus vídeos y la añadiremos.</p><ul class="list video-grid" id="video-list"><li>Preparando vídeos…</li></ul><p class="small bands-note">Los enlaces te llevan a YouTube. Radikal Sonoro no aloja los vídeos.</p></section>
 <section id="spotify"><div class="section-head"><h2>Podcasts</h2><small>Programas · Sesiones · Archivo</small></div><div class="spot" id="sbox"></div><p class="small">Escucha y sigue los programas de Radikal Sonoro en Spotify.</p><div class="box" style="margin-top:14px"><strong style="font:800 25px Barlow Condensed;text-transform:uppercase">Radikal Sonoro en Ágora Sol Radio</strong><p class="small">Aquí puedes escuchar los podcasts de nuestros programas emitidos en Ágora Sol Radio.</p><a class="chip" href="https://www.agorasolradio.org/podcast/radikalsonoro/" target="_blank" rel="noopener noreferrer">▶ Escuchar podcasts en Ágora Sol ↗</a></div></section>
-<section id="contacto"><div class="section-head"><h2>Contacto y redes</h2><small>Estamos al otro lado</small></div><div class="box"><p><strong>¿Tienes una noticia, propones una entrevista o quieres presentar un especial?</strong></p><p class="small">Cuéntanos tu propuesta. Al enviar se abrirá tu aplicación de correo con el mensaje preparado para Radikal Sonoro.</p><form id="contact-form"><label>¿Qué quieres proponernos? *<select name="tipo" required><option value="">Selecciona una opción</option><option>Enviar una noticia</option><option>Proponer una entrevista</option><option>Proponer un programa especial</option><option>Otra colaboración</option></select></label><div class="formrow"><label>Nombre o banda *<input name="nombre" required></label><label>Tu correo *<input type="email" name="email" required></label></div><label>Asunto *<input name="asunto" required></label><label>Cuéntanos la propuesta *<textarea name="mensaje" rows="5" required placeholder="Información, enlaces, fechas y cualquier detalle importante…"></textarea></label><button class="chip" type="submit">Enviar propuesta</button><p class="small">Si tienes fotos, carteles o dossier, podrás adjuntarlos al correo que se abrirá.</p></form><ul class="list" id="contactlist"></ul><div class="socials" id="redes"></div></div></section>
+<section id="contacto"><div class="section-head"><h2>Contacto y redes</h2><small>Estamos al otro lado</small></div><div class="box"><p><strong>¿Tienes una noticia, propones una entrevista o quieres presentar un especial?</strong></p><p class="small">Rellena el formulario y tu mensaje llegará directamente al equipo de Radikal Sonoro. No necesitas abrir ninguna aplicación de correo.</p><form id="contact-form" action="https://formsubmit.co/radikalsonororadio@gmail.com" method="POST" enctype="multipart/form-data"><input type="hidden" name="_subject" value="Nuevo mensaje · Radikal Sonoro"><input type="hidden" name="_template" value="table"><input type="hidden" name="_next" value="https://radikalsonoro.es/gracias.html"><input type="text" name="_honey" style="display:none"><label>¿Qué quieres proponernos? *<select name="tipo" required><option value="">Selecciona una opción</option><option>Enviar una noticia</option><option>Proponer una entrevista</option><option>Proponer un programa especial</option><option>Otra colaboración</option></select></label><div class="formrow"><label>Nombre o banda *<input name="nombre" required></label><label>Tu correo *<input type="email" name="email" required></label></div><label>Asunto *<input name="asunto" required></label><label>Cuéntanos la propuesta *<textarea name="mensaje" rows="5" required placeholder="Información, enlaces, fechas y cualquier detalle importante…"></textarea></label><label>Adjuntar fotos, cartel o dossier (opcional)<input type="file" name="adjunto" accept="image/*,.pdf"></label><button class="chip" type="submit">Enviar propuesta</button><p class="small">El envío se realiza desde la web. Puedes adjuntar imágenes o un PDF (límite total de 10 MB).</p></form><ul class="list" id="contactlist"></ul><div class="socials" id="redes"></div></div></section>
 </main>
 <footer>RADIKAL SONORO RADIO SHOW · HECHO POR LA ESCENA, PARA LA ESCENA.</footer>
 <script>
 // ===== CONFIGURA AQUÍ =====
 var STREAM_URL = "https://stream.zeno.fm/pxp41f9kwzzuv";          // URL de tu radio (Zeno.fm o AzuraCast), termina en /stream o .mp3
-var CONTACT_EMAIL = "contacto@radikalsonoro.es";       // Tu correo
+var CONTACT_EMAIL = "radikalsonororadio@gmail.com"; // Buzón real de recepción
 var REDES = {Facebook:"https://www.facebook.com/profile.php?id=100001253785777",Instagram:"https://www.instagram.com/radikalsonoro/",TikTok:"",YouTube:"",Spotify:"",X:""};  // Pega el enlace de cada red; las vacías no se muestran
 var SHOW_TZ = "";             // Zona horaria del programa, ej. "Europe/Madrid" o "America/Mexico_City". Vacío = hora de cada visitante
 var SPOTIFY_URL = "https://open.spotify.com/show/3ZeFOmui57GFb4Ufwgxrr3?si=PHO--gEkSKmeJ749X8ZDeg&utm_source=copy-link";         // Enlace de tu playlist, artista o álbum de Spotify
@@ -399,27 +399,19 @@ function tick(){
 }
 tick();setInterval(tick,1000);
 
-function sendByEmail(form,subjectPrefix){
-  form.addEventListener("submit",function(ev){
-    ev.preventDefault();
-    var data=new FormData(form),lines=[];
-    data.forEach(function(value,key){if(typeof value==="string"&&value.trim())lines.push(key+": "+value.trim());});
-    var subject=subjectPrefix+" · "+(data.get("asunto")||data.get("evento")||data.get("tipo")||"Radikal Sonoro");
-    window.location.href="mailto:"+CONTACT_EMAIL+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(lines.join("\n\n"));
-  });
-}
-var contactForm=document.getElementById("contact-form");
-if(contactForm)sendByEmail(contactForm,"Propuesta para Radikal Sonoro");
 var concertForm=document.getElementById("concert-form");
 if(concertForm){
-  concertForm.removeAttribute("data-netlify");concertForm.removeAttribute("netlify-honeypot");concertForm.removeAttribute("enctype");concertForm.removeAttribute("action");
-  sendByEmail(concertForm,"Propuesta de concierto");
-  var concertFile=concertForm.querySelector('input[type="file"]');
-  if(concertFile){concertFile.insertAdjacentHTML("afterend",'<span class="small">El cartel no se adjunta automáticamente: añádelo al correo cuando se abra.</span>');}
+  concertForm.removeAttribute("data-netlify");
+  concertForm.removeAttribute("netlify-honeypot");
+  concertForm.action="https://formsubmit.co/radikalsonororadio@gmail.com";
+  concertForm.method="POST";
+  concertForm.enctype="multipart/form-data";
+  concertForm.insertAdjacentHTML("afterbegin",'<input type="hidden" name="_subject" value="Nuevo concierto propuesto · Radikal Sonoro"><input type="hidden" name="_template" value="table"><input type="hidden" name="_next" value="https://radikalsonoro.es/gracias.html"><input type="text" name="_honey" style="display:none">');
+  var concertHelp=concertForm.querySelector("#concert-msg");
+  if(concertHelp)concertHelp.textContent="El envío se realiza desde la web. Puedes adjuntar el cartel (límite total de 10 MB).";
 }
 var cl=document.getElementById("contactlist"),rl=document.getElementById("redes"),c="",r="";
 cl.innerHTML='<li>Escríbenos y conecta con la escena.</li>';
-if(CONTACT_EMAIL)r+='<a class="chip" href="mailto:'+encodeURI(CONTACT_EMAIL)+'">✉ '+CONTACT_EMAIL.replace(/[<>&"]/g,"")+'</a>';
 for(var k in REDES){if(REDES[k])r+='<a class="chip" href="'+encodeURI(REDES[k])+'" target="_blank" rel="noopener">'+k+'</a>';}
 rl.innerHTML=r||'<span class="small">Aquí irán tus redes sociales.</span>';
 })();
