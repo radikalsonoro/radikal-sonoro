@@ -86,7 +86,18 @@ button:hover,.chip:hover,.cta:hover{background:var(--yellow);color:#111!importan
 #conciertos .concert-more{display:inline-block;align-self:flex-start;margin-top:4px;background:#090909;color:#fff;padding:6px 8px;font:10px var(--mono);text-decoration:none}
 #conciertos form{margin-top:16px}
 .magazine-interview{grid-column:1/-1;margin:0}
-#proximamente .next-program{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center;margin:18px 0 22px;padding:16px 18px;background:var(--paper);color:#111;border:3px solid #111;border-left:10px solid var(--red);box-shadow:6px 6px var(--yellow);position:relative;z-index:1}\n#proximamente .next-program-label{display:inline-block;margin-bottom:7px;padding:5px 8px;background:var(--red);color:#fff;font:10px var(--mono);letter-spacing:.1em}\n#proximamente .next-program h3{margin:0;color:#111;font:900 clamp(28px,4vw,46px)/.9 var(--display);text-transform:uppercase}\n#proximamente .next-program p{margin:7px 0 0;color:#222;font-size:13px}\n#proximamente .next-program-count{min-width:150px;padding:12px;background:#111;color:var(--yellow);text-align:center;font:700 13px var(--mono)}\n#proximamente .next-program-count small{display:block;margin-bottom:5px;color:#fff;font-size:9px}\n#proximamente{grid-column:1/-1;min-height:0;margin:0;padding:20px;background:linear-gradient(90deg,rgba(0,0,0,.94),rgba(0,0,0,.68) 52%,rgba(0,0,0,.24)),url("https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=1500&q=85") center 38%/cover;border:3px solid var(--paper);border-left:9px solid var(--red);box-shadow:8px 8px #000;position:relative;overflow:hidden}
+#proximamente .next-program{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center;margin:18px 0 22px;padding:16px 18px;background:var(--paper);color:#111;border:3px solid #111;border-left:10px solid var(--red);box-shadow:6px 6px var(--yellow);position:relative;z-index:1}\n#proximamente .next-program-label{display:inline-block;margin-bottom:7px;padding:5px 8px;background:var(--red);color:#fff;font:10px var(--mono);letter-spacing:.1em}\n#proximamente .next-program h3{margin:0;color:#111;font:900 clamp(28px,4vw,46px)/.9 var(--display);text-transform:uppercase}\n#proximamente .next-program p{margin:7px 0 0;color:#222;font-size:13px}\n#proximamente .next-program-count{min-width:150px;padding:12px;background:#111;color:var(--yellow);text-align:center;font:700 13px var(--mono)}\n#proximamente .next-program-count small{display:block;margin-bottom:5px;color:#fff;font-size:9px}
+#proximamente .program-info{position:relative;z-index:1;margin-top:20px;padding:16px;background:rgba(5,5,5,.88);border:1px solid #eee}
+#proximamente .program-info-head>span{display:inline-block;background:var(--yellow);color:#111;padding:5px 8px;font:10px var(--mono);letter-spacing:.1em}
+#proximamente .program-info-head h3{margin:10px 0 5px;color:#fff;font:900 clamp(22px,3vw,34px)/1 var(--display);text-transform:uppercase}
+#proximamente .program-info-head p{margin:0 0 14px;color:#eee;font-size:13px}
+#proximamente .program-info-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+#proximamente .program-info-grid article{min-width:0;padding:12px;background:var(--paper);color:#111;border-top:5px solid var(--red)}
+#proximamente .program-info-grid article>span{font:10px var(--mono);color:#9c1721}
+#proximamente .program-info-grid h4{margin:7px 0 5px;font:900 22px/1 var(--display);text-transform:uppercase}
+#proximamente .program-info-grid p{margin:0;color:#222;font-size:12px;line-height:1.4}
+@media(max-width:680px){#proximamente .program-info-grid{grid-template-columns:1fr}}
+\n#proximamente{grid-column:1/-1;min-height:0;margin:0;padding:20px;background:linear-gradient(90deg,rgba(0,0,0,.94),rgba(0,0,0,.68) 52%,rgba(0,0,0,.24)),url("https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=1500&q=85") center 38%/cover;border:3px solid var(--paper);border-left:9px solid var(--red);box-shadow:8px 8px #000;position:relative;overflow:hidden}
 #proximamente:after{content:"DIY";position:absolute;right:15px;bottom:-30px;color:#e51b2b29;font:900 clamp(100px,20vw,230px)/1 var(--display);pointer-events:none}
 #proximamente .section-head{display:none}#proximamente:before{content:"PRÓXIMO PROGRAMA · RADIO EN DIRECTO";display:inline-block;background:var(--red);padding:6px 10px;color:#fff;font:500 10px var(--mono);letter-spacing:.1em;transform:rotate(-2deg)}
 #proximamente .upcoming-feature{display:grid;grid-template-columns:minmax(160px,.7fr) minmax(0,1.3fr);gap:22px;align-items:center;margin-top:18px;position:relative;z-index:1}
@@ -196,6 +207,14 @@ footer{max-width:none;margin:0;padding:24px;text-align:center;background:#050505
 <div class="next-program">
   <div><span class="next-program-label">PRÓXIMO PROGRAMA · ÁGORA SOL RADIO</span><h3>Miércoles 25 de noviembre</h3><p>De 20:00 a 22:00 h · Directo, invitados y mucho ruido.</p><a class="cta" href="#agora">▶ Escucha Ágora Sol Radio</a></div>
   <div class="next-program-count"><small>CUENTA ATRÁS</small><span id="next-program-countdown">Próxima emisión</span></div>
+</div>
+<div class="program-info">
+  <div class="program-info-head"><span>AVANCE DE CONTENIDOS</span><h3>¿Qué tendremos en el próximo programa?</h3><p>Entrevistas, especiales, novedades y sonidos de la escena independiente.</p></div>
+  <div class="program-info-grid">
+    <article><span>01 / ENTREVISTA</span><h4>Invitados</h4><p>En este espacio anunciaremos la banda, colectivo o artista que nos acompañará.</p></article>
+    <article><span>02 / ESPECIAL</span><h4>Protagonista</h4><p> aquí presentaremos el disco, grupo, movimiento o tema especial de la emisión.</p></article>
+    <article><span>03 / ADEMÁS</span><h4>En el programa</h4><p>Novedades, agenda, recomendaciones y música seleccionada para la ocasión.</p></article>
+  </div>
 </div>
 </section>
 <section id="quienes-somos">
