@@ -403,17 +403,18 @@ rl.innerHTML=r||'<span class="small">Aquí irán tus redes sociales.</span>';
  var left=document.createElement("div");left.className="magazine-left";
  top.appendChild(left);top.appendChild(concerts);
  left.appendChild(radio);
+ var direct=document.getElementById("directo");
+ if(direct)left.appendChild(direct);
  var feature=document.createElement("div");feature.className="magazine-interview";feature.appendChild(interview);
  var bottom=document.createElement("div");bottom.className="magazine-bottom";
  bottom.appendChild(news);bottom.appendChild(spotify);
  var hero=main.querySelector(".hero");
  if(hero)hero.remove();
- var who=document.getElementById("quienes-somos"),direct=document.getElementById("directo");
+ var who=document.getElementById("quienes-somos");
  main.insertBefore(top,main.firstChild);
  main.insertBefore(feature,top.nextSibling);
  main.insertBefore(bottom,feature.nextSibling);
  if(who)main.appendChild(who);
- if(direct)main.appendChild(direct);
 })();
 </script>
 </body></html>
