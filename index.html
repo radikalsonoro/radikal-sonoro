@@ -128,6 +128,26 @@ footer{max-width:none;margin:0;padding:24px;text-align:center;background:#050505
  .magazine-top{grid-template-columns:minmax(0,1.2fr) minmax(250px,.9fr);gap:12px}main{padding:0 13px 40px}
  #conciertos{padding:14px}#conciertos .concert-card{grid-template-columns:82px minmax(0,1fr)}.team-card strong{font-size:20px}
 }
+@media (min-width:681px) and (max-width:900px){
+ /* La agenda deja de estirar la columna de radio y generar un hueco vertical */
+ .magazine-top{grid-template-columns:minmax(0,1fr);gap:14px;align-items:start}
+ .magazine-left{min-width:0;align-self:start}
+ #radio,.magazine-top #radio{flex:0 0 auto;height:auto;min-height:0;align-self:start}
+ #conciertos{height:auto;min-height:0}
+ .radio-grid{grid-template-columns:minmax(0,1fr)}
+ .radio-card+.radio-card{border-left:0;border-top:1px solid #655}
+ /* Contraste reforzado para la sección Bandas libres */
+ #videos,#videos p,#videos .small{color:#eee!important}
+ #videos .section-head h2{color:#eee!important}
+ #videos .video-grid li{background:#090909;color:#fff!important}
+ #videos .video-grid li a{color:#fff!important}
+ /* Cabecera y logotipo proporcionados al ancho de una tablet */
+ header{min-height:190px;padding-left:128px}
+ .logo{left:14px;top:20px}
+ .logo img{width:96px;height:96px}
+ header h1{font-size:clamp(48px,7vw,70px);margin-right:0}
+ header .tagline{margin-right:0}
+}
 @media(max-width:680px){
  header{min-height:148px;padding:15px 10px 15px 84px}.logo{left:8px;top:27px}.logo img{width:64px;height:64px}
  header:after{display:none}header h1{font-size:clamp(38px,10vw,56px);line-height:.84;margin:7px 0 4px}
