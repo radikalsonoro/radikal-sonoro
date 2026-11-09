@@ -17,16 +17,16 @@
 html{scroll-padding-top:72px}body{background:#090909;color:var(--cream);font-family:"DM Sans",Arial,sans-serif}
 body:before{opacity:.17;background-image:radial-gradient(#fff .65px,transparent .8px);background-size:4px 4px}
 .topline{height:8px;background:repeating-linear-gradient(-12deg,#ed1724 0 24px,#f4efe5 24px 27px,#080808 27px 48px)}
-header{max-width:1500px;min-height:218px;padding:22px 28px;display:grid;grid-template-columns:170px 1fr;grid-template-rows:auto auto auto;gap:5px 24px;text-align:left;align-items:center;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.55)),radial-gradient(ellipse at 70% 45%,#555 0,#222 24%,#090909 68%)}
+header{max-width:1500px;min-height:250px;padding:22px 28px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:7px;text-align:center;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.55)),radial-gradient(ellipse at 70% 45%,#555 0,#222 24%,#090909 68%)}
 header:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.28;background:repeating-linear-gradient(125deg,transparent 0 18px,rgba(255,255,255,.12) 19px 20px,transparent 21px 42px)}
 header:after{content:"24H DE MÚSICA\\A INDEPENDIENTE\\A PUNK · HARDCORE · SKA\\A METAL · ALTERNATIVA";white-space:pre;position:absolute;right:3%;top:25px;color:#f4efe5;font:italic 900 clamp(17px,2vw,27px)/1.18 "Barlow Condensed";text-align:right;letter-spacing:.04em;transform:rotate(-3deg);text-shadow:2px 2px #000}
-.logo{grid-column:1;grid-row:1/4;z-index:1;margin:0}.logo img{width:min(170px,100%);filter:drop-shadow(5px 4px 0 #ed1724) grayscale(1) contrast(1.2)}
-header .kicker,header h1,header .tagline,header .header-stamp{grid-column:2;position:relative;z-index:1;margin-left:0;margin-right:0;text-align:left}
+.logo{z-index:1;margin:0;line-height:0}.logo img{display:block;width:min(145px,100%);height:auto;filter:drop-shadow(5px 4px 0 #ed1724) grayscale(1) contrast(1.2)}
+header .kicker,header h1,header .tagline,header .header-stamp{position:relative;z-index:1;margin-left:auto;margin-right:auto;text-align:center}
 header .kicker{width:max-content;background:#ed1724;color:#fff;padding:5px 10px;font-size:11px;letter-spacing:.18em;transform:rotate(-2deg)}
 header h1{font:900 clamp(58px,9vw,112px)/.78 "Barlow Condensed",Impact,sans-serif;letter-spacing:-.045em;text-shadow:4px 4px #750d13;margin:7px 0}
 header h1 span{color:#ed1724;-webkit-text-stroke:1px #f4efe5}
 header .tagline{max-width:650px;color:#f4efe5;font:800 12px/1.3 "DM Sans";letter-spacing:.09em;text-transform:uppercase;margin:2px 0 7px}
-.header-stamp{justify-self:start;background:#f4efe5;color:#111;border:0;box-shadow:4px 4px #ed1724;padding:5px 9px;font-size:9px;letter-spacing:.16em;transform:rotate(-2deg)}
+.header-stamp{align-self:center;background:#f4efe5;color:#111;border:0;box-shadow:4px 4px #ed1724;padding:5px 9px;font-size:9px;letter-spacing:.16em;transform:rotate(-2deg)}
 nav{position:sticky;top:0;z-index:50;justify-content:space-around;gap:0;padding:7px 10px;background:#050505;border-top:2px solid #f4efe5;border-bottom:3px solid #ed1724}
 nav a{font:900 17px "Barlow Condensed";letter-spacing:.09em;padding:8px 13px;color:#eee;text-decoration:none}
 nav a.active,nav a:hover{background:#ed1724;color:white;transform:rotate(-1deg)}
@@ -72,8 +72,8 @@ audio{accent-color:#ed1724}
 .spot iframe{height:300px}
 footer{border-top:3px solid #ed1724;background:#050505;color:#eee}
 @media(max-width:800px){
- header{grid-template-columns:90px 1fr;min-height:160px;padding:18px 14px;gap:5px 13px}
- .logo img{width:90px}header:after{font-size:14px;right:10px;top:12px;opacity:.7}
+ header{min-height:220px;padding:18px 14px;gap:6px}
+ .logo img{width:110px}header:after{font-size:14px;right:10px;top:12px;opacity:.7}
  header h1{font-size:clamp(48px,11vw,72px)}header .tagline{max-width:500px;font-size:9px}
  nav{justify-content:flex-start;overflow-x:auto}nav a{white-space:nowrap;font-size:16px;padding:8px 12px}
  main{display:block;padding:0 12px 35px}.hero{margin-top:13px}
@@ -84,7 +84,7 @@ footer{border-top:3px solid #ed1724;background:#050505;color:#eee}
  #conciertos .concert-card{grid-template-columns:110px 1fr}
 }
 @media(max-width:430px){
- header{grid-template-columns:62px 1fr;padding:15px 10px}.logo img{width:62px}
+ header{padding:15px 10px}.logo img{width:90px}
  header:after{display:none}header h1{font-size:46px}
  header .tagline{font-size:8px;letter-spacing:.03em}
  .hero-main h2{font-size:48px}.section-head{align-items:flex-start;flex-direction:column}
