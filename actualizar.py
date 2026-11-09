@@ -217,7 +217,7 @@ def actualizar_conciertos():
     agenda = sorted(
         por_url_fecha.values(),
         key=lambda e: (e.get("prioridad", 1), e.get("fecha", ""), e.get("hora", ""))
-    )[:5]
+    )[:6]
     for evento in agenda:
         evento.pop("prioridad", None)
     guardar_json("conciertos.json", agenda)
