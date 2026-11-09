@@ -8,7 +8,7 @@
 <title>Radikal Sonoro | Punk · Hardcore · Ska · Metal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Mono:wght@400;500&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
 
 
@@ -34,7 +34,6 @@
 
 
 <style id="radikal-sonoro-editorial">
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Mono:wght@400;500&family=Inter:wght@400;600;700;800;900&display=swap');
 :root{--paper:#eeeae1;--ink:#080808;--red:#d7192d;--yellow:#f4d52f;--display:'Anton','Barlow Condensed',Impact,sans-serif;--body:'Inter',Arial,sans-serif;--mono:'DM Mono',monospace}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:72px;background:var(--ink)}
 body{margin:0;background:var(--ink);color:var(--paper);font-family:var(--body);line-height:1.5}
@@ -292,15 +291,6 @@ async function loadConcertNews(){
 (function(){
 loadNews();
 loadConcertNews();
-var t=document.getElementById("title");
-if(t){
-var txt=t.textContent.trim(),cls=["a","b","c","d"],i=0,out="";
-txt.split(" ").forEach(function(w,wi){
-if(wi>0)out+='<span class="gap" aria-hidden="true"></span>';
-w.split("").forEach(function(ch){out+='<span aria-hidden="true" class="'+cls[(i++*7+wi)%4]+'">'+ch+'</span>';});
-});
-t.innerHTML=out;
-}
 
 var audio=document.getElementById("audio"),msg=document.getElementById("msg");
 document.getElementById("play").addEventListener("click",function(){
