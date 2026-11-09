@@ -593,6 +593,57 @@ footer{background:#090909!important;color:#eeeae1!important;border-top:8px solid
 #videos p,#videos .bands-intro,#videos .bands-note{color:#eeeae1!important;background:transparent!important}
 #videos .video-grid li{background:#171717!important;color:#fff!important;border-left:6px solid #d7192d!important}
 #videos .video-grid li a,#videos li a{color:#fff!important}
+
+/* Cabecera: logo junto al nombre, nunca encima del título */
+header{
+ display:grid!important;
+ grid-template-columns:minmax(105px,160px) minmax(0,1fr)!important;
+ grid-template-rows:auto auto auto auto!important;
+ align-items:center!important;
+ justify-items:start!important;
+ column-gap:18px!important;
+ row-gap:5px!important;
+ text-align:left!important;
+}
+header .logo{
+ grid-column:1!important;
+ grid-row:1 / 5!important;
+ position:static!important;
+ justify-self:center!important;
+ align-self:center!important;
+ margin:0!important;
+ width:100%!important;
+ max-width:160px!important;
+}
+header .logo img{
+ display:block!important;
+ width:100%!important;
+ max-width:150px!important;
+ height:auto!important;
+ max-height:none!important;
+ object-fit:contain!important;
+}
+header .kicker{grid-column:2!important;grid-row:1!important;margin:0!important;justify-self:start!important}
+header h1{grid-column:2!important;grid-row:2!important;margin:4px 0!important;justify-self:start!important;text-align:left!important;line-height:1!important}
+header .tagline{grid-column:2!important;grid-row:3!important;margin:0!important;justify-self:start!important;text-align:left!important}
+header .header-stamp{grid-column:2!important;grid-row:4!important;justify-self:start!important;align-self:start!important;margin:3px 0 0!important}
+@media(max-width:800px){
+ header{display:grid!important;grid-template-columns:90px minmax(0,1fr)!important;grid-template-rows:auto auto auto auto!important;min-height:180px!important;padding:16px 12px!important;column-gap:12px!important;row-gap:4px!important}
+ header .logo{grid-column:1!important;grid-row:1 / 5!important;width:90px!important;max-width:90px!important;position:static!important}
+ header .logo img{width:90px!important;max-width:90px!important}
+ header .kicker,header h1,header .tagline,header .header-stamp{grid-column:2!important;justify-self:start!important;text-align:left!important}
+ header h1{font-size:clamp(40px,8vw,66px)!important;line-height:1!important;margin:3px 0!important}
+ header:after{font-size:9px!important;bottom:5px!important;right:8px!important}
+}
+@media(max-width:430px){
+ header{grid-template-columns:62px minmax(0,1fr)!important;min-height:150px!important;padding:12px 9px!important;column-gap:9px!important}
+ header .logo{width:62px!important;max-width:62px!important}
+ header .logo img{width:62px!important;max-width:62px!important}
+ header h1{font-size:clamp(34px,9vw,46px)!important;line-height:1!important}
+ header .tagline{font-size:7px!important;line-height:1.25!important}
+ header .kicker{font-size:8px!important;padding:3px 5px!important}
+ header .header-stamp{font-size:7px!important;padding:3px 5px!important}
+}
 </style>
 </head>
 <body id="inicio">
