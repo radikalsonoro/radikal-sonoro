@@ -1,72 +1,68 @@
 [
   {
     "fecha": "2026-11-12",
-    "hora": "12:00",
-    "evento": "GRIPPI + INTRUSA + ARPIA",
-    "artistas": "GRIPPI + INTRUSA + ARPIA",
-    "sala": "Primera Línea VK Bar · La Trinchera",
+    "hora": "21:00",
+    "evento": "i hate bouncers + ferrocentro",
+    "artistas": "i hate bouncers + ferrocentro",
+    "sala": "Wurlitzer Ballroom",
     "ciudad": "Madrid",
     "pais": "España",
-    "url": "https://primeralineavkbar.com/index.php/2026/10/20/jueves-12-de-noviembre-neuroot-noruega-roke/",
-    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2023/03/cropped-primera-linea_logo.png",
-    "fuente": "Primera Línea VK Bar"
+    "url": "https://wurlitzerballroom.com/concierto/i-hate-bouncers-2026-11-12",
+    "cartel": ""
   },
   {
     "fecha": "2026-11-13",
-    "hora": "20:00",
-    "evento": "LÁGRIMAS + SVDESTADA",
-    "artistas": "Lágrimas + Svdestada",
-    "sala": "Sala La Trinchera · Vallecas",
+    "hora": "21:30",
+    "evento": "The Nomads + Star Mafia Boy",
+    "artistas": "The Nomads + Star Mafia Boy",
+    "sala": "Gruta 77",
     "ciudad": "Madrid",
     "pais": "España",
-    "url": "https://primeralineavkbar.com/index.php/2026/10/20/viernes-13-de-noviembre-lagrimas-svdestada/",
-    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/10/13.11-lagrimas-svdestada-madrid-1-739x1024.jpg"
-  },
-  {
-    "fecha": "2026-11-13",
-    "hora": "20:00",
-    "evento": "LAGRIMAS + SVDESTADA",
-    "artistas": "LAGRIMAS + SVDESTADA",
-    "sala": "Primera Línea VK Bar · La Trinchera",
-    "ciudad": "Madrid",
-    "pais": "España",
-    "url": "https://primeralineavkbar.com/index.php/2026/10/20/viernes-13-de-noviembre-lagrimas-svdestada/",
-    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2023/03/cropped-primera-linea_logo.png",
-    "fuente": "Primera Línea VK Bar"
-  },
-  {
-    "fecha": "2026-11-14",
-    "hora": "19:30",
-    "evento": "KAXTA +  DETRAPO",
-    "artistas": "KAXTA +  DETRAPO",
-    "sala": "Primera Línea VK Bar · La Trinchera",
-    "ciudad": "Madrid",
-    "pais": "España",
-    "url": "https://primeralineavkbar.com/index.php/2026/10/20/sabado-14-de-noviembre-kaxta-detrapo/",
-    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2023/03/cropped-primera-linea_logo.png",
-    "fuente": "Primera Línea VK Bar"
-  },
-  {
-    "fecha": "2026-11-14",
-    "hora": "20:00",
-    "evento": "KAXTA + DETRAPO",
-    "artistas": "Kaxta + Detrapo",
-    "sala": "Sala La Trinchera · Vallecas",
-    "ciudad": "Madrid",
-    "pais": "España",
-    "url": "https://primeralineavkbar.com/index.php/2026/10/20/sabado-14-de-noviembre-kaxta-detrapo/",
-    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/10/14.11-sabado-noche-kaxta-detrapo-767x1024.jpeg"
+    "url": "https://gruta77.com/events/the-nomads-suecia/",
+    "cartel": "https://gruta77.com/wp-content/uploads/2026/10/13_noviembre-Mahou_web.jpg"
   },
   {
     "fecha": "2026-11-15",
-    "hora": "13:00",
-    "evento": "THE CJS",
-    "artistas": "THE CJS",
-    "sala": "Primera Línea VK Bar · La Trinchera",
+    "hora": "21:00",
+    "evento": "Pyrex + Traumatizer",
+    "artistas": "Pyrex + Traumatizer",
+    "sala": "Wurlitzer Ballroom",
     "ciudad": "Madrid",
     "pais": "España",
-    "url": "https://primeralineavkbar.com/index.php/2026/10/20/sabado-14-de-noviembre-sesion-vermut-the-cjs/",
-    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2023/03/cropped-primera-linea_logo.png",
-    "fuente": "Primera Línea VK Bar"
+    "url": "https://wurlitzerballroom.com/concierto/pyrex-traumatizer-2026-11-15",
+    "cartel": ""
+  },
+  {
+    "fecha": "2026-11-15",
+    "hora": "20:30",
+    "evento": "La Gran Orquesta Republicana Sound System",
+    "artistas": "La Gran Orquesta Republicana Sound System",
+    "sala": "Gruta 77",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://gruta77.com/events/la-gran-orquesta-republicana-sound-system/var/ri-0.l-L2/",
+    "cartel": "https://gruta77.com/wp-content/uploads/2026/10/15_noviembre_web.jpg"
+  },
+  {
+    "fecha": "2026-11-20",
+    "hora": "21:30",
+    "evento": "Hammond York + Sally Brown + Majaicans — Mad Ska Last Session",
+    "artistas": "Hammond York + Sally Brown + Majaicans",
+    "sala": "Gruta 77",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://gruta77.com/events/hammond-york-sally-brown-majaicans-en-mad-ska-last-session/var/ri-0.l-L2/",
+    "cartel": "https://gruta77.com/wp-content/uploads/2026/08/20_noviembre_web.jpg"
+  },
+  {
+    "fecha": "2026-11-26",
+    "hora": "21:00",
+    "evento": "The Upsessions + The Crepitans",
+    "artistas": "The Upsessions + The Crepitans",
+    "sala": "Gruta 77",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://gruta77.com/events/the-upsessions-paises-bajos-the-crepitans/",
+    "cartel": "https://gruta77.com/wp-content/uploads/2026/03/26_noviembre_web.jpg"
   }
 ]
