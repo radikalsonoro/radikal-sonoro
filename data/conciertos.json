@@ -12,6 +12,17 @@
   },
   {
     "fecha": "2026-11-13",
+    "hora": "20:00",
+    "evento": "Lágrimas + Svdestada",
+    "artistas": "Lágrimas + Svdestada",
+    "sala": "La Trinchera",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://primeralineavkbar.com/index.php/2026/10/20/viernes-13-de-noviembre-lagrimas-svdestada/",
+    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/10/13.11-lagrimas-svdestada-madrid-1-739x1024.jpg"
+  },
+  {
+    "fecha": "2026-11-13",
     "hora": "21:30",
     "evento": "The Nomads + Star Mafia Boy",
     "artistas": "The Nomads + Star Mafia Boy",
@@ -20,6 +31,17 @@
     "pais": "España",
     "url": "https://gruta77.com/events/the-nomads-suecia/",
     "cartel": "https://gruta77.com/wp-content/uploads/2026/10/13_noviembre-Mahou_web.jpg"
+  },
+  {
+    "fecha": "2026-11-14",
+    "hora": "19:30",
+    "evento": "Kaxta + Detrapo",
+    "artistas": "Kaxta + Detrapo",
+    "sala": "La Trinchera",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://primeralineavkbar.com/index.php/2026/10/20/sabado-14-de-noviembre-kaxta-detrapo/",
+    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/10/14.11-sabado-noche-kaxta-detrapo-767x1024.jpeg"
   },
   {
     "fecha": "2026-11-15",
@@ -33,17 +55,6 @@
     "cartel": ""
   },
   {
-    "fecha": "2026-11-15",
-    "hora": "20:30",
-    "evento": "La Gran Orquesta Republicana Sound System",
-    "artistas": "La Gran Orquesta Republicana Sound System",
-    "sala": "Gruta 77",
-    "ciudad": "Madrid",
-    "pais": "España",
-    "url": "https://gruta77.com/events/la-gran-orquesta-republicana-sound-system/var/ri-0.l-L2/",
-    "cartel": "https://gruta77.com/wp-content/uploads/2026/10/15_noviembre_web.jpg"
-  },
-  {
     "fecha": "2026-11-20",
     "hora": "21:30",
     "evento": "Hammond York + Sally Brown + Majaicans — Mad Ska Last Session",
@@ -53,16 +64,5 @@
     "pais": "España",
     "url": "https://gruta77.com/events/hammond-york-sally-brown-majaicans-en-mad-ska-last-session/var/ri-0.l-L2/",
     "cartel": "https://gruta77.com/wp-content/uploads/2026/08/20_noviembre_web.jpg"
-  },
-  {
-    "fecha": "2026-11-26",
-    "hora": "21:00",
-    "evento": "The Upsessions + The Crepitans",
-    "artistas": "The Upsessions + The Crepitans",
-    "sala": "Gruta 77",
-    "ciudad": "Madrid",
-    "pais": "España",
-    "url": "https://gruta77.com/events/the-upsessions-paises-bajos-the-crepitans/",
-    "cartel": "https://gruta77.com/wp-content/uploads/2026/03/26_noviembre_web.jpg"
   }
 ]
