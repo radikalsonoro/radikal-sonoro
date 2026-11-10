@@ -1,5 +1,17 @@
 [
   {
+    "fecha": "2026-11-12",
+    "hora": "12:00",
+    "evento": "GRIPPI + INTRUSA + ARPIA",
+    "artistas": "GRIPPI + INTRUSA + ARPIA",
+    "sala": "Primera Línea VK Bar · La Trinchera",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://primeralineavkbar.com/index.php/2026/10/20/jueves-12-de-noviembre-neuroot-noruega-roke/",
+    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2023/03/cropped-primera-linea_logo.png",
+    "fuente": "Primera Línea VK Bar"
+  },
+  {
     "fecha": "2026-11-13",
     "hora": "20:00",
     "evento": "LÁGRIMAS + SVDESTADA",
@@ -9,6 +21,30 @@
     "pais": "España",
     "url": "https://primeralineavkbar.com/index.php/2026/10/20/viernes-13-de-noviembre-lagrimas-svdestada/",
     "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/10/13.11-lagrimas-svdestada-madrid-1-739x1024.jpg"
+  },
+  {
+    "fecha": "2026-11-13",
+    "hora": "20:00",
+    "evento": "LAGRIMAS + SVDESTADA",
+    "artistas": "LAGRIMAS + SVDESTADA",
+    "sala": "Primera Línea VK Bar · La Trinchera",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://primeralineavkbar.com/index.php/2026/10/20/viernes-13-de-noviembre-lagrimas-svdestada/",
+    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2023/03/cropped-primera-linea_logo.png",
+    "fuente": "Primera Línea VK Bar"
+  },
+  {
+    "fecha": "2026-11-14",
+    "hora": "19:30",
+    "evento": "KAXTA +  DETRAPO",
+    "artistas": "KAXTA +  DETRAPO",
+    "sala": "Primera Línea VK Bar · La Trinchera",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://primeralineavkbar.com/index.php/2026/10/20/sabado-14-de-noviembre-kaxta-detrapo/",
+    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2023/03/cropped-primera-linea_logo.png",
+    "fuente": "Primera Línea VK Bar"
   },
   {
     "fecha": "2026-11-14",
@@ -22,47 +58,15 @@
     "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/10/14.11-sabado-noche-kaxta-detrapo-767x1024.jpeg"
   },
   {
-    "fecha": "2026-11-18",
-    "hora": "19:00",
-    "evento": "ZHED + NARKOM + UNDEFINED VOID",
-    "artistas": "Zhed + Narkom + Undefined Void (DJ set techno industrial)",
-    "sala": "Sala La Trinchera · Vallecas",
+    "fecha": "2026-11-15",
+    "hora": "13:00",
+    "evento": "THE CJS",
+    "artistas": "THE CJS",
+    "sala": "Primera Línea VK Bar · La Trinchera",
     "ciudad": "Madrid",
     "pais": "España",
-    "url": "https://primeralineavkbar.com/index.php/2026/11/05/miercoles-18-de-noviembre-narkom-narkom-chiasso-suiza-zhed-undefined-void-dj-set-techno-industrial/",
-    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/11/18.11-miercoles--819x1024.jpeg"
-  },
-  {
-    "fecha": "2026-11-20",
-    "hora": "20:00",
-    "evento": "SHÖCK + CHULERÍA JODER",
-    "artistas": "Shöck + Chulería Joder",
-    "sala": "Sala La Trinchera · Vallecas",
-    "ciudad": "Madrid",
-    "pais": "España",
-    "url": "https://primeralineavkbar.com/index.php/2026/11/05/viernes-20-de-noviembre-shock-chuleria-joder/",
-    "cartel": ""
-  },
-  {
-    "fecha": "2026-11-21",
-    "hora": "20:00",
-    "evento": "YACOPSAE + RAGEOUS INTENT + HEDOR",
-    "artistas": "Yacopsae + Rageous Intent + Hedor",
-    "sala": "Sala La Trinchera · Vallecas",
-    "ciudad": "Madrid",
-    "pais": "España",
-    "url": "https://primeralineavkbar.com/index.php/2026/11/05/sabado-21-de-noviembre-yacopsae-rageuos-intent-hedor/",
-    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/11/21.11-sabado-noche-.png"
-  },
-  {
-    "fecha": "2026-11-29",
-    "hora": "21:00",
-    "evento": "MAMÁ LADILLA + EL SEÑOR QUE TE MOLESTA · ÚLTIMO CONCIERTO EN GRUTA 77",
-    "artistas": "Mamá Ladilla + El Señor Que Te Molesta",
-    "sala": "Gruta 77",
-    "ciudad": "Madrid",
-    "pais": "España",
-    "url": "https://gruta77.com/events/mama-ladilla-el-senor-que-te-molesta-ultimo-concierto-en-gruta77/var/ri-0.l-L2/",
-    "cartel": ""
+    "url": "https://primeralineavkbar.com/index.php/2026/10/20/sabado-14-de-noviembre-sesion-vermut-the-cjs/",
+    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2023/03/cropped-primera-linea_logo.png",
+    "fuente": "Primera Línea VK Bar"
   }
 ]

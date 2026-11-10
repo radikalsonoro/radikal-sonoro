@@ -1,37 +1,512 @@
 [
   {
+    "titulo": "Crónicas de conciertos",
+    "url": "https://www.insonoro.com/cronicasconciertos",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "Reseñas de discos",
+    "url": "https://www.insonoro.com/criticasdiscos",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "Jared James Nichols regresará a España en febrero de 2027 con cuatro conciertos",
+    "url": "https://www.insonoro.com/noticia/127834/jared-james-nichols-regresara-a-espana-en-febrero-de-2027-con-cuatro-conciertos",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "Brighton 64 llevarán su gira de despedida a Pamplona y Torrelavega en noviembre",
+    "url": "https://www.insonoro.com/noticia/127833/brighton-64-llevaran-su-gira-de-despedida-a-pamplona-y-torrelavega-en-noviembre-",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "Suburbia presenta \"SIC day\", un minuto de punk, hartazgo y crítica social",
+    "url": "https://www.insonoro.com/noticia/127832/suburbia-presenta-_sic-day_--un-minuto-de-punk--hartazgo-y-critica-social",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "Dandoguerra publica su nuevo álbum \"Justicia\"",
+    "url": "https://www.insonoro.com/noticia/127831/dandoguerra-publica-su-nuevo-album-_justicia_",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "The Daltonics publican su nuevo EP \"Hoy también se sale\" y preparan su presentación en Bilbao",
+    "url": "https://www.insonoro.com/noticia/127830/the-daltonics-publican-su-nuevo-ep-_hoy-tambien-se-sale_-y-preparan-su-presentacion-en-bilbao",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "Hatebreed anuncian \"Fatal Paradox\", su nuevo disco, y estrenan el single \"Kill Count Increase\"",
+    "url": "https://www.insonoro.com/noticia/127829/hatebreed-anuncian-_fatal-paradox_--su-nuevo-disco--y-estrenan-el-single-_kill-count-increase_",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "Bloodhunter y Death & Legacy anuncian una gira conjunta por cinco ciudades",
+    "url": "https://www.insonoro.com/noticia/127828/bloodhunter-y-death-&-legacy-anuncian-una-gira-conjunta-por-cinco-ciudades",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "Leverse presenta \"Sigue y despega\", segundo adelanto de su próximo disco",
+    "url": "https://www.insonoro.com/noticia/127826/leverse-presenta-_sigue-y-despega_--segundo-adelanto-de-su-proximo-disco",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "Nukore presentan \"Break The Chains\", primer adelanto de su próximo disco",
+    "url": "https://www.insonoro.com/noticia/127822/nukore-presentan-_break-the-chains_--primer-adelanto-de-su-proximo-disco-",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "Bryan Adams publica \"How’s It Goin’\", su nuevo álbum inspirado en Canadá",
+    "url": "https://www.insonoro.com/noticia/127820/bryan-adams-publica-_how-s-it-goin-_--su-nuevo-album-inspirado-en-canada",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "Kiko Veneno publica \"Precisamente\", su nuevo álbum",
+    "url": "https://www.insonoro.com/noticia/127819/kiko-veneno-publica-_precisamente_--su-nuevo-album",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "Spike And The Gimme Gimmes comienzan esta semana su gira peninsular \"Take The Fall Tour\"",
+    "url": "https://www.insonoro.com/noticia/127818/spike-and-the-gimme-gimmes-comienzan-esta-semana-su-gira-peninsular-_take-the-fall-tour_",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "Peiremans+ presentan \"Durangoko Palentinoan\", adelanto de su nuevo disco",
+    "url": "https://www.insonoro.com/noticia/127816/peiremans--presentan-_durangoko-palentinoan_--adelanto-de-su-nuevo-disco",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "LeanWolf anuncia dos conciertos en España dentro de su Spanish Tour 2026",
+    "url": "https://www.insonoro.com/noticia/127814/leanwolf-anuncia-dos-conciertos-en-espana-dentro-de-su-spanish-tour-2026",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "Moorah publica su nuevo álbum \"The Beast Called Ego\"",
+    "url": "https://www.insonoro.com/noticia/127813/moorah-publica-su-nuevo-album-_the-beast-called-ego_",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "Arrasateko Gaztetxea presenta su programación de conciertos para los jueves de noviembre",
+    "url": "https://www.insonoro.com/noticia/127812/arrasateko-gaztetxea-presenta-su-programacion-de-conciertos-para-los-jueves-de-noviembre",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "Talco anuncia cinco encuentros gratuitos para presentar su nuevo disco, \"Freek\"",
+    "url": "https://www.insonoro.com/noticia/127811/talco-anuncia-cinco-encuentros-gratuitos-para-presentar-su-nuevo-disco--_freek_",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "REC presenta \"Señalan\", nuevo single de rap-metal",
+    "url": "https://www.insonoro.com/noticia/127807/rec-presenta-_senalan_--nuevo-single-de-rap-metal-",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "Dale Punki Dale 341, entrevista a Insurrectos",
+    "url": "https://www.insonoro.com/noticia/127805/dale-punki-dale-341--entrevista-a-insurrectos",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "Nina Busta presenta \"Viernes día de Venus\", primer adelanto de su EP \"333\"",
+    "url": "https://www.insonoro.com/noticia/127803/nina-busta-presenta-_viernes-dia-de-venus_--primer-adelanto-de-su-ep-_333_",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "Julio Blanco presenta \"Basta\", un single contra la polarización y los abusos de poder",
+    "url": "https://www.insonoro.com/noticia/127802/julio-blanco-presenta-_basta_--un-single-contra-la-polarizacion-y-los-abusos-de-poder",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "Midnight Generation anuncian conciertos en Barcelona y Madrid en septiembre de 2027",
+    "url": "https://www.insonoro.com/noticia/127800/midnight-generation-anuncian-conciertos-en-barcelona-y-madrid-en-septiembre-de-2027",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "Niña Polaca llegará a Escenario Santander el 13 de noviembre con su gira \"Onu Tour\"",
+    "url": "https://www.insonoro.com/noticia/127797/nina-polaca-llegara-a-escenario-santander-el-13-de-noviembre-con-su-gira-_onu-tour_",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "Kleejoss publican \"Un Apocalipsis Después\", su primer disco de estudio como trío",
+    "url": "https://www.insonoro.com/noticia/127796/kleejoss-publican-_un-apocalipsis-despues_--su-primer-disco-de-estudio-como-trio",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-10"
+  },
+  {
     "titulo": "Gruta 77 prepara tres semanas de conciertos antes de su cierre definitivo",
-    "resumen": "La histórica sala madrileña ha anunciado una programación de despedida con bandas como The Nomads, The Upsessions, The Fuzztones y Mamá Ladilla antes de cerrar sus puertas.",
-    "fecha": "2026-11-09",
-    "fuente": "Insonoro.com",
-    "url": "https://www.insonoro.com/noticia/127795/gruta-77-prepara-tres-semanas-de-conciertos-antes-de-su-cierre-definitivo"
+    "url": "https://www.insonoro.com/noticia/127795/gruta-77-prepara-tres-semanas-de-conciertos-antes-de-su-cierre-definitivo",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-10"
   },
   {
-    "titulo": "Jatera nace en Cantabria con músicos de The Birras, ARDEN y Karne Cruda",
-    "resumen": "El nuevo trío cántabro reúne a Monchi, Víctor y César y prepara sus primeras canciones con la intención de grabar un álbum debut.",
-    "fecha": "2026-11-09",
-    "fuente": "Insonoro.com",
-    "url": "https://www.insonoro.com/noticia/127798/jatera--nuevo-proyecto-con-musicos-conocidos-de-la-escena-cantabra"
+    "titulo": "The Muggs regresan a la península en mayo y junio de 2027 con una extensa gira",
+    "url": "https://www.insonoro.com/noticia/127791/the-muggs-regresan-a-la-peninsula-en-mayo-y-junio-de-2027-con-una-extensa-gira",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-10"
   },
   {
-    "titulo": "The Interrupters anuncian su nuevo álbum, Battle Scars",
-    "resumen": "La banda estadounidense de ska-punk publicará Battle Scars el 29 de enero de 2027 y ha adelantado el disco con el single y videoclip Back From The Dead.",
-    "fecha": "2026-11-05",
-    "fuente": "Kerrang!",
-    "url": "https://www.kerrang.com/the-interrupters-announce-new-album-battle-scars-and-share-single-back-from-the-dead"
+    "titulo": "Rata Blanca celebrará su 40 aniversario con una extensa gira por España en mayo de 2027",
+    "url": "https://www.insonoro.com/noticia/127647/rata-blanca-celebrara-su-40-aniversario-con-una-extensa-gira-por-espana-en-mayo-de-2027",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-10"
   },
   {
-    "titulo": "Farsoth ficha por M-Theory Audio y presenta Chainsaw Cult",
-    "resumen": "La banda sueca de death metal anuncia su fichaje por M-Theory Audio y estrena Chainsaw Cult como primer adelanto de su tercer álbum, previsto para primavera de 2027.",
-    "fecha": "2026-11-07",
-    "fuente": "Insonoro.com",
-    "url": "https://insonoro.com/noticia/127755/farsoth-ficha-por-m-theory-audio-y-presenta-el-single-_chainsaw-cult_"
+    "titulo": "BURZ, la nueva banda de Fernando (Estricalla, El Corazón del Sapo, Kuraia), prepara sus primeros conciertos",
+    "url": "https://www.insonoro.com/noticia/127663/burz--la-nueva-banda-de-fernando--estricalla--el-corazon-del-sapo--kuraia---prepara-sus-primeros-conciertos",
+    "fuente": "Insonoro",
+    "fecha": "2026-11-10"
   },
   {
-    "titulo": "EZEZEZ publica Car Crasha Sorotiko Bidien, último adelanto de Burubero",
-    "resumen": "El cuarteto bilbaíno presenta el tercer single de su próximo álbum, que llegará el 27 de noviembre y combina elementos de punk, grunge y rock.",
-    "fecha": "2026-11-05",
-    "fuente": "ESCplus",
-    "url": "https://www.escplus.es/musica/2026/ezezez-car-crasha-sorotiko-bidien-burubero/"
+    "titulo": "Talco anuncia conciertos íntimos y gratuitos en Barcelona, Madrid y Bilbao para presentar “Freek”, su nuevo disco",
+    "url": "https://mariskalrock.com/actualidad/talco-anuncia-conciertos-intimos-y-gratuitos-en-barcelona-madrid-y-bilbao-para-presentar-freek-su-nuevo-disco/",
+    "fuente": "MariskalRock",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "Resurrection Fest abre la nueva venta de entradas para su edición de 2027, con Mötley Crüe, Parkway Drive, Evanescence y Lorna Shore al frente",
+    "url": "https://mariskalrock.com/actualidad/resurrection-fest-abre-la-nueva-venta-de-entradas-para-su-edicion-de-2027-con-motley-crue-parkway-drive-evanescence-y-lorna-shore-al-frente/",
+    "fuente": "MariskalRock",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "Entrevista a Escarnio: \"No hablamos de política, fútbol o religión dentro de la banda y gracias a eso la cosa funciona bien de bien\"",
+    "url": "https://mariskalrock.com/actualidad/entrevista-a-escarnio-no-hablamos-de-politica-futbol-o-religion-dentro-de-la-banda-y-gracias-a-eso-la-cosa-funciona-bien-de-bien/",
+    "fuente": "MariskalRock",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "Muere Del Casher, inventor del wah-wah, el pedal favorito de Slash (Guns N’ Roses), Kirk Hammett (Metallica), Jimi Hendrix y millones de guitarristas en todo el mundo",
+    "url": "https://mariskalrock.com/actualidad/muere-del-casher-inventor-del-wah-wah-el-pedal-de-guitarra-favorito-de-slash-guns-n-roses-kirk-hammett-metallica-o-jimi-hendrix/",
+    "fuente": "MariskalRock",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "Entrevista a Noche Cero: \"Quiero tener esa libertad; poder soltar una carcajada, escupir una verdad incómoda o bajar la voz cuando toca\"",
+    "url": "https://mariskalrock.com/actualidad/entrevista-a-noche-cero-quiero-tener-esa-libertad-poder-soltar-una-carcajada-escupir-una-verdad-incomoda-o-bajar-la-voz-cuando-toca/",
+    "fuente": "MariskalRock",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "Crónica de 20/20 + The Bo Derek’s en Bilbao: Un relámpago inapelable",
+    "url": "https://mariskalrock.com/actualidad/cronica-de-20-20-the-bo-dereks-en-bilbao-un-relampago-inapelable/",
+    "fuente": "MariskalRock",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "Crónica de Joe Bonamassa en Madrid: Maestría a las seis cuerdas",
+    "url": "https://mariskalrock.com/actualidad/cronica-de-joe-bonamassa-en-madrid-maestria-a-las-seis-cuerdas/",
+    "fuente": "MariskalRock",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "Blackie Lawless dice que hay partes que ha compuesto para el nuevo disco de W.A.S.P. que \"son una porquería”",
+    "url": "https://mariskalrock.com/actualidad/blackie-lawless-dice-que-hay-partes-que-ha-compuesto-para-el-nuevo-disco-de-w-a-s-p-que-son-una-porqueria/",
+    "fuente": "MariskalRock",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "El compromiso de Michael Angelo Batio para la gira de Manowar que pasará por España: \"Vamos a llevar a los fans a la primera vez que escucharon estas canciones”",
+    "url": "https://mariskalrock.com/actualidad/el-compromiso-de-michael-angelo-batio-para-la-gira-de-manowar-que-pasara-por-espana-vamos-a-llevar-a-los-fans-a-la-primera-vez-que-escucharon-estas-canciones/",
+    "fuente": "MariskalRock",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "Vein Slitter se prepara para lanzar \"Conscious\", su próximo single dedicado a \"las personas especiales\" que la sociedad \"discrimina\"",
+    "url": "https://mariskalrock.com/noticias-breves/vein-slitter-se-prepara-para-lanzar-conscious-su-proximo-single-dedicado-a-las-personas-especiales-que-la-sociedad-discrimina/",
+    "fuente": "MariskalRock",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "Crónica de Sôber + Sweet Rage en Bilbao: Elegancia, músculo y memoria",
+    "url": "https://mariskalrock.com/actualidad/cronica-de-sober-sweet-rage-en-bilbao-elegancia-musculo-y-memoria/",
+    "fuente": "MariskalRock",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "Entrevistas a Angelus Apatrida, Crummy y Cristobal Cintas y la mejor programación de rock y metal en nuestra radio",
+    "url": "https://mariskalrock.com/actualidad/entrevistas-a-angelus-apatrida-crummy-y-cristobal-cintas-y-la-mejor-programacion-de-rock-y-metal-en-nuestra-radio/",
+    "fuente": "MariskalRock",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "Premiere: Hear Meridian Veil's Debut Single \"The Watcher\"",
+    "url": "https://metalinjection.net/news/premiere-hear-meridian-veils-debut-single-the-watcher",
+    "fuente": "Metal Injection",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "DS Premiere: Brackish – “Your Sister’s Apartment”",
+    "url": "https://dyingscene.com/ds-premiere-brackish-your-sisters-apartment/",
+    "fuente": "Dying Scene",
+    "fecha": "2026-11-10"
+  },
+  {
+    "titulo": "Watch: Sepultura Plays Final Show In Sāo Paulo, Brazil",
+    "url": "https://metalinjection.net/news/watch-sepultura-plays-final-show-in-sao-paulo-brazil",
+    "fuente": "Metal Injection",
+    "fecha": "2026-11-09"
+  },
+  {
+    "titulo": "Kerry King Teases “My War” From Upcoming Sophomore Solo Album",
+    "url": "https://metalinjection.net/new-music/kerry-king-teases-my-war-from-upcoming-sophomore-solo-album",
+    "fuente": "Metal Injection",
+    "fecha": "2026-11-09"
+  },
+  {
+    "titulo": "Watch: Silly Goose Goes Wild at Denny’s, Music Video Forthcoming",
+    "url": "https://metalinjection.net/news/watch-silly-goose-goes-wild-at-dennys-music-video-forthcoming",
+    "fuente": "Metal Injection",
+    "fecha": "2026-11-09"
+  },
+  {
+    "titulo": "Watch: Deftones Play Unreleased 'Eros' Track \"Melanie\" at Dia De Los Deftones",
+    "url": "https://metalinjection.net/news/watch-deftones-play-unreleased-eros-track-melanie-at-dia-de-los-deftones",
+    "fuente": "Metal Injection",
+    "fecha": "2026-11-09"
+  },
+  {
+    "titulo": "Watch: Speed Frontman Jem Siow Joins Killswitch Engage Onstage For \"My Last Serenade\"",
+    "url": "https://metalinjection.net/news/watch-speed-frontman-jem-siow-joins-killswitch-engage-onstage-for-my-last-serenade",
+    "fuente": "Metal Injection",
+    "fecha": "2026-11-09"
+  },
+  {
+    "titulo": "NYC post-hardcore rockers SKY CASTLES turn a near-fatal crash into into “010103”",
+    "url": "https://idioteq.com/nyc-post-hardcore-rockers-sky-castles-010103/",
+    "fuente": "IDIOTEQ",
+    "fecha": "2026-11-09"
+  },
+  {
+    "titulo": "Taking Back Sunday’s Eddie Reyes on Long Island hardcore before the emo boom: revisiting his 2005 interview",
+    "url": "https://idioteq.com/taking-back-sundays-eddie-reyes-on-long-island-hardcore-before-the-emo-boom-2005-interview/",
+    "fuente": "IDIOTEQ",
+    "fecha": "2026-11-09"
+  },
+  {
+    "titulo": "AS CITIES BURN rebuild their guitar-driven post-hardcore around Cody Bonnette’s songs on “brain matter(s)”",
+    "url": "https://idioteq.com/as-cities-burn-brain-matters/",
+    "fuente": "IDIOTEQ",
+    "fecha": "2026-11-09"
+  },
+  {
+    "titulo": "Meet the Connecticut Slipknot That Got There First",
+    "url": "https://metalinjection.net/editorials/meet-the-connecticut-slipknot-that-got-there-first",
+    "fuente": "Metal Injection",
+    "fecha": "2026-11-08"
+  },
+  {
+    "titulo": "Vote Durst: Limp Bizkit's Fred Durst Announces a Campaign for… Something",
+    "url": "https://metalinjection.net/news/vote-durst-limp-bizkits-fred-durst-announces-a-campaign-for-something",
+    "fuente": "Metal Injection",
+    "fecha": "2026-11-08"
+  },
+  {
+    "titulo": "Tom Morello on Son Roman: \"It’s Not Nepotism When Your Kid’s That F***ing Good\"",
+    "url": "https://metalinjection.net/news/tom-morello-on-son-roman-its-not-nepotism-when-your-kids-that-fing-good",
+    "fuente": "Metal Injection",
+    "fecha": "2026-11-08"
+  },
+  {
+    "titulo": "US-German art-punks SMILE  turn working-class survival into urgent noise-rock on “Gotta Run”",
+    "url": "https://idioteq.com/us-german-art-punks-smile-gotta-run/",
+    "fuente": "IDIOTEQ",
+    "fecha": "2026-11-08"
+  },
+  {
+    "titulo": "Vancouver’s novas bring years of metalcore friendships to the uneasy post-rock of “Oh Moon”",
+    "url": "https://idioteq.com/novas-oh-moon/",
+    "fuente": "IDIOTEQ",
+    "fecha": "2026-11-08"
+  },
+  {
+    "titulo": "OUTSPOKEN revisit “The Current”, confront their reunion history ahead of a European tour (interview and photo gallery)",
+    "url": "https://idioteq.com/outspoken-revisit-the-current-interview-and-photo-gallery/",
+    "fuente": "IDIOTEQ",
+    "fecha": "2026-11-08"
+  },
+  {
+    "titulo": "DINERBOY explain the grief, dark humour and haunted house behind “Better Home”",
+    "url": "https://idioteq.com/dinerboy-better-home/",
+    "fuente": "IDIOTEQ",
+    "fecha": "2026-11-08"
+  },
+  {
+    "titulo": "Ian Gillan Resting After Successful Procedure Following Deep Purple’s Postponed European Tour",
+    "url": "https://metalinjection.net/news/ian-gillan-resting-after-successful-procedure-following-deep-purples-postponed-european-tour",
+    "fuente": "Metal Injection",
+    "fecha": "2026-11-07"
+  },
+  {
+    "titulo": "Watch: Chelsea Wolfe Releases Brooding Video For \"Halo\"",
+    "url": "https://metalinjection.net/news/watch-chelsea-wolfe-releases-brooding-video-for-halo",
+    "fuente": "Metal Injection",
+    "fecha": "2026-11-07"
+  },
+  {
+    "titulo": "Ozzfest Returns, Turnstile Declines Metallica Tour + More Top Stories of the Week",
+    "url": "https://metalinjection.net/injection-reflection/ozzfest-returns-turnstile-declines-metallica-tour-more-top-stories-of-the-week",
+    "fuente": "Metal Injection",
+    "fecha": "2026-11-07"
+  },
+  {
+    "titulo": "The 5 Best Derrick Green-Era Sepultura Songs",
+    "url": "https://metalinjection.net/lists/the-5-best-derrick-green-era-sepultura-songs",
+    "fuente": "Metal Injection",
+    "fecha": "2026-11-07"
+  },
+  {
+    "titulo": "Burn Eternal, Carnifex, We Came As Romans & More Added To Metal Injection's Top Tracks of the Week",
+    "url": "https://metalinjection.net/playlist/top-tracks-of-the-week-playlist/burn-eternal-carnifex-we-came-as-romans-more-added-to-metal-injections-top-tracks-of-the-week",
+    "fuente": "Metal Injection",
+    "fecha": "2026-11-06"
+  },
+  {
+    "titulo": "Watch: Celine Dion Plays Air Bass to Metallica at the Sphere",
+    "url": "https://metalinjection.net/news/watch-celine-dion-plays-air-bass-to-metallica-at-the-sphere",
+    "fuente": "Metal Injection",
+    "fecha": "2026-11-06"
+  },
+  {
+    "titulo": "Sharon Osbourne Says Ozzfest Is Mostly Booked",
+    "url": "https://metalinjection.net/news/sharon-osbourne-says-ozzfest-is-mostly-booked",
+    "fuente": "Metal Injection",
+    "fecha": "2026-11-06"
+  },
+  {
+    "titulo": "Watch: Carnifex Drops Video For \"The Process Of Pain\" Featuring Chaney Crabb of Entheos",
+    "url": "https://metalinjection.net/new-music/watch-carnifex-drops-video-for-the-process-of-pain-featuring-chaney-crabb-of-entheos",
+    "fuente": "Metal Injection",
+    "fecha": "2026-11-06"
+  },
+  {
+    "titulo": "Hatebreed's 'Fatal Paradox' Is Out Now, Grab an Exclusive Vinyl From Metal Injection",
+    "url": "https://metalinjection.net/new-music/hatebreeds-fatal-paradox-is-out-now-grab-an-exclusive-vinyl-from-metal-injection",
+    "fuente": "Metal Injection",
+    "fecha": "2026-11-06"
+  },
+  {
+    "titulo": "Watch: WWE's Rhea Ripley Join Motionless in White On Stage",
+    "url": "https://metalinjection.net/news/watch-wwes-rhea-ripley-join-motionless-in-white-on-stage",
+    "fuente": "Metal Injection",
+    "fecha": "2026-11-06"
+  },
+  {
+    "titulo": "The Weekly Injection: New Releases From Hatebreed, Cult of Luna, and More Out This Week — 11.6",
+    "url": "https://metalinjection.net/upcoming-releases/heavy-new-releases/the-weekly-injection-new-releases-from-hatebreed-cult-of-luna-and-more-out-this-week-11-6",
+    "fuente": "Metal Injection",
+    "fecha": "2026-11-06"
+  },
+  {
+    "titulo": "Dying Scene Radio Presents: Four Records – Episode 32: Adam Davis (Omnigone, Link 80)",
+    "url": "https://dyingscene.com/dying-scene-radio-presents-four-records-episode-32-adam-davis-omnigone-link-80/",
+    "fuente": "Dying Scene",
+    "fecha": "2026-11-06"
+  },
+  {
+    "titulo": "Watch: Here’s That Haywire Video the NYPD Broke Up",
+    "url": "https://metalinjection.net/new-music/watch-heres-that-haywire-video-the-nypd-broke-up",
+    "fuente": "Metal Injection",
+    "fecha": "2026-11-05"
+  },
+  {
+    "titulo": "Coheed and Cambria Announce 2027 Neverender Cruise With Glassjaw, Joyce Manor and More",
+    "url": "https://metalinjection.net/news/coheed-and-cambria-announce-2027-neverender-cruise-with-glassjaw-joyce-manor-and-more",
+    "fuente": "Metal Injection",
+    "fecha": "2026-11-05"
+  },
+  {
+    "titulo": "Listen: Comeback Kid Taps Courtney LaPlante For New Single, \"Shedding Season\"",
+    "url": "https://metalinjection.net/new-music/listen-comeback-kid-taps-courtney-laplante-for-new-single-shedding-season",
+    "fuente": "Metal Injection",
+    "fecha": "2026-11-05"
+  },
+  {
+    "titulo": "Chuck Billy of Testament on Reliving His Cancer Experience, Opening Up Publicly [Exclusive]",
+    "url": "https://metalinjection.net/video/chuck-billy-of-testament-on-reliving-his-cancer-experience-opening-up-publicly-exclusive",
+    "fuente": "Metal Injection",
+    "fecha": "2026-11-05"
+  },
+  {
+    "titulo": "Listen: Death Angel Release Snarky New Single, \"The Never Was\"",
+    "url": "https://metalinjection.net/new-music/listen-death-angel-release-snarky-new-single-the-never-was",
+    "fuente": "Metal Injection",
+    "fecha": "2026-11-05"
+  },
+  {
+    "titulo": "Knifetwister Records To Release “Trans Riot!”: A Benefit Compilation Supporting Transgender Communities",
+    "url": "https://dyingscene.com/knifetwister-records-to-release-trans-riot-a-benefit-compilation-supporting-transgender-communities/",
+    "fuente": "Dying Scene",
+    "fecha": "2026-11-05"
+  },
+  {
+    "titulo": "Work, motherhood and weekends on stage: the women behind Timmins pop-punks SAVING BAMBI",
+    "url": "https://idioteq.com/saving-bambi/",
+    "fuente": "IDIOTEQ",
+    "fecha": "2026-11-05"
+  },
+  {
+    "titulo": "Unmade revisit the adventurous side of 90s guitar rock through their hardcore roots",
+    "url": "https://idioteq.com/unmade-debut-7/",
+    "fuente": "IDIOTEQ",
+    "fecha": "2026-11-05"
+  },
+  {
+    "titulo": "Death-metal dads, hardcore sons: the family story behind Zeeland’s INHERITED",
+    "url": "https://idioteq.com/inherited-hardcore/",
+    "fuente": "IDIOTEQ",
+    "fecha": "2026-11-05"
+  },
+  {
+    "titulo": "DS Photo Gallery: Angel Du$t, Agnostic Front accompanied by Step 2 This – Miami, FL (10/03/26)",
+    "url": "https://dyingscene.com/ds-photo-gallery-angel-dut-agnostic-front-accompanied-by-step-2-this-miami-fl-10-03-26/",
+    "fuente": "Dying Scene",
+    "fecha": "2026-11-04"
+  },
+  {
+    "titulo": "DS Interview: Tim Stegall talks “Anarchy in the Studio” and Punk History",
+    "url": "https://dyingscene.com/ds-interview-tim-stegall-talks-anarchy-in-the-studio-and-punk-history/",
+    "fuente": "Dying Scene",
+    "fecha": "2026-11-02"
+  },
+  {
+    "titulo": "DS Feature: Cleaning out the Inbox (10/30/2026)",
+    "url": "https://dyingscene.com/cleaning-out-the-inbox-10-30-2026/",
+    "fuente": "Dying Scene",
+    "fecha": "2026-10-30"
+  },
+  {
+    "titulo": "DS Book Club: Jim Ruland Talks His Newest Crime Novel, “Mightier Than The Sword”",
+    "url": "https://dyingscene.com/ds-book-club-jim-ruland-talks-his-newest-crime-novel-mightier-than-the-sword/",
+    "fuente": "Dying Scene",
+    "fecha": "2026-10-27"
+  },
+  {
+    "titulo": "Dying Scene Radio Presents: Four Records – Episode 31: Molly Tie (Author “Rebel Grrrls",
+    "url": "https://dyingscene.com/dying-scene-radio-presents-four-records-episode-31-molly-tie-author-rebel-grrrls/",
+    "fuente": "Dying Scene",
+    "fecha": "2026-10-23"
   }
 ]
