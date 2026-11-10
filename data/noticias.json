@@ -1,37 +1,30 @@
 [
   {
-    "titulo": "Suburbia presenta «SIC day», un minuto de punk, hartazgo y crítica social",
-    "resumen": "La banda colombiana afincada en Braga ha estrenado el primer adelanto de su próximo EP, una pieza de un minuto que cruza punk y hardcore con crítica social.",
-    "fecha": "2026-11-10",
-    "fuente": "Insonoro",
-    "url": "https://www.insonoro.com/noticia/127832/suburbia-presenta-_sic-day_--un-minuto-de-punk--hartazgo-y-critica-social"
-  },
-  {
-    "titulo": "Dandoguerra publica su nuevo álbum «Justicia»",
-    "resumen": "El grupo ha publicado de forma independiente el álbum Justicia y lo presenta con «Hacia la gloria», un corte de hardcore y metalcore contra el sistema.",
-    "fecha": "2026-11-10",
-    "fuente": "Insonoro",
-    "url": "https://www.insonoro.com/noticia/127831/dandoguerra-publica-su-nuevo-album-_justicia_"
-  },
-  {
-    "titulo": "Hatebreed anuncian «Fatal Paradox» y estrenan «Kill Count Increase»",
-    "resumen": "Hatebreed ha anunciado su noveno álbum Fatal Paradox y ha adelantado el lanzamiento con el single de hardcore «Kill Count Increase».",
-    "fecha": "2026-11-10",
-    "fuente": "Insonoro",
-    "url": "https://www.insonoro.com/noticia/127829/hatebreed-anuncian-_fatal-paradox_--su-nuevo-disco--y-estrenan-el-single-_kill-count-increase_"
-  },
-  {
-    "titulo": "Bloodhunter y Death & Legacy anuncian una gira conjunta por cinco ciudades",
-    "resumen": "Las dos bandas españolas unirán fuerzas en una gira de cinco ciudades entre diciembre de 2026 y marzo de 2027, con inicio el 5 de diciembre en Madrid.",
-    "fecha": "2026-11-10",
-    "fuente": "Insonoro",
-    "url": "https://www.insonoro.com/noticia/127828/bloodhunter-y-death-%26-legacy-anuncian-una-gira-conjunta-por-cinco-ciudades"
-  },
-  {
     "titulo": "Nukore presentan «Break The Chains», primer adelanto de su próximo disco",
-    "resumen": "La formación alavesa ha estrenado «Break The Chains», primer adelanto de Any Given Day, álbum anunciado para el 19 de febrero de 2027.",
+    "resumen": "La banda de metal y hardcore de Vitoria-Gasteiz ha estrenado el primer single de Any Given Day, álbum previsto para el 19 de febrero de 2027.",
     "fecha": "2026-11-10",
     "fuente": "Insonoro",
-    "url": "https://www.insonoro.com/noticia/127822/nukore-presentan-_break-the-chains_--primer-adelanto-de-su-proximo-disco-"
+    "url": "https://insonoro.com/noticia/127822/nukore-presentan-_break-the-chains_--primer-adelanto-de-su-proximo-disco-"
+  },
+  {
+    "titulo": "Spike And The Gimme Gimmes comienzan su gira peninsular «Take The Fall Tour»",
+    "resumen": "La banda de punk rock recorrerá siete ciudades españolas y Lisboa entre el 13 y el 21 de noviembre con un repertorio de versiones y su nuevo disco Shit the Bed.",
+    "fecha": "2026-11-10",
+    "fuente": "Insonoro",
+    "url": "https://insonoro.com/noticia/127818/spike-and-the-gimme-gimmes-comienzan-esta-semana-su-gira-peninsular-_take-the-fall-tour_"
+  },
+  {
+    "titulo": "Peiremans+ presentan «Durangoko Palentinoan», adelanto de su nuevo disco",
+    "resumen": "El supergrupo vasco formado por músicos de Berri Txarrak, Bide Ertzean y Kashbad adelanta un álbum que publicará Only In Dreams el 19 de noviembre.",
+    "fecha": "2026-11-10",
+    "fuente": "Insonoro",
+    "url": "https://insonoro.com/noticia/127816/peiremans--presentan-_durangoko-palentinoan_--adelanto-de-su-nuevo-disco"
+  },
+  {
+    "titulo": "Patxa presenta la canción con la que optó al Benidorm Fest",
+    "resumen": "La banda comparte un nuevo single en castellano que mantiene su identidad heavy metal y que ya está disponible en plataformas digitales.",
+    "fecha": "2026-11-10",
+    "fuente": "Insonoro",
+    "url": "https://insonoro.com/noticia/127810/patxa-presenta-la-cancion-con-la-que-opto-al-benidorm-fest"
   }
 ]
