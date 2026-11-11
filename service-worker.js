@@ -1,4 +1,4 @@
-const CACHE_NAME = "radikal-sonoro-v2";
+const CACHE_NAME = "radikal-sonoro-v3";
 const APP_SHELL = ["/", "/index.html", "/manifest.webmanifest", "/radikal-sonoro-logo.jpg"];
 
 self.addEventListener("install", (event) => {
