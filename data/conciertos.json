@@ -1,57 +1,68 @@
 [
   {
+    "fecha": "2026-11-12",
+    "hora": "21:00",
+    "evento": "i hate bouncers + ferrocentro",
+    "artistas": "i hate bouncers + ferrocentro",
+    "sala": "Wurlitzer Ballroom",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://wurlitzerballroom.com/concierto/i-hate-bouncers-2026-11-12",
+    "cartel": ""
+  },
+  {
     "fecha": "2026-11-13",
     "hora": "20:00",
     "evento": "Lágrimas + Svdestada",
-    "artistas": "Punk / hardcore",
-    "sala": "Sala La Trinchera",
+    "artistas": "Lágrimas + Svdestada",
+    "sala": "La Trinchera",
     "ciudad": "Madrid",
     "pais": "España",
-    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/10/13.11-lagrimas-svdestada-madrid-1-150x150.jpg",
-    "url": "https://primeralineavkbar.com/index.php/trinchera/"
+    "url": "https://primeralineavkbar.com/index.php/2026/10/20/viernes-13-de-noviembre-lagrimas-svdestada/",
+    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/10/13.11-lagrimas-svdestada-madrid-1-739x1024.jpg"
+  },
+  {
+    "fecha": "2026-11-13",
+    "hora": "21:30",
+    "evento": "The Nomads + Star Mafia Boy",
+    "artistas": "The Nomads + Star Mafia Boy",
+    "sala": "Gruta 77",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://gruta77.com/events/the-nomads-suecia/",
+    "cartel": "https://gruta77.com/wp-content/uploads/2026/10/13_noviembre-Mahou_web.jpg"
   },
   {
     "fecha": "2026-11-14",
     "hora": "19:30",
     "evento": "Kaxta + Detrapo",
-    "artistas": "Rock estatal",
-    "sala": "Sala La Trinchera",
+    "artistas": "Kaxta + Detrapo",
+    "sala": "La Trinchera",
     "ciudad": "Madrid",
     "pais": "España",
-    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/10/14.11-sabado-noche-kaxta-detrapo-150x150.jpeg",
-    "url": "https://ticketandroll.com/evento/kaxta-detrapo-en-madrid?lang=es"
+    "url": "https://primeralineavkbar.com/index.php/2026/10/20/sabado-14-de-noviembre-kaxta-detrapo/",
+    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/10/14.11-sabado-noche-kaxta-detrapo-767x1024.jpeg"
   },
   {
-    "fecha": "2026-11-18",
-    "hora": "19:00",
-    "evento": "Narkom + Zhed + Undefined Void",
-    "artistas": "Punk / industrial",
-    "sala": "Sala La Trinchera",
+    "fecha": "2026-11-15",
+    "hora": "21:00",
+    "evento": "Pyrex + Traumatizer",
+    "artistas": "Pyrex + Traumatizer",
+    "sala": "Wurlitzer Ballroom",
     "ciudad": "Madrid",
     "pais": "España",
-    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/11/18.11-miercoles--150x150.jpeg",
-    "url": "https://primeralineavkbar.com/index.php/trinchera/"
+    "url": "https://wurlitzerballroom.com/concierto/pyrex-traumatizer-2026-11-15",
+    "cartel": ""
   },
   {
-    "fecha": "2026-11-21",
-    "hora": "13:00",
-    "evento": "Activos Tóxicos + Desmayo",
-    "artistas": "Punk",
-    "sala": "Sala La Trinchera",
+    "fecha": "2026-11-15",
+    "hora": "20:30",
+    "evento": "La Gran Orquesta Republicana Sound System",
+    "artistas": "La Gran Orquesta Republicana Sound System",
+    "sala": "Gruta 77",
     "ciudad": "Madrid",
     "pais": "España",
-    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/11/21.11-sabado-vermut-150x150.png",
-    "url": "https://primeralineavkbar.com/index.php/trinchera/"
-  },
-  {
-    "fecha": "2026-11-21",
-    "hora": "20:00",
-    "evento": "Yacopsae + Rageous Intent + Hedor",
-    "artistas": "Grindcore / hardcore",
-    "sala": "Sala La Trinchera",
-    "ciudad": "Madrid",
-    "pais": "España",
-    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/11/21.11-sabado-noche--150x150.png",
-    "url": "https://primeralineavkbar.com/index.php/trinchera/"
+    "url": "https://gruta77.com/events/la-gran-orquesta-republicana-sound-system/var/ri-0.l-L2/",
+    "cartel": "https://gruta77.com/wp-content/uploads/2026/10/15_noviembre_web.jpg"
   }
 ]
