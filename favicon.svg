@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+<rect width="128" height="128" fill="#080808"/>
+<path d="M0 0h128v18H0zM0 110h128v18H0z" fill="#d7192d"/>
+<path d="M12 22h104v84H12z" fill="none" stroke="#eeeae1" stroke-width="4"/>
+<text x="64" y="78" text-anchor="middle" font-family="Arial Black,Impact,sans-serif" font-size="48" font-weight="900" fill="#f4d52f" stroke="#d7192d" stroke-width="1.5" paint-order="stroke">RS</text>
+<path d="M17 92h94" stroke="#eeeae1" stroke-width="3"/>
+</svg>
