@@ -495,7 +495,6 @@ t.innerHTML=out;
 }
 
 var audio=document.getElementById("audio"),msg=document.getElementById("msg"),playButton=document.getElementById("play");
-var autoRadioKey="radikal-radio-autostart";
 function prepareRadio(){
   if(!STREAM_URL){msg.textContent="La radio aún no está conectada. Falta la URL de la transmisión.";return false;}
   if(!audio.src || audio.src!==new URL(STREAM_URL,location.href).href) audio.src=STREAM_URL;
@@ -516,10 +515,7 @@ function startRadio(automatic){
     });
   }
 }
-playButton.addEventListener("click",function(){
-  try{localStorage.setItem(autoRadioKey,"1");}catch(e){}
-  startRadio(false);
-});
+playButton.addEventListener("click",function(){startRadio(false);});
 audio.addEventListener("play",function(){msg.textContent="Sonando en vivo · Radikal Sonoro 24H.";playButton.textContent="▶ Radio sonando";});
 audio.addEventListener("pause",function(){if(!audio.ended)playButton.textContent="▶ Escuchar 24H";});
 /* Intento de reproducción al abrir tanto la web como la app instalada.
