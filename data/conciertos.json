@@ -1,52 +1,57 @@
 [
   {
     "fecha": "2026-11-13",
-    "hora": "21:00",
-    "evento": "Spike and The Gimme Gimmes",
-    "artistas": "Punk rock",
-    "sala": "Jimmy Jazz",
-    "ciudad": "Vitoria-Gasteiz",
-    "pais": "España",
-    "url": "https://www.hfmncrew.cat/es/tickets/"
-  },
-  {
-    "fecha": "2026-11-13",
-    "hora": "",
-    "evento": "Neuroot + Artritis + Peedoh",
-    "artistas": "Hardcore punk / punk acelerado",
-    "sala": "Mogambo",
-    "ciudad": "Donostia",
-    "pais": "España",
-    "url": "https://insonoro.com/noticia/127839/neuroot-artritis-y-peedoh-compartiran-escenario-este-viernes-en-donosti"
-  },
-  {
-    "fecha": "2026-11-14",
-    "hora": "21:00",
-    "evento": "Spike and The Gimme Gimmes",
-    "artistas": "Punk rock",
-    "sala": "Sala Estilo",
-    "ciudad": "Oviedo",
-    "pais": "España",
-    "url": "https://www.hfmncrew.cat/es/tickets/"
-  },
-  {
-    "fecha": "2026-11-14",
     "hora": "20:00",
-    "evento": "Against the Waves + The Fall of Atlantis",
-    "artistas": "Metalcore",
-    "sala": "Sala Uni",
+    "evento": "Lágrimas + Svdestada",
+    "artistas": "Punk / hardcore",
+    "sala": "Sala La Trinchera",
     "ciudad": "Madrid",
     "pais": "España",
-    "url": "https://rockingticket.com/"
+    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/10/13.11-lagrimas-svdestada-madrid-1-150x150.jpg",
+    "url": "https://primeralineavkbar.com/index.php/trinchera/"
   },
   {
-    "fecha": "2026-11-15",
-    "hora": "21:00",
-    "evento": "Spike and The Gimme Gimmes",
-    "artistas": "Punk rock",
-    "sala": "Inn Club",
-    "ciudad": "A Coruña",
+    "fecha": "2026-11-14",
+    "hora": "19:30",
+    "evento": "Kaxta + Detrapo",
+    "artistas": "Rock estatal",
+    "sala": "Sala La Trinchera",
+    "ciudad": "Madrid",
     "pais": "España",
-    "url": "https://www.hfmncrew.cat/es/tickets/"
+    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/10/14.11-sabado-noche-kaxta-detrapo-150x150.jpeg",
+    "url": "https://ticketandroll.com/evento/kaxta-detrapo-en-madrid?lang=es"
+  },
+  {
+    "fecha": "2026-11-18",
+    "hora": "19:00",
+    "evento": "Narkom + Zhed + Undefined Void",
+    "artistas": "Punk / industrial",
+    "sala": "Sala La Trinchera",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/11/18.11-miercoles--150x150.jpeg",
+    "url": "https://primeralineavkbar.com/index.php/trinchera/"
+  },
+  {
+    "fecha": "2026-11-21",
+    "hora": "13:00",
+    "evento": "Activos Tóxicos + Desmayo",
+    "artistas": "Punk",
+    "sala": "Sala La Trinchera",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/11/21.11-sabado-vermut-150x150.png",
+    "url": "https://primeralineavkbar.com/index.php/trinchera/"
+  },
+  {
+    "fecha": "2026-11-21",
+    "hora": "20:00",
+    "evento": "Yacopsae + Rageous Intent + Hedor",
+    "artistas": "Grindcore / hardcore",
+    "sala": "Sala La Trinchera",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/11/21.11-sabado-noche--150x150.png",
+    "url": "https://primeralineavkbar.com/index.php/trinchera/"
   }
 ]
