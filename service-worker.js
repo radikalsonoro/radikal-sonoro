@@ -1,4 +1,4 @@
-const CACHE_NAME = "radikal-sonoro-v5";
+const CACHE_NAME = "radikal-sonoro-v6";
 const CORE = ["/", "/index.html", "/manifest.webmanifest", "/app-icon.svg", "/app-icon-192.png", "/app-icon-512.png", "/favicon.svg"];
 self.addEventListener("install", event => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(CORE)).then(() => self.skipWaiting()));
