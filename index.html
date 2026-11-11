@@ -270,7 +270,7 @@ footer{max-width:none;margin:0;padding:24px;text-align:center;background:#050505
 <div class="header-stamp">RUIDO · RESISTENCIA · AUTOGESTIÓN</div>
 </header>
 <nav aria-label="Navegación principal">
-<button id="install-app" type="button">INSTALAR APP</button>
+<button id="install-app" type="button" aria-label="Instalar la aplicación Radikal Sonoro">DESCARGAR APP</button>
 <a class="active" href="#inicio">Inicio</a><a href="#radio">La radio</a><a href="#noticias">Noticias</a><a href="#proximamente">Próximo programa</a><a href="#conciertos">Conciertos</a><a href="#spotify">Podcasts</a><a href="#videos">Bandas libres</a><a href="#contacto">Contacto</a>
 </nav>
 <main>
@@ -339,23 +339,30 @@ footer{max-width:none;margin:0;padding:24px;text-align:center;background:#050505
   if (!installButton) return;
 
   var alreadyInstalled = window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true;
-  // Solo mostrar el botón cuando el navegador ofrezca una instalación real.
-  installButton.hidden = true;
+  // El botón permanece visible: Chrome puede entregar el aviso de instalación
+  // después de cargar la página, por eso no debemos ocultarlo mientras esperamos.
+  installButton.hidden = alreadyInstalled;
   if (alreadyInstalled) return;
 
   window.addEventListener("beforeinstallprompt", function(event){
     event.preventDefault();
     installPrompt = event;
-    installButton.hidden = false;
-    installButton.textContent = "INSTALAR APP";
+    installButton.textContent = "DESCARGAR APP";
+    installButton.setAttribute("aria-label", "Instalar la aplicación Radikal Sonoro");
   });
 
   installButton.addEventListener("click", async function(){
-    if (!installPrompt) return;
-    installPrompt.prompt();
-    var choice = await installPrompt.userChoice;
-    installPrompt = null;
-    if (choice && choice.outcome === "accepted") installButton.hidden = true;
+    if (installPrompt) {
+      installPrompt.prompt();
+      var choice = await installPrompt.userChoice;
+      installPrompt = null;
+      if (choice && choice.outcome === "accepted") installButton.hidden = true;
+      return;
+    }
+    // Si Chrome aún no ofrece el aviso nativo, mantenemos el botón operativo
+    // indicando la ruta de instalación del propio navegador, sin alertas.
+    installButton.textContent = "CHROME ⋮ · INSTALAR APP";
+    installButton.setAttribute("aria-label", "En Chrome, abre el menú y selecciona Instalar aplicación");
   });
 
   window.addEventListener("appinstalled", function(){
