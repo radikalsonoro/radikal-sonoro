@@ -269,7 +269,7 @@ button[hidden]{display:none!important}
 <div class="header-stamp">RUIDO · RESISTENCIA · AUTOGESTIÓN</div>
 </header>
 <nav aria-label="Navegación principal">
-<button id="install-app" type="button" hidden>INSTALAR APP</button>
+<button id="install-app" type="button">INSTALAR APP</button>
 <a class="active" href="#inicio">Inicio</a><a href="#radio">La radio</a><a href="#noticias">Noticias</a><a href="#proximamente">Próximo programa</a><a href="#conciertos">Conciertos</a><a href="#spotify">Podcasts</a><a href="#videos">Bandas libres</a><a href="#contacto">Contacto</a>
 </nav>
 <main>
@@ -336,18 +336,40 @@ button[hidden]{display:none!important}
   var installButton = document.getElementById("install-app");
   var installPrompt = null;
   if (!installButton) return;
+
+  // El acceso a la instalación siempre queda visible; algunos navegadores
+  // no emiten beforeinstallprompt aunque permitan añadir la web al inicio.
+  var alreadyInstalled = window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true;
+  installButton.hidden = alreadyInstalled;
+
   window.addEventListener("beforeinstallprompt", function(event){
     event.preventDefault();
     installPrompt = event;
     installButton.hidden = false;
+    installButton.textContent = "INSTALAR APP";
   });
+
   installButton.addEventListener("click", async function(){
-    if (!installPrompt) return;
-    installPrompt.prompt();
-    await installPrompt.userChoice;
-    installPrompt = null;
-    installButton.hidden = true;
+    if (installPrompt) {
+      installPrompt.prompt();
+      var choice = await installPrompt.userChoice;
+      installPrompt = null;
+      if (choice && choice.outcome === "accepted") installButton.hidden = true;
+      return;
+    }
+
+    var ua = navigator.userAgent || "";
+    var isIOS = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
+    var isAndroid = /Android/i.test(ua);
+    if (isIOS) {
+      alert("Para instalar Radikal Sonoro en iPhone/iPad:\n1. Abre esta web en Safari.\n2. Pulsa Compartir.\n3. Elige «Añadir a pantalla de inicio».\n4. Pulsa «Añadir».");
+    } else if (isAndroid) {
+      alert("Para instalar Radikal Sonoro:\n1. Abre esta web en Chrome.\n2. Pulsa el menú ⋮.\n3. Elige «Instalar aplicación» o «Añadir a pantalla de inicio».\n4. Confirma la instalación.");
+    } else {
+      alert("Para instalar Radikal Sonoro en este ordenador, abre la web con Chrome o Edge y busca «Instalar Radikal Sonoro» en el menú del navegador o el icono de instalación de la barra de direcciones.");
+    }
   });
+
   window.addEventListener("appinstalled", function(){
     installButton.hidden = true;
     installPrompt = null;
