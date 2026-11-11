@@ -64,19 +64,6 @@ main>section,.magazine-top section{min-width:0;margin:0;padding:20px;background:
 .section-head small{flex:0 0 auto;background:var(--yellow);color:#111;padding:5px 8px;font:500 9px var(--mono);letter-spacing:.08em;text-transform:uppercase;transform:rotate(-2deg)}
 .small{font-size:11px;line-height:1.45}
 #radio,.magazine-top #radio{flex:1;margin:0;padding:18px;background:linear-gradient(110deg,rgba(180,10,25,.84),rgba(0,0,0,.83)),url("https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&q=80") center/cover;border:3px solid var(--paper);box-shadow:8px 8px #000}
-#flyers-programas{grid-column:1/-1;padding:18px;background:#111;border:3px solid var(--paper);box-shadow:7px 7px #000}
-#flyers-programas .section-head{border-color:var(--red)}
-#flyers-programas .section-head h2{font-size:clamp(30px,4vw,48px)}
-#flyers-programas>p{color:var(--paper)}
-.flyer-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr));gap:16px}
-.flyer-slot{min-width:0;max-width:340px;background:#080808;border:1px solid #777;box-shadow:5px 5px var(--red)}
-.flyer-art{min-height:300px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:18px;padding:24px 14px;text-align:center;color:#fff;background:radial-gradient(circle at 50% 40%,#6e1118 0,#26090d 48%,#080808 100%);border:8px solid #eee;outline:2px solid #111;outline-offset:-13px}
-.flyer-art span{font:900 17px var(--display);letter-spacing:.08em;color:var(--yellow)}
-.flyer-art strong{font:900 clamp(35px,5vw,54px)/.9 var(--display);text-shadow:3px 3px #000;transform:rotate(-3deg)}
-.flyer-art small{font:700 11px var(--mono);color:var(--yellow)}
-.flyer-caption{display:flex;flex-direction:column;gap:5px;padding:12px;color:#fff}
-.flyer-caption strong{font:900 17px var(--display);text-transform:uppercase}
-.flyer-caption span{font-size:12px;color:#ddd}
 #radio .section-head{border-color:var(--yellow)}#radio .section-head h2{font-size:clamp(42px,5vw,68px);color:var(--yellow);text-shadow:3px 3px #111}#radio .section-head small{background:var(--paper);color:#111}
 .radio-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:0;background:#080808df;border:1px solid #ffffff80}
 .radio-card{min-width:0;padding:17px;color:var(--paper)}.radio-card+.radio-card{border-left:1px solid #655}
@@ -234,18 +221,8 @@ footer{max-width:none;margin:0;padding:24px;text-align:center;background:#050505
 </div>
 </section>
 <section id="radio"><div class="section-head"><h2>En directo</h2><small>24 horas de música independiente</small></div><div class="radio-grid"><div class="radio-card"><h3>Radikal Sonoro · 24h</h3><p>Nuestra señal online. Dale al play y acompaña la resistencia sonora.</p><button id="play" type="button">▶ Música 24H</button><audio id="audio" controls preload="none"></audio><p class="msg" id="msg" role="status"></p></div><div class="radio-card" id="agora"><h3>Ágora Sol Radio</h3><p>Escucha la emisión en directo de Ágora Sol Radio.</p><audio controls preload="none" src="https://cervera.eldialdigital.com:23141/stream">Tu navegador no admite el reproductor de audio.</audio><p class="small agora-schedule"><strong>RADIKAL SONORO · MIÉRCOLES · 20:00–22:00 H</strong></p><a href="https://www.agorasolradio.org/directo/" target="_blank" rel="noopener">Abrir la web de Ágora Sol Radio ↗</a></div></div></section>
-<section id="flyers-programas">
-<div class="section-head"><h2>Flyers de los programas</h2><small>Carteles · Archivo de emisiones</small></div>
-<p class="small">Cada programa tendrá su propio cartel: entrevistas, especiales e invitados. Iremos incorporando aquí los flyers de cada emisión.</p>
-<div class="flyer-grid">
-<article class="flyer-slot">
-<div class="flyer-art"><span>RADIKAL SONORO</span><strong>PRÓXIMO<br>PROGRAMA</strong><small>MIÉRCOLES · 20:00–22:00 H</small></div>
-<div class="flyer-caption"><strong>Próxima emisión</strong><span>El flyer oficial se publicará aquí.</span></div>
-</article>
-</div>
-</section>
 <section id="noticias"><div class="section-head"><h2>Últimas noticias</h2><small>Underground · Aquí y fuera</small></div><p class="small">Selección de hasta 5 noticias recientes de punk, hardcore, ska y metal independiente. Enlaces a las fuentes originales.</p><div id="news-status" role="status" aria-live="polite">Buscando noticias recientes…</div><ul class="list" id="news-list"><li>Conectando con las fuentes…</li></ul><p class="small">Fuentes: Google News RSS. Los artículos pertenecen a sus medios originales.</p></section>
-<section id="conciertos"><div class="section-head"><h2>Agenda de conciertos</h2><small>Próximas fechas</small></div><p class="small">Hasta 6 conciertos. Madrid y alrededores primero; después, el resto de la escena estatal. Carteles cuando estén disponibles y verificados.</p><p class="small">Agenda colaboradora: <a href="https://primeralineavkbar.com/index.php/trinchera/" target="_blank" rel="noopener noreferrer">La Trinchera · Primera Línea VK Bar</a>.</p><div id="concert-news-status" role="status" aria-live="polite">Buscando anuncios de conciertos…</div><ul class="list" id="concert-news-list"><li>Conectando con las fuentes…</li></ul><p class="small">¿Organizas un concierto o tocas en una banda? Envíanos la información para revisarla.</p>
+<section id="conciertos"><div class="section-head"><h2>Agenda de conciertos</h2><small>Próximas fechas</small></div><p class="small">Hasta 6 conciertos. Madrid y alrededores primero; después, el resto de la escena estatal. Solo se publican conciertos con cartel oficial visible.</p><p class="small">Agenda colaboradora: <a href="https://primeralineavkbar.com/index.php/trinchera/" target="_blank" rel="noopener noreferrer">La Trinchera · Primera Línea VK Bar</a>.</p><div id="concert-news-status" role="status" aria-live="polite">Buscando anuncios de conciertos…</div><ul class="list" id="concert-news-list"><li>Conectando con las fuentes…</li></ul><p class="small">¿Organizas un concierto o tocas en una banda? Envíanos la información para revisarla.</p>
 <form class="box" id="concert-form" name="concert-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" action="/gracias.html"><input type="hidden" name="form-name" value="concert-form"><p hidden><label>No rellenes este campo: <input name="bot-field"></label></p><label>Grupo o artista *<input name="grupo" required></label><label>Nombre del concierto o festival *<input name="evento" required></label><div class="formrow"><label>Fecha *<input type="date" name="fecha" required></label><label>Hora<input type="time" name="hora"></label></div><label>Sala o recinto *<input name="sala" required></label><div class="formrow"><label>Ciudad *<input name="ciudad" required></label><label>País<input name="pais"></label></div><label>Estilo musical<input name="estilo" placeholder="Punk, hardcore, ska, metal…"></label><label>Precio de entrada<input name="precio"></label><label>Enlace de entradas o evento<input type="url" name="enlace" placeholder="https://…"></label><label>Cartel del concierto<input type="file" name="cartel" accept="image/*,.pdf"></label><label>Información adicional<textarea name="info" rows="4"></textarea></label><label>Correo de contacto<input type="email" name="email" required></label><button class="chip" type="submit">Enviar concierto</button><p class="small" id="concert-msg" role="status">Se abrirá tu correo para enviar los datos a Radikal Sonoro. Recuerda adjuntar el cartel si lo tienes.</p></form></section>
 <section id="videos"><div class="section-head"><h2>Bandas libres</h2><small>Descubre · Escucha · Comparte</small></div><p class="bands-intro">Un espacio para descubrir y dar visibilidad a bandas independientes y autogestionadas. Aquí encontrarás búsquedas de videoclips, directos y sesiones de punk, hardcore, ska y metal underground. ¿Tienes una banda? Envíanos tus vídeos y la añadiremos.</p><ul class="list video-grid" id="video-list"><li>Preparando vídeos…</li></ul><p class="small bands-note">Los enlaces te llevan a YouTube. Radikal Sonoro no aloja los vídeos.</p></section>
 <section id="spotify"><div class="section-head"><h2>Podcasts</h2><small>Programas · Sesiones · Archivo</small></div><div class="spot" id="sbox"></div><p class="small">Escucha y sigue los programas de Radikal Sonoro en Spotify.</p><div class="box" style="margin-top:14px"><strong style="font:800 25px Barlow Condensed;text-transform:uppercase">Radikal Sonoro en Ágora Sol Radio</strong><p class="small">Aquí puedes escuchar los podcasts de nuestros programas emitidos en Ágora Sol Radio.</p><a class="chip" href="https://www.agorasolradio.org/podcast/radikalsonoro/" target="_blank" rel="noopener noreferrer">▶ Escuchar podcasts en Ágora Sol ↗</a></div></section>
@@ -302,7 +279,7 @@ async function loadConcertNews(){
     if(!response.ok)throw new Error("No se pudo cargar la agenda");
     var events=await response.json(),today=new Date();today.setHours(0,0,0,0);
     events=(Array.isArray(events)?events:[]).filter(function(ev){
-      if(!ev||!ev.fecha||!ev.url)return false;
+      if(!ev||!ev.fecha||!ev.url||!ev.cartel)return false;
       var d=new Date(ev.fecha+"T00:00:00");return !isNaN(d.getTime())&&d>=today;
     }).slice(0,6);
     list.innerHTML="";list.className="concert-grid";
@@ -312,7 +289,7 @@ async function loadConcertNews(){
       card.className="concert-card";card.setAttribute("data-number",String(index+1).padStart(2,"0"));
       if(ev.cartel){
         var img=document.createElement("img");img.className="concert-poster";img.src=ev.cartel;img.alt="Cartel oficial: "+(ev.evento||ev.artistas||"concierto");img.loading="lazy";
-        img.onerror=function(){var ph=document.createElement("div");ph.className="concert-placeholder";ph.textContent="No se ha podido cargar el cartel oficial";this.parentNode.replaceChild(ph,this);};
+        img.onerror=function(){var card=this.closest(".concert-card");if(card)card.remove();};
         card.appendChild(img);
       }else{
         var ph=document.createElement("div"),tag=document.createElement("span"),name=document.createElement("strong");
@@ -424,8 +401,7 @@ rl.innerHTML=r||'<span class="small">Aquí irán tus redes sociales.</span>';
 (function(){
  var main=document.querySelector("main");
  var radio=document.getElementById("radio");
- var flyers=document.getElementById("flyers-programas");
- var concerts=document.getElementById("conciertos");
+  var concerts=document.getElementById("conciertos");
  var interview=document.getElementById("proximamente");
  var news=document.getElementById("noticias");
  var spotify=document.getElementById("spotify");
@@ -434,7 +410,6 @@ rl.innerHTML=r||'<span class="small">Aquí irán tus redes sociales.</span>';
  var left=document.createElement("div");left.className="magazine-left";
  top.appendChild(left);top.appendChild(concerts);
  left.appendChild(radio);
- if(flyers)left.appendChild(flyers);
  var direct=document.getElementById("directo");
  if(direct)left.appendChild(direct);
  var feature=document.createElement("div");feature.className="magazine-interview";feature.appendChild(interview);
