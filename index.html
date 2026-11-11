@@ -412,7 +412,7 @@ async function loadConcertNews(){
       card.className="concert-card";card.setAttribute("data-number",String(index+1).padStart(2,"0"));
       if(ev.cartel){
         var img=document.createElement("img");img.className="concert-poster";img.src=ev.cartel;img.alt="Cartel oficial: "+(ev.evento||ev.artistas||"concierto");img.loading="lazy";
-        img.onerror=function(){var card=this.closest(".concert-card");if(card)card.remove();};
+        img.onerror=function(){var ph=document.createElement("div"),tag=document.createElement("span"),name=document.createElement("strong");ph.className="concert-placeholder";tag.textContent="CARTEL NO DISPONIBLE";name.textContent=ev.evento||ev.artistas||"Concierto";ph.appendChild(tag);ph.appendChild(name);this.replaceWith(ph);};
         card.appendChild(img);
       }else{
         var ph=document.createElement("div"),tag=document.createElement("span"),name=document.createElement("strong");
