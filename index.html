@@ -3,7 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#090909">
+<meta name="theme-color" content="#d7192d">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Radikal Sonoro">
+<link rel="icon" type="image/svg+xml" href="/app-icon.svg">
 <meta name="description" content="Radikal Sonoro: radio punk, hardcore, ska y metal. Noticias underground, conciertos y cultura alternativa.">
 <link rel="icon" type="image/png" sizes="152x152" href="https://images.zeno.fm/ZziN82g5xsNyVYXh5rx-16695uSCdkZvXw-iJA7_PrA/rs%3Afill%3A152%3A152/q%3A75/g%3Ace%3A0%3A0/aHR0cHM6Ly9wcm94eS56ZW5vLmZtL2NvbnRlbnQvc3RhdGlvbnMvYWd4emZucGxibTh0YzNSaGRITnlNZ3NTQ2tGMWRHaERiR2xsYm5RWWdJQ1E5cy1jMGdvTUN4SU9VM1JoZEdsdmJsQnliMlpwYkdVWWdJQ1ExcGJTX0FvTW9nRUVlbVZ1YncvaW1hZ2UvP3U9MTY1ODE3NTU4OTAwMA">
 <link rel="apple-touch-icon" href="https://images.zeno.fm/ZziN82g5xsNyVYXh5rx-16695uSCdkZvXw-iJA7_PrA/rs%3Afill%3A152%3A152/q%3A75/g%3Ace%3A0%3A0/aHR0cHM6Ly9wcm94eS56ZW5vLmZtL2NvbnRlbnQvc3RhdGlvbnMvYWd4emZucGxibTh0YzNSaGRITnlNZ3NTQ2tGMWRHaERiR2xsYm5RWWdJQ1E5cy1jMGdvTUN4SU9VM1JoZEdsdmJsQnliMlpwYkdVWWdJQ1ExcGJTX0FvTW9nRUVlbVZ1YncvaW1hZ2UvP3U9MTY1ODE3NTU4OTAwMA">
@@ -243,6 +249,12 @@ footer{max-width:none;margin:0;padding:24px;text-align:center;background:#050505
 @media(max-width:900px){#conciertos .concert-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#conciertos .concert-card{grid-template-rows:220px 1fr}#conciertos .concert-poster{height:220px}}
 @media(max-width:560px){#conciertos{padding:15px}#conciertos .concert-grid{grid-template-columns:1fr;gap:13px}#conciertos .concert-card{grid-template-columns:116px minmax(0,1fr);grid-template-rows:1fr;min-height:168px}#conciertos .concert-poster{height:100%;min-height:168px;max-height:220px;object-fit:contain}#conciertos .concert-card-body{padding:10px;gap:6px}#conciertos .concert-card-body>a:not(.concert-more){font-size:23px}#conciertos .concert-date{font-size:12px}#conciertos .concert-more{font-size:9px;padding:7px}}
 
+
+/* Instalación de la aplicación PWA */
+#install-app{margin-left:8px;background:var(--yellow);color:#111!important;border-color:#fff;font-size:10px;padding:9px 12px}
+#install-app:hover{background:var(--red);color:#fff!important}
+button[hidden]{display:none!important}
+
 </style>
 </head>
 <body id="inicio">
@@ -255,6 +267,7 @@ footer{max-width:none;margin:0;padding:24px;text-align:center;background:#050505
 <div class="header-stamp">RUIDO · RESISTENCIA · AUTOGESTIÓN</div>
 </header>
 <nav aria-label="Navegación principal">
+<button id="install-app" type="button" hidden>INSTALAR APP</button>
 <a class="active" href="#inicio">Inicio</a><a href="#radio">La radio</a><a href="#noticias">Noticias</a><a href="#proximamente">Próximo programa</a><a href="#conciertos">Conciertos</a><a href="#spotify">Podcasts</a><a href="#videos">Bandas libres</a><a href="#contacto">Contacto</a>
 </nav>
 <main>
@@ -308,6 +321,37 @@ footer{max-width:none;margin:0;padding:24px;text-align:center;background:#050505
 </main>
 <footer>RADIKAL SONORO RADIO SHOW · HECHO POR LA ESCENA, PARA LA ESCENA.</footer>
 <script>
+
+/* Aplicación instalable Radikal Sonoro */
+(function(){
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function(){
+      navigator.serviceWorker.register("/service-worker.js").catch(function(err){
+        console.warn("No se pudo registrar el modo app:", err);
+      });
+    });
+  }
+  var installButton = document.getElementById("install-app");
+  var installPrompt = null;
+  if (!installButton) return;
+  window.addEventListener("beforeinstallprompt", function(event){
+    event.preventDefault();
+    installPrompt = event;
+    installButton.hidden = false;
+  });
+  installButton.addEventListener("click", async function(){
+    if (!installPrompt) return;
+    installPrompt.prompt();
+    await installPrompt.userChoice;
+    installPrompt = null;
+    installButton.hidden = true;
+  });
+  window.addEventListener("appinstalled", function(){
+    installButton.hidden = true;
+    installPrompt = null;
+  });
+})();
+
 // ===== CONFIGURA AQUÍ =====
 var STREAM_URL = "https://stream.zeno.fm/pxp41f9kwzzuv";          // URL de tu radio (Zeno.fm o AzuraCast), termina en /stream o .mp3
 var CONTACT_EMAIL = "radikalsonororadio@gmail.com"; // Buzón real de recepción
