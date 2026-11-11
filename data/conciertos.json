@@ -1,17 +1,6 @@
 [
   {
     "fecha": "2026-11-13",
-    "hora": "21:30",
-    "evento": "The Nomads + Star Mafia Boy",
-    "artistas": "The Nomads + Star Mafia Boy",
-    "sala": "Gruta 77",
-    "ciudad": "Madrid",
-    "pais": "España",
-    "url": "https://gruta77.com/events/the-nomads-suecia/",
-    "cartel": "https://gruta77.com/wp-content/uploads/2026/10/13_noviembre-Mahou_web.jpg"
-  },
-  {
-    "fecha": "2026-11-13",
     "hora": "20:00",
     "evento": "Lágrimas + Svdestada",
     "artistas": "Lágrimas + Svdestada",
@@ -20,6 +9,17 @@
     "pais": "España",
     "url": "https://primeralineavkbar.com/index.php/2026/10/20/viernes-13-de-noviembre-lagrimas-svdestada/",
     "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/10/13.11-lagrimas-svdestada-madrid-1-739x1024.jpg"
+  },
+  {
+    "fecha": "2026-11-13",
+    "hora": "21:30",
+    "evento": "The Nomads + Star Mafia Boy",
+    "artistas": "The Nomads + Star Mafia Boy",
+    "sala": "Gruta 77",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://gruta77.com/events/the-nomads-suecia/",
+    "cartel": "https://gruta77.com/wp-content/uploads/2026/10/13_noviembre-Mahou_web.jpg"
   },
   {
     "fecha": "2026-11-14",
