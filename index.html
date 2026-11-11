@@ -257,15 +257,7 @@ footer{max-width:none;margin:0;padding:24px;text-align:center;background:#050505
 button[hidden]{display:none!important}
 
 
-/* Navegación rápida para la app instalada */
-.app-dock{display:none}
-@media(max-width:700px){
-  body{padding-bottom:76px}
-  .app-dock{position:fixed;z-index:9999;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom));display:flex;justify-content:space-around;gap:4px;padding:9px 5px;background:#090909;border:1px solid #d7192d;box-shadow:0 5px 24px #000b;border-radius:5px}
-  .app-dock a{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;color:#eeeae1;text-decoration:none;font:800 10px/1.1 Arial,sans-serif;text-transform:uppercase;letter-spacing:.3px}
-  .app-dock a span{font-size:19px;color:#f4d52f;line-height:1}
-  .app-dock a:active{color:#d7192d}
-}
+
 
 </style>
 </head>
@@ -560,10 +552,5 @@ rl.innerHTML=r||'<span class="small">Aquí irán tus redes sociales.</span>';
 })();
 </script>
 
-<nav class="app-dock" aria-label="Accesos rápidos de la app">
-  <a href="#radio"><span aria-hidden="true">◉</span>Radio</a>
-  <a href="#noticias"><span aria-hidden="true">▤</span>Noticias</a>
-  <a href="#conciertos"><span aria-hidden="true">♫</span>Conciertos</a>
-  <a href="#spotify"><span aria-hidden="true">▶</span>Podcasts</a>
-</nav>
+
 </body></html>
