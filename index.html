@@ -249,10 +249,12 @@ footer{max-width:none;margin:0;padding:24px;text-align:center;background:#050505
 @media(max-width:560px){#conciertos{padding:15px}#conciertos .concert-grid{grid-template-columns:1fr;gap:13px}#conciertos .concert-card{grid-template-columns:116px minmax(0,1fr);grid-template-rows:1fr;min-height:168px}#conciertos .concert-poster{height:100%;min-height:168px;max-height:220px;object-fit:contain}#conciertos .concert-card-body{padding:10px;gap:6px}#conciertos .concert-card-body>a:not(.concert-more){font-size:23px}#conciertos .concert-date{font-size:12px}#conciertos .concert-more{font-size:9px;padding:7px}}
 
 
-/* Instalación de la aplicación PWA */
-#install-app{margin-left:8px;background:var(--yellow);color:#111!important;border-color:#fff;font-size:10px;padding:9px 12px}
-#install-app:hover{background:var(--red);color:#fff!important}
+/* Acceso visible y destacado para instalar la app */
+#install-app{display:inline-flex!important;align-items:center;justify-content:center;flex:0 0 auto;margin:0 8px 0 0;padding:13px 18px;background:var(--yellow)!important;color:#080808!important;border:3px solid #fff!important;border-bottom:5px solid var(--red)!important;border-radius:2px;font:900 16px/1 var(--display);letter-spacing:.04em;text-transform:uppercase;box-shadow:3px 3px 0 #000;cursor:pointer;visibility:visible!important;opacity:1!important}
+#install-app:hover{background:var(--red)!important;color:#fff!important}
+@media(max-width:560px){nav{justify-content:flex-start;gap:7px;padding:10px}#install-app{width:100%;margin:0 0 5px;padding:15px;font-size:19px;order:-1}}
 button[hidden]{display:none!important}
+#install-app[hidden]{display:inline-flex!important}
 
 
 
@@ -340,7 +342,8 @@ button[hidden]{display:none!important}
   // El acceso a la instalación siempre queda visible; algunos navegadores
   // no emiten beforeinstallprompt aunque permitan añadir la web al inicio.
   var alreadyInstalled = window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true;
-  installButton.hidden = alreadyInstalled;
+  installButton.hidden = false;
+  if (alreadyInstalled) installButton.textContent = "APP YA INSTALADA";
 
   window.addEventListener("beforeinstallprompt", function(event){
     event.preventDefault();
@@ -371,7 +374,8 @@ button[hidden]{display:none!important}
   });
 
   window.addEventListener("appinstalled", function(){
-    installButton.hidden = true;
+    installButton.hidden = false;
+    installButton.textContent = "APP YA INSTALADA";
     installPrompt = null;
   });
 })();
