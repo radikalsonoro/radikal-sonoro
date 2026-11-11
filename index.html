@@ -196,6 +196,28 @@ footer{max-width:none;margin:0;padding:24px;text-align:center;background:#050505
  header{padding-left:74px}.logo{left:7px;top:31px}.logo img{width:55px;height:55px}
  header h1{font-size:36px}#conciertos .concert-card{grid-template-columns:76px minmax(0,1fr)}#conciertos .concert-card-body{padding:8px}
 }
+
+/* REDISEÑO EXPERIMENTAL: MURO PUNK DE CARTELES */
+.magazine-top{grid-template-columns:minmax(0,1fr)!important}
+#conciertos{grid-column:1/-1;width:100%;height:auto!important;margin:0;padding:clamp(16px,2.5vw,28px);background:linear-gradient(180deg,#080808 0%,#171717 100%);border:2px solid var(--paper);border-top:8px solid var(--red);box-shadow:8px 8px #000}
+#conciertos .section-head{align-items:flex-end;border-bottom:4px solid var(--red);padding-bottom:12px}
+#conciertos .section-head h2{padding:0;background:none;color:var(--paper);font-size:clamp(38px,6vw,72px);line-height:.86;transform:none;text-shadow:4px 4px var(--red)}
+#conciertos .section-head small{background:var(--yellow);color:#111;transform:rotate(-2deg)}
+#conciertos>p{max-width:850px;color:#e8e3da}
+#conciertos .concert-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:20px 0 12px}
+#conciertos .concert-card{position:relative;display:flex;flex-direction:column;min-width:0;min-height:0;background:#eeeae1;color:#111;border:2px solid #eeeae1;border-bottom:7px solid var(--red);box-shadow:5px 5px #000;overflow:hidden;transform:rotate(-.35deg);transition:transform .18s ease,box-shadow .18s ease}
+#conciertos .concert-card:nth-child(2n){transform:rotate(.45deg)}
+#conciertos .concert-card:hover{transform:translateY(-5px) rotate(0);box-shadow:8px 10px #000}
+#conciertos .concert-poster{display:block;width:100%;height:auto;min-height:0;max-height:none;aspect-ratio:3/4;object-fit:contain;background:#090909}
+#conciertos .concert-card-body{padding:13px 14px 15px;gap:7px}
+#conciertos .concert-date{font-size:17px;margin:0 0 3px}
+#conciertos .concert-card-body>a:not(.concert-more){font-size:clamp(21px,2.4vw,29px);line-height:.98}
+#conciertos .concert-card-body .small{font-size:11px;line-height:1.45}
+#conciertos .concert-more{margin-top:5px;padding:8px 10px;background:#090909;color:#fff}
+#conciertos .concert-placeholder{min-height:0;aspect-ratio:3/4}
+#conciertos form{max-width:760px;margin:24px auto 0;padding:18px;background:#eeeae1;color:#111;border:2px solid #111;border-left:7px solid var(--red)}
+@media(max-width:900px){#conciertos .concert-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}}
+@media(max-width:520px){#conciertos .concert-grid{grid-template-columns:1fr;gap:16px}#conciertos .concert-card{max-width:460px;width:100%;margin:0 auto}#conciertos .concert-poster{aspect-ratio:3/4}#conciertos .section-head{align-items:flex-start;flex-direction:column}}
 </style>
 </head>
 <body id="inicio">
@@ -439,7 +461,7 @@ rl.innerHTML=r||'<span class="small">Aquí irán tus redes sociales.</span>';
  if(!main||!radio||!concerts||!interview||!news||!spotify)return;
  var top=document.createElement("div");top.className="magazine-top";
  var left=document.createElement("div");left.className="magazine-left";
- top.appendChild(left);top.appendChild(concerts);
+ top.appendChild(left);
  left.appendChild(radio);
  var direct=document.getElementById("directo");
  if(direct)left.appendChild(direct);
@@ -451,7 +473,8 @@ rl.innerHTML=r||'<span class="small">Aquí irán tus redes sociales.</span>';
  if(hero)hero.remove();
  var who=document.getElementById("quienes-somos");
  main.insertBefore(top,main.firstChild);
- main.insertBefore(bottom,top.nextSibling);
+ main.insertBefore(concerts,top.nextSibling);
+ main.insertBefore(bottom,concerts.nextSibling);
  if(who)main.appendChild(who);
 })();
 </script>
