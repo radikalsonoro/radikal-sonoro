@@ -218,6 +218,31 @@ footer{max-width:none;margin:0;padding:24px;text-align:center;background:#050505
 #conciertos form{max-width:760px;margin:24px auto 0;padding:18px;background:#eeeae1;color:#111;border:2px solid #111;border-left:7px solid var(--red)}
 @media(max-width:900px){#conciertos .concert-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}}
 @media(max-width:520px){#conciertos .concert-grid{grid-template-columns:1fr;gap:16px}#conciertos .concert-card{max-width:460px;width:100%;margin:0 auto}#conciertos .concert-poster{aspect-ratio:3/4}#conciertos .section-head{align-items:flex-start;flex-direction:column}}
+
+/* NUEVA AGENDA EDITORIAL: carteles completos y fichas limpias */
+#conciertos{height:auto;padding:22px;background:var(--paper);color:#111;border:0;border-top:7px solid var(--red);border-bottom:5px solid #111;box-shadow:6px 6px #000}
+#conciertos .section-head{border-bottom:3px solid #111}
+#conciertos .section-head h2{padding:0;background:none;color:#111;font-size:clamp(38px,5vw,58px);transform:none;text-shadow:none}
+#conciertos .section-head small{background:var(--red);color:#fff;transform:none}
+#conciertos>p{color:#292929!important}
+#conciertos>p a{color:#a10e20}
+#conciertos #concert-news-status{background:#111;color:#fff}
+#conciertos .concert-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:18px 0 22px;padding:0;list-style:none}
+#conciertos .concert-card{display:grid;grid-template-columns:1fr;grid-template-rows:235px 1fr;min-width:0;min-height:0;background:#fff;color:#111;border:1px solid #bbb;border-bottom:5px solid var(--red);box-shadow:3px 3px #c7c0b5;overflow:hidden}
+#conciertos .concert-poster{display:block;width:100%;height:235px;min-height:0;max-height:none;aspect-ratio:auto;object-fit:contain;background:#111}
+#conciertos .concert-card-body{padding:14px;gap:8px;align-items:flex-start}
+#conciertos .concert-date{margin:0;padding:7px 9px;background:var(--yellow);color:#111;font:900 15px/1.15 var(--mono)}
+#conciertos .concert-date small{color:#111;font-size:8px}
+#conciertos .concert-card-body>a:not(.concert-more){margin:2px 0;color:#111;font:900 clamp(22px,2.2vw,29px)/.95 var(--display)}
+#conciertos .concert-card-body .small{color:#444;font-size:11px}
+#conciertos .concert-more{margin-top:auto;padding:8px 10px;background:#111;color:#fff;border:1px solid #111;font:10px var(--mono)}
+#conciertos .concert-more:hover{background:var(--red);color:#fff}
+#conciertos form{padding:18px;background:#151515;color:#eee;border:2px solid #111;border-top:5px solid var(--red)}
+#conciertos form>label,#conciertos form .formrow label{color:#eee}
+#conciertos form .small{color:#eee}
+@media(max-width:900px){#conciertos .concert-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#conciertos .concert-card{grid-template-rows:220px 1fr}#conciertos .concert-poster{height:220px}}
+@media(max-width:560px){#conciertos{padding:15px}#conciertos .concert-grid{grid-template-columns:1fr;gap:13px}#conciertos .concert-card{grid-template-columns:116px minmax(0,1fr);grid-template-rows:1fr;min-height:168px}#conciertos .concert-poster{height:100%;min-height:168px;max-height:220px;object-fit:contain}#conciertos .concert-card-body{padding:10px;gap:6px}#conciertos .concert-card-body>a:not(.concert-more){font-size:23px}#conciertos .concert-date{font-size:12px}#conciertos .concert-more{font-size:9px;padding:7px}}
+
 </style>
 </head>
 <body id="inicio">
