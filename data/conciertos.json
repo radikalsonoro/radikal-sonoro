@@ -1,1 +1,52 @@
-[]
+[
+  {
+    "fecha": "2026-11-13",
+    "hora": "21:00",
+    "evento": "Spike and The Gimme Gimmes",
+    "artistas": "Punk rock",
+    "sala": "Jimmy Jazz",
+    "ciudad": "Vitoria-Gasteiz",
+    "pais": "España",
+    "url": "https://www.hfmncrew.cat/es/tickets/"
+  },
+  {
+    "fecha": "2026-11-13",
+    "hora": "",
+    "evento": "Neuroot + Artritis + Peedoh",
+    "artistas": "Hardcore punk / punk acelerado",
+    "sala": "Mogambo",
+    "ciudad": "Donostia",
+    "pais": "España",
+    "url": "https://insonoro.com/noticia/127839/neuroot-artritis-y-peedoh-compartiran-escenario-este-viernes-en-donosti"
+  },
+  {
+    "fecha": "2026-11-14",
+    "hora": "21:00",
+    "evento": "Spike and The Gimme Gimmes",
+    "artistas": "Punk rock",
+    "sala": "Sala Estilo",
+    "ciudad": "Oviedo",
+    "pais": "España",
+    "url": "https://www.hfmncrew.cat/es/tickets/"
+  },
+  {
+    "fecha": "2026-11-14",
+    "hora": "20:00",
+    "evento": "Against the Waves + The Fall of Atlantis",
+    "artistas": "Metalcore",
+    "sala": "Sala Uni",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://rockingticket.com/"
+  },
+  {
+    "fecha": "2026-11-15",
+    "hora": "21:00",
+    "evento": "Spike and The Gimme Gimmes",
+    "artistas": "Punk rock",
+    "sala": "Inn Club",
+    "ciudad": "A Coruña",
+    "pais": "España",
+    "url": "https://www.hfmncrew.cat/es/tickets/"
+  }
+]
