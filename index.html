@@ -249,12 +249,11 @@ footer{max-width:none;margin:0;padding:24px;text-align:center;background:#050505
 @media(max-width:560px){#conciertos{padding:15px}#conciertos .concert-grid{grid-template-columns:1fr;gap:13px}#conciertos .concert-card{grid-template-columns:116px minmax(0,1fr);grid-template-rows:1fr;min-height:168px}#conciertos .concert-poster{height:100%;min-height:168px;max-height:220px;object-fit:contain}#conciertos .concert-card-body{padding:10px;gap:6px}#conciertos .concert-card-body>a:not(.concert-more){font-size:23px}#conciertos .concert-date{font-size:12px}#conciertos .concert-more{font-size:9px;padding:7px}}
 
 
-/* Acceso visible y destacado para instalar la app */
-#install-app{display:inline-flex!important;align-items:center;justify-content:center;flex:0 0 auto;margin:0 8px 0 0;padding:13px 18px;background:var(--yellow)!important;color:#080808!important;border:3px solid #fff!important;border-bottom:5px solid var(--red)!important;border-radius:2px;font:900 16px/1 var(--display);letter-spacing:.04em;text-transform:uppercase;box-shadow:3px 3px 0 #000;cursor:pointer;visibility:visible!important;opacity:1!important}
-#install-app:hover{background:var(--red)!important;color:#fff!important}
-@media(max-width:560px){nav{justify-content:flex-start;gap:7px;padding:10px}#install-app{width:100%;margin:0 0 5px;padding:15px;font-size:19px;order:-1}}
-button[hidden]{display:none!important}
-#install-app[hidden]{display:inline-flex!important}
+/* Botón compacto de instalación PWA */
+#install-app{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;width:auto;margin:0 6px 0 0;padding:7px 10px;background:var(--yellow);color:#080808;border:1px solid var(--paper);border-bottom:3px solid var(--red);border-radius:2px;font:700 10px/1.1 var(--mono);letter-spacing:.03em;text-transform:uppercase;box-shadow:2px 2px 0 #000;cursor:pointer}
+#install-app:hover{background:var(--red);color:#fff}
+#install-app[hidden],button[hidden]{display:none!important}
+@media(max-width:560px){nav{justify-content:flex-start;gap:6px;padding:8px}#install-app{width:auto;min-height:32px;margin:0;padding:7px 9px;font-size:10px;order:0}}
 
 
 
@@ -339,11 +338,10 @@ button[hidden]{display:none!important}
   var installPrompt = null;
   if (!installButton) return;
 
-  // El acceso a la instalación siempre queda visible; algunos navegadores
-  // no emiten beforeinstallprompt aunque permitan añadir la web al inicio.
   var alreadyInstalled = window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true;
-  installButton.hidden = false;
-  if (alreadyInstalled) installButton.textContent = "APP YA INSTALADA";
+  // Solo mostrar el botón cuando el navegador ofrezca una instalación real.
+  installButton.hidden = true;
+  if (alreadyInstalled) return;
 
   window.addEventListener("beforeinstallprompt", function(event){
     event.preventDefault();
@@ -353,29 +351,15 @@ button[hidden]{display:none!important}
   });
 
   installButton.addEventListener("click", async function(){
-    if (installPrompt) {
-      installPrompt.prompt();
-      var choice = await installPrompt.userChoice;
-      installPrompt = null;
-      if (choice && choice.outcome === "accepted") installButton.hidden = true;
-      return;
-    }
-
-    var ua = navigator.userAgent || "";
-    var isIOS = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
-    var isAndroid = /Android/i.test(ua);
-    if (isIOS) {
-      alert("Para instalar Radikal Sonoro en iPhone/iPad:\n1. Abre esta web en Safari.\n2. Pulsa Compartir.\n3. Elige «Añadir a pantalla de inicio».\n4. Pulsa «Añadir».");
-    } else if (isAndroid) {
-      alert("Para instalar Radikal Sonoro:\n1. Abre esta web en Chrome.\n2. Pulsa el menú ⋮.\n3. Elige «Instalar aplicación» o «Añadir a pantalla de inicio».\n4. Confirma la instalación.");
-    } else {
-      alert("Para instalar Radikal Sonoro en este ordenador, abre la web con Chrome o Edge y busca «Instalar Radikal Sonoro» en el menú del navegador o el icono de instalación de la barra de direcciones.");
-    }
+    if (!installPrompt) return;
+    installPrompt.prompt();
+    var choice = await installPrompt.userChoice;
+    installPrompt = null;
+    if (choice && choice.outcome === "accepted") installButton.hidden = true;
   });
 
   window.addEventListener("appinstalled", function(){
-    installButton.hidden = false;
-    installButton.textContent = "APP YA INSTALADA";
+    installButton.hidden = true;
     installPrompt = null;
   });
 })();
