@@ -81,6 +81,11 @@ button:hover,.chip:hover,.cta:hover{background:var(--yellow);color:#111!importan
 #conciertos .section-head{border-color:var(--yellow)}#conciertos .section-head h2{font-size:clamp(30px,3.5vw,43px);color:#111;background:var(--yellow);padding:6px 9px;transform:rotate(-1deg);text-shadow:none}
 #conciertos p,#conciertos .small{color:var(--paper)}
 #conciertos .concert-grid{display:grid;grid-template-columns:1fr;gap:10px}
+#conciertos .venue-group{list-style:none;margin:18px 0 22px;padding:0}
+#conciertos .venue-heading{display:flex;align-items:center;gap:10px;margin:0 0 9px;padding:8px 11px;background:var(--yellow);color:#111;border-left:7px solid var(--red);font:900 25px/.95 var(--display);text-transform:uppercase}
+#conciertos .venue-heading span{margin-left:auto;font:500 9px var(--mono);text-transform:uppercase;letter-spacing:.08em}
+#conciertos .venue-events{display:grid;grid-template-columns:1fr;gap:9px}
+#conciertos .venue-empty{padding:10px;background:#151515;color:var(--paper);font:11px var(--mono)}
 #conciertos .concert-card{display:grid;grid-template-columns:92px minmax(0,1fr);min-height:126px;background:var(--paper);color:#111;border:2px solid #090909;border-bottom:5px solid var(--red);box-shadow:4px 4px #000;overflow:hidden}
 #conciertos .concert-poster,#conciertos .concert-placeholder{width:100%;height:100%;min-height:126px;max-height:170px;object-fit:cover;aspect-ratio:3/4}
 #conciertos .concert-placeholder{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:8px;background:repeating-linear-gradient(135deg,#333 0 2px,#090909 2px 8px);color:var(--yellow)}
@@ -441,7 +446,19 @@ async function loadConcertNews(){
   }).slice(0,6);
   list.innerHTML="";list.className="concert-grid";
   if(!events.length){status.textContent="No hay próximos conciertos con fecha y fuente verificadas.";list.innerHTML="<li>No hay eventos confirmados en este momento.</li>";return;}
-  events.forEach(function(ev,index){
+  var venues=new Map();
+  events.forEach(function(ev){
+    var venue=[ev.sala||"Sala por confirmar",ev.ciudad||""].filter(Boolean).join(" · ");
+    if(!venues.has(venue))venues.set(venue,[]);
+    venues.get(venue).push(ev);
+  });
+  Array.from(venues.entries()).forEach(function(entry){
+    var venueName=entry[0],venueEvents=entry[1];
+    var group=document.createElement("li"),heading=document.createElement("h3"),count=document.createElement("span"),cards=document.createElement("div");
+    group.className="venue-group";heading.className="venue-heading";heading.appendChild(document.createTextNode(venueName));
+    count.textContent=venueEvents.length+(venueEvents.length===1?" fecha":" fechas");heading.appendChild(count);
+    cards.className="venue-events";group.appendChild(heading);group.appendChild(cards);list.appendChild(group);
+    venueEvents.forEach(function(ev,index){
     var card=document.createElement("article"),body=document.createElement("div");
     card.className="concert-card";card.setAttribute("data-number",String(index+1).padStart(2,"0"));
     if(ev.cartel){
@@ -459,9 +476,10 @@ async function loadConcertNews(){
     title.href=ev.url;title.target="_blank";title.rel="noopener noreferrer";title.textContent=ev.evento||ev.artistas||"Concierto";
     meta.className="small";meta.textContent=[ev.artistas,ev.sala,ev.ciudad,ev.pais].filter(Boolean).join(" · ");
     more.className="concert-more";more.href=ev.url;more.target="_blank";more.rel="noopener noreferrer";more.textContent="INFORMACIÓN Y ENTRADAS ↗";
-    body.appendChild(date);body.appendChild(title);body.appendChild(meta);body.appendChild(more);card.appendChild(body);list.appendChild(card);
+    body.appendChild(date);body.appendChild(title);body.appendChild(meta);body.appendChild(more);card.appendChild(body);cards.appendChild(card);
+    });
   });
-  status.textContent=events.length+" próximos eventos · Carteles oficiales cuando están disponibles.";
+  status.textContent=events.length+" próximos eventos · "+venues.size+" salas · Carteles oficiales cuando están disponibles.";
 }
 (function(){
 loadNews();
