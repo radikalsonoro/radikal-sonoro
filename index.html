@@ -391,22 +391,23 @@ var YT_PLAYLIST_ID = "";      // ID de tu lista de YouTube (empieza con PL...)
 // Noticias automáticas desde Google News RSS, mediante RSS2JSON.
 async function loadNews(){
   var list=document.getElementById("news-list"),status=document.getElementById("news-status");
+  var fallback=[{"titulo":"Etsaiakeroak estrena el videoclip de «Stop Kontrol»","resumen":"La banda presenta el vídeo de un tema de «Kalentura», su trabajo publicado en 2025. Punk vasco con mensaje directo.","fecha":"11/11/2026","fuente":"Insonoro","url":"https://insonoro.com/noticia/127853/etsaiakeroak-estrena-el-videoclip-de-_stop-kontrol_"},{"titulo":"Talco anuncian seis fechas en España para el «Freek Tour 2027»","resumen":"La banda italiana llevará su ska-punk a Madrid, Santiago, Bilbao, Zaragoza, Barcelona e Iruñea entre febrero y abril de 2027.","fecha":"11/11/2026","fuente":"Insonoro","url":"https://insonoro.com/noticia/127852/talco-anuncian-seis-conciertos-en-espana-dentro-de-su-gira-_freek-tour-2027_"},{"titulo":"Against the Waves presentarán «Survivalism» en Madrid","resumen":"La banda presentará su nuevo álbum el 14 de noviembre en Sala Uni, acompañada por The Fall of Atlantis.","fecha":"11/11/2026","fuente":"Insonoro","url":"https://insonoro.com/noticia/127851/against-the-waves-presentaran-_survivalism_-en-madrid-este-sabado"},{"titulo":"Stopping Donkeys publican su álbum debut «La Llanura»","resumen":"El grupo manchego estrena diez canciones que mezclan rock alternativo, grunge y psicodelia.","fecha":"11/11/2026","fuente":"Insonoro","url":"https://insonoro.com/noticia/127850/stopping-donkeys-publican-su-album-debut--_la-llanura_"},{"titulo":"BURZ anuncian cuatro conciertos en diciembre","resumen":"El proyecto liderado por Fernando, vinculado a El Corazón del Sapo y Kuraia, anuncia el «DANZE ANTIFA Tour 026».","fecha":"11/11/2026","fuente":"Insonoro","url":"https://insonoro.com/noticia/127840/burz--la-banda-liderada-por-fernando-de-el-corazon-del-sapo-y-kuraia--anuncia-cuatro-conciertos-en-diciembre"}];
+  var items=fallback;
   try{
-    var response=await fetch("data/noticias.json?"+Date.now(),{cache:"no-store"});
-    if(!response.ok)throw new Error("No se pudo cargar la agenda editorial");
-    var items=await response.json();
-    items=Array.isArray(items)?items.filter(function(n){return n&&n.titulo&&n.url;}).slice(0,5):[];
-    list.innerHTML="";
-    if(!items.length){list.innerHTML="<li>No hay noticias verificadas disponibles hoy.</li>";status.textContent="0 noticias verificadas.";return;}
-    items.forEach(function(n){
-      var li=document.createElement("li"),a=document.createElement("a"),summary=document.createElement("p"),meta=document.createElement("div");
-      a.href=n.url;a.target="_blank";a.rel="noopener noreferrer";a.textContent=n.titulo;
-      summary.textContent=n.resumen||"Consulta la información completa en la fuente original.";summary.style.margin="6px 0";summary.style.fontSize="13px";
-      meta.className="small";meta.textContent=(n.fecha||"Fecha no indicada")+" · "+(n.fuente||"Fuente original");
-      li.appendChild(a);li.appendChild(summary);li.appendChild(meta);list.appendChild(li);
-    });
-    status.textContent=items.length+" noticias verificadas · Actualizado: "+(new Date()).toLocaleDateString("es-ES");
-  }catch(error){status.textContent="No se han podido cargar las noticias. Se actualizará en la próxima revisión.";list.innerHTML="<li>Noticias temporalmente no disponibles.</li>";}
+    var response=await fetch("/data/noticias.json?"+Date.now(),{cache:"no-store"});
+    if(response.ok){var liveItems=await response.json();if(Array.isArray(liveItems)&&liveItems.length)items=liveItems;}
+  }catch(error){console.warn("Noticias: usando copia de respaldo",error);}
+  items=(Array.isArray(items)?items.filter(function(n){return n&&n.titulo&&n.url;}).slice(0,5):[]);
+  list.innerHTML="";
+  if(!items.length){list.innerHTML="<li>No hay noticias verificadas disponibles hoy.</li>";status.textContent="0 noticias verificadas.";return;}
+  items.forEach(function(n){
+    var li=document.createElement("li"),a=document.createElement("a"),summary=document.createElement("p"),meta=document.createElement("div");
+    a.href=n.url;a.target="_blank";a.rel="noopener noreferrer";a.textContent=n.titulo;
+    summary.textContent=n.resumen||"Consulta la información completa en la fuente original.";summary.style.margin="6px 0";summary.style.fontSize="13px";
+    meta.className="small";meta.textContent=(n.fecha||"Fecha no indicada")+" · "+(n.fuente||"Fuente original");
+    li.appendChild(a);li.appendChild(summary);li.appendChild(meta);list.appendChild(li);
+  });
+  status.textContent=items.length+" noticias · Actualizado: "+(new Date()).toLocaleDateString("es-ES");
 }
 // Detecta fechas futuras explícitas en el anuncio (no confunde publicación con fecha del evento).
 function getConcertDate(item){
@@ -424,38 +425,40 @@ function getConcertDate(item){
 async function loadConcertNews(){
   var list=document.getElementById("concert-news-list"),status=document.getElementById("concert-news-status");
   if(!list||!status)return;
+  var fallback=[{"fecha":"2026-11-13","hora":"21:00","evento":"Spike and The Gimme Gimmes","artistas":"Punk rock","sala":"Jimmy Jazz","ciudad":"Vitoria-Gasteiz","pais":"España","url":"https://www.hfmncrew.cat/es/tickets/"},{"fecha":"2026-11-13","hora":"","evento":"Neuroot + Artritis + Peedoh","artistas":"Hardcore punk / punk acelerado","sala":"Mogambo","ciudad":"Donostia","pais":"España","url":"https://insonoro.com/noticia/127839/neuroot-artritis-y-peedoh-compartiran-escenario-este-viernes-en-donosti"},{"fecha":"2026-11-14","hora":"21:00","evento":"Spike and The Gimme Gimmes","artistas":"Punk rock","sala":"Sala Estilo","ciudad":"Oviedo","pais":"España","url":"https://www.hfmncrew.cat/es/tickets/"},{"fecha":"2026-11-14","hora":"20:00","evento":"Against the Waves + The Fall of Atlantis","artistas":"Metalcore","sala":"Sala Uni","ciudad":"Madrid","pais":"España","url":"https://rockingticket.com/"},{"fecha":"2026-11-15","hora":"21:00","evento":"Spike and The Gimme Gimmes","artistas":"Punk rock","sala":"Inn Club","ciudad":"A Coruña","pais":"España","url":"https://www.hfmncrew.cat/es/tickets/"}];
+  var events=fallback;
   try{
-    var response=await fetch("data/conciertos.json?"+Date.now(),{cache:"no-store"});
-    if(!response.ok)throw new Error("No se pudo cargar la agenda");
-    var events=await response.json(),today=new Date();today.setHours(0,0,0,0);
-    events=(Array.isArray(events)?events:[]).filter(function(ev){
-      if(!ev||!ev.fecha||!ev.url)return false;
-      var d=new Date(ev.fecha+"T00:00:00");return !isNaN(d.getTime())&&d>=today;
-    }).slice(0,6);
-    list.innerHTML="";list.className="concert-grid";
-    if(!events.length){status.textContent="No hay próximos conciertos con fecha y fuente verificadas.";list.innerHTML="<li>No hay eventos confirmados en este momento.</li>";return;}
-    events.forEach(function(ev,index){
-      var card=document.createElement("article"),body=document.createElement("div");
-      card.className="concert-card";card.setAttribute("data-number",String(index+1).padStart(2,"0"));
-      if(ev.cartel){
-        var img=document.createElement("img");img.className="concert-poster";img.src=ev.cartel;img.alt="Cartel oficial: "+(ev.evento||ev.artistas||"concierto");img.loading="lazy";
-        img.onerror=function(){var ph=document.createElement("div"),tag=document.createElement("span"),name=document.createElement("strong");ph.className="concert-placeholder";tag.textContent="CARTEL NO DISPONIBLE";name.textContent=ev.evento||ev.artistas||"Concierto";ph.appendChild(tag);ph.appendChild(name);this.replaceWith(ph);};
-        card.appendChild(img);
-      }else{
-        var ph=document.createElement("div"),tag=document.createElement("span"),name=document.createElement("strong");
-        ph.className="concert-placeholder";tag.textContent="SIN CARTEL VERIFICADO";name.textContent=ev.evento||ev.artistas||"Concierto";ph.appendChild(tag);ph.appendChild(name);card.appendChild(ph);
-      }
-      body.className="concert-card-body";
-      var date=document.createElement("div"),small=document.createElement("small"),title=document.createElement("a"),meta=document.createElement("div"),more=document.createElement("a");
-      date.className="concert-date";small.textContent="FECHA DEL EVENTO";date.appendChild(small);
-      date.appendChild(document.createTextNode(new Date(ev.fecha+"T00:00:00").toLocaleDateString("es-ES",{weekday:"short",day:"2-digit",month:"long",year:"numeric"})+(ev.hora?" · "+ev.hora:"")));
-      title.href=ev.url;title.target="_blank";title.rel="noopener noreferrer";title.textContent=ev.evento||ev.artistas||"Concierto";
-      meta.className="small";meta.textContent=[ev.artistas,ev.sala,ev.ciudad,ev.pais].filter(Boolean).join(" · ");
-      more.className="concert-more";more.href=ev.url;more.target="_blank";more.rel="noopener noreferrer";more.textContent="INFORMACIÓN Y ENTRADAS ↗";
-      body.appendChild(date);body.appendChild(title);body.appendChild(meta);body.appendChild(more);card.appendChild(body);list.appendChild(card);
-    });
-    status.textContent=events.length+" próximos eventos verificados · Carteles oficiales cuando están disponibles.";
-  }catch(error){status.textContent="Agenda temporalmente no disponible; se actualizará en la próxima revisión.";list.innerHTML="<li>No se ha podido cargar la agenda.</li>";}
+    var response=await fetch("/data/conciertos.json?"+Date.now(),{cache:"no-store"});
+    if(response.ok){var liveEvents=await response.json();if(Array.isArray(liveEvents)&&liveEvents.length)events=liveEvents;}
+  }catch(error){console.warn("Conciertos: usando copia de respaldo",error);}
+  var today=new Date();today.setHours(0,0,0,0);
+  events=(Array.isArray(events)?events:[]).filter(function(ev){
+    if(!ev||!ev.fecha||!ev.url)return false;
+    var d=new Date(ev.fecha+"T00:00:00");return !isNaN(d.getTime())&&d>=today;
+  }).slice(0,6);
+  list.innerHTML="";list.className="concert-grid";
+  if(!events.length){status.textContent="No hay próximos conciertos con fecha y fuente verificadas.";list.innerHTML="<li>No hay eventos confirmados en este momento.</li>";return;}
+  events.forEach(function(ev,index){
+    var card=document.createElement("article"),body=document.createElement("div");
+    card.className="concert-card";card.setAttribute("data-number",String(index+1).padStart(2,"0"));
+    if(ev.cartel){
+      var img=document.createElement("img");img.className="concert-poster";img.src=ev.cartel;img.alt="Cartel oficial: "+(ev.evento||ev.artistas||"concierto");img.loading="lazy";
+      img.onerror=function(){var ph=document.createElement("div"),tag=document.createElement("span"),name=document.createElement("strong");ph.className="concert-placeholder";tag.textContent="CARTEL NO DISPONIBLE";name.textContent=ev.evento||ev.artistas||"Concierto";ph.appendChild(tag);ph.appendChild(name);this.replaceWith(ph);};
+      card.appendChild(img);
+    }else{
+      var ph=document.createElement("div"),tag=document.createElement("span"),name=document.createElement("strong");
+      ph.className="concert-placeholder";tag.textContent="SIN CARTEL VERIFICADO";name.textContent=ev.evento||ev.artistas||"Concierto";ph.appendChild(tag);ph.appendChild(name);card.appendChild(ph);
+    }
+    body.className="concert-card-body";
+    var date=document.createElement("div"),small=document.createElement("small"),title=document.createElement("a"),meta=document.createElement("div"),more=document.createElement("a");
+    date.className="concert-date";small.textContent="FECHA DEL EVENTO";date.appendChild(small);
+    date.appendChild(document.createTextNode(new Date(ev.fecha+"T00:00:00").toLocaleDateString("es-ES",{weekday:"short",day:"2-digit",month:"long",year:"numeric"})+(ev.hora?" · "+ev.hora:"")));
+    title.href=ev.url;title.target="_blank";title.rel="noopener noreferrer";title.textContent=ev.evento||ev.artistas||"Concierto";
+    meta.className="small";meta.textContent=[ev.artistas,ev.sala,ev.ciudad,ev.pais].filter(Boolean).join(" · ");
+    more.className="concert-more";more.href=ev.url;more.target="_blank";more.rel="noopener noreferrer";more.textContent="INFORMACIÓN Y ENTRADAS ↗";
+    body.appendChild(date);body.appendChild(title);body.appendChild(meta);body.appendChild(more);card.appendChild(body);list.appendChild(card);
+  });
+  status.textContent=events.length+" próximos eventos · Carteles oficiales cuando están disponibles.";
 }
 (function(){
 loadNews();
