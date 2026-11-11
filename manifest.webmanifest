@@ -1,0 +1,19 @@
+{
+  "name": "Radikal Sonoro",
+  "short_name": "Radikal",
+  "description": "Radio libre: punk, hardcore, ska y metal underground",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#090909",
+  "theme_color": "#d71920",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/app-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
