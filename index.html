@@ -95,6 +95,22 @@ button:hover,.chip:hover,.cta:hover{background:var(--yellow);color:#111!importan
 #proximamente .next-program-count{min-width:150px;padding:12px;background:#111;color:var(--yellow);text-align:center;font:700 13px var(--mono)}
 #proximamente .next-program-count small{display:block;margin-bottom:5px;color:#fff;font-size:9px}
 #proximamente .next-program-count span{display:block;margin-top:9px;color:var(--yellow);font:900 clamp(18px,2.5vw,27px)/1.2 var(--mono);font-variant-numeric:tabular-nums;letter-spacing:.02em}
+#proximamente .program-promo{grid-template-columns:minmax(210px,.82fr) minmax(0,1.18fr);gap:22px;align-items:stretch;padding:18px;background:rgba(5,5,5,.9);border:2px solid var(--paper);border-left:10px solid var(--red);box-shadow:7px 7px var(--yellow)}
+#proximamente .program-promo-art{min-height:255px;padding:17px 13px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;color:#fff;background:repeating-linear-gradient(135deg,#161616 0 3px,#080808 3px 9px);border:2px solid var(--paper);box-shadow:5px 5px var(--red);transform:rotate(-1deg)}
+#proximamente .program-promo-date{align-self:stretch;padding:7px 5px;background:var(--yellow);color:#090909;font:900 11px var(--mono);letter-spacing:.06em}
+#proximamente .program-promo-art strong{font:900 clamp(43px,5.5vw,72px)/.78 var(--display);letter-spacing:-.025em;text-shadow:4px 4px var(--red)}
+#proximamente .program-promo-art em{padding:5px 10px;background:var(--red);color:#fff;font:900 clamp(17px,2vw,25px)/1 var(--display);font-style:normal;letter-spacing:.08em;transform:rotate(-2deg)}
+#proximamente .program-promo-art small{color:var(--yellow);font:10px var(--mono);letter-spacing:.04em}
+#proximamente .program-promo-info{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;min-width:0}
+#proximamente .program-promo-info h3{margin:5px 0 9px;color:#fff;font:900 clamp(35px,4.5vw,58px)/.88 var(--display);text-transform:uppercase;text-shadow:3px 3px var(--red)}
+#proximamente .program-promo-info>p{max-width:560px;margin:0 0 13px;color:#eee;font-size:13px}
+#proximamente .program-promo .next-program-count{width:100%;min-width:0;margin:0 0 13px;padding:10px 13px;text-align:left;border-left:5px solid var(--yellow)}
+#proximamente .program-promo .next-program-count span{margin-top:4px;font-size:clamp(19px,2.4vw,27px)}
+#proximamente .program-promo-actions{display:flex;flex-wrap:wrap;align-items:center;gap:9px}
+#proximamente .program-calendar{display:inline-flex;padding:10px 12px;background:var(--yellow);color:#111!important;border:2px solid var(--paper);box-shadow:4px 4px #000;font:900 10px var(--mono);text-decoration:none}
+#proximamente .program-podcast{display:inline-block;color:#fff;font:10px var(--mono);text-decoration:underline}
+.magazine-interview{grid-column:1/-1;margin:0}
+
 
 #proximamente{grid-column:1/-1;min-height:0;margin:0;padding:20px;background:linear-gradient(90deg,rgba(0,0,0,.94),rgba(0,0,0,.68) 52%,rgba(0,0,0,.24)),url("https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=1500&q=85") center 38%/cover;border:3px solid var(--paper);border-left:9px solid var(--red);box-shadow:8px 8px #000;position:relative;overflow:hidden}
 #proximamente:after{content:"DIY";position:absolute;right:15px;bottom:-30px;color:#e51b2b29;font:900 clamp(100px,20vw,230px)/1 var(--display);pointer-events:none}
@@ -169,7 +185,7 @@ footer{max-width:none;margin:0;padding:24px;text-align:center;background:#050505
  .magazine-bottom{display:flex;flex-direction:column;gap:12px;margin:12px 0}
  main>section,.magazine-top section{margin:12px 0;padding:15px}.magazine-top #radio{margin:0}
  #radio .radio-grid{grid-template-columns:1fr}.radio-card+.radio-card{border-left:0;border-top:1px solid #655}
- #proximamente{min-height:0;padding:18px}#proximamente .next-program{grid-template-columns:1fr;gap:10px;padding:13px}#proximamente .next-program-count{min-width:0;text-align:left}#proximamente .upcoming-feature{grid-template-columns:1fr;gap:14px}
+ #proximamente{min-height:0;padding:18px}#proximamente .next-program{grid-template-columns:1fr;gap:14px;padding:13px}#proximamente .program-promo-art{min-height:205px;transform:none}#proximamente .program-promo-info h3{font-size:clamp(36px,10vw,48px)}#proximamente .program-promo-actions{align-items:stretch;flex-direction:column;width:100%}#proximamente .program-promo-actions a{width:100%;text-align:center}#proximamente .next-program-count{min-width:0;text-align:left}#proximamente .upcoming-feature{grid-template-columns:1fr;gap:14px}
  #proximamente .upcoming-art{min-height:160px}#proximamente .upcoming-copy h3{font-size:46px}
  #conciertos .concert-card{grid-template-columns:88px minmax(0,1fr)}#conciertos .concert-poster,#conciertos .concert-placeholder{min-height:125px}
  .section-head{align-items:flex-start;flex-direction:column;gap:8px}.section-head h2{font-size:38px}#radio .section-head h2{font-size:46px}
@@ -201,9 +217,24 @@ footer{max-width:none;margin:0;padding:24px;text-align:center;background:#050505
 </div>
 <section id="proximamente" class="upcoming">
 <div class="section-head"><h2>Próximo programa</h2><small>Ágora Sol Radio</small></div>
-<div class="next-program">
-  <div><span class="next-program-label">PRÓXIMO PROGRAMA · ÁGORA SOL RADIO</span><h3>Miércoles 25 de noviembre</h3><p>De 20:00 a 22:00 h · Directo, invitados y mucho ruido.</p><a class="cta" href="#agora">▶ Escucha Ágora Sol Radio</a></div>
-  <div class="next-program-count"><small>CUENTA ATRÁS</small><span id="next-program-countdown">Próxima emisión</span></div>
+<div class="next-program program-promo">
+  <div class="program-promo-art" aria-label="Anuncio tipográfico de Radikal Sonoro: Punk en Directo">
+    <span class="program-promo-date">MIÉRCOLES · 25 NOV 2026</span>
+    <strong>RADIKAL<br>SONORO</strong>
+    <em>PUNK EN DIRECTO</em>
+    <small>ÁGORA SOL RADIO · 20:00—22:00 H</small>
+  </div>
+  <div class="program-promo-info">
+    <span class="next-program-label">PRÓXIMA EMISIÓN · EN LA RADIO LIBRE</span>
+    <h3>Regresa Radikal Sonoro</h3>
+    <p>El miércoles 25 de noviembre volvemos con dos horas de punk en directo, cultura underground y mucho ruido. Sintoniza Ágora Sol Radio.</p>
+    <div class="next-program-count"><small>CUENTA ATRÁS</small><span id="next-program-countdown">Próxima emisión</span></div>
+    <div class="program-promo-actions">
+      <a class="cta" href="#agora">▶ ESCUCHAR EN DIRECTO</a>
+      <a class="program-calendar" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Radikal+Sonoro%3A+Punk+en+Directo&amp;dates=20261125T200000%2F20261125T220000&amp;details=Dos+horas+de+punk+en+directo+y+cultura+underground+con+Radikal+Sonoro.&amp;location=%C3%81gora+Sol+Radio&amp;ctz=Europe%2FMadrid" target="_blank" rel="noopener noreferrer">＋ AÑADIR AL CALENDARIO</a>
+      <a class="program-podcast" href="https://www.agorasolradio.org/podcast/radikalsonoro/" target="_blank" rel="noopener noreferrer">ESCUCHAR PROGRAMAS ANTERIORES ↗</a>
+    </div>
+  </div>
 </div>
 </section>
 <section id="quienes-somos">
@@ -413,14 +444,14 @@ rl.innerHTML=r||'<span class="small">Aquí irán tus redes sociales.</span>';
  var direct=document.getElementById("directo");
  if(direct)left.appendChild(direct);
  var feature=document.createElement("div");feature.className="magazine-interview";feature.appendChild(interview);
+ left.appendChild(feature);
  var bottom=document.createElement("div");bottom.className="magazine-bottom";
  bottom.appendChild(news);bottom.appendChild(spotify);
  var hero=main.querySelector(".hero");
  if(hero)hero.remove();
  var who=document.getElementById("quienes-somos");
  main.insertBefore(top,main.firstChild);
- main.insertBefore(feature,top.nextSibling);
- main.insertBefore(bottom,feature.nextSibling);
+ main.insertBefore(bottom,top.nextSibling);
  if(who)main.appendChild(who);
 })();
 </script>
