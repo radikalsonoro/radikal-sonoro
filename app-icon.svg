@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<rect width="512" height="512" fill="#080808"/>
+<path d="M0 0h512v512H0z" fill="none" stroke="#eeeae1" stroke-width="18"/>
+<path d="M30 30h452v452H30z" fill="none" stroke="#d7192d" stroke-width="22"/>
+<path d="M65 90h382v70H65z" fill="#d7192d"/>
+<text x="256" y="139" fill="#fff" font-family="Arial Black,Arial,sans-serif" font-size="45" font-weight="900" text-anchor="middle">RADIKAL</text>
+<text x="256" y="305" fill="#eeeae1" font-family="Arial Black,Arial,sans-serif" font-size="112" font-weight="900" text-anchor="middle">RS</text>
+<path d="M80 340h352v16H80z" fill="#f4d52f"/>
+<text x="256" y="410" fill="#f4d52f" font-family="Arial,sans-serif" font-size="31" font-weight="900" letter-spacing="7" text-anchor="middle">SONORO</text>
+<text x="256" y="455" fill="#eeeae1" font-family="monospace" font-size="17" letter-spacing="3" text-anchor="middle">RADIO UNDERGROUND</text>
+</svg>
