@@ -165,6 +165,9 @@ def leer_trinchera():
                 if not cartel:
                     img = detalle.find("img")
                     cartel = urljoin(url_evento, img.get("src", "")) if img else ""
+                # No incluir eventos sin imagen de cartel: la agenda es visual.
+                if not cartel or not cartel.startswith(("http://", "https://")):
+                    continue
                 eventos.append({
                     "fecha": fecha, "hora": hora, "evento": titulo,
                     "artistas": titulo, "sala": "Primera Línea VK Bar · La Trinchera",
@@ -201,8 +204,9 @@ def actualizar_conciertos():
     for evento in existentes + nuevos:
         fecha = evento.get("fecha", "")
         url = evento.get("url", "")
+        cartel = evento.get("cartel", "")
         try:
-            if not fecha or datetime.strptime(fecha, "%Y-%m-%d").date() < hoy or not url:
+            if not fecha or datetime.strptime(fecha, "%Y-%m-%d").date() < hoy or not url or not cartel or not cartel.startswith(("http://", "https://")):
                 continue
         except ValueError:
             continue
