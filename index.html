@@ -425,7 +425,7 @@ async function loadConcertNews(){
     if(!response.ok)throw new Error("No se pudo cargar la agenda");
     var events=await response.json(),today=new Date();today.setHours(0,0,0,0);
     events=(Array.isArray(events)?events:[]).filter(function(ev){
-      if(!ev||!ev.fecha||!ev.url||!ev.cartel)return false;
+      if(!ev||!ev.fecha||!ev.url)return false;
       var d=new Date(ev.fecha+"T00:00:00");return !isNaN(d.getTime())&&d>=today;
     }).slice(0,6);
     list.innerHTML="";list.className="concert-grid";
