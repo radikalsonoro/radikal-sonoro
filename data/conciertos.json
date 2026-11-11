@@ -12,6 +12,28 @@
   },
   {
     "fecha": "2026-11-13",
+    "hora": "21:30",
+    "evento": "The Nomads + Star Mafia Boy",
+    "artistas": "The Nomads + Star Mafia Boy",
+    "sala": "Gruta 77",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://gruta77.com/events/the-nomads-suecia/",
+    "cartel": "https://gruta77.com/wp-content/uploads/2026/10/13_noviembre-Mahou_web.jpg"
+  },
+  {
+    "fecha": "2026-11-13",
+    "hora": "21:00",
+    "evento": "ESPIRICOM + NARKOM + NoRMAN BATES",
+    "artistas": "ESPIRICOM + NARKOM + NoRMAN BATES",
+    "sala": "Wurlitzer Ballroom",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://wurlitzerballroom.com/concierto/espiricom-narkom-norman-bates-2026-11-13",
+    "cartel": ""
+  },
+  {
+    "fecha": "2026-11-13",
     "hora": "20:00",
     "evento": "Lágrimas + Svdestada",
     "artistas": "Lágrimas + Svdestada",
@@ -23,18 +45,7 @@
   },
   {
     "fecha": "2026-11-14",
-    "hora": "21:30",
-    "evento": "Mala Brava + Mallory Knox + Lukas + Los Voltajes + Thee Girlfriends",
-    "artistas": "Mala Brava + Mallory Knox + Lukas + Los Voltajes + Thee Girlfriends",
-    "sala": "Gruta 77",
-    "ciudad": "Madrid",
-    "pais": "España",
-    "url": "https://gruta77.com/events/mallory-knox-lukas-los-voltajes-thee-girlfriends/",
-    "cartel": "https://gruta77.com/wp-content/uploads/2026/08/14_noviembre_eventual_web.jpg"
-  },
-  {
-    "fecha": "2026-11-14",
-    "hora": "19:30",
+    "hora": "20:00",
     "evento": "Kaxta + Detrapo",
     "artistas": "Kaxta + Detrapo",
     "sala": "La Trinchera",
@@ -44,25 +55,14 @@
     "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/10/14.11-sabado-noche-kaxta-detrapo-767x1024.jpeg"
   },
   {
-    "fecha": "2026-11-15",
-    "hora": "21:00",
-    "evento": "Pyrex + Traumatizer",
-    "artistas": "Pyrex + Traumatizer",
-    "sala": "Wurlitzer Ballroom",
-    "ciudad": "Madrid",
-    "pais": "España",
-    "url": "https://wurlitzerballroom.com/concierto/pyrex-traumatizer-2026-11-15",
-    "cartel": ""
-  },
-  {
-    "fecha": "2026-11-20",
+    "fecha": "2026-11-14",
     "hora": "21:30",
-    "evento": "Hammond York + Sally Brown + Majaicans — Mad Ska Last Session",
-    "artistas": "Hammond York + Sally Brown + Majaicans",
+    "evento": "Mala Brava + Mallory Knox + Lukas + Los Voltajes + Thee Girlfriends",
+    "artistas": "Mala Brava + Mallory Knox + Lukas + Los Voltajes + Thee Girlfriends",
     "sala": "Gruta 77",
     "ciudad": "Madrid",
     "pais": "España",
-    "url": "https://gruta77.com/events/hammond-york-sally-brown-majaicans-en-mad-ska-last-session/",
-    "cartel": "https://gruta77.com/wp-content/uploads/2026/08/20_noviembre_web.jpg"
+    "url": "https://gruta77.com/events/mallory-knox-lukas-los-voltajes-thee-girlfriends/",
+    "cartel": "https://gruta77.com/wp-content/uploads/2026/08/14_noviembre_eventual_web.jpg"
   }
 ]
