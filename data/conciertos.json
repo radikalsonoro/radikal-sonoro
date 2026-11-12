@@ -33,6 +33,17 @@
     "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/11/18.11-miercoles--819x1024.jpeg"
   },
   {
+    "fecha": "2026-11-19",
+    "hora": "21:00",
+    "evento": "Boston Babies + Perfil",
+    "artistas": "Boston Babies + Perfil Bajo",
+    "sala": "Sala El Sol",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://salaelsol.com/eventos/boston-babies-perfil-mazo/",
+    "cartel": "https://salaelsol.com/wp-content/uploads/2026/10/BOSTON.avif"
+  },
+  {
     "fecha": "2026-11-21",
     "hora": "20:00",
     "evento": "Yacopsae + Rageous Intent + Hedor",
@@ -42,6 +53,17 @@
     "pais": "España",
     "url": "https://primeralineavkbar.com/index.php/2026/11/05/sabado-21-de-noviembre-yacopsae-rageuos-intent-hedor/",
     "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/11/21.11-sabado-noche-.png"
+  },
+  {
+    "fecha": "2026-11-21",
+    "hora": "21:00",
+    "evento": "Tronkas!",
+    "artistas": "Tronkas!",
+    "sala": "Sala El Sol",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://salaelsol.com/eventos/tronkas-mazo/",
+    "cartel": "https://salaelsol.com/wp-content/uploads/2026/10/TRONKAS.avif"
   },
   {
     "fecha": "2026-11-21",
@@ -64,5 +86,16 @@
     "pais": "España",
     "url": "https://gruta77.com/events/3a-fiesta-homenaje-a-shane-macgowan-the-pogues-the-trebolmakers-radio-clash/",
     "cartel": "https://gruta77.com/wp-content/uploads/2026/08/27_noviembre_web.jpg"
+  },
+  {
+    "fecha": "2026-11-28",
+    "hora": "20:30",
+    "evento": "Brighton 64 + Javier Sun",
+    "artistas": "Brighton 64 + Javier Sun",
+    "sala": "Sala El Sol",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://salaelsol.com/eventos/brighton-64-javier-sun-ultima-vez-en-madrid/",
+    "cartel": "https://salaelsol.com/wp-content/uploads/2026/05/7d59a946-5ec7-45a7-925a-9c524bd30e02.jpeg"
   }
 ]
