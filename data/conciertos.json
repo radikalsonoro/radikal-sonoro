@@ -1,79 +1,68 @@
 [
   {
-    "fecha": "2026-11-13",
+    "fecha": "2026-11-20",
     "hora": "20:00",
-    "evento": "Lágrimas + Svdestada",
-    "artistas": "Punk / hardcore",
+    "evento": "Shöck + Chulería Joder",
+    "artistas": "Shöck + Chulería Joder",
     "sala": "La Trinchera",
     "ciudad": "Madrid",
     "pais": "España",
-    "url": "https://primeralineavkbar.com/index.php/2026/10/20/viernes-13-de-noviembre-lagrimas-svdestada/",
-    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/10/13.11-lagrimas-svdestada-madrid-1-739x1024.jpg"
+    "url": "https://primeralineavkbar.com/index.php/2026/11/05/viernes-20-de-noviembre-shock-chuleria-joder/",
+    "cartel": ""
   },
   {
-    "fecha": "2026-11-14",
-    "hora": "19:30",
-    "evento": "Kaxta + Detrapo",
-    "artistas": "Punk / rock",
+    "fecha": "2026-11-21",
+    "hora": "20:00",
+    "evento": "Yacopsae + Rageous Intent + Hedor",
+    "artistas": "Yacopsae + Rageous Intent + Hedor",
     "sala": "La Trinchera",
     "ciudad": "Madrid",
     "pais": "España",
-    "url": "https://primeralineavkbar.com/index.php/2026/10/20/sabado-14-de-noviembre-kaxta-detrapo/",
-    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/10/14.11-sabado-noche-kaxta-detrapo-767x1024.jpeg"
+    "url": "https://primeralineavkbar.com/index.php/2026/11/05/sabado-21-de-noviembre-yacopsae-rageuos-intent-hedor/",
+    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/11/21.11-sabado-noche-.png"
   },
   {
-    "fecha": "2026-11-18",
-    "hora": "19:00",
-    "evento": "Narkom + Zhed + Undefined Void (DJ set)",
-    "artistas": "Punk / industrial",
-    "sala": "La Trinchera",
-    "ciudad": "Madrid",
-    "pais": "España",
-    "url": "https://primeralineavkbar.com/index.php/trinchera/",
-    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/11/18.11-miercoles--150x150.jpeg"
-  },
-  {
-    "fecha": "2026-11-13",
+    "fecha": "2026-11-21",
     "hora": "21:30",
-    "evento": "The Nomads + Star Mafia Boy",
-    "artistas": "Garage punk",
+    "evento": "DDT + Thee Suckin' Dicks + Macarrones",
+    "artistas": "DDT + Thee Suckin' Dicks + Macarrones",
     "sala": "Gruta 77",
     "ciudad": "Madrid",
     "pais": "España",
-    "url": "https://gruta77.com/programacion-eventos-gruta77-madrid/",
-    "cartel": "https://gruta77.com/wp-content/uploads/2026/10/13_noviembre-Mahou_web.jpg"
+    "url": "https://gruta77.com/events/ddt-thee-suckin-dicks-macarrones/",
+    "cartel": "https://gruta77.com/wp-content/uploads/2026/08/21_noviembre_web.jpg"
   },
   {
-    "fecha": "2026-11-14",
+    "fecha": "2026-11-27",
     "hora": "21:30",
-    "evento": "Mala Brava + Mallory Knox + Lukas + Los Voltajes + Thee Girlfriends",
-    "artistas": "Garage / power pop / punk",
+    "evento": "3ª Fiesta homenaje a Shane MacGowan: The Trebolmakers + Radio Clash",
+    "artistas": "The Trebolmakers + Radio Clash",
     "sala": "Gruta 77",
     "ciudad": "Madrid",
     "pais": "España",
-    "url": "https://gruta77.com/programacion-eventos-gruta77-madrid/",
-    "cartel": "https://gruta77.com/wp-content/uploads/2026/08/14_noviembre_web.jpg"
-  },
-  {
-    "fecha": "2026-11-13",
-    "hora": "21:00",
-    "evento": "Espiricom + Narkom + NoRMAN BATES",
-    "artistas": "Avant-garde",
-    "sala": "Wurlitzer Ballroom",
-    "ciudad": "Madrid",
-    "pais": "España",
-    "url": "https://wurlitzerballroom.com/concierto/espiricom-narkom-norman-bates-2026-11-13",
-    "cartel": "https://sjuuujieewmyiqtcxkps.supabase.co/storage/v1/object/sign/carteles/c2e679d7-60e7-42ce-898b-8844f8625930.jpeg?token=eyJraWQiOiIwMGUyMTZmMi01YTQyLTQyN2QtYTNlMC1iYjg0NzYyMzczZDIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXJ0ZWxlcy9jMmU2NzlkNy02MGU3LTQyY2UtODk4Yi04ODQ0Zjg2MjU5MzAuanBlZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTQ0NzY5NzYsImV4cCI6MTc5NDU2MzM3Nn0.2zaxWELhwXAb1Ql9PMuse2yQMQxBnAv0o3pvaNL_6RY"
+    "url": "https://gruta77.com/events/3a-fiesta-homenaje-a-shane-macgowan-the-pogues-the-trebolmakers-radio-clash/",
+    "cartel": "https://gruta77.com/wp-content/uploads/2026/08/27_noviembre_web.jpg"
   },
   {
     "fecha": "2026-11-15",
     "hora": "21:00",
     "evento": "Pyrex + Traumatizer",
-    "artistas": "Hardcore punk / D-beat",
+    "artistas": "Pyrex + Traumatizer",
     "sala": "Wurlitzer Ballroom",
     "ciudad": "Madrid",
     "pais": "España",
     "url": "https://wurlitzerballroom.com/concierto/pyrex-traumatizer-2026-11-15",
-    "cartel": "https://sjuuujieewmyiqtcxkps.supabase.co/storage/v1/object/sign/carteles/b8cac3e9-9cdb-49e7-a9fc-08b9abed2513.jpeg?token=eyJraWQiOiIwMGUyMTZmMi01YTQyLTQyN2QtYTNlMC1iYjg0NzYyMzczZDIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXJ0ZWxlcy9iOGNhYzNlOS05Y2RiLTQ5ZTctYTlmYy0wOGI5YWJlZDI1MTMuanBlZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTQ0NzY5NzYsImV4cCI6MTc5NDU2MzM3Nn0.5Wym22PN8NsjBWXgoUPsMt3WK1dnUhR1fKJeVnCoX1g"
+    "cartel": ""
+  },
+  {
+    "fecha": "2026-12-01",
+    "hora": "21:00",
+    "evento": "Risk it! + Breathing + Pit Beef",
+    "artistas": "Risk it! + Breathing + Pit Beef",
+    "sala": "Wurlitzer Ballroom",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://wurlitzerballroom.com/concierto/risk-it-breathing-2026-12-01",
+    "cartel": ""
   }
 ]
