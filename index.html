@@ -10,7 +10,8 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Radikal Sonoro">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" sizes="any">\n<link rel="shortcut icon" href="/favicon.svg?v=2" type="image/svg+xml">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" sizes="any">
+<link rel="shortcut icon" href="/favicon.svg?v=2" type="image/svg+xml">
 
 <meta name="description" content="Radikal Sonoro: radio punk, hardcore, ska y metal. Noticias underground, conciertos y cultura alternativa."><title>Radikal Sonoro | Punk · Hardcore · Ska · Metal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -283,7 +284,12 @@ footer{max-width:none;margin:0;padding:24px;text-align:center;background:#050505
 #news-list .news-meta{margin-top:12px;padding-top:8px;border-top:1px dashed #888;font:9px var(--mono);text-transform:uppercase;letter-spacing:.035em}
 @media(max-width:700px){#news-list{grid-template-columns:1fr}#news-list li.news-card{min-height:0;padding-top:15px;padding-bottom:12px}#noticias:after{top:95px}}
 
-\n/* Refuerzo del logotipo y acceso a la radio en pantallas grandes */\n.logo{width:150px;height:150px;display:flex;align-items:center;justify-content:center;background:#080808;border:3px solid #eeeae1;box-shadow:6px 6px #d7192d;padding:4px}.logo img{width:100%;height:100%;object-fit:contain;filter:none}\n#radio #play{min-height:46px;font-size:13px;padding:13px 18px}\n#radio #msg{min-height:20px;font-weight:700}\n</style>
+
+/* Refuerzo del logotipo y acceso a la radio en pantallas grandes */
+.logo{width:150px;height:150px;display:flex;align-items:center;justify-content:center;background:#080808;border:3px solid #eeeae1;box-shadow:6px 6px #d7192d;padding:4px}.logo img{width:100%;height:100%;object-fit:contain;filter:none}
+#radio #play{min-height:46px;font-size:13px;padding:13px 18px}
+#radio #msg{min-height:20px;font-weight:700}
+</style>
 </head>
 <body id="inicio">
 <div class="topline"></div>
@@ -553,7 +559,8 @@ w.split("").forEach(function(ch){out+='<span aria-hidden="true" class="'+cls[(i+
 t.innerHTML=out;
 }
 
-var audio=document.getElementById("audio"),msg=document.getElementById("msg"),playButton=document.getElementById("play");\naudio.autoplay=true;audio.preload="none";audio.setAttribute("playsinline","");
+var audio=document.getElementById("audio"),msg=document.getElementById("msg"),playButton=document.getElementById("play");
+audio.autoplay=true;audio.preload="none";audio.setAttribute("playsinline","");
 function prepareRadio(){
   if(!STREAM_URL){msg.textContent="La radio aún no está conectada. Falta la URL de la transmisión.";return false;}
   if(!audio.src || audio.src!==new URL(STREAM_URL,location.href).href) audio.src=STREAM_URL;
