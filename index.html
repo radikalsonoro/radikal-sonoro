@@ -532,7 +532,7 @@ async function loadConcertNews(){
     if(!ev||!ev.fecha||!ev.url)return false;
     var d=new Date(ev.fecha+"T00:00:00");
     return !isNaN(d.getTime())&&d>=today;
-  }).sort(function(a,b){return a.fecha.localeCompare(b.fecha);}).slice(0,5);
+  }).sort(function(a,b){return a.fecha.localeCompare(b.fecha);}).slice(0,12);
   list.innerHTML="";list.className="concert-grid";
   if(!events.length){
     status.textContent="No hay próximos conciertos con fecha y fuente verificadas.";
