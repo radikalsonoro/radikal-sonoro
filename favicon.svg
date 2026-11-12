@@ -1,7 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-<rect width="128" height="128" fill="#080808"/>
-<path d="M0 0h128v18H0zM0 110h128v18H0z" fill="#d7192d"/>
-<path d="M12 22h104v84H12z" fill="none" stroke="#eeeae1" stroke-width="4"/>
-<text x="64" y="78" text-anchor="middle" font-family="Arial Black,Impact,sans-serif" font-size="48" font-weight="900" fill="#f4d52f" stroke="#d7192d" stroke-width="1.5" paint-order="stroke">RS</text>
-<path d="M17 92h94" stroke="#eeeae1" stroke-width="3"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><rect width="128" height="128" fill="#090909"/><image href="https://images.zeno.fm/ZziN82g5xsNyVYXh5rx-16695uSCdkZvXw-iJA7_PrA/rs%3Afill%3A152%3A152/q%3A75/g%3Ace%3A0%3A0/aHR0cHM6Ly9wcm94eS56ZW5vLmZtL2NvbnRlbnQvc3RhdGlvbnMvYWd4emZucGxibTh0YzNSaGRITnlNZ3NTQ2tGMWRHaERiR2xsYm5RWWdJQ1E5cS1jMGdvTUN4SU9VM1JoZEdsdmJsQnliMlpwYkdVWWdJQ1ExcGJTX0FvTW9nRUVlbVZ1YncvaW1hZ2UvP3U9MTY1ODE3NTU4OTAwMA" x="2" y="2" width="124" height="124" preserveAspectRatio="xMidYMid meet"/></svg>
