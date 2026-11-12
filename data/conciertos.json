@@ -1,20 +1,9 @@
 [
   {
-    "fecha": "2026-11-12",
-    "hora": "21:00",
-    "evento": "i hate bouncers + ferrocentro",
-    "artistas": "i hate bouncers + ferrocentro",
-    "sala": "Wurlitzer Ballroom",
-    "ciudad": "Madrid",
-    "pais": "España",
-    "url": "https://wurlitzerballroom.com/concierto/i-hate-bouncers-2026-11-12",
-    "cartel": ""
-  },
-  {
     "fecha": "2026-11-13",
     "hora": "20:00",
     "evento": "Lágrimas + Svdestada",
-    "artistas": "Lágrimas + Svdestada",
+    "artistas": "Punk / hardcore",
     "sala": "La Trinchera",
     "ciudad": "Madrid",
     "pais": "España",
@@ -22,21 +11,10 @@
     "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/10/13.11-lagrimas-svdestada-madrid-1-739x1024.jpg"
   },
   {
-    "fecha": "2026-11-13",
-    "hora": "21:30",
-    "evento": "The Nomads + Star Mafia Boy",
-    "artistas": "The Nomads + Star Mafia Boy",
-    "sala": "Gruta 77",
-    "ciudad": "Madrid",
-    "pais": "España",
-    "url": "https://gruta77.com/events/the-nomads-suecia/",
-    "cartel": "https://gruta77.com/wp-content/uploads/2026/10/13_noviembre-Mahou_web.jpg"
-  },
-  {
     "fecha": "2026-11-14",
     "hora": "19:30",
     "evento": "Kaxta + Detrapo",
-    "artistas": "Kaxta + Detrapo",
+    "artistas": "Punk / rock",
     "sala": "La Trinchera",
     "ciudad": "Madrid",
     "pais": "España",
@@ -44,25 +22,58 @@
     "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/10/14.11-sabado-noche-kaxta-detrapo-767x1024.jpeg"
   },
   {
+    "fecha": "2026-11-18",
+    "hora": "19:00",
+    "evento": "Narkom + Zhed + Undefined Void (DJ set)",
+    "artistas": "Punk / industrial",
+    "sala": "La Trinchera",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://primeralineavkbar.com/index.php/trinchera/",
+    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/11/18.11-miercoles--150x150.jpeg"
+  },
+  {
+    "fecha": "2026-11-13",
+    "hora": "21:30",
+    "evento": "The Nomads + Star Mafia Boy",
+    "artistas": "Garage punk",
+    "sala": "Gruta 77",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://gruta77.com/programacion-eventos-gruta77-madrid/",
+    "cartel": "https://gruta77.com/wp-content/uploads/2026/10/13_noviembre-Mahou_web.jpg"
+  },
+  {
+    "fecha": "2026-11-14",
+    "hora": "21:30",
+    "evento": "Mala Brava + Mallory Knox + Lukas + Los Voltajes + Thee Girlfriends",
+    "artistas": "Garage / power pop / punk",
+    "sala": "Gruta 77",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://gruta77.com/programacion-eventos-gruta77-madrid/",
+    "cartel": "https://gruta77.com/wp-content/uploads/2026/08/14_noviembre_web.jpg"
+  },
+  {
+    "fecha": "2026-11-13",
+    "hora": "21:00",
+    "evento": "Espiricom + Narkom + NoRMAN BATES",
+    "artistas": "Avant-garde",
+    "sala": "Wurlitzer Ballroom",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://wurlitzerballroom.com/concierto/espiricom-narkom-norman-bates-2026-11-13",
+    "cartel": "https://sjuuujieewmyiqtcxkps.supabase.co/storage/v1/object/sign/carteles/c2e679d7-60e7-42ce-898b-8844f8625930.jpeg?token=eyJraWQiOiIwMGUyMTZmMi01YTQyLTQyN2QtYTNlMC0yYjg0NzYyMzczZDIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXJ0ZWxlcy9jMmU2NzlkNy02MGU3LTQyY2UtODk4Yi04ODQ0Zjg2MjU5MzAuanBlZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTQ0NzAzNjksImV4cCI6MTc5NDU1Njc2OX0.-S7llvmTOWoEEvUyyk4hLP3mhTEYy4jJxNgg4VZ2gYc"
+  },
+  {
     "fecha": "2026-11-15",
     "hora": "21:00",
     "evento": "Pyrex + Traumatizer",
-    "artistas": "Pyrex + Traumatizer",
+    "artistas": "Hardcore punk / D-beat",
     "sala": "Wurlitzer Ballroom",
     "ciudad": "Madrid",
     "pais": "España",
     "url": "https://wurlitzerballroom.com/concierto/pyrex-traumatizer-2026-11-15",
-    "cartel": ""
-  },
-  {
-    "fecha": "2026-11-15",
-    "hora": "20:30",
-    "evento": "La Gran Orquesta Republicana Sound System",
-    "artistas": "La Gran Orquesta Republicana Sound System",
-    "sala": "Gruta 77",
-    "ciudad": "Madrid",
-    "pais": "España",
-    "url": "https://gruta77.com/events/la-gran-orquesta-republicana-sound-system/var/ri-0.l-L2/",
-    "cartel": "https://gruta77.com/wp-content/uploads/2026/10/15_noviembre_web.jpg"
+    "cartel": "https://sjuuujieewmyiqtcxkps.supabase.co/storage/v1/object/sign/carteles/b8cac3e9-9cdb-49e7-a9fc-08b9abed2513.jpeg?token=eyJraWQiOiIwMGUyMTZmMi01YTQyLTQyN2QtYTNlMC0yYjg0NzYyMzczZDIiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJjYXJ0ZWxlcy9iOGNhYzNlOS05Y2RiLTQ5ZTctYTlmYy0wOGI5YWJlZDI1MTMuanBlZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTQ0NzAzNjksImV4cCI6MTc5NDU1Njc2OX0.-EgbDB_jZRme2vUa6QlU8upIgGKfqpvSBjyj64s6B28"
   }
 ]
