@@ -548,7 +548,7 @@ async function loadConcertNews(){
     var ap=/la trinchera/i.test(a.sala||"")?0:1;
     var bp=/la trinchera/i.test(b.sala||"")?0:1;
     return ap-bp||a.fecha.localeCompare(b.fecha);
-  }).slice(0,7);
+  }).slice(0,12);
   list.innerHTML="";list.className="concert-grid";
   if(!events.length){
     status.textContent="No hay próximos conciertos con fecha y fuente verificadas.";
