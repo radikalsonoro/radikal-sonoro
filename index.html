@@ -532,10 +532,23 @@ async function loadConcertNews(){
   }catch(error){console.warn("No se pudo cargar la agenda",error);}
   var today=new Date();today.setHours(0,0,0,0);
   events=(Array.isArray(events)?events:[]).filter(function(ev){
-    if(!ev||!ev.fecha||!ev.url)return false;
+    if(!ev||!ev.fecha||!ev.url||!ev.cartel)return false;
     var d=new Date(ev.fecha+"T00:00:00");
     return !isNaN(d.getTime())&&d>=today;
-  }).sort(function(a,b){return a.fecha.localeCompare(b.fecha);}).slice(0,12);
+  });
+  events=await Promise.all(events.map(function(ev){
+    return new Promise(function(resolve){
+      var poster=new Image();
+      poster.onload=function(){resolve(ev);};
+      poster.onerror=function(){resolve(null);};
+      poster.src=ev.cartel;
+    });
+  }));
+  events=events.filter(Boolean).sort(function(a,b){
+    var ap=/la trinchera/i.test(a.sala||"")?0:1;
+    var bp=/la trinchera/i.test(b.sala||"")?0:1;
+    return ap-bp||a.fecha.localeCompare(b.fecha);
+  }).slice(0,7);
   list.innerHTML="";list.className="concert-grid";
   if(!events.length){
     status.textContent="No hay próximos conciertos con fecha y fuente verificadas.";
@@ -548,7 +561,11 @@ async function loadConcertNews(){
     if(!venues.has(venue))venues.set(venue,[]);
     venues.get(venue).push(ev);
   });
-  Array.from(venues.entries()).forEach(function(entry){
+  Array.from(venues.entries()).sort(function(a,b){
+    var ap=/la trinchera/i.test(a[0])?0:1;
+    var bp=/la trinchera/i.test(b[0])?0:1;
+    return ap-bp||a[0].localeCompare(b[0]);
+  }).forEach(function(entry){
     var venueName=entry[0],venueEvents=entry[1];
     var group=document.createElement("li"),heading=document.createElement("h3"),place=document.createElement("span"),cards=document.createElement("div");
     group.className="venue-group";
@@ -566,7 +583,7 @@ async function loadConcertNews(){
         var posterLink=document.createElement("a"),img=document.createElement("img");
         posterLink.className="concert-poster-link";posterLink.href=ev.cartel;posterLink.target="_blank";posterLink.rel="noopener noreferrer";posterLink.setAttribute("aria-label","Abrir cartel original de "+(ev.evento||"este concierto"));
         img.className="concert-poster";img.src=ev.cartel;img.alt="Cartel original: "+(ev.evento||ev.artistas||"concierto");img.loading="lazy";
-        img.onerror=function(){var pending=document.createElement("div");pending.className="concert-poster-pending";pending.textContent="Cartel original no disponible";this.replaceWith(pending);};
+        img.onerror=function(){card.remove();};
         posterLink.appendChild(img);card.appendChild(posterLink);
       }else{
         var pending=document.createElement("div");
