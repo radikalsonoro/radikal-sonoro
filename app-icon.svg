@@ -1,1 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" rx="64" fill="#090909"/><image href="https://images.zeno.fm/ZziN82g5xsNyVYXh5rx-16695uSCdkZvXw-iJA7_PrA/rs%3Afill%3A152%3A152/q%3A75/g%3Ace%3A0%3A0/aHR0cHM6Ly9wcm94eS56ZW5vLmZtL2NvbnRlbnQvc3RhdGlvbnMvYWd4emZucGxibTh0YzNSaGRITnlNZ3NTQ2tGMWRHaERiR2xsYm5RWWdJQ1E5cS1jMGdvTUN4SU9VM1JoZEdsdmJsQnliMlpwYkdVWWdJQ1ExcGJTX0FvTW9nRUVlbVZ1YncvaW1hZ2UvP3U9MTY1ODE3NTU4OTAwMA" x="16" y="16" width="480" height="480" preserveAspectRatio="xMidYMid meet"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<title>Radikal Sonoro — calavera oficial</title>
+<rect width="512" height="512" fill="#f2eee5"/>
+<path d="M68 145 22 98l8 86 42 19M444 145l46-47-8 86-42 19" fill="#d7192d" stroke="#080808" stroke-width="9"/>
+<path d="M120 94 92 35l42 19 21 43M392 94l28-59-42 19-21 43" fill="#f2eee5" stroke="#080808" stroke-width="13" stroke-linejoin="round"/>
+<path d="M256 42C147 42 75 116 75 220c0 83 38 129 88 157v49h186v-49c50-28 88-74 88-157C437 116 365 42 256 42Z" fill="#fff" stroke="#080808" stroke-width="17" stroke-linejoin="round"/>
+<path d="M111 185c24-49 62-76 109-79-20 36-42 60-79 77-11 5-21 6-30 2ZM401 185c-24-49-62-76-109-79 20 36 42 60 79 77 11 5 21 6 30 2Z" fill="#080808"/>
+<path d="M144 219c13-31 36-47 67-47 30 0 48 20 47 48-1 36-26 62-60 62-39 0-68-28-54-63ZM368 219c-13-31-36-47-67-47-30 0-48 20-47 48 1 36 26 62 60 62 39 0 68-28 54-63Z" fill="#080808"/>
+<path d="m256 250-33 71 29 18 37-18-33-71Z" fill="#080808"/>
+<path d="M203 355q53 35 106 0l-11 49h-84Z" fill="#080808"/>
+<path d="M220 404v33m24-34v34m24-34v34m24-34v34" stroke="#080808" stroke-width="10"/>
+<path d="M80 171 46 202l36 6M432 171l34 31-36 6" fill="none" stroke="#d7192d" stroke-width="12"/>
+<text x="256" y="478" text-anchor="middle" font-family="Impact,Arial Black,sans-serif" font-size="53" font-weight="900" letter-spacing="-2" fill="#080808">RADIKAL SONORO</text>
+<text x="256" y="505" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="900" letter-spacing="7" fill="#d7192d">RADIO SHOW</text>
+</svg>
