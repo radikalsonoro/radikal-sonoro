@@ -11,6 +11,17 @@
     "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/10/13.11-lagrimas-svdestada-madrid-1-739x1024.jpg"
   },
   {
+    "fecha": "2026-11-13",
+    "hora": "20:30",
+    "evento": "En Vano + Inkandescencia + El Silencio de los Mudos",
+    "artistas": "En Vano + Inkandescencia + El Silencio de los Mudos",
+    "sala": "Barracudas Rock Bar",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://barracudasrockbar.com/event/en-vano-inkandescencia-el-silencio-de-los-mudos/",
+    "cartel": "https://barracudasrockbar.com/wp-content/uploads/EN-VANO-INKANDESCENCIA-EL-SILENCIO-DE-LOS-MUDOS.jpg"
+  },
+  {
     "fecha": "2026-11-14",
     "hora": "19:30",
     "evento": "Kaxta + Detrapo",
@@ -22,6 +33,17 @@
     "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/10/14.11-sabado-noche-kaxta-detrapo-767x1024.jpeg"
   },
   {
+    "fecha": "2026-11-15",
+    "hora": "20:00",
+    "evento": "Remedios Caseros + Babylon",
+    "artistas": "Remedios Caseros + Babylon",
+    "sala": "Sala El Sol",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://salaelsol.com/eventos/remedios-caseros-babylon/",
+    "cartel": "https://salaelsol.com/wp-content/uploads/2026/10/remedios.jpeg"
+  },
+  {
     "fecha": "2026-11-18",
     "hora": "19:00",
     "evento": "Zhed + Narkom + Undefined Void",
@@ -31,6 +53,17 @@
     "pais": "España",
     "url": "https://primeralineavkbar.com/index.php/2026/11/05/miercoles-18-de-noviembre-narkom-narkom-chiasso-suiza-zhed-undefined-void-dj-set-techno-industrial/",
     "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/11/18.11-miercoles--819x1024.jpeg"
+  },
+  {
+    "fecha": "2026-11-18",
+    "hora": "21:00",
+    "evento": "Illuminasty",
+    "artistas": "Illuminasty",
+    "sala": "Barracudas Rock Bar",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://barracudasrockbar.com/event/illuminasty/",
+    "cartel": "https://barracudasrockbar.com/wp-content/uploads/ILLUMINASTY.jpg"
   },
   {
     "fecha": "2026-11-19",
@@ -97,5 +130,27 @@
     "pais": "España",
     "url": "https://salaelsol.com/eventos/brighton-64-javier-sun-ultima-vez-en-madrid/",
     "cartel": "https://salaelsol.com/wp-content/uploads/2026/05/7d59a946-5ec7-45a7-925a-9c524bd30e02.jpeg"
+  },
+  {
+    "fecha": "2026-11-29",
+    "hora": "21:00",
+    "evento": "Mamá Ladilla + El Señor Que Te Molesta — último concierto en Gruta 77",
+    "artistas": "Mamá Ladilla + El Señor Que Te Molesta",
+    "sala": "Gruta 77",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://gruta77.com/events/mama-ladilla-el-senor-que-te-molesta-ultimo-concierto-en-gruta77/",
+    "cartel": "https://gruta77.com/wp-content/uploads/2026/06/29_noviembre_web.jpg"
+  },
+  {
+    "fecha": "2026-12-05",
+    "hora": "20:00",
+    "evento": "The Buzzos + The Diesel Dogs + The Vil Veins",
+    "artistas": "The Buzzos + The Diesel Dogs + The Vil Veins",
+    "sala": "Sala El Sol",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://salaelsol.com/eventos/the-buzzos-the-diesel-dogs-the-vil-veins/",
+    "cartel": "https://salaelsol.com/wp-content/uploads/2026/11/WhatsApp-Image-2026-11-04-at-18.50.29.jpeg"
   }
 ]
