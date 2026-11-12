@@ -263,6 +263,26 @@ footer{max-width:none;margin:0;padding:24px;text-align:center;background:#050505
 
 
 
+
+/* NOTICIAS · portada editorial underground */
+#noticias{position:relative;overflow:hidden;background:#eeeae1 url("https://www.transparenttextures.com/patterns/paper-fibers.png");border:3px solid #090909;border-top:9px solid var(--red);box-shadow:8px 8px #000}
+#noticias:after{content:"RUIDO\A ESTATAL";white-space:pre;position:absolute;right:14px;top:74px;color:rgba(215,25,45,.09);font:900 clamp(52px,8vw,108px)/.78 var(--display);text-align:right;pointer-events:none;transform:rotate(-7deg)}
+#noticias .section-head{position:relative;z-index:1;border-bottom:5px solid #090909}
+#noticias .section-head h2{font-size:clamp(42px,5.5vw,68px);text-shadow:3px 3px var(--yellow)}
+#noticias .section-head small{background:var(--red);color:#fff;transform:rotate(-2deg);box-shadow:3px 3px #111}
+#noticias>p.small{position:relative;z-index:1;max-width:680px;font-size:12px!important;font-weight:700;letter-spacing:.015em}
+#news-status{position:relative;z-index:1;background:#111;color:var(--yellow);border-left:6px solid var(--red);font-weight:700}
+#news-list{position:relative;z-index:1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}
+#news-list li.news-card{position:relative;min-width:0;min-height:190px;padding:18px 14px 13px 54px;background:#fff;border:2px solid #111;border-bottom:6px solid var(--red);box-shadow:4px 4px #111;overflow:hidden;transition:transform .16s,box-shadow .16s}
+#news-list li.news-card:hover{transform:translate(-2px,-3px) rotate(-.4deg);box-shadow:7px 7px var(--yellow)}
+#news-list .news-number{position:absolute;left:0;top:0;bottom:0;width:42px;display:flex;align-items:center;justify-content:center;background:#111;color:var(--yellow);font:900 28px var(--display);writing-mode:vertical-rl;transform:rotate(180deg)}
+#news-list .news-tag{display:inline-block;margin:0 0 10px;padding:4px 7px;background:var(--yellow);color:#111;font:900 9px var(--mono);letter-spacing:.08em;transform:rotate(-2deg)}
+#news-list li>a{font-size:clamp(20px,2.3vw,29px);line-height:.96;text-decoration:none;text-decoration-color:var(--red);text-decoration-thickness:3px;text-underline-offset:4px}
+#news-list li>a:hover{text-decoration:underline;color:var(--red)}
+#news-list li p{font-size:12px!important;line-height:1.5}
+#news-list .news-meta{margin-top:12px;padding-top:8px;border-top:1px dashed #888;font:9px var(--mono);text-transform:uppercase;letter-spacing:.035em}
+@media(max-width:700px){#news-list{grid-template-columns:1fr}#news-list li.news-card{min-height:0;padding-top:15px;padding-bottom:12px}#noticias:after{top:95px}}
+
 </style>
 </head>
 <body id="inicio">
@@ -320,7 +340,7 @@ footer{max-width:none;margin:0;padding:24px;text-align:center;background:#050505
 </div>
 </section>
 <section id="radio"><div class="section-head"><h2>En directo</h2><small>24 horas de música independiente</small></div><div class="radio-grid"><div class="radio-card"><h3>Radikal Sonoro · 24h</h3><p>Nuestra señal online. Dale al play y acompaña la resistencia sonora.</p><button id="play" type="button" aria-label="Escuchar Radikal Sonoro 24 horas">▶ Escuchar 24H</button><audio id="audio" controls preload="none" playsinline></audio><p class="msg" id="msg" role="status"></p></div><div class="radio-card" id="agora"><h3>Ágora Sol Radio</h3><p>Escucha la emisión en directo de Ágora Sol Radio.</p><audio controls preload="none" src="https://cervera.eldialdigital.com:23141/stream">Tu navegador no admite el reproductor de audio.</audio><p class="small agora-schedule"><strong>RADIKAL SONORO · MIÉRCOLES · 20:00–22:00 H</strong></p><a href="https://www.agorasolradio.org/directo/" target="_blank" rel="noopener">Abrir la web de Ágora Sol Radio ↗</a></div></div></section>
-<section id="noticias"><div class="section-head"><h2>Últimas noticias</h2><small>Underground · Aquí y fuera</small></div><p class="small">Selección de hasta 5 noticias recientes de punk, hardcore, ska y metal independiente. Enlaces a las fuentes originales.</p><div id="news-status" role="status" aria-live="polite">Buscando noticias recientes…</div><ul class="list" id="news-list"><li>Conectando con las fuentes…</li></ul><p class="small">Fuentes: Google News RSS. Los artículos pertenecen a sus medios originales.</p></section>
+<section id="noticias"><div class="section-head"><h2>Últimas noticias</h2><small>Prioridad estatal · Sin fronteras</small></div><p class="small">Cinco historias seleccionadas de la escena estatal: punk, hardcore, ska, metal y cultura alternativa. Varias fuentes, cero relleno.</p><div id="news-status" role="status" aria-live="polite">Buscando noticias recientes…</div><ul class="list" id="news-list"><li>Conectando con las fuentes…</li></ul><p class="small">Fuentes consultadas: Maneras de Vivir, Insonoro, Esquirlas de Metal, MariskalRock, RockZone y prensa musical. Cada noticia enlaza a su publicación original.</p></section>
 <section id="conciertos"><div class="section-head"><h2>Agenda de conciertos</h2><small>Próximas fechas</small></div><p class="small">Hasta 7 conciertos. Madrid y alrededores primero; después, el resto de la escena estatal. Solo se publican conciertos con cartel oficial visible.</p><p class="small">Agenda colaboradora: <a href="https://primeralineavkbar.com/index.php/trinchera/" target="_blank" rel="noopener noreferrer">La Trinchera · Primera Línea VK Bar</a>.</p><div id="concert-news-status" role="status" aria-live="polite">Buscando anuncios de conciertos…</div><ul class="list" id="concert-news-list"><li>Conectando con las fuentes…</li></ul><p class="small">¿Organizas un concierto o tocas en una banda? Envíanos la información para revisarla.</p>
 <form class="box" id="concert-form" name="concert-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" action="/gracias.html"><input type="hidden" name="form-name" value="concert-form"><p hidden><label>No rellenes este campo: <input name="bot-field"></label></p><label>Grupo o artista *<input name="grupo" required></label><label>Nombre del concierto o festival *<input name="evento" required></label><div class="formrow"><label>Fecha *<input type="date" name="fecha" required></label><label>Hora<input type="time" name="hora"></label></div><label>Sala o recinto *<input name="sala" required></label><div class="formrow"><label>Ciudad *<input name="ciudad" required></label><label>País<input name="pais"></label></div><label>Estilo musical<input name="estilo" placeholder="Punk, hardcore, ska, metal…"></label><label>Precio de entrada<input name="precio"></label><label>Enlace de entradas o evento<input type="url" name="enlace" placeholder="https://…"></label><label>Cartel oficial del concierto *<input type="file" name="cartel" accept="image/*" required></label><label>Información adicional<textarea name="info" rows="4"></textarea></label><label>Correo de contacto<input type="email" name="email" required></label><button class="chip" type="submit">Enviar concierto</button><p class="small" id="concert-msg" role="status">Se abrirá tu correo para enviar los datos a Radikal Sonoro. El cartel oficial es obligatorio para publicar el concierto.</p></form></section>
 <section id="videos"><div class="section-head"><h2>Bandas libres</h2><small>Descubre · Escucha · Comparte</small></div><p class="bands-intro">Un espacio para descubrir y dar visibilidad a bandas independientes y autogestionadas. Aquí encontrarás búsquedas de videoclips, directos y sesiones de punk, hardcore, ska y metal underground. ¿Tienes una banda? Envíanos tus vídeos y la añadiremos.</p><ul class="list video-grid" id="video-list"><li>Preparando vídeos…</li></ul><p class="small bands-note">Los enlaces te llevan a YouTube. Radikal Sonoro no aloja los vídeos.</p></section>
@@ -399,23 +419,62 @@ var YT_PLAYLIST_ID = "";      // ID de tu lista de YouTube (empieza con PL...)
 // Noticias automáticas desde Google News RSS, mediante RSS2JSON.
 async function loadNews(){
   var list=document.getElementById("news-list"),status=document.getElementById("news-status");
-  var fallback=[{"titulo":"Etsaiakeroak estrena el videoclip de «Stop Kontrol»","resumen":"La banda presenta el vídeo de un tema de «Kalentura», su trabajo publicado en 2025. Punk vasco con mensaje directo.","fecha":"11/11/2026","fuente":"Insonoro","url":"https://insonoro.com/noticia/127853/etsaiakeroak-estrena-el-videoclip-de-_stop-kontrol_"},{"titulo":"Talco anuncian seis fechas en España para el «Freek Tour 2027»","resumen":"La banda italiana llevará su ska-punk a Madrid, Santiago, Bilbao, Zaragoza, Barcelona e Iruñea entre febrero y abril de 2027.","fecha":"11/11/2026","fuente":"Insonoro","url":"https://insonoro.com/noticia/127852/talco-anuncian-seis-conciertos-en-espana-dentro-de-su-gira-_freek-tour-2027_"},{"titulo":"Against the Waves presentarán «Survivalism» en Madrid","resumen":"La banda presentará su nuevo álbum el 14 de noviembre en Sala Uni, acompañada por The Fall of Atlantis.","fecha":"11/11/2026","fuente":"Insonoro","url":"https://insonoro.com/noticia/127851/against-the-waves-presentaran-_survivalism_-en-madrid-este-sabado"},{"titulo":"Stopping Donkeys publican su álbum debut «La Llanura»","resumen":"El grupo manchego estrena diez canciones que mezclan rock alternativo, grunge y psicodelia.","fecha":"11/11/2026","fuente":"Insonoro","url":"https://insonoro.com/noticia/127850/stopping-donkeys-publican-su-album-debut--_la-llanura_"},{"titulo":"BURZ anuncian cuatro conciertos en diciembre","resumen":"El proyecto liderado por Fernando, vinculado a El Corazón del Sapo y Kuraia, anuncia el «DANZE ANTIFA Tour 026».","fecha":"11/11/2026","fuente":"Insonoro","url":"https://insonoro.com/noticia/127840/burz--la-banda-liderada-por-fernando-de-el-corazon-del-sapo-y-kuraia--anuncia-cuatro-conciertos-en-diciembre"}];
-  var items=fallback;
+  if(!list||!status)return;
+  var fallback=[];
   try{
     var response=await fetch("/data/noticias.json?"+Date.now(),{cache:"no-store"});
-    if(response.ok){var liveItems=await response.json();if(Array.isArray(liveItems)&&liveItems.length)items=liveItems;}
-  }catch(error){console.warn("Noticias: usando copia de respaldo",error);}
-  items=(Array.isArray(items)?items.filter(function(n){return n&&n.titulo&&n.url;}).slice(0,5):[]);
+    if(response.ok){var saved=await response.json();if(Array.isArray(saved))fallback=saved;}
+  }catch(error){console.warn("Noticias: no se pudo cargar el archivo local",error);}
+  // Búsqueda distribuida: medios estatales y publicaciones especializadas.
+  var feeds=[
+    {q:'site:manerasdevivir.com (punk OR hardcore OR ska OR metal)',tag:'Maneras de Vivir'},
+    {q:'site:insonoro.com (punk OR hardcore OR ska OR metal)',tag:'Insonoro'},
+    {q:'site:esquirlasdemetal.es metal noticias',tag:'Esquirlas de Metal'},
+    {q:'site:mariskalrock.com (punk OR hardcore OR metal)',tag:'MariskalRock'},
+    {q:'site:rockzone.es (punk OR hardcore OR metal)',tag:'RockZone'},
+    {q:'(punk OR hardcore OR ska OR metal) España bandas estatales',tag:'Prensa musical'}
+  ];
+  var results=await Promise.all(feeds.map(async function(feed){
+    try{
+      var rss='https://news.google.com/rss/search?q='+encodeURIComponent(feed.q)+'&hl=es&gl=ES&ceid=ES:es';
+      var api='https://api.rss2json.com/v1/api.json?rss_url='+encodeURIComponent(rss);
+      var res=await fetch(api);if(!res.ok)return [];
+      var data=await res.json();return (data.items||[]).slice(0,8).map(function(item){
+        var title=(item.title||"").replace(/\s+-\s+[^-]+$/,"").trim();
+        var desc=(item.description||"").replace(/<[^>]*>/g," ").replace(/&nbsp;/g," ").replace(/\s+/g," ").trim();
+        var source=(item.author||feed.tag||"Fuente original").trim();
+        return {titulo:title,resumen:desc.slice(0,230),fecha:item.pubDate||"",fuente:source,url:item.link||"",_tag:feed.tag};
+      });
+    }catch(error){console.warn("Fuente no disponible: "+feed.tag,error);return [];}
+  }));
+  var all=results.flat().concat(fallback);
+  var seen=new Set(),items=all.filter(function(n){
+    if(!n||!n.titulo||!n.url)return false;
+    var key=n.url.split("?")[0];if(seen.has(key))return false;seen.add(key);
+    var text=(n.titulo+" "+(n.resumen||"")).toLowerCase();
+    return /punk|hardcore|ska|metal|oi!|street.?punk|thrash|deathcore|metalcore|grind|stoner|doom|post.?punk|rock alternativo/.test(text);
+  });
+  function dateValue(n){var d=new Date(n.fecha||n.pubDate||0);return isNaN(d.getTime())?0:d.getTime();}
+  items.sort(function(a,b){
+    var aState=/españa|estatal|madrid|barcelona|bilbao|valencia|zaragoza|sevilla|galicia|euskadi|asturias|andalucía|cataluña|castilla|navarra/i.test((a.titulo||"")+" "+(a.resumen||""));
+    var bState=/españa|estatal|madrid|barcelona|bilbao|valencia|zaragoza|sevilla|galicia|euskadi|asturias|andalucía|cataluña|castilla|navarra/i.test((b.titulo||"")+" "+(b.resumen||""));
+    return (Number(bState)-Number(aState))||(dateValue(b)-dateValue(a));
+  });
+  items=items.slice(0,5);
+  if(!items.length)items=fallback.filter(function(n){return n&&n.titulo&&n.url;}).slice(0,5);
   list.innerHTML="";
   if(!items.length){list.innerHTML="<li>No hay noticias verificadas disponibles hoy.</li>";status.textContent="0 noticias verificadas.";return;}
-  items.forEach(function(n){
-    var li=document.createElement("li"),a=document.createElement("a"),summary=document.createElement("p"),meta=document.createElement("div");
+  items.forEach(function(n,index){
+    var li=document.createElement("li"),a=document.createElement("a"),summary=document.createElement("p"),meta=document.createElement("div"),tag=document.createElement("span"),number=document.createElement("span");
+    li.className="news-card";li.setAttribute("data-number",String(index+1).padStart(2,"0"));
+    tag.className="news-tag";tag.textContent=/metal|thrash|death|doom|grind/i.test(n.titulo+" "+(n.resumen||""))?"METAL":/ska/i.test(n.titulo+" "+(n.resumen||""))?"SKA":/hardcore/i.test(n.titulo+" "+(n.resumen||""))?"HARDCORE":"PUNK / ALTERNATIVA";
     a.href=n.url;a.target="_blank";a.rel="noopener noreferrer";a.textContent=n.titulo;
-    summary.textContent=n.resumen||"Consulta la información completa en la fuente original.";summary.style.margin="6px 0";summary.style.fontSize="13px";
-    meta.className="small";meta.textContent=(n.fecha||"Fecha no indicada")+" · "+(n.fuente||"Fuente original");
-    li.appendChild(a);li.appendChild(summary);li.appendChild(meta);list.appendChild(li);
+    summary.textContent=n.resumen||"Consulta la información completa en la fuente original.";
+    meta.className="small news-meta";meta.textContent=(n.fecha?new Date(n.fecha).toLocaleDateString("es-ES"):"Actualidad")+" · "+(n.fuente||n._tag||"Fuente original");
+    number.className="news-number";number.textContent=String(index+1).padStart(2,"0");
+    li.appendChild(number);li.appendChild(tag);li.appendChild(a);li.appendChild(summary);li.appendChild(meta);list.appendChild(li);
   });
-  status.textContent=items.length+" noticias · Actualizado: "+(new Date()).toLocaleDateString("es-ES");
+  status.textContent=items.length+" noticias · Fuentes múltiples · "+(new Date()).toLocaleDateString("es-ES");
 }
 // Detecta fechas futuras explícitas en el anuncio (no confunde publicación con fecha del evento).
 function getConcertDate(item){
