@@ -110,6 +110,17 @@
     "cartel": "https://gruta77.com/wp-content/uploads/2026/08/21_noviembre_web.jpg"
   },
   {
+    "fecha": "2026-11-26",
+    "hora": "20:30",
+    "evento": "Split Dogs",
+    "artistas": "Split Dogs",
+    "sala": "Sala Nazca",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://www.salanazcaconciertos.com/conciertos",
+    "cartel": "https://static.wixstatic.com/media/67fdf2_473684491fbd43cc952702cfe0c4f9e1~mv2.jpg/v1/fit/w_375%2Ch_374%2Cq_90%2Cenc_avif%2Cquality_auto/67fdf2_473684491fbd43cc952702cfe0c4f9e1~mv2.jpg"
+  },
+  {
     "fecha": "2026-11-27",
     "hora": "21:30",
     "evento": "3ª Fiesta homenaje a Shane MacGowan: The Trebolmakers + Radio Clash",
@@ -143,6 +154,17 @@
     "cartel": "https://gruta77.com/wp-content/uploads/2026/06/29_noviembre_web.jpg"
   },
   {
+    "fecha": "2026-11-29",
+    "hora": "21:00",
+    "evento": "Imperial Triumphant",
+    "artistas": "Imperial Triumphant",
+    "sala": "Sala Nazca",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://www.salanazcaconciertos.com/conciertos",
+    "cartel": "https://static.wixstatic.com/media/67fdf2_69f3c4fba5cc494cb4a43ee9422dc584~mv2.jpg/v1/fit/w_375%2Ch_374%2Cq_90%2Cenc_avif%2Cquality_auto/67fdf2_69f3c4fba5cc494cb4a43ee9422dc584~mv2.jpg"
+  },
+  {
     "fecha": "2026-12-05",
     "hora": "20:00",
     "evento": "The Buzzos + The Diesel Dogs + The Vil Veins",
@@ -152,5 +174,27 @@
     "pais": "España",
     "url": "https://salaelsol.com/eventos/the-buzzos-the-diesel-dogs-the-vil-veins/",
     "cartel": "https://salaelsol.com/wp-content/uploads/2026/11/WhatsApp-Image-2026-11-04-at-18.50.29.jpeg"
+  },
+  {
+    "fecha": "2027-01-15",
+    "hora": "21:00",
+    "evento": "Ignite",
+    "artistas": "Ignite",
+    "sala": "Sala Nazca",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://www.salanazcaconciertos.com/conciertos",
+    "cartel": "https://static.wixstatic.com/media/67fdf2_e994c0ee9a3d494897858eb77128a374~mv2.jpg/v1/fit/w_375%2Ch_374%2Cq_90%2Cenc_avif%2Cquality_auto/67fdf2_e994c0ee9a3d494897858eb77128a374~mv2.jpg"
+  },
+  {
+    "fecha": "2027-01-30",
+    "hora": "21:00",
+    "evento": "Ktulu",
+    "artistas": "Ktulu",
+    "sala": "Sala Nazca",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://www.salanazcaconciertos.com/conciertos",
+    "cartel": "https://static.wixstatic.com/media/67fdf2_4b2637eca6d944d09c092dc4ab1f126b~mv2.jpg/v1/fit/w_375%2Ch_374%2Cq_90%2Cenc_avif%2Cquality_auto/67fdf2_4b2637eca6d944d09c092dc4ab1f126b~mv2.jpg"
   }
 ]
