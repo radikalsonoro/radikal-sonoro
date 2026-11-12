@@ -254,6 +254,28 @@ footer{max-width:none;margin:0;padding:24px;text-align:center;background:#050505
 @media(max-width:560px){#conciertos{padding:15px}#conciertos .concert-grid{grid-template-columns:1fr;gap:13px}#conciertos .concert-card{grid-template-columns:116px minmax(0,1fr);grid-template-rows:1fr;min-height:168px}#conciertos .concert-poster{height:100%;min-height:168px;max-height:220px;object-fit:contain}#conciertos .concert-card-body{padding:10px;gap:6px}#conciertos .concert-card-body>a:not(.concert-more){font-size:23px}#conciertos .concert-date{font-size:12px}#conciertos .concert-more{font-size:9px;padding:7px}}
 
 
+
+/* AGENDA POR SALAS · carteles oficiales originales */
+#conciertos .concert-grid{display:block;margin:20px 0 24px;padding:0;list-style:none}
+#conciertos .venue-group{margin:0 0 28px;padding:0;list-style:none}
+#conciertos .venue-heading{display:flex;align-items:center;gap:12px;margin:0 0 13px;padding:10px 13px;background:#111;color:#fff;border-left:8px solid var(--red);font:900 clamp(24px,3vw,34px)/1 var(--display);text-transform:uppercase}
+#conciertos .venue-heading span{margin-left:auto;color:var(--yellow);font:500 10px/1.4 var(--mono);text-align:right;letter-spacing:.04em}
+#conciertos .venue-events{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+#conciertos .concert-card{display:flex;flex-direction:column;min-width:0;background:#fff;color:#111;border:1px solid #c9c2b8;border-bottom:5px solid var(--red);box-shadow:3px 3px #c7c0b5;overflow:hidden}
+#conciertos .concert-poster-link{display:flex;align-items:center;justify-content:center;width:100%;height:310px;padding:8px;background:#111}
+#conciertos .concert-poster{display:block;width:100%;height:100%;min-height:0;max-height:none;aspect-ratio:auto;object-fit:contain;background:#111}
+#conciertos .concert-poster-pending{display:flex;align-items:center;justify-content:center;min-height:170px;padding:20px;background:repeating-linear-gradient(135deg,#e8e2d8 0 2px,#f8f6f1 2px 8px);color:#555;text-align:center;font:700 11px var(--mono);text-transform:uppercase}
+#conciertos .concert-card-body{display:flex;flex:1;flex-direction:column;align-items:flex-start;gap:8px;padding:14px}
+#conciertos .concert-date{margin:0;padding:7px 9px;background:var(--yellow);color:#111;font:900 14px/1.2 var(--mono)}
+#conciertos .concert-date small{color:#111;font-size:8px}
+#conciertos .concert-card-body>a:not(.concert-more){margin:2px 0;color:#111;font:900 clamp(21px,2vw,28px)/.98 var(--display);text-transform:uppercase;text-decoration:none}
+#conciertos .concert-card-body .small{color:#444;font-size:11px;line-height:1.45}
+#conciertos .concert-more{margin-top:auto;padding:8px 10px;background:#111;color:#fff;border:1px solid #111;font:10px var(--mono)}
+#conciertos .concert-more:hover{background:var(--red);color:#fff}
+#conciertos .venue-empty{padding:16px;background:#111;color:#fff;font:12px var(--mono)}
+@media(max-width:900px){#conciertos .venue-events{grid-template-columns:repeat(2,minmax(0,1fr))}#conciertos .concert-poster-link{height:280px}}
+@media(max-width:560px){#conciertos .venue-heading{align-items:flex-start;flex-direction:column;gap:5px;font-size:27px}#conciertos .venue-heading span{margin:0;text-align:left}#conciertos .venue-events{grid-template-columns:1fr;gap:13px}#conciertos .concert-card{display:grid;grid-template-columns:minmax(112px,38%) minmax(0,1fr);grid-template-rows:1fr;min-height:170px}#conciertos .concert-poster-link{height:100%;min-height:170px;padding:4px}#conciertos .concert-poster{height:100%;min-height:160px;max-height:230px}#conciertos .concert-poster-pending{min-height:170px;padding:10px;font-size:9px}#conciertos .concert-card-body{padding:10px;gap:7px}#conciertos .concert-card-body>a:not(.concert-more){font-size:22px}#conciertos .concert-date{font-size:11px;padding:6px}#conciertos .concert-more{font-size:9px;padding:7px}}
+
 /* Botón compacto de instalación PWA */
 #install-app{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;width:auto;margin:0 6px 0 0;padding:7px 10px;background:#171717;color:#fff;border:1px solid var(--red);border-bottom:3px solid var(--red);border-radius:2px;font:700 10px/1.1 var(--mono);letter-spacing:.03em;text-transform:uppercase;box-shadow:2px 2px 0 #000;cursor:pointer}
 #install-app:hover{background:var(--red);color:#fff}
@@ -497,53 +519,69 @@ function getConcertDate(item){
 async function loadConcertNews(){
   var list=document.getElementById("concert-news-list"),status=document.getElementById("concert-news-status");
   if(!list||!status)return;
-  var fallback=[{"fecha":"2026-11-13","hora":"21:00","evento":"Spike and The Gimme Gimmes","artistas":"Punk rock","sala":"Jimmy Jazz","ciudad":"Vitoria-Gasteiz","pais":"España","url":"https://www.hfmncrew.cat/es/tickets/"},{"fecha":"2026-11-13","hora":"","evento":"Neuroot + Artritis + Peedoh","artistas":"Hardcore punk / punk acelerado","sala":"Mogambo","ciudad":"Donostia","pais":"España","url":"https://insonoro.com/noticia/127839/neuroot-artritis-y-peedoh-compartiran-escenario-este-viernes-en-donosti"},{"fecha":"2026-11-14","hora":"21:00","evento":"Spike and The Gimme Gimmes","artistas":"Punk rock","sala":"Sala Estilo","ciudad":"Oviedo","pais":"España","url":"https://www.hfmncrew.cat/es/tickets/"},{"fecha":"2026-11-14","hora":"20:00","evento":"Against the Waves + The Fall of Atlantis","artistas":"Metalcore","sala":"Sala Uni","ciudad":"Madrid","pais":"España","url":"https://rockingticket.com/"},{"fecha":"2026-11-15","hora":"21:00","evento":"Spike and The Gimme Gimmes","artistas":"Punk rock","sala":"Inn Club","ciudad":"A Coruña","pais":"España","url":"https://www.hfmncrew.cat/es/tickets/"}];
-  var events=fallback;
+  var events=[];
   try{
     var response=await fetch("/data/conciertos.json?"+Date.now(),{cache:"no-store"});
-    if(response.ok){var liveEvents=await response.json();if(Array.isArray(liveEvents)&&liveEvents.length)events=liveEvents;}
-  }catch(error){console.warn("Conciertos: usando copia de respaldo",error);}
+    if(response.ok){
+      var liveEvents=await response.json();
+      if(Array.isArray(liveEvents))events=liveEvents;
+    }
+  }catch(error){console.warn("No se pudo cargar la agenda",error);}
   var today=new Date();today.setHours(0,0,0,0);
   events=(Array.isArray(events)?events:[]).filter(function(ev){
     if(!ev||!ev.fecha||!ev.url)return false;
-    var d=new Date(ev.fecha+"T00:00:00");return !isNaN(d.getTime())&&d>=today;
-  }).slice(0,7);
+    var d=new Date(ev.fecha+"T00:00:00");
+    return !isNaN(d.getTime())&&d>=today;
+  }).sort(function(a,b){return a.fecha.localeCompare(b.fecha);}).slice(0,5);
   list.innerHTML="";list.className="concert-grid";
-  if(!events.length){status.textContent="No hay próximos conciertos con fecha y fuente verificadas.";list.innerHTML="<li>No hay eventos confirmados en este momento.</li>";return;}
+  if(!events.length){
+    status.textContent="No hay próximos conciertos con fecha y fuente verificadas.";
+    list.innerHTML="<li class=\"venue-empty\">En cuanto confirmemos nuevas fechas y carteles oficiales, aparecerán aquí.</li>";
+    return;
+  }
   var venues=new Map();
   events.forEach(function(ev){
-    var venue=[ev.sala||"Sala por confirmar",ev.ciudad||""].filter(Boolean).join(" · ");
+    var venue=(ev.sala||"Sala por confirmar").trim();
     if(!venues.has(venue))venues.set(venue,[]);
     venues.get(venue).push(ev);
   });
   Array.from(venues.entries()).forEach(function(entry){
     var venueName=entry[0],venueEvents=entry[1];
-    var group=document.createElement("li"),heading=document.createElement("h3"),count=document.createElement("span"),cards=document.createElement("div");
-    group.className="venue-group";heading.className="venue-heading";heading.appendChild(document.createTextNode(venueName));
-    count.textContent=venueEvents.length+(venueEvents.length===1?" fecha":" fechas");heading.appendChild(count);
-    cards.className="venue-events";group.appendChild(heading);group.appendChild(cards);list.appendChild(group);
-    venueEvents.forEach(function(ev,index){
-    var card=document.createElement("article"),body=document.createElement("div");
-    card.className="concert-card";card.setAttribute("data-number",String(index+1).padStart(2,"0"));
-    if(ev.cartel){
-      var img=document.createElement("img");img.className="concert-poster";img.src=ev.cartel;img.alt="Cartel oficial: "+(ev.evento||ev.artistas||"concierto");img.loading="lazy";
-      img.onerror=function(){var ph=document.createElement("div"),tag=document.createElement("span"),name=document.createElement("strong");ph.className="concert-placeholder";tag.textContent="CARTEL NO DISPONIBLE";name.textContent=ev.evento||ev.artistas||"Concierto";ph.appendChild(tag);ph.appendChild(name);this.replaceWith(ph);};
-      card.appendChild(img);
-    }else{
-      var ph=document.createElement("div"),tag=document.createElement("span"),name=document.createElement("strong");
-      ph.className="concert-placeholder";tag.textContent="SIN CARTEL VERIFICADO";name.textContent=ev.evento||ev.artistas||"Concierto";ph.appendChild(tag);ph.appendChild(name);card.appendChild(ph);
-    }
-    body.className="concert-card-body";
-    var date=document.createElement("div"),small=document.createElement("small"),title=document.createElement("a"),meta=document.createElement("div"),more=document.createElement("a");
-    date.className="concert-date";small.textContent="FECHA DEL EVENTO";date.appendChild(small);
-    date.appendChild(document.createTextNode(new Date(ev.fecha+"T00:00:00").toLocaleDateString("es-ES",{weekday:"short",day:"2-digit",month:"long",year:"numeric"})+(ev.hora?" · "+ev.hora:"")));
-    title.href=ev.url;title.target="_blank";title.rel="noopener noreferrer";title.textContent=ev.evento||ev.artistas||"Concierto";
-    meta.className="small";meta.textContent=[ev.artistas,ev.sala,ev.ciudad,ev.pais].filter(Boolean).join(" · ");
-    more.className="concert-more";more.href=ev.url;more.target="_blank";more.rel="noopener noreferrer";more.textContent="INFORMACIÓN Y ENTRADAS ↗";
-    body.appendChild(date);body.appendChild(title);body.appendChild(meta);body.appendChild(more);card.appendChild(body);cards.appendChild(card);
+    var group=document.createElement("li"),heading=document.createElement("h3"),place=document.createElement("span"),cards=document.createElement("div");
+    group.className="venue-group";
+    heading.className="venue-heading";
+    heading.appendChild(document.createTextNode(venueName));
+    var cities=Array.from(new Set(venueEvents.map(function(ev){return ev.ciudad||"";}).filter(Boolean)));
+    place.textContent=cities.join(" · ")+(cities.length?" · ":"")+venueEvents.length+(venueEvents.length===1?" fecha":" fechas");
+    heading.appendChild(place);
+    cards.className="venue-events";
+    group.appendChild(heading);group.appendChild(cards);list.appendChild(group);
+    venueEvents.forEach(function(ev){
+      var card=document.createElement("article"),body=document.createElement("div");
+      card.className="concert-card";
+      if(ev.cartel){
+        var posterLink=document.createElement("a"),img=document.createElement("img");
+        posterLink.className="concert-poster-link";posterLink.href=ev.cartel;posterLink.target="_blank";posterLink.rel="noopener noreferrer";posterLink.setAttribute("aria-label","Abrir cartel original de "+(ev.evento||"este concierto"));
+        img.className="concert-poster";img.src=ev.cartel;img.alt="Cartel original: "+(ev.evento||ev.artistas||"concierto");img.loading="lazy";
+        img.onerror=function(){var pending=document.createElement("div");pending.className="concert-poster-pending";pending.textContent="Cartel original no disponible";this.replaceWith(pending);};
+        posterLink.appendChild(img);card.appendChild(posterLink);
+      }else{
+        var pending=document.createElement("div");
+        pending.className="concert-poster-pending";
+        pending.textContent="Cartel oficial pendiente";
+        card.appendChild(pending);
+      }
+      body.className="concert-card-body";
+      var date=document.createElement("div"),small=document.createElement("small"),title=document.createElement("a"),meta=document.createElement("div"),more=document.createElement("a");
+      date.className="concert-date";small.textContent="FECHA";date.appendChild(small);
+      date.appendChild(document.createTextNode(new Date(ev.fecha+"T00:00:00").toLocaleDateString("es-ES",{weekday:"short",day:"2-digit",month:"long"})+(ev.hora?" · "+ev.hora:"")));
+      title.href=ev.url;title.target="_blank";title.rel="noopener noreferrer";title.textContent=ev.evento||ev.artistas||"Concierto";
+      meta.className="small";meta.textContent=[ev.artistas,ev.ciudad,ev.pais].filter(Boolean).join(" · ");
+      more.className="concert-more";more.href=ev.url;more.target="_blank";more.rel="noopener noreferrer";more.textContent="INFO / ENTRADAS ↗";
+      body.appendChild(date);body.appendChild(title);body.appendChild(meta);body.appendChild(more);card.appendChild(body);cards.appendChild(card);
     });
   });
-  status.textContent=events.length+" próximos eventos · "+venues.size+" salas · Carteles oficiales cuando están disponibles.";
+  status.textContent=events.length+" próximos conciertos · "+venues.size+" salas · Carteles originales de bandas y promotores.";
 }
 (function(){
 loadNews();
