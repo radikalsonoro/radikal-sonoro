@@ -47,7 +47,7 @@ body{margin:0;background:var(--ink);color:var(--paper);font-family:var(--body);l
 body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.16;background-image:radial-gradient(#fff .65px,transparent .8px);background-size:4px 4px}
 a{color:inherit;text-decoration-color:var(--red);text-underline-offset:4px}a:hover{color:var(--yellow)}
 .topline{height:10px;background:repeating-linear-gradient(135deg,var(--red) 0 24px,var(--paper) 24px 27px,var(--ink) 27px 48px)}
-header{width:100%;max-width:none;min-height:238px;margin:0;padding:24px 28px 22px 190px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;position:relative;overflow:hidden;color:var(--paper);background:linear-gradient(90deg,rgba(0,0,0,.9),rgba(0,0,0,.55)),url("https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1800&q=85") center 42%/cover;border-bottom:6px solid var(--paper)}
+header{width:100%;max-width:none;min-height:238px;margin:0;padding:24px 28px 22px 130px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;position:relative;overflow:hidden;color:var(--paper);background:linear-gradient(90deg,rgba(0,0,0,.9),rgba(0,0,0,.55)),url("https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1800&q=85") center 42%/cover;border-bottom:6px solid var(--paper)}
 header:before{content:none!important;display:none!important}
 header:after{content:"24H DE MÚSICA\A INDEPENDIENTE\A PUNK · HARDCORE · SKA\A METAL · ALTERNATIVA";white-space:pre;position:absolute;right:3%;top:16px;color:#fff;font:italic 900 clamp(17px,2.1vw,29px)/1.08 "Barlow Condensed";text-align:right;letter-spacing:.04em;transform:rotate(-3deg);text-shadow:3px 3px #000}
 .logo{position:absolute;left:22px;top:16px;z-index:4;margin:0;display:block}.logo img{display:block;width:145px;height:145px;max-width:none;object-fit:contain;filter:grayscale(1) contrast(1.25) drop-shadow(5px 4px 0 var(--red))}
@@ -285,7 +285,7 @@ footer{max-width:none;margin:0;padding:24px;text-align:center;background:#050505
 
 
 /* Refuerzo del logotipo y acceso a la radio en pantallas grandes */
-.logo{width:150px;height:150px;display:flex;align-items:center;justify-content:center;background:#080808;border:3px solid #eeeae1;box-shadow:6px 6px #d7192d;padding:4px}.logo img{width:100%;height:100%;object-fit:contain;filter:none}
+.logo{width:96px;height:96px;display:flex;align-items:center;justify-content:center;background:#080808;border:2px solid #eeeae1;box-shadow:4px 4px #d7192d;padding:3px}.logo img{width:100%;height:100%;object-fit:contain;filter:none}@media(max-width:900px){.logo{width:82px;height:82px}}@media(max-width:680px){.logo{width:64px;height:64px}}@media(max-width:360px){.logo{width:55px;height:55px}}
 #radio #play{min-height:46px;font-size:13px;padding:13px 18px}
 #radio #msg{min-height:20px;font-weight:700}
 </style>
