@@ -475,22 +475,25 @@ async function loadNews(){
     }catch(error){console.warn("Fuente no disponible: "+feed.tag,error);return [];}
   }));
   var all=results.flat().concat(fallback);
+  function dateValue(n){var d=new Date(n.fecha||n.pubDate||"");return isNaN(d.getTime())?0:d.getTime();}
+  var now=Date.now(),cutoff=now-7*24*60*60*1000;
   var seen=new Set(),items=all.filter(function(n){
     if(!n||!n.titulo||!n.url)return false;
+    var published=dateValue(n);
+    // Solo noticias con fecha comprobable de los últimos 7 días; nunca rescatar noticias antiguas como fallback.
+    if(!published||published<cutoff||published>now+24*60*60*1000)return false;
     var key=n.url.split("?")[0];if(seen.has(key))return false;seen.add(key);
     var text=(n.titulo+" "+(n.resumen||"")).toLowerCase();
     return /punk|hardcore|ska|metal|oi!|street.?punk|thrash|deathcore|metalcore|grind|stoner|doom|post.?punk|rock alternativo/.test(text);
   });
-  function dateValue(n){var d=new Date(n.fecha||n.pubDate||0);return isNaN(d.getTime())?0:d.getTime();}
   items.sort(function(a,b){
     var aState=/españa|estatal|madrid|barcelona|bilbao|valencia|zaragoza|sevilla|galicia|euskadi|asturias|andalucía|cataluña|castilla|navarra/i.test((a.titulo||"")+" "+(a.resumen||""));
     var bState=/españa|estatal|madrid|barcelona|bilbao|valencia|zaragoza|sevilla|galicia|euskadi|asturias|andalucía|cataluña|castilla|navarra/i.test((b.titulo||"")+" "+(b.resumen||""));
     return (Number(bState)-Number(aState))||(dateValue(b)-dateValue(a));
   });
   items=items.slice(0,5);
-  if(!items.length)items=fallback.filter(function(n){return n&&n.titulo&&n.url;}).slice(0,5);
   list.innerHTML="";
-  if(!items.length){list.innerHTML="<li>No hay noticias verificadas disponibles hoy.</li>";status.textContent="0 noticias verificadas.";return;}
+  if(!items.length){list.innerHTML="<li>No hay noticias verificadas de los últimos 7 días. Volveremos a mostrar noticias cuando haya publicaciones recientes.</li>";status.textContent="0 noticias recientes · Límite: 7 días.";return;}
   items.forEach(function(n,index){
     var li=document.createElement("li"),a=document.createElement("a"),summary=document.createElement("p"),meta=document.createElement("div"),tag=document.createElement("span"),number=document.createElement("span");
     li.className="news-card";li.setAttribute("data-number",String(index+1).padStart(2,"0"));
@@ -501,7 +504,7 @@ async function loadNews(){
     number.className="news-number";number.textContent=String(index+1).padStart(2,"0");
     li.appendChild(number);li.appendChild(tag);li.appendChild(a);li.appendChild(summary);li.appendChild(meta);list.appendChild(li);
   });
-  status.textContent=items.length+" noticias · Fuentes múltiples · "+(new Date()).toLocaleDateString("es-ES");
+  status.textContent=items.length+" noticias de los últimos 7 días · Fuentes múltiples · "+(new Date()).toLocaleDateString("es-ES");
 }
 // Detecta fechas futuras explícitas en el anuncio (no confunde publicación con fecha del evento).
 function getConcertDate(item){
