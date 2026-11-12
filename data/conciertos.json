@@ -1,14 +1,36 @@
 [
   {
-    "fecha": "2026-11-20",
+    "fecha": "2026-11-13",
     "hora": "20:00",
-    "evento": "Shöck + Chulería Joder",
-    "artistas": "Shöck + Chulería Joder",
+    "evento": "Lágrimas + Svdestada",
+    "artistas": "Lágrimas + Svdestada",
     "sala": "La Trinchera",
     "ciudad": "Madrid",
     "pais": "España",
-    "url": "https://primeralineavkbar.com/index.php/2026/11/05/viernes-20-de-noviembre-shock-chuleria-joder/",
-    "cartel": ""
+    "url": "https://primeralineavkbar.com/index.php/2026/10/20/viernes-13-de-noviembre-lagrimas-svdestada/",
+    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/10/13.11-lagrimas-svdestada-madrid-1-739x1024.jpg"
+  },
+  {
+    "fecha": "2026-11-14",
+    "hora": "19:30",
+    "evento": "Kaxta + Detrapo",
+    "artistas": "Kaxta + Detrapo",
+    "sala": "La Trinchera",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://primeralineavkbar.com/index.php/2026/10/20/sabado-14-de-noviembre-kaxta-detrapo/",
+    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/10/14.11-sabado-noche-kaxta-detrapo-767x1024.jpeg"
+  },
+  {
+    "fecha": "2026-11-18",
+    "hora": "19:00",
+    "evento": "Zhed + Narkom + Undefined Void",
+    "artistas": "Zhed + Narkom + Undefined Void",
+    "sala": "La Trinchera",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://primeralineavkbar.com/index.php/2026/11/05/miercoles-18-de-noviembre-narkom-narkom-chiasso-suiza-zhed-undefined-void-dj-set-techno-industrial/",
+    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/11/18.11-miercoles--819x1024.jpeg"
   },
   {
     "fecha": "2026-11-21",
@@ -42,27 +64,5 @@
     "pais": "España",
     "url": "https://gruta77.com/events/3a-fiesta-homenaje-a-shane-macgowan-the-pogues-the-trebolmakers-radio-clash/",
     "cartel": "https://gruta77.com/wp-content/uploads/2026/08/27_noviembre_web.jpg"
-  },
-  {
-    "fecha": "2026-11-15",
-    "hora": "21:00",
-    "evento": "Pyrex + Traumatizer",
-    "artistas": "Pyrex + Traumatizer",
-    "sala": "Wurlitzer Ballroom",
-    "ciudad": "Madrid",
-    "pais": "España",
-    "url": "https://wurlitzerballroom.com/concierto/pyrex-traumatizer-2026-11-15",
-    "cartel": ""
-  },
-  {
-    "fecha": "2026-12-01",
-    "hora": "21:00",
-    "evento": "Risk it! + Breathing + Pit Beef",
-    "artistas": "Risk it! + Breathing + Pit Beef",
-    "sala": "Wurlitzer Ballroom",
-    "ciudad": "Madrid",
-    "pais": "España",
-    "url": "https://wurlitzerballroom.com/concierto/risk-it-breathing-2026-12-01",
-    "cartel": ""
   }
 ]
