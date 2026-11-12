@@ -443,7 +443,7 @@ async function loadConcertNews(){
   events=(Array.isArray(events)?events:[]).filter(function(ev){
     if(!ev||!ev.fecha||!ev.url)return false;
     var d=new Date(ev.fecha+"T00:00:00");return !isNaN(d.getTime())&&d>=today;
-  }).slice(0,6);
+  }).slice(0,7);
   list.innerHTML="";list.className="concert-grid";
   if(!events.length){status.textContent="No hay próximos conciertos con fecha y fuente verificadas.";list.innerHTML="<li>No hay eventos confirmados en este momento.</li>";return;}
   var venues=new Map();
