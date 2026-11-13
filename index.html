@@ -617,13 +617,13 @@ t.innerHTML=out;
 }
 
 var audio=document.getElementById("audio"),msg=document.getElementById("msg"),playButton=document.getElementById("play");
-audio.autoplay=true;audio.preload="none";audio.setAttribute("playsinline","");
+audio.preload="none";audio.setAttribute("playsinline","");
 function prepareRadio(){
   if(!STREAM_URL){msg.textContent="La radio aún no está conectada. Falta la URL de la transmisión.";return false;}
   if(!audio.src || audio.src!==new URL(STREAM_URL,location.href).href) audio.src=STREAM_URL;
   return true;
 }
-function startRadio(automatic){
+function startRadio(){
   if(!prepareRadio())return;
   var result=audio.play();
   if(result&&typeof result.then==="function"){
@@ -631,22 +631,14 @@ function startRadio(automatic){
       msg.textContent="Sonando en vivo · Radikal Sonoro 24H.";
       playButton.textContent="▶ Radio sonando";
     }).catch(function(){
-      msg.textContent=automatic
-        ?"Chrome ha bloqueado el inicio automático. Pulsa «Escuchar 24H» una vez para activar la radio."
-        :"No se pudo reproducir. Comprueba tu conexión e inténtalo de nuevo.";
+      msg.textContent="No se pudo reproducir. Comprueba tu conexión e inténtalo de nuevo.";
       playButton.textContent="▶ Escuchar 24H";
     });
   }
 }
-playButton.addEventListener("click",function(){startRadio(false);});
+playButton.addEventListener("click",function(){startRadio();});
 audio.addEventListener("play",function(){msg.textContent="Sonando en vivo · Radikal Sonoro 24H.";playButton.textContent="▶ Radio sonando";});
 audio.addEventListener("pause",function(){if(!audio.ended)playButton.textContent="▶ Escuchar 24H";});
-/* Intento de reproducción al abrir tanto la web como la app instalada.
-   Chrome puede exigir un primer toque del usuario; si ocurre, el botón queda disponible. */
-function tryAutoStart(){startRadio(true);}
-if(document.readyState==="complete"||document.readyState==="interactive") tryAutoStart();
-else document.addEventListener("DOMContentLoaded",tryAutoStart,{once:true});
-window.addEventListener("pageshow",function(event){if(event.persisted)tryAutoStart();});
 
 var videoList=document.getElementById("video-list");
 var videoSearches=[
