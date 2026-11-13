@@ -1,49 +1,5 @@
 [
   {
-    "fecha": "2026-11-13",
-    "hora": "20:00",
-    "evento": "Lágrimas + Svdestada",
-    "artistas": "Lágrimas + Svdestada",
-    "sala": "La Trinchera",
-    "ciudad": "Madrid",
-    "pais": "España",
-    "url": "https://primeralineavkbar.com/index.php/2026/10/20/viernes-13-de-noviembre-lagrimas-svdestada/",
-    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/10/13.11-lagrimas-svdestada-madrid-1-739x1024.jpg"
-  },
-  {
-    "fecha": "2026-11-13",
-    "hora": "20:30",
-    "evento": "En Vano + Inkandescencia + El Silencio de los Mudos",
-    "artistas": "En Vano + Inkandescencia + El Silencio de los Mudos",
-    "sala": "Barracudas Rock Bar",
-    "ciudad": "Madrid",
-    "pais": "España",
-    "url": "https://barracudasrockbar.com/event/en-vano-inkandescencia-el-silencio-de-los-mudos/",
-    "cartel": "https://barracudasrockbar.com/wp-content/uploads/EN-VANO-INKANDESCENCIA-EL-SILENCIO-DE-LOS-MUDOS.jpg"
-  },
-  {
-    "fecha": "2026-11-14",
-    "hora": "19:30",
-    "evento": "Kaxta + Detrapo",
-    "artistas": "Kaxta + Detrapo",
-    "sala": "La Trinchera",
-    "ciudad": "Madrid",
-    "pais": "España",
-    "url": "https://primeralineavkbar.com/index.php/2026/10/20/sabado-14-de-noviembre-kaxta-detrapo/",
-    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/10/14.11-sabado-noche-kaxta-detrapo-767x1024.jpeg"
-  },
-  {
-    "fecha": "2026-11-15",
-    "hora": "20:00",
-    "evento": "Remedios Caseros + Babylon",
-    "artistas": "Remedios Caseros + Babylon",
-    "sala": "Sala El Sol",
-    "ciudad": "Madrid",
-    "pais": "España",
-    "url": "https://salaelsol.com/eventos/remedios-caseros-babylon/",
-    "cartel": "https://salaelsol.com/wp-content/uploads/2026/10/remedios.jpeg"
-  },
-  {
     "fecha": "2026-11-18",
     "hora": "19:00",
     "evento": "Zhed + Narkom + Undefined Void",
@@ -53,38 +9,6 @@
     "pais": "España",
     "url": "https://primeralineavkbar.com/index.php/2026/11/05/miercoles-18-de-noviembre-narkom-narkom-chiasso-suiza-zhed-undefined-void-dj-set-techno-industrial/",
     "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/11/18.11-miercoles--819x1024.jpeg"
-  },
-  {
-    "fecha": "2026-11-18",
-    "hora": "21:00",
-    "evento": "Illuminasty",
-    "artistas": "Illuminasty",
-    "sala": "Barracudas Rock Bar",
-    "ciudad": "Madrid",
-    "pais": "España",
-    "url": "https://barracudasrockbar.com/event/illuminasty/",
-    "cartel": "https://barracudasrockbar.com/wp-content/uploads/ILLUMINASTY.jpg"
-  },
-  {
-    "fecha": "2026-11-19",
-    "hora": "21:00",
-    "evento": "Boston Babies + Perfil",
-    "artistas": "Boston Babies + Perfil Bajo",
-    "sala": "Sala El Sol",
-    "ciudad": "Madrid",
-    "pais": "España",
-    "url": "https://salaelsol.com/eventos/boston-babies-perfil-mazo/",
-    "cartel": "https://salaelsol.com/wp-content/uploads/2026/10/BOSTON.avif"
-  },
-  {
-    "fecha": "2026-11-19",
-    "evento": "Brujería — Estamos Chingados 2026",
-    "artistas": "Brujería",
-    "sala": "Revi Live",
-    "ciudad": "Madrid",
-    "pais": "España",
-    "url": "https://conciertos.revi.live/",
-    "cartel": "https://conciertos.revi.live/wp-content/uploads/2026/10/Brujeria-240x300.jpg"
   },
   {
     "fecha": "2026-11-21",
@@ -109,25 +33,15 @@
     "cartel": "https://gruta77.com/wp-content/uploads/2026/08/21_noviembre_web.jpg"
   },
   {
-    "fecha": "2026-11-21",
-    "evento": "Discerptus + Vertebrae",
-    "artistas": "Discerptus + Vertebrae",
-    "sala": "Revi Live",
-    "ciudad": "Madrid",
-    "pais": "España",
-    "url": "https://conciertos.revi.live/",
-    "cartel": "https://conciertos.revi.live/wp-content/uploads/2026/10/Discerptus-169x300.jpg"
-  },
-  {
     "fecha": "2026-11-26",
-    "hora": "20:30",
-    "evento": "Split Dogs",
-    "artistas": "Split Dogs",
-    "sala": "Sala Nazca",
+    "hora": "21:00",
+    "evento": "The Upsessions + The Crepitans",
+    "artistas": "The Upsessions + The Crepitans",
+    "sala": "Gruta 77",
     "ciudad": "Madrid",
     "pais": "España",
-    "url": "https://www.salanazcaconciertos.com/conciertos",
-    "cartel": "https://static.wixstatic.com/media/67fdf2_473684491fbd43cc952702cfe0c4f9e1~mv2.jpg/v1/fit/w_375%2Ch_374%2Cq_90%2Cenc_avif%2Cquality_auto/67fdf2_473684491fbd43cc952702cfe0c4f9e1~mv2.jpg"
+    "url": "https://gruta77.com/events/the-upsessions-paises-bajos-the-crepitans/",
+    "cartel": "https://gruta77.com/wp-content/uploads/2026/03/26_noviembre_web.jpg"
   },
   {
     "fecha": "2026-11-27",
@@ -143,34 +57,12 @@
   {
     "fecha": "2026-11-29",
     "hora": "21:00",
-    "evento": "Mamá Ladilla + El Señor Que Te Molesta — último concierto en Gruta 77",
+    "evento": "Mamá Ladilla + El Señor Que Te Molesta",
     "artistas": "Mamá Ladilla + El Señor Que Te Molesta",
     "sala": "Gruta 77",
     "ciudad": "Madrid",
     "pais": "España",
     "url": "https://gruta77.com/events/mama-ladilla-el-senor-que-te-molesta-ultimo-concierto-en-gruta77/",
     "cartel": "https://gruta77.com/wp-content/uploads/2026/06/29_noviembre_web.jpg"
-  },
-  {
-    "fecha": "2026-11-29",
-    "hora": "21:00",
-    "evento": "Imperial Triumphant",
-    "artistas": "Imperial Triumphant",
-    "sala": "Sala Nazca",
-    "ciudad": "Madrid",
-    "pais": "España",
-    "url": "https://www.salanazcaconciertos.com/conciertos",
-    "cartel": "https://static.wixstatic.com/media/67fdf2_69f3c4fba5cc494cb4a43ee9422dc584~mv2.jpg/v1/fit/w_375%2Ch_374%2Cq_90%2Cenc_avif%2Cquality_auto/67fdf2_69f3c4fba5cc494cb4a43ee9422dc584~mv2.jpg"
-  },
-  {
-    "fecha": "2027-01-15",
-    "hora": "21:00",
-    "evento": "Ignite",
-    "artistas": "Ignite",
-    "sala": "Sala Nazca",
-    "ciudad": "Madrid",
-    "pais": "España",
-    "url": "https://www.salanazcaconciertos.com/conciertos",
-    "cartel": "https://static.wixstatic.com/media/67fdf2_e994c0ee9a3d494897858eb77128a374~mv2.jpg/v1/fit/w_375%2Ch_374%2Cq_90%2Cenc_avif%2Cquality_auto/67fdf2_e994c0ee9a3d494897858eb77128a374~mv2.jpg"
   }
 ]
