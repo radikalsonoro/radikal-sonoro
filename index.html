@@ -491,7 +491,7 @@ async function loadNews(){
     var bState=/españa|estatal|madrid|barcelona|bilbao|valencia|zaragoza|sevilla|galicia|euskadi|asturias|andalucía|cataluña|castilla|navarra/i.test((b.titulo||"")+" "+(b.resumen||""));
     return (Number(bState)-Number(aState))||(dateValue(b)-dateValue(a));
   });
-  items=items.slice(0,5);
+  items=items.slice(0,6);
   list.innerHTML="";
   if(!items.length){list.innerHTML="<li>No hay noticias verificadas de los últimos 7 días. Volveremos a mostrar noticias cuando haya publicaciones recientes.</li>";status.textContent="0 noticias recientes · Límite: 7 días.";return;}
   items.forEach(function(n,index){
@@ -504,7 +504,7 @@ async function loadNews(){
     number.className="news-number";number.textContent=String(index+1).padStart(2,"0");
     li.appendChild(number);li.appendChild(tag);li.appendChild(a);li.appendChild(summary);li.appendChild(meta);list.appendChild(li);
   });
-  status.textContent=items.length+" noticias de los últimos 7 días · Fuentes múltiples · "+(new Date()).toLocaleDateString("es-ES");
+  status.textContent=items.length+"/6 noticias de los últimos 7 días · Fuentes múltiples · "+(new Date()).toLocaleDateString("es-ES");
 }
 // Detecta fechas futuras explícitas en el anuncio (no confunde publicación con fecha del evento).
 function getConcertDate(item){
