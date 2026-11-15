@@ -1,16 +1,5 @@
 [
   {
-    "fecha": "2026-11-18",
-    "hora": "19:00",
-    "evento": "Zhed + Narkom + Undefined Void",
-    "artistas": "Zhed + Narkom + Undefined Void (DJ set techno industrial)",
-    "sala": "La Trinchera",
-    "ciudad": "Madrid",
-    "pais": "España",
-    "url": "https://primeralineavkbar.com/index.php/2026/11/05/miercoles-18-de-noviembre-narkom-narkom-chiasso-suiza-zhed-undefined-void-dj-set-techno-industrial/",
-    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/11/18.11-miercoles--819x1024.jpeg"
-  },
-  {
     "fecha": "2026-11-21",
     "hora": "13:00",
     "evento": "Activos Tóxicos + Desmayo — sesión vermut",
@@ -40,7 +29,7 @@
     "sala": "Gruta 77",
     "ciudad": "Madrid",
     "pais": "España",
-    "url": "https://gruta77.com/events/ddt-thee-suckin-dicks-macarrones/",
+    "url": "https://gruta77.com/",
     "cartel": "https://gruta77.com/wp-content/uploads/2026/08/21_noviembre_web.jpg"
   },
   {
@@ -51,18 +40,7 @@
     "sala": "Gruta 77",
     "ciudad": "Madrid",
     "pais": "España",
-    "url": "https://gruta77.com/events/the-upsessions-paises-bajos-the-crepitans/",
-    "cartel": "https://gruta77.com/wp-content/uploads/2026/03/26_noviembre_web.jpg"
-  },
-  {
-    "fecha": "2026-11-29",
-    "hora": "21:00",
-    "evento": "Mamá Ladilla + El Señor Que Te Molesta — último concierto en Gruta 77",
-    "artistas": "Mamá Ladilla + El Señor Que Te Molesta",
-    "sala": "Gruta 77",
-    "ciudad": "Madrid",
-    "pais": "España",
-    "url": "https://gruta77.com/events/mama-ladilla-el-senor-que-te-molesta-ultimo-concierto-en-gruta77/",
-    "cartel": "https://gruta77.com/wp-content/uploads/2026/06/29_noviembre_web.jpg"
+    "url": "https://gruta77.com/",
+    "cartel": "https://gruta77.com/wp-content/uploads/2026/08/26_noviembre_web.jpg"
   }
 ]
