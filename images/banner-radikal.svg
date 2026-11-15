@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 520" role="img" aria-labelledby="t d">
+<title id="t">Radikal Sonoro — Radio punk underground</title><desc id="d">Banner editorial punk en negro, rojo, blanco y amarillo con tipografía desgastada, símbolo anarquista y collage geométrico.</desc>
+<defs>
+ <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#050505"/><stop offset=".55" stop-color="#171313"/><stop offset="1" stop-color="#39030a"/></linearGradient>
+ <pattern id="grain" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="2" cy="3" r="1" fill="#fff" opacity=".18"/><circle cx="13" cy="11" r=".8" fill="#fff" opacity=".12"/></pattern>
+ <pattern id="stripes" width="34" height="34" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><rect width="12" height="34" fill="#d7192d" opacity=".7"/></pattern>
+ <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="2" seed="8" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="3"/></filter>
+</defs>
+<rect width="1800" height="520" fill="url(#bg)"/><rect width="1800" height="520" fill="url(#grain)"/>
+<path d="M0 0H1800V34H0Z" fill="#d7192d"/><path d="M0 486H1800V520H0Z" fill="#eeeae1"/>
+<path d="M0 55L560 0 450 520 0 470Z" fill="#d7192d" opacity=".88"/>
+<path d="M1250 0H1800V520H1390Z" fill="url(#stripes)" opacity=".8"/>
+<path d="M70 80L530 38 480 440 30 470Z" fill="#090909" stroke="#eeeae1" stroke-width="8"/>
+<g transform="translate(275 255)" filter="url(#rough)"><circle r="150" fill="none" stroke="#f4d52f" stroke-width="17"/><path d="M-105-105L105 105M105-105L-105 105M0-148V148" stroke="#f4d52f" stroke-width="18" fill="none"/><path d="M-130 0H130" stroke="#f4d52f" stroke-width="18"/></g>
+<g transform="rotate(-3 900 250)">
+ <text x="570" y="230" fill="#eeeae1" font-family="Impact,Arial Black,sans-serif" font-size="150" letter-spacing="-3" filter="url(#rough)">RADIKAL</text>
+ <text x="570" y="380" fill="#d7192d" stroke="#eeeae1" stroke-width="2" paint-order="stroke" font-family="Impact,Arial Black,sans-serif" font-size="170" letter-spacing="-5" filter="url(#rough)">SONORO</text>
+</g>
+<path d="M585 414L1300 414 1280 466 560 466Z" fill="#f4d52f"/>
+<text x="610" y="451" fill="#080808" font-family="Arial,sans-serif" font-size="29" font-weight="900" letter-spacing="5">RADIO · PUNK · HARDCORE · SKA · METAL</text>
+<g transform="translate(1510 255) rotate(7)"><rect x="-175" y="-155" width="300" height="310" fill="#eeeae1" stroke="#080808" stroke-width="9"/><text x="-145" y="-70" fill="#080808" font-family="Impact,Arial Black,sans-serif" font-size="45">RUIDO</text><text x="-145" y="-5" fill="#d7192d" font-family="Impact,Arial Black,sans-serif" font-size="45">LIBRE</text><text x="-145" y="60" fill="#080808" font-family="Impact,Arial Black,sans-serif" font-size="45">24 HORAS</text><path d="M-145 88H90" stroke="#080808" stroke-width="8"/></g>
+<text x="585" y="500" fill="#080808" font-family="monospace" font-size="18" font-weight="bold" letter-spacing="5">RUIDO · RESISTENCIA · AUTOGESTIÓN</text>
+</svg>
