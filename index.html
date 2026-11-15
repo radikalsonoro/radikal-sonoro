@@ -315,7 +315,11 @@ footer{max-width:none;margin:0;padding:24px;text-align:center;background:#050505
 /* Banner editorial aprobado: collage punk negro, rojo, blanco y amarillo */
 header{min-height:260px!important;height:29vw;max-height:520px;min-height:250px!important;padding:0!important;background:#080808 url("/images/banner-radikal.svg") center/cover no-repeat!important;border-top:5px solid var(--red);border-bottom:7px solid var(--paper);box-shadow:0 7px 0 #111}
 header:before,header:after{display:none!important}
-header .logo,header .kicker,header h1,header .tagline,header .header-stamp{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+header .kicker,header h1,header .tagline,header .header-stamp{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+/* Mantener visible el logotipo original sobre el banner editorial */
+header .logo{display:flex!important;position:absolute!important;left:18px!important;top:18px!important;z-index:10!important;width:96px!important;height:96px!important;margin:0!important;padding:3px!important;overflow:visible!important;clip:auto!important;background:#080808!important;border:2px solid #eeeae1!important;box-shadow:4px 4px #d7192d!important}
+header .logo img{display:block!important;width:100%!important;height:100%!important;object-fit:contain!important;filter:none!important}
+@media(max-width:680px){header .logo{left:9px!important;top:9px!important;width:64px!important;height:64px!important}}
 .team-grid{align-items:stretch}
 .team-card{height:100%;min-height:0}
 .team-card img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center center;border:3px solid var(--paper);background:#080808}
