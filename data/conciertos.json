@@ -1,5 +1,27 @@
 [
   {
+    "fecha": "2026-11-19",
+    "hora": "20:00",
+    "evento": "Brujería + Murdery",
+    "artistas": "Brujería + Murdery",
+    "sala": "Revi Live",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://www.madnesslive.es/es/conciertos-en-madrid/1963-comprar-entrada-brujeria-murdery-madrid.html",
+    "cartel": "https://conciertos.revi.live/wp-content/uploads/2026/10/Brujeria-240x300.jpg"
+  },
+  {
+    "fecha": "2026-11-20",
+    "hora": "",
+    "evento": "Fabio Lione’s Dawn of Victory",
+    "artistas": "Fabio Lione’s Dawn of Victory",
+    "sala": "Revi Live",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://conciertos.revi.live/",
+    "cartel": "https://conciertos.revi.live/wp-content/uploads/2026/10/Fabio-Lione-nov26-300x300.jpg"
+  },
+  {
     "fecha": "2026-11-21",
     "hora": "13:00",
     "evento": "Activos Tóxicos + Desmayo — sesión vermut",
@@ -9,6 +31,28 @@
     "pais": "España",
     "url": "https://primeralineavkbar.com/index.php/2026/11/05/sabado-21-de-noviembre-vermut-activos-toxicosmadrid-desmayo-alicante/",
     "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/11/21.11-sabado-vermut.png"
+  },
+  {
+    "fecha": "2026-11-21",
+    "hora": "17:00",
+    "evento": "Sujeto K + Guillotina",
+    "artistas": "Sujeto K + Guillotina",
+    "sala": "Sala Barracudas",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://barracudasrockbar.com/event/sujeto-k-guillotina/",
+    "cartel": "https://barracudasrockbar.com/wp-content/uploads/SUJETO-K-GUILLOTINA.jpg"
+  },
+  {
+    "fecha": "2026-11-21",
+    "hora": "20:00",
+    "evento": "Discerptus + Vertebrae",
+    "artistas": "Discerptus + Vertebrae",
+    "sala": "Revi Space (Revi Live)",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://conciertos.revi.live/",
+    "cartel": "https://conciertos.revi.live/wp-content/uploads/2026/10/Discerptus-169x300.jpg"
   },
   {
     "fecha": "2026-11-21",
@@ -33,6 +77,17 @@
     "cartel": "https://gruta77.com/wp-content/uploads/2026/08/21_noviembre_web.jpg"
   },
   {
+    "fecha": "2026-11-25",
+    "hora": "",
+    "evento": "Rats in the Temple — Flotsam & Jetsam",
+    "artistas": "Flotsam & Jetsam",
+    "sala": "Revi Live",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://conciertos.revi.live/",
+    "cartel": "https://conciertos.revi.live/wp-content/uploads/2026/10/FlotsanJetsam-26-212x300.jpg"
+  },
+  {
     "fecha": "2026-11-26",
     "hora": "21:00",
     "evento": "The Upsessions (Países Bajos) + The Crepitans",
@@ -42,5 +97,38 @@
     "pais": "España",
     "url": "https://gruta77.com/events/the-upsessions-paises-bajos-the-crepitans/",
     "cartel": "https://gruta77.com/wp-content/uploads/2026/03/26_noviembre_web.jpg"
+  },
+  {
+    "fecha": "2026-11-27",
+    "hora": "20:30",
+    "evento": "The Afónicos + Monterrey",
+    "artistas": "The Afónicos + Monterrey",
+    "sala": "Sala Barracudas",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://barracudasrockbar.com/event/the-afonicos-monterrey/",
+    "cartel": "https://barracudasrockbar.com/wp-content/uploads/THE-AFONICOS-MONTEREY.jpg"
+  },
+  {
+    "fecha": "2026-11-28",
+    "hora": "",
+    "evento": "XXII Feria del Disco de Metal Extremo",
+    "artistas": "Tsjuder + Baxaxaxa + The Great Observer + Regent Death",
+    "sala": "Revi Live",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://conciertos.revi.live/",
+    "cartel": "https://conciertos.revi.live/wp-content/uploads/2026/10/XXII-feria-metal-extremo-225x300.jpg"
+  },
+  {
+    "fecha": "2026-11-28",
+    "hora": "21:00",
+    "evento": "Zutaten + Urban Cookies + Preachers of Distortion",
+    "artistas": "Zutaten + Urban Cookies + Preachers of Distortion",
+    "sala": "Sala Barracudas",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://barracudasrockbar.com/event/zutaten-urban-cookies-preachers-of-distortion/",
+    "cartel": "https://barracudasrockbar.com/wp-content/uploads/ZUTANTEN-URBAN-COOKIES-PREACHERS-OF-DISTORTION.jpg"
   }
 ]
