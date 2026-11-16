@@ -546,15 +546,9 @@ async function loadConcertNews(){
     var d=new Date(ev.fecha+"T00:00:00");
     return !isNaN(d.getTime())&&d>=today;
   });
-  events=await Promise.all(events.map(function(ev){
-    return new Promise(function(resolve){
-      var poster=new Image();
-      poster.onload=function(){resolve(ev);};
-      poster.onerror=function(){resolve(null);};
-      poster.src=ev.cartel;
-    });
-  }));
-  events=events.filter(Boolean).sort(function(a,b){
+  // No descartamos conciertos porque el servidor externo del cartel falle o tarde.
+  // La ficha se conserva y ofrece un enlace directo al cartel original.
+  events=events.sort(function(a,b){
     var ap=/la trinchera/i.test(a.sala||"")?0:1;
     var bp=/la trinchera/i.test(b.sala||"")?0:1;
     return ap-bp||a.fecha.localeCompare(b.fecha);
@@ -593,7 +587,12 @@ async function loadConcertNews(){
         var posterLink=document.createElement("a"),img=document.createElement("img");
         posterLink.className="concert-poster-link";posterLink.href=ev.cartel;posterLink.target="_blank";posterLink.rel="noopener noreferrer";posterLink.setAttribute("aria-label","Abrir cartel original de "+(ev.evento||"este concierto"));
         img.className="concert-poster";img.src=ev.cartel;img.alt="Cartel original: "+(ev.evento||ev.artistas||"concierto");img.loading="lazy";
-        img.onerror=function(){card.remove();};
+        img.onerror=function(){
+          var fallback=document.createElement("span");
+          fallback.className="concert-poster-pending";
+          fallback.textContent="Ver cartel oficial ↗";
+          posterLink.replaceChild(fallback,img);
+        };
         posterLink.appendChild(img);card.appendChild(posterLink);
       }else{
         var pending=document.createElement("div");
