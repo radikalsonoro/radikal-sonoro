@@ -363,7 +363,7 @@ header .logo img{display:block!important;width:100%!important;height:100%!import
     <span class="app-kicker">RADIKAL SONORO · APP GRATUITA</span>
     <h2 id="app-promo-title">EL RUIDO<br><span>VA CONTIGO</span></h2>
     <p>Instala Radikal Sonoro en tu móvil y ten la radio, las noticias underground y la agenda de conciertos siempre a mano. Sin pagar y sin pasar por ninguna tienda de aplicaciones.</p>
-    <a class="app-install-link" href="#install-app">＋ INSTALAR RADIKAL SONORO</a>
+    <button class="app-install-link" id="app-promo-install" type="button">＋ INSTALAR RADIKAL SONORO</button>
   </div>
   <div class="app-platforms" aria-label="Cómo instalar la aplicación">
     <div class="app-platform"><strong>ANDROID</strong><span>Abre la web en un navegador compatible y elige <em>Instalar aplicación</em> o <em>Añadir a pantalla de inicio</em>.</span></div>
@@ -446,9 +446,11 @@ header .logo img{display:block!important;width:100%!important;height:100%!import
     installButton.setAttribute("aria-label", "Instalar la aplicación Radikal Sonoro");
   });
 
-  installButton.addEventListener("click", async function(){
+  var promoInstallButton = document.getElementById("app-promo-install");
+  async function startInstall(){
     if (alreadyInstalled) {
       installButton.textContent = "APP INSTALADA";
+      if (promoInstallButton) promoInstallButton.textContent = "APP INSTALADA";
       return;
     }
     if (installPrompt) {
@@ -456,16 +458,23 @@ header .logo img{display:block!important;width:100%!important;height:100%!import
       var choice = await installPrompt.userChoice;
       installPrompt = null;
       if (choice && choice.outcome === "accepted") {
-        installButton.textContent = "APP INSTALADA";
         alreadyInstalled = true;
+        installButton.textContent = "APP INSTALADA";
+        if (promoInstallButton) promoInstallButton.textContent = "APP INSTALADA";
       }
       return;
     }
-    // Chrome no permite forzar el cuadro nativo si no considera la web
-    // instalable. El botón permanece visible y da la ruta del menú, sin alertas.
-    installButton.textContent = "CHROME ⋮ · INSTALAR";
-    installButton.setAttribute("aria-label", "Abre el menú de Chrome y selecciona Instalar aplicación o Añadir a pantalla de inicio");
-  });
+    var isAppleMobile = /iphone|ipad|ipod/i.test(navigator.userAgent);
+    if (isAppleMobile) {
+      alert("Para instalar Radikal Sonoro en tu iPhone:\n1. Abre esta web en Safari.\n2. Pulsa el botón Compartir (cuadrado con flecha).\n3. Elige «Añadir a pantalla de inicio».\n4. Pulsa «Añadir».");
+    } else {
+      alert("Para instalar Radikal Sonoro en Android:\n1. Abre esta web en tu navegador.\n2. Pulsa el menú ⋮.\n3. Elige «Instalar aplicación» o «Añadir a pantalla de inicio».\n\nSi no aparece, prueba con otro navegador compatible y comprueba que la web se haya abierto con HTTPS.");
+    }
+    installButton.textContent = "VER INSTRUCCIONES";
+    installButton.setAttribute("aria-label", "Mostrar instrucciones para instalar Radikal Sonoro");
+  }
+  installButton.addEventListener("click", startInstall);
+  if (promoInstallButton) promoInstallButton.addEventListener("click", startInstall);
 
   window.addEventListener("appinstalled", function(){
     alreadyInstalled = true;
