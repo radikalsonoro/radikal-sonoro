@@ -104,7 +104,7 @@ public class MainActivity extends Activity {
             "<h2 style='color:#f5d328'>RADIKAL SONORO</h2>" +
             "<p>No se ha podido conectar con la web.</p>" +
             "<p>Comprueba tu conexión a Internet y vuelve a intentarlo.</p>" +
-            "<button onclick="window.location.href='https://radikalsonoro.es/'" style='padding:14px;background:#d71920;color:white;border:0;font-weight:bold'>REINTENTAR</button>" +
+            "<button onclick=\"window.location.href='https://radikalsonoro.es/'\" style='padding:14px;background:#d71920;color:white;border:0;font-weight:bold'>REINTENTAR</button>" +
             "</body></html>";
         webView.loadDataWithBaseURL(null, html, "text/html", "UTF-8", null);
     }
