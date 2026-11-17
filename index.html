@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#d7192d">
 <link rel="manifest" href="/manifest.webmanifest">
-<link rel="apple-touch-icon" href="/app-icon.svg?v=6">
+<link rel="apple-touch-icon" sizes="192x192" href="/app-icon-192.png">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -320,6 +320,24 @@ header .logo img{display:block!important;width:100%!important;height:100%!import
 .team-card{height:100%;min-height:0}
 .team-card img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center center;border:3px solid var(--paper);background:#080808}
 @media(max-width:680px){header{height:34vw;min-height:145px!important;max-height:230px}}
+
+/* PROMO PWA · acceso destacado a la app */
+#app-promo{position:relative;isolation:isolate;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(240px,.8fr);gap:24px;align-items:center;margin:28px 0 34px;padding:clamp(22px,4vw,42px);overflow:hidden;background:#101010;color:#fff;border:3px solid #090909;border-left:12px solid #d71920;box-shadow:8px 8px 0 #d71920}
+#app-promo:before{content:"RS";position:absolute;z-index:-1;right:3%;top:-35%;color:rgba(255,255,255,.055);font:900 clamp(150px,25vw,330px)/1 Anton,sans-serif;transform:rotate(-12deg)}
+#app-promo .app-kicker{display:inline-block;margin-bottom:12px;padding:6px 9px;background:#f5d328;color:#111;font:900 10px/1.2 'DM Mono',monospace;letter-spacing:.12em;transform:rotate(-2deg)}
+#app-promo h2{max-width:650px;margin:0 0 12px;color:#fff;font:900 clamp(36px,5.5vw,68px)/.88 Anton,'Barlow Condensed',sans-serif;text-transform:uppercase}
+#app-promo h2 span{color:#f5d328;text-shadow:3px 3px #d71920}
+#app-promo p{max-width:620px;margin:0 0 18px;color:#e7e2d9;font-size:14px;line-height:1.55}
+#app-promo .app-install-link{display:inline-flex;align-items:center;gap:10px;padding:13px 18px;background:#d71920;color:#fff;border:2px solid #fff;box-shadow:4px 4px #f5d328;font:900 13px 'DM Mono',monospace;text-decoration:none;letter-spacing:.04em}
+#app-promo .app-install-link:hover{background:#f5d328;color:#111}
+#app-promo .app-platforms{display:grid;gap:10px}
+#app-promo .app-platform{padding:13px 14px;background:#1d1d1d;border:1px solid #555;border-left:5px solid #f5d328}
+#app-promo .app-platform strong{display:block;margin-bottom:5px;color:#f5d328;font:900 16px Anton,'Barlow Condensed',sans-serif;text-transform:uppercase}
+#app-promo .app-platform span{display:block;color:#eee;font:11px/1.5 'DM Mono',monospace}
+#app-promo .app-platform em{color:#fff;font-style:normal;font-weight:700}
+@media(max-width:680px){#app-promo{grid-template-columns:1fr;gap:18px;margin:20px 0 26px;padding:22px 17px;border-left-width:8px;box-shadow:5px 5px 0 #d71920}#app-promo h2{font-size:43px}#app-promo .app-platforms{grid-template-columns:1fr 1fr;gap:8px}#app-promo .app-platform{padding:10px 9px}#app-promo .app-platform strong{font-size:14px}#app-promo .app-platform span{font-size:10px}}
+@media(max-width:390px){#app-promo .app-platforms{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body id="inicio">
@@ -340,6 +358,18 @@ header .logo img{display:block!important;width:100%!important;height:100%!import
 <div class="hero-main"><div class="kicker">Radio libre · Cultura underground</div><h2>24 horas de música independiente</h2><p>Punk, hardcore, ska, metal y cultura alternativa. Una radio hecha por y para la escena.</p><a class="cta" href="#radio">▶ Escucha Radikal Sonoro</a></div>
 <div class="hero-side"><div class="sidebox"><div class="redline"></div><strong>Radio 24 horas</strong><p>Emisión online para escuchar la escena estés donde estés.</p></div><div class="sidebox"><div class="redline"></div><strong>Próximo programa · Miércoles 25 de noviembre</strong><p>De 20:00 a 22:00 h en Ágora Sol Radio. Directo, invitados y mucho ruido.</p></div></div>
 </div>
+<section id="app-promo" aria-labelledby="app-promo-title">
+  <div class="app-promo-copy">
+    <span class="app-kicker">RADIKAL SONORO · APP GRATUITA</span>
+    <h2 id="app-promo-title">EL RUIDO<br><span>VA CONTIGO</span></h2>
+    <p>Instala Radikal Sonoro en tu móvil y ten la radio, las noticias underground y la agenda de conciertos siempre a mano. Sin pagar y sin pasar por ninguna tienda de aplicaciones.</p>
+    <a class="app-install-link" href="#install-app">＋ INSTALAR RADIKAL SONORO</a>
+  </div>
+  <div class="app-platforms" aria-label="Cómo instalar la aplicación">
+    <div class="app-platform"><strong>ANDROID</strong><span>Abre la web en un navegador compatible y elige <em>Instalar aplicación</em> o <em>Añadir a pantalla de inicio</em>.</span></div>
+    <div class="app-platform"><strong>iPHONE</strong><span>Abre la web en <em>Safari</em>, pulsa Compartir y selecciona <em>Añadir a pantalla de inicio</em>.</span></div>
+  </div>
+</section>
 <section id="proximamente" class="upcoming">
 <div class="section-head"><h2>Próximo programa</h2><small>Ágora Sol Radio</small></div>
 <div class="next-program program-promo">
