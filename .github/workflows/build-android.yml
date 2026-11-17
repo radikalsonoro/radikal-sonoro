@@ -31,6 +31,9 @@ jobs:
       - name: Preparar Android SDK
         uses: android-actions/setup-android@v3
 
+      - name: Instalar plataforma Android 35
+        run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
+
       - name: Compilar APK
         working-directory: android
         run: gradle assembleDebug
