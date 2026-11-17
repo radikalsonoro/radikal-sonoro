@@ -13,6 +13,9 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      ANDROID_HOME: /usr/local/lib/android/sdk
+      ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
     steps:
       - name: Descargar repositorio
         uses: actions/checkout@v4
@@ -28,15 +31,14 @@ jobs:
         with:
           gradle-version: '8.9'
 
-      - name: Preparar Android SDK
-        uses: android-actions/setup-android@v3
-
-      - name: Instalar plataforma Android 35
-        run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
+      - name: Aceptar licencias e instalar Android SDK
+        run: |
+          yes | sdkmanager --licenses
+          sdkmanager --install "platforms;android-35" "build-tools;35.0.0" "platform-tools"
 
       - name: Compilar APK
         working-directory: android
-        run: gradle assembleDebug
+        run: gradle assembleDebug --no-daemon
 
       - name: Preparar archivo descargable
         run: cp android/app/build/outputs/apk/debug/app-debug.apk radikal-sonoro.apk
