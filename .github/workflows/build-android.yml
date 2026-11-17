@@ -1,0 +1,47 @@
+name: Crear APK de Radikal Sonoro
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'android/**'
+      - '.github/workflows/build-android.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Preparar Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Preparar Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
+
+      - name: Preparar Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Compilar APK
+        working-directory: android
+        run: gradle assembleDebug
+
+      - name: Preparar archivo descargable
+        run: cp android/app/build/outputs/apk/debug/app-debug.apk radikal-sonoro.apk
+
+      - name: Publicar APK en una versión de GitHub
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: android-v1.0.${{ github.run_number }}
+          name: Radikal Sonoro Android v1.0.${{ github.run_number }}
+          generate_release_notes: true
+          files: radikal-sonoro.apk
