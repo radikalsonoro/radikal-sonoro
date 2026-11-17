@@ -1,0 +1,41 @@
+name: Construir APK Radikal Sonoro
+on:
+  workflow_dispatch:
+  push:
+    branches: [android-app-preview]
+    paths: ['android-app/**', '.github/workflows/android-app.yml']
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar código
+        uses: actions/checkout@v4
+      - name: Preparar Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Preparar Android SDK
+        uses: android-actions/setup-android@v3
+      - name: Preparar Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
+      - name: Descargar icono oficial
+        run: |
+          mkdir -p android-app/app/src/main/res/drawable-nodpi
+          curl -fL 'https://raw.githubusercontent.com/radikalsonoro/radikal-sonoro/main/app-icon-512.png' -o android-app/app/src/main/res/drawable-nodpi/ic_launcher.png
+      - name: Compilar APK de prueba
+        working-directory: android-app
+        run: gradle assembleDebug
+      - name: Publicar APK como artefacto
+        uses: actions/upload-artifact@v4
+        with:
+          name: Radikal-Sonoro-Android-test
+          path: android-app/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+          retention-days: 14
