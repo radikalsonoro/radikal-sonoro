@@ -321,6 +321,12 @@ header .logo img{display:block!important;width:100%!important;height:100%!import
 .team-card img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center center;border:3px solid var(--paper);background:#080808}
 @media(max-width:680px){header{height:34vw;min-height:145px!important;max-height:230px}}
 
+/* ACCESO DESTACADO A LA APP EN EL MENU */
+nav a.app-nav-link{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 17px;background:var(--yellow);color:#090909;border:2px solid #fff;border-bottom:5px solid var(--red);box-shadow:3px 3px 0 #000;font:900 17px/1 var(--display);letter-spacing:.07em;transform:rotate(-1deg)}
+nav a.app-nav-link span{font:900 20px/1 var(--body)}
+nav a.app-nav-link:hover,nav a.app-nav-link.active{background:var(--red);color:#fff;border-color:#fff;transform:rotate(0) translateY(-2px);box-shadow:4px 4px 0 var(--yellow)}
+@media(max-width:680px){nav a.app-nav-link{grid-column:1/-1;min-height:46px;font-size:20px;letter-spacing:.1em;box-shadow:4px 4px 0 var(--red);border:2px solid #fff;border-bottom:5px solid var(--red)}}
+
 /* PROMO PWA · acceso destacado a la app */
 #app-promo{position:relative;isolation:isolate;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(240px,.8fr);gap:24px;align-items:center;margin:28px 0 34px;padding:clamp(22px,4vw,42px);overflow:hidden;background:#101010;color:#fff;border:3px solid #090909;border-left:12px solid #d71920;box-shadow:8px 8px 0 #d71920}
 #app-promo:before{content:"RS";position:absolute;z-index:-1;right:3%;top:-35%;color:rgba(255,255,255,.055);font:900 clamp(150px,25vw,330px)/1 Anton,sans-serif;transform:rotate(-12deg)}
@@ -351,7 +357,7 @@ header .logo img{display:block!important;width:100%!important;height:100%!import
 </header>
 <nav aria-label="Navegación principal">
 <a class="active" href="#inicio">Inicio</a><a href="#radio">La radio</a><a href="#noticias">Noticias</a><a href="#proximamente">Próximo programa</a><a href="#conciertos">Conciertos</a><a href="#spotify">Podcasts</a><a href="#videos">Bandas libres</a><a href="#quienes-somos">Quiénes somos</a><a href="#contacto">Contacto</a>
-<a href="#app-radikal">La app</a></nav>
+<a class="app-nav-link" href="#app-radikal"><span aria-hidden="true">⬇</span> DESCARGA LA APP</a></nav>
 <main>
 <div class="hero">
 <div class="hero-main"><div class="kicker">Radio libre · Cultura underground</div><h2>24 horas de música independiente</h2><p>Punk, hardcore, ska, metal y cultura alternativa. Una radio hecha por y para la escena.</p><a class="cta" href="#radio">▶ Escucha Radikal Sonoro</a></div>
