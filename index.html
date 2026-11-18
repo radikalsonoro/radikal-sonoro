@@ -541,21 +541,21 @@ async function loadNews(){
     var now=Date.now(),cutoff=now-7*24*60*60*1000,seen=new Set();
     var items=source.filter(function(n){
       if(!n||!n.titulo||!n.url)return false;
-      var published=dateValue(n),pinned=/^(Underoath regresan a España en 2027|DÜRÜM lanza «Francoland»)/i.test(n.titulo||"");
+      var published=dateValue(n),pinned=/^(Underoath|DÜRÜM lanza «Francoland»)/i.test(n.titulo||"");
       if(!published||((published<cutoff||published>now+24*60*60*1000)&&!pinned))return false;
       var key=n.url.split("?")[0];if(seen.has(key))return false;seen.add(key);
       return /punk|hardcore|ska|metal|oi!|street.?punk|thrash|deathcore|metalcore|grind|stoner|doom|post.?punk|rock alternativo/.test((n.titulo+" "+(n.resumen||"")).toLowerCase());
     });
     items.sort(function(a,b){
-      var pinA=/^Underoath regresan a España en 2027/i.test(a.titulo||"")?2:0;
-      var pinB=/^Underoath regresan a España en 2027/i.test(b.titulo||"")?2:0;
+      var pinA=/^Underoath/i.test(a.titulo||"")?3:0;
+      var pinB=/^Underoath/i.test(b.titulo||"")?3:0;
       return pinB-pinA||dateValue(b)-dateValue(a);
     });
     items=items.slice(0,5);list.innerHTML="";
     if(!items.length){list.innerHTML="<li>No hay noticias verificadas recientes.</li>";status.textContent="0 noticias recientes.";return;}
     items.forEach(function(n,index){
       var durum=/^DÜRÜM lanza «Francoland»/i.test(n.titulo||"");
-      var underoath=/^Underoath regresan a España en 2027/i.test(n.titulo||"");
+      var underoath=/^Underoath/i.test(n.titulo||"");
       var pinned=underoath;
       var li=document.createElement("li"),a=document.createElement("a"),summary=document.createElement("p"),meta=document.createElement("div"),tag=document.createElement("span"),number=document.createElement("span");
       li.className="news-card"+(pinned?" featured-news":"");li.setAttribute("data-number",String(index+1).padStart(2,"0"));
