@@ -349,10 +349,20 @@ nav a.app-nav-link:hover,nav a.app-nav-link.active{background:var(--red);color:#
 @media(max-width:390px){#app-promo .app-platforms{grid-template-columns:1fr}}
 
 
-#news-list li.featured-news{margin:12px -10px 16px;padding:17px 14px 16px;background:#111;color:#eee;border:3px solid #d7192d;border-left:9px solid #f4d52f;box-shadow:6px 6px #000;position:relative}
-#news-list li.featured-news:before{content:"NOTICIA DESTACADA";display:inline-block;margin:0 0 10px;padding:5px 8px;background:#f4d52f;color:#111;font:900 10px "DM Mono",monospace;letter-spacing:.1em}
-#news-list li.featured-news>a{color:#fff;font-size:clamp(27px,3vw,38px);line-height:.98;text-shadow:2px 2px #d7192d}
+#news-list li.featured-news{display:grid;grid-template-columns:minmax(210px,.82fr) minmax(0,1.18fr);gap:18px;margin:16px -10px 20px;padding:15px;background:#090909;color:#eee;border:3px solid #d7192d;border-left:10px solid #f4d52f;box-shadow:7px 7px #000;position:relative;overflow:hidden}
+#news-list li.featured-news:before{content:"NOTICIA DESTACADA";position:absolute;z-index:2;top:12px;left:12px;padding:6px 9px;background:#f4d52f;color:#111;font:900 10px "DM Mono",monospace;letter-spacing:.1em;box-shadow:3px 3px #d7192d}
+#news-list li.featured-news .featured-visual{min-width:0;position:relative;align-self:stretch;min-height:230px;background:#171717}
+#news-list li.featured-news .featured-visual img{display:block;width:100%;height:100%;min-height:230px;max-height:330px;object-fit:cover;filter:grayscale(.18) contrast(1.08)}
+#news-list li.featured-news .featured-credit{position:absolute;right:5px;bottom:5px;padding:3px 5px;background:#080808d9;color:#fff;font:8px "DM Mono",monospace}
+#news-list li.featured-news .featured-copy{min-width:0;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:25px 5px 8px 0}
+#news-list li.featured-news .news-tag{display:inline-block;margin:0 0 9px;padding:5px 8px;background:#d7192d;color:#fff;font:900 9px "DM Mono",monospace;letter-spacing:.09em}
+#news-list li.featured-news>a{display:block;color:#fff;font-size:clamp(29px,3.6vw,46px);line-height:.92;text-shadow:2px 2px #d7192d}
 #news-list li.featured-news p,#news-list li.featured-news .small{color:#eee}
+#news-list li.featured-news .featured-summary{margin:10px 0 8px;font-size:13px;line-height:1.5}
+#news-list li.featured-news .featured-meta{color:#f4d52f;font:10px "DM Mono",monospace}
+#news-list li.featured-news .featured-cta{display:inline-flex;margin-top:12px;padding:10px 13px;background:#d7192d;color:#fff;border:2px solid #fff;box-shadow:4px 4px #f4d52f;font:900 11px "DM Mono",monospace;text-decoration:none;letter-spacing:.06em}
+#news-list li.featured-news .featured-cta:hover{background:#f4d52f;color:#111}
+@media(max-width:620px){#news-list li.featured-news{grid-template-columns:1fr;gap:10px;padding:11px}#news-list li.featured-news .featured-visual{min-height:180px}#news-list li.featured-news .featured-visual img{min-height:180px;max-height:230px}#news-list li.featured-news .featured-copy{padding:22px 4px 5px}#news-list li.featured-news>a{font-size:clamp(30px,9vw,42px)}}
 </style>
 </head>
 <body id="inicio">
@@ -573,14 +583,27 @@ async function loadNews(){
   if(!items.length){list.innerHTML="<li>No hay noticias verificadas de los últimos 7 días. Volveremos a mostrar noticias cuando haya publicaciones recientes.</li>";status.textContent="0 noticias recientes · Límite: 7 días.";return;}
   items.forEach(function(n,index){
     var li=document.createElement("li"),a=document.createElement("a"),summary=document.createElement("p"),meta=document.createElement("div"),tag=document.createElement("span"),number=document.createElement("span");
-    li.className="news-card"+(/^Underoath regresan a España en 2027/i.test(n.titulo||"")?" featured-news":"");li.setAttribute("data-number",String(index+1).padStart(2,"0"));
+    var isPinned=/^Underoath regresan a España en 2027/i.test(n.titulo||"");
+    li.className="news-card"+(isPinned?" featured-news":"");li.setAttribute("data-number",String(index+1).padStart(2,"0"));
     tag.className="news-tag";tag.textContent=n.categoria||(/metal|thrash|death|doom|grind/i.test(n.titulo+" "+(n.resumen||""))?"METAL":/ska/i.test(n.titulo+" "+(n.resumen||""))?"SKA":/hardcore/i.test(n.titulo+" "+(n.resumen||""))?"HARDCORE":"PUNK / ALTERNATIVA");
     a.href=(n.video||n.escucha)?"noticia-durum.html":n.url;if(!(n.video||n.escucha)){a.target="_blank";a.rel="noopener noreferrer";}a.textContent=n.titulo;
     summary.textContent=n.resumen||"Consulta la información completa en la fuente original.";
     meta.className="small news-meta";meta.textContent=(n.fecha?new Date(n.fecha).toLocaleDateString("es-ES"):"Actualidad")+" · "+(n.fuente||n._tag||"Fuente original");
     number.className="news-number";number.textContent=String(index+1).padStart(2,"0");
-    li.appendChild(number);li.appendChild(tag);li.appendChild(a);li.appendChild(summary);
-li.appendChild(meta);list.appendChild(li);
+    if(isPinned){
+      var visual=document.createElement("div"),photoLink=document.createElement("a"),photo=document.createElement("img"),credit=document.createElement("span"),copy=document.createElement("div"),cta=document.createElement("a");
+      visual.className="featured-visual";photoLink.href="https://www.broadwayworld.com/bwwmusic/article/Photos-UNDEROATH-to-Tour-Europe-and-UK-in-Spring-2027-Starting-April-2-in-Berlin-20261116";photoLink.target="_blank";photoLink.rel="noopener noreferrer";
+      photo.src="https://cloudimages2.broadwayworld.com/upload13/2470977/share-00006bb465146758-0ef313b3-cbb0-45bb-a029-daff1aff9961-3c5f3863.jpg?format=auto&width=800";photo.alt="Fotografía promocional de Underoath";photo.loading="lazy";
+      credit.className="featured-credit";credit.textContent="Foto: BroadwayWorld";
+      photoLink.appendChild(photo);visual.appendChild(photoLink);visual.appendChild(credit);
+      copy.className="featured-copy";summary.className="featured-summary";meta.className="small featured-meta";
+      cta.className="featured-cta";cta.href=n.url;cta.target="_blank";cta.rel="noopener noreferrer";cta.textContent="LEER NOTICIA COMPLETA ↗";
+      copy.appendChild(tag);copy.appendChild(a);copy.appendChild(summary);copy.appendChild(meta);copy.appendChild(cta);
+      li.appendChild(visual);li.appendChild(copy);
+    }else{
+      li.appendChild(number);li.appendChild(tag);li.appendChild(a);li.appendChild(summary);li.appendChild(meta);
+    }
+    list.appendChild(li);
   });
   status.textContent=items.length+"/6 noticias de los últimos 7 días · Fuentes múltiples · "+(new Date()).toLocaleDateString("es-ES");
 }
