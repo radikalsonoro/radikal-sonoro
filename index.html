@@ -551,7 +551,7 @@ async function loadNews(){
       var pinB=/^Underoath/i.test(b.titulo||"")?3:0;
       return pinB-pinA||dateValue(b)-dateValue(a);
     });
-    items=items.slice(0,5);list.innerHTML="";
+    items=items.slice(0,7);list.innerHTML="";
     if(!items.length){list.innerHTML="<li>No hay noticias verificadas recientes.</li>";status.textContent="0 noticias recientes.";return;}
     items.forEach(function(n,index){
       var durum=/^DÜRÜM lanza «Francoland»/i.test(n.titulo||"");
@@ -579,7 +579,7 @@ async function loadNews(){
       }else{li.appendChild(number);li.appendChild(tag);li.appendChild(a);li.appendChild(summary);li.appendChild(meta);}
       list.appendChild(li);
     });
-    status.textContent=items.length+"/5 noticias · UNDEROATH destacado · "+(new Date()).toLocaleDateString("es-ES");
+    status.textContent=items.length+"/7 noticias · 6 noticias + destacada · "+(new Date()).toLocaleDateString("es-ES");
   }
   // Mostrar primero el contenido publicado en el repositorio: no depender de servicios RSS externos.
   renderNews(fallback);
