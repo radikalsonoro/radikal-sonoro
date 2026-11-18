@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#d7192d">
+<meta name="description" content="Archivo de noticias de Radikal Sonoro: punk, hardcore, ska, rock y metal underground.">
+<title>Archivo de noticias | Radikal Sonoro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;700;800;900&family=DM+Mono:wght@400;500&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#eeeae1;--ink:#080808;--red:#d7192d;--yellow:#f4d52f;--display:'Anton','Barlow Condensed',Impact,sans-serif;--body:'Inter',Arial,sans-serif;--mono:'DM Mono',monospace}
+*{box-sizing:border-box}body{margin:0;background:var(--ink);color:var(--paper);font-family:var(--body);line-height:1.5}
+.topline{height:10px;background:repeating-linear-gradient(135deg,var(--red) 0 24px,var(--paper) 24px 27px,var(--ink) 27px 48px)}
+header{padding:30px 22px 24px;border-bottom:7px solid var(--paper);background:linear-gradient(110deg,#080808,#35050b);text-align:center}
+.brand{color:var(--yellow);font:900 13px var(--mono);letter-spacing:.18em;text-decoration:none}
+h1{margin:12px 0 5px;color:#fff;font:900 clamp(42px,8vw,82px)/.9 var(--display);text-transform:uppercase;text-shadow:4px 4px var(--red)}
+header p{margin:12px auto 0;color:#ddd;font-size:12px}
+main{width:min(900px,calc(100% - 30px));margin:28px auto 60px}
+.back{display:inline-block;margin-bottom:18px;padding:9px 12px;background:var(--yellow);color:#111;font:900 11px var(--mono);text-decoration:none;border:2px solid var(--paper);box-shadow:4px 4px var(--red)}
+.month{margin:24px 0 10px;padding:9px 12px;background:var(--red);color:#fff;border-left:7px solid var(--yellow);font:900 27px/1 var(--display);text-transform:uppercase}
+.news{margin:0;padding:16px 14px;background:var(--paper);color:#111;border-bottom:2px dashed #999}
+.news h2{margin:0 0 7px;font:900 25px/1 var(--display);text-transform:uppercase}
+.news h2 a{color:#111;text-decoration:none}.news h2 a:hover{color:var(--red)}
+.news p{margin:7px 0;color:#333;font-size:13px}
+.meta{color:#555;font:10px var(--mono);letter-spacing:.03em}
+.tag{display:inline-block;margin-bottom:8px;padding:4px 7px;background:var(--yellow);color:#111;font:500 9px var(--mono)}
+#status{padding:9px 11px;background:#222;color:var(--yellow);font:10px var(--mono)}
+.empty{padding:18px;background:#222;color:#eee}
+footer{padding:20px;text-align:center;border-top:3px solid var(--red);color:#aaa;font:10px var(--mono)}
+@media(max-width:600px){main{width:calc(100% - 22px)}.news{padding:13px 11px}.news h2{font-size:22px}}
+</style>
+</head>
+<body>
+<div class="topline"></div>
+<header>
+<a class="brand" href="index.html">RADIKAL SONORO</a>
+<h1>Archivo de noticias</h1>
+<p>Memoria viva de la escena independiente · Punk · Hardcore · Ska · Rock · Metal</p>
+</header>
+<main>
+<a class="back" href="index.html#noticias">← VOLVER A ÚLTIMAS NOTICIAS</a>
+<div id="status" role="status">Cargando archivo…</div>
+<div id="archive"></div>
+</main>
+<footer>RADIKAL SONORO · APOYO A LA ESCENA · RUIDO SIN PERMISO</footer>
+<script>
+(async function(){
+ const root=document.getElementById('archive'),status=document.getElementById('status');
+ try{
+  const response=await fetch('data/noticias.json?'+Date.now(),{cache:'no-store'});
+  if(!response.ok)throw new Error('No se pudo cargar el archivo');
+  const data=await response.json();
+  const items=(Array.isArray(data)?data:[]).filter(n=>n&&n.titulo&&n.fecha).sort((a,b)=>b.fecha.localeCompare(a.fecha));
+  if(!items.length){status.textContent='Todavía no hay noticias archivadas.';return;}
+  const groups=new Map();
+  items.forEach(n=>{const d=new Date(n.fecha+'T12:00:00');if(isNaN(d))return;const key=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0');if(!groups.has(key))groups.set(key,{label:d.toLocaleDateString('es-ES',{month:'long',year:'numeric'}),items:[]});groups.get(key).items.push(n);});
+  root.innerHTML='';
+  groups.forEach(group=>{
+   const heading=document.createElement('h2');heading.className='month';heading.textContent=group.label;root.appendChild(heading);
+   group.items.forEach(n=>{
+    const article=document.createElement('article');article.className='news';
+    const tag=document.createElement('span');tag.className='tag';tag.textContent=n.categoria||'RADIKAL SONORO';
+    const title=document.createElement('h2'),link=document.createElement('a');link.textContent=n.titulo;link.href=(n.video||n.escucha)?'noticia-durum.html':(n.url||'#');
+    if(!(n.video||n.escucha)){link.target='_blank';link.rel='noopener noreferrer';}
+    title.appendChild(link);
+    const summary=document.createElement('p');summary.textContent=n.resumen||'';
+    const meta=document.createElement('div');meta.className='meta';meta.textContent=new Date(n.fecha+'T12:00:00').toLocaleDateString('es-ES')+' · '+(n.fuente||'Radikal Sonoro');
+    article.append(tag,title,summary,meta);root.appendChild(article);
+   });
+  });
+  status.textContent=items.length+' noticias conservadas · Ordenadas por mes y año.';
+ }catch(error){status.textContent='No se ha podido cargar el archivo. Inténtalo de nuevo más tarde.';}
+})();
+</script>
+</body>
+</html>
