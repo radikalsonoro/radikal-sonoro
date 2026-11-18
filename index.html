@@ -544,7 +544,7 @@ async function loadNews(){
       var published=dateValue(n),pinned=/^(Underoath|DÜRÜM lanza «Francoland»)/i.test(n.titulo||"");
       if(!published||((published<cutoff||published>now+24*60*60*1000)&&!pinned))return false;
       var key=n.url.split("?")[0];if(seen.has(key))return false;seen.add(key);
-      return /punk|hardcore|ska|metal|oi!|street.?punk|thrash|deathcore|metalcore|grind|stoner|doom|post.?punk|rock alternativo/.test((n.titulo+" "+(n.resumen||"")).toLowerCase());
+      return pinned||/punk|hardcore|ska|metal|oi!|street.?punk|thrash|deathcore|metalcore|grind|stoner|doom|post.?punk|rock alternativo/.test((n.titulo+" "+(n.resumen||"")+" "+(n.categoria||"")).toLowerCase());
     });
     items.sort(function(a,b){
       var pinA=/^Underoath/i.test(a.titulo||"")?3:0;
