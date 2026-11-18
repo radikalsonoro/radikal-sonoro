@@ -348,6 +348,11 @@ nav a.app-nav-link:hover,nav a.app-nav-link.active{background:var(--red);color:#
 @media(max-width:680px){#app-promo{grid-template-columns:1fr;gap:18px;margin:20px 0 26px;padding:22px 17px;border-left-width:8px;box-shadow:5px 5px 0 #d71920}#app-promo h2{font-size:43px}#app-promo .app-platforms{grid-template-columns:1fr 1fr;gap:8px}#app-promo .app-platform{padding:10px 9px}#app-promo .app-platform strong{font-size:14px}#app-promo .app-platform span{font-size:10px}}
 @media(max-width:390px){#app-promo .app-platforms{grid-template-columns:1fr}}
 
+
+#news-list li.featured-news{margin:12px -10px 16px;padding:17px 14px 16px;background:#111;color:#eee;border:3px solid #d7192d;border-left:9px solid #f4d52f;box-shadow:6px 6px #000;position:relative}
+#news-list li.featured-news:before{content:"NOTICIA DESTACADA";display:inline-block;margin:0 0 10px;padding:5px 8px;background:#f4d52f;color:#111;font:900 10px "DM Mono",monospace;letter-spacing:.1em}
+#news-list li.featured-news>a{color:#fff;font-size:clamp(27px,3vw,38px);line-height:.98;text-shadow:2px 2px #d7192d}
+#news-list li.featured-news p,#news-list li.featured-news .small{color:#eee}
 </style>
 </head>
 <body id="inicio">
@@ -550,7 +555,8 @@ async function loadNews(){
     if(!n||!n.titulo||!n.url)return false;
     var published=dateValue(n);
     // Solo noticias con fecha comprobable de los últimos 7 días; nunca rescatar noticias antiguas como fallback.
-    if(!published||published<cutoff||published>now+24*60*60*1000)return false;
+    var pinned=/^Underoath regresan a España en 2027/i.test(n.titulo||"");
+    if(!published||((published<cutoff||published>now+24*60*60*1000)&&!pinned))return false;
     var key=n.url.split("?")[0];if(seen.has(key))return false;seen.add(key);
     var text=(n.titulo+" "+(n.resumen||"")).toLowerCase();
     return /punk|hardcore|ska|metal|oi!|street.?punk|thrash|deathcore|metalcore|grind|stoner|doom|post.?punk|rock alternativo/.test(text);
@@ -558,14 +564,16 @@ async function loadNews(){
   items.sort(function(a,b){
     var aState=/españa|estatal|madrid|barcelona|bilbao|valencia|zaragoza|sevilla|galicia|euskadi|asturias|andalucía|cataluña|castilla|navarra/i.test((a.titulo||"")+" "+(a.resumen||""));
     var bState=/españa|estatal|madrid|barcelona|bilbao|valencia|zaragoza|sevilla|galicia|euskadi|asturias|andalucía|cataluña|castilla|navarra/i.test((b.titulo||"")+" "+(b.resumen||""));
-    return (Number(bState)-Number(aState))||(dateValue(b)-dateValue(a));
+    var aPinned=/^Underoath regresan a España en 2027/i.test(a.titulo||"");
+    var bPinned=/^Underoath regresan a España en 2027/i.test(b.titulo||"");
+    return (Number(bPinned)-Number(aPinned))||(Number(bState)-Number(aState))||(dateValue(b)-dateValue(a));
   });
   items=items.slice(0,6);
   list.innerHTML="";
   if(!items.length){list.innerHTML="<li>No hay noticias verificadas de los últimos 7 días. Volveremos a mostrar noticias cuando haya publicaciones recientes.</li>";status.textContent="0 noticias recientes · Límite: 7 días.";return;}
   items.forEach(function(n,index){
     var li=document.createElement("li"),a=document.createElement("a"),summary=document.createElement("p"),meta=document.createElement("div"),tag=document.createElement("span"),number=document.createElement("span");
-    li.className="news-card";li.setAttribute("data-number",String(index+1).padStart(2,"0"));
+    li.className="news-card"+(/^Underoath regresan a España en 2027/i.test(n.titulo||"")?" featured-news":"");li.setAttribute("data-number",String(index+1).padStart(2,"0"));
     tag.className="news-tag";tag.textContent=n.categoria||(/metal|thrash|death|doom|grind/i.test(n.titulo+" "+(n.resumen||""))?"METAL":/ska/i.test(n.titulo+" "+(n.resumen||""))?"SKA":/hardcore/i.test(n.titulo+" "+(n.resumen||""))?"HARDCORE":"PUNK / ALTERNATIVA");
     a.href=(n.video||n.escucha)?"noticia-durum.html":n.url;if(!(n.video||n.escucha)){a.target="_blank";a.rel="noopener noreferrer";}a.textContent=n.titulo;
     summary.textContent=n.resumen||"Consulta la información completa en la fuente original.";
