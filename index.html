@@ -304,6 +304,9 @@ footer{max-width:none;margin:0;padding:24px;text-align:center;background:#050505
 #news-list li>a:hover{text-decoration:underline;color:var(--red)}
 #news-list li p{font-size:12px!important;line-height:1.5}
 #news-list .news-meta{margin-top:12px;padding-top:8px;border-top:1px dashed #888;font:9px var(--mono);text-transform:uppercase;letter-spacing:.035em}
+#news-list .news-actions{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
+#news-list .news-actions a{display:inline-flex;align-items:center;padding:7px 9px;background:#111;color:#fff;border:1px solid #111;font:900 10px var(--mono);text-decoration:none;text-transform:uppercase}
+#news-list .news-actions a:hover{background:var(--red);border-color:var(--red);color:#fff}
 @media(max-width:700px){#news-list{grid-template-columns:1fr}#news-list li.news-card{min-height:0;padding-top:15px;padding-bottom:12px}#noticias:after{top:95px}}
 
 
@@ -566,7 +569,14 @@ async function loadNews(){
     summary.textContent=n.resumen||"Consulta la información completa en la fuente original.";
     meta.className="small news-meta";meta.textContent=(n.fecha?new Date(n.fecha).toLocaleDateString("es-ES"):"Actualidad")+" · "+(n.fuente||n._tag||"Fuente original");
     number.className="news-number";number.textContent=String(index+1).padStart(2,"0");
-    li.appendChild(number);li.appendChild(tag);li.appendChild(a);li.appendChild(summary);li.appendChild(meta);list.appendChild(li);
+    li.appendChild(number);li.appendChild(tag);li.appendChild(a);li.appendChild(summary);
+    if(n.video||n.escucha){
+      var actions=document.createElement("div");actions.className="news-actions";
+      if(n.video){var video=document.createElement("a");video.href=n.video;video.target="_blank";video.rel="noopener noreferrer";video.textContent="▶ Ver videoclip";actions.appendChild(video);}
+      if(n.escucha){var listen=document.createElement("a");listen.href=n.escucha;listen.target="_blank";listen.rel="noopener noreferrer";listen.textContent="♫ Escuchar single";actions.appendChild(listen);}
+      li.appendChild(actions);
+    }
+    li.appendChild(meta);list.appendChild(li);
   });
   status.textContent=items.length+"/6 noticias de los últimos 7 días · Fuentes múltiples · "+(new Date()).toLocaleDateString("es-ES");
 }
