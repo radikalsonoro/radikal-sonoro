@@ -364,6 +364,37 @@ nav a.app-nav-link:hover,nav a.app-nav-link.active{background:var(--red);color:#
 #news-list li.featured-news .featured-cta:hover{background:#f4d52f;color:#111}
 @media(max-width:620px){#news-list li.featured-news{grid-template-columns:1fr;gap:10px;padding:11px}#news-list li.featured-news .featured-visual{min-height:180px}#news-list li.featured-news .featured-visual img{min-height:180px;max-height:230px}#news-list li.featured-news .featured-copy{padding:22px 4px 5px}#news-list li.featured-news>a{font-size:clamp(30px,9vw,42px)}}
 </style>
+
+<!-- Google Analytics 4 · Radikal Sonoro -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VYL8XSD55M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VYL8XSD55M');
+  document.addEventListener('DOMContentLoaded', function () {
+    var radio = document.getElementById('audio');
+    if (radio) {
+      radio.addEventListener('play', function () {
+        gtag('event', 'radio_play', {event_category: 'radio', event_label: 'Radikal Sonoro 24H'});
+      });
+    }
+    document.addEventListener('click', function (event) {
+      var link = event.target.closest('#news-list a, #concert-news-list a');
+      if (!link) return;
+      var inNews = !!link.closest('#news-list');
+      gtag('event', inNews ? 'news_open' : 'concert_open', {
+        event_category: inNews ? 'news' : 'concerts',
+        link_url: link.href,
+        link_text: (link.textContent || '').trim().slice(0, 100)
+      });
+    });
+    window.addEventListener('appinstalled', function () {
+      gtag('event', 'pwa_installed', {event_category: 'pwa', event_label: 'Radikal Sonoro'});
+    });
+  });
+</script>
+
 </head>
 <body id="inicio">
 <div class="topline"></div>
