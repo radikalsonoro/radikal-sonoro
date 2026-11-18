@@ -547,8 +547,8 @@ async function loadNews(){
       return /punk|hardcore|ska|metal|oi!|street.?punk|thrash|deathcore|metalcore|grind|stoner|doom|post.?punk|rock alternativo/.test((n.titulo+" "+(n.resumen||"")).toLowerCase());
     });
     items.sort(function(a,b){
-      var pinA=/^DÜRÜM lanza «Francoland»/i.test(a.titulo||"")?2:/^Underoath regresan a España en 2027/i.test(a.titulo||"")?1:0;
-      var pinB=/^DÜRÜM lanza «Francoland»/i.test(b.titulo||"")?2:/^Underoath regresan a España en 2027/i.test(b.titulo||"")?1:0;
+      var pinA=/^Underoath regresan a España en 2027/i.test(a.titulo||"")?2:0;
+      var pinB=/^Underoath regresan a España en 2027/i.test(b.titulo||"")?2:0;
       return pinB-pinA||dateValue(b)-dateValue(a);
     });
     items=items.slice(0,5);list.innerHTML="";
@@ -556,7 +556,7 @@ async function loadNews(){
     items.forEach(function(n,index){
       var durum=/^DÜRÜM lanza «Francoland»/i.test(n.titulo||"");
       var underoath=/^Underoath regresan a España en 2027/i.test(n.titulo||"");
-      var pinned=durum||underoath;
+      var pinned=underoath;
       var li=document.createElement("li"),a=document.createElement("a"),summary=document.createElement("p"),meta=document.createElement("div"),tag=document.createElement("span"),number=document.createElement("span");
       li.className="news-card"+(pinned?" featured-news":"");li.setAttribute("data-number",String(index+1).padStart(2,"0"));
       tag.className="news-tag";tag.textContent=n.categoria||(durum?"METAL / ALTERNATIVA":/metal|thrash|death|doom|grind/i.test(n.titulo+" "+(n.resumen||""))?"METAL":/ska/i.test(n.titulo+" "+(n.resumen||""))?"SKA":/hardcore/i.test(n.titulo+" "+(n.resumen||""))?"HARDCORE":"PUNK / ALTERNATIVA");
@@ -568,7 +568,7 @@ async function loadNews(){
         var visual=document.createElement("div"),copy=document.createElement("div"),stamp=document.createElement("div"),cta=document.createElement("a");
         visual.className="featured-visual";
         visual.style.cssText="display:flex;min-height:230px;align-items:center;justify-content:center;padding:22px;background:repeating-linear-gradient(135deg,#181818 0 5px,#080808 5px 12px);border:2px solid #d7192d";
-        stamp.textContent=durum?"DÜRÜM · NUEVO SINGLE":"GIRA ESPAÑA 2027";stamp.style.cssText="padding:12px;background:#d7192d;color:#fff;font:900 30px Anton,Impact,sans-serif;text-align:center";
+        stamp.textContent="UNDEROATH · MADRID 2027";stamp.style.cssText="padding:12px;background:#d7192d;color:#fff;font:900 30px Anton,Impact,sans-serif;text-align:center";
         visual.appendChild(stamp);copy.className="featured-copy";copy.appendChild(tag);copy.appendChild(a);copy.appendChild(summary);copy.appendChild(meta);
         if(durum){
           cta.href="https://youtu.be/-KmmfMvEaWw";cta.target="_blank";cta.rel="noopener noreferrer";cta.className="featured-cta";cta.textContent="VER VIDEOCLIP «FRANCOLAND» ↗";copy.appendChild(cta);
@@ -579,7 +579,7 @@ async function loadNews(){
       }else{li.appendChild(number);li.appendChild(tag);li.appendChild(a);li.appendChild(summary);li.appendChild(meta);}
       list.appendChild(li);
     });
-    status.textContent=items.length+"/5 noticias · DÜRÜM destacado · "+(new Date()).toLocaleDateString("es-ES");
+    status.textContent=items.length+"/5 noticias · UNDEROATH destacado · "+(new Date()).toLocaleDateString("es-ES");
   }
   // Mostrar primero el contenido publicado en el repositorio: no depender de servicios RSS externos.
   renderNews(fallback);
