@@ -564,7 +564,7 @@ async function loadNews(){
   items.forEach(function(n,index){
     var li=document.createElement("li"),a=document.createElement("a"),summary=document.createElement("p"),meta=document.createElement("div"),tag=document.createElement("span"),number=document.createElement("span");
     li.className="news-card";li.setAttribute("data-number",String(index+1).padStart(2,"0"));
-    tag.className="news-tag";tag.textContent=/metal|thrash|death|doom|grind/i.test(n.titulo+" "+(n.resumen||""))?"METAL":/ska/i.test(n.titulo+" "+(n.resumen||""))?"SKA":/hardcore/i.test(n.titulo+" "+(n.resumen||""))?"HARDCORE":"PUNK / ALTERNATIVA";
+    tag.className="news-tag";tag.textContent=n.categoria||(/metal|thrash|death|doom|grind/i.test(n.titulo+" "+(n.resumen||""))?"METAL":/ska/i.test(n.titulo+" "+(n.resumen||""))?"SKA":/hardcore/i.test(n.titulo+" "+(n.resumen||""))?"HARDCORE":"PUNK / ALTERNATIVA");
     a.href=(n.video||n.escucha)?"noticia-durum.html":n.url;if(!(n.video||n.escucha)){a.target="_blank";a.rel="noopener noreferrer";}a.textContent=n.titulo;
     summary.textContent=n.resumen||"Consulta la información completa en la fuente original.";
     meta.className="small news-meta";meta.textContent=(n.fecha?new Date(n.fecha).toLocaleDateString("es-ES"):"Actualidad")+" · "+(n.fuente||n._tag||"Fuente original");
