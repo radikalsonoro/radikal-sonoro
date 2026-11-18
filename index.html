@@ -536,7 +536,53 @@ async function loadNews(){
     var response=await fetch("/data/noticias.json?"+Date.now(),{cache:"no-store"});
     if(response.ok){var saved=await response.json();if(Array.isArray(saved))fallback=saved;}
   }catch(error){console.warn("Noticias: no se pudo cargar el archivo local",error);}
-  // Búsqueda distribuida: medios estatales y publicaciones especializadas.
+  function dateValue(n){var d=new Date(n.fecha||n.pubDate||"");return isNaN(d.getTime())?0:d.getTime();}
+  function renderNews(source){
+    var now=Date.now(),cutoff=now-7*24*60*60*1000,seen=new Set();
+    var items=source.filter(function(n){
+      if(!n||!n.titulo||!n.url)return false;
+      var published=dateValue(n),pinned=/^(Underoath regresan a España en 2027|DÜRÜM lanza «Francoland»)/i.test(n.titulo||"");
+      if(!published||((published<cutoff||published>now+24*60*60*1000)&&!pinned))return false;
+      var key=n.url.split("?")[0];if(seen.has(key))return false;seen.add(key);
+      return /punk|hardcore|ska|metal|oi!|street.?punk|thrash|deathcore|metalcore|grind|stoner|doom|post.?punk|rock alternativo/.test((n.titulo+" "+(n.resumen||"")).toLowerCase());
+    });
+    items.sort(function(a,b){
+      var pinA=/^DÜRÜM lanza «Francoland»/i.test(a.titulo||"")?2:/^Underoath regresan a España en 2027/i.test(a.titulo||"")?1:0;
+      var pinB=/^DÜRÜM lanza «Francoland»/i.test(b.titulo||"")?2:/^Underoath regresan a España en 2027/i.test(b.titulo||"")?1:0;
+      return pinB-pinA||dateValue(b)-dateValue(a);
+    });
+    items=items.slice(0,5);list.innerHTML="";
+    if(!items.length){list.innerHTML="<li>No hay noticias verificadas recientes.</li>";status.textContent="0 noticias recientes.";return;}
+    items.forEach(function(n,index){
+      var durum=/^DÜRÜM lanza «Francoland»/i.test(n.titulo||"");
+      var underoath=/^Underoath regresan a España en 2027/i.test(n.titulo||"");
+      var pinned=durum||underoath;
+      var li=document.createElement("li"),a=document.createElement("a"),summary=document.createElement("p"),meta=document.createElement("div"),tag=document.createElement("span"),number=document.createElement("span");
+      li.className="news-card"+(pinned?" featured-news":"");li.setAttribute("data-number",String(index+1).padStart(2,"0"));
+      tag.className="news-tag";tag.textContent=n.categoria||(durum?"METAL / ALTERNATIVA":/metal|thrash|death|doom|grind/i.test(n.titulo+" "+(n.resumen||""))?"METAL":/ska/i.test(n.titulo+" "+(n.resumen||""))?"SKA":/hardcore/i.test(n.titulo+" "+(n.resumen||""))?"HARDCORE":"PUNK / ALTERNATIVA");
+      a.href=(n.video||n.escucha)?"noticia-durum.html":n.url;if(!(n.video||n.escucha)){a.target="_blank";a.rel="noopener noreferrer";}a.textContent=n.titulo;
+      summary.textContent=n.resumen||"Consulta la información completa en la fuente original.";
+      meta.className="small news-meta";meta.textContent=(n.fecha?new Date(n.fecha).toLocaleDateString("es-ES"):"Actualidad")+" · Fuente: "+(n.fuente||n._tag||"Fuente original");
+      number.className="news-number";number.textContent=String(index+1).padStart(2,"0");
+      if(pinned){
+        var visual=document.createElement("div"),copy=document.createElement("div"),stamp=document.createElement("div"),cta=document.createElement("a");
+        visual.className="featured-visual";
+        visual.style.cssText="display:flex;min-height:230px;align-items:center;justify-content:center;padding:22px;background:repeating-linear-gradient(135deg,#181818 0 5px,#080808 5px 12px);border:2px solid #d7192d";
+        stamp.textContent=durum?"DÜRÜM · NUEVO SINGLE":"GIRA ESPAÑA 2027";stamp.style.cssText="padding:12px;background:#d7192d;color:#fff;font:900 30px Anton,Impact,sans-serif;text-align:center";
+        visual.appendChild(stamp);copy.className="featured-copy";copy.appendChild(tag);copy.appendChild(a);copy.appendChild(summary);copy.appendChild(meta);
+        if(durum){
+          cta.href="https://youtu.be/-KmmfMvEaWw";cta.target="_blank";cta.rel="noopener noreferrer";cta.className="featured-cta";cta.textContent="VER VIDEOCLIP «FRANCOLAND» ↗";copy.appendChild(cta);
+        }else{
+          cta.href=n.url;cta.target="_blank";cta.rel="noopener noreferrer";cta.className="featured-cta";cta.textContent="LEER NOTICIA COMPLETA ↗";copy.appendChild(cta);
+        }
+        li.appendChild(visual);li.appendChild(copy);
+      }else{li.appendChild(number);li.appendChild(tag);li.appendChild(a);li.appendChild(summary);li.appendChild(meta);}
+      list.appendChild(li);
+    });
+    status.textContent=items.length+"/5 noticias · DÜRÜM destacado · "+(new Date()).toLocaleDateString("es-ES");
+  }
+  // Mostrar primero el contenido publicado en el repositorio: no depender de servicios RSS externos.
+  renderNews(fallback);
   var feeds=[
     {q:'site:manerasdevivir.com (punk OR hardcore OR ska OR metal)',tag:'Maneras de Vivir'},
     {q:'site:insonoro.com (punk OR hardcore OR ska OR metal)',tag:'Insonoro'},
@@ -549,63 +595,16 @@ async function loadNews(){
     try{
       var rss='https://news.google.com/rss/search?q='+encodeURIComponent(feed.q)+'&hl=es&gl=ES&ceid=ES:es';
       var api='https://api.rss2json.com/v1/api.json?rss_url='+encodeURIComponent(rss);
-      var res=await fetch(api);if(!res.ok)return [];
+      var res=await Promise.race([fetch(api),new Promise(function(resolve){setTimeout(function(){resolve(null);},5000);})]);
+      if(!res||!res.ok)return [];
       var data=await res.json();return (data.items||[]).slice(0,8).map(function(item){
         var title=(item.title||"").replace(/\s+-\s+[^-]+$/,"").trim();
         var desc=(item.description||"").replace(/<[^>]*>/g," ").replace(/&nbsp;/g," ").replace(/\s+/g," ").trim();
-        var source=(item.author||feed.tag||"Fuente original").trim();
-        return {titulo:title,resumen:desc.slice(0,230),fecha:item.pubDate||"",fuente:source,url:item.link||"",_tag:feed.tag};
+        return {titulo:title,resumen:desc.slice(0,230),fecha:item.pubDate||"",fuente:(item.author||feed.tag||"Fuente original").trim(),url:item.link||"",_tag:feed.tag};
       });
     }catch(error){console.warn("Fuente no disponible: "+feed.tag,error);return [];}
   }));
-  var all=results.flat().concat(fallback);
-  function dateValue(n){var d=new Date(n.fecha||n.pubDate||"");return isNaN(d.getTime())?0:d.getTime();}
-  var now=Date.now(),cutoff=now-7*24*60*60*1000;
-  var seen=new Set(),items=all.filter(function(n){
-    if(!n||!n.titulo||!n.url)return false;
-    var published=dateValue(n);
-    // Solo noticias con fecha comprobable de los últimos 7 días; nunca rescatar noticias antiguas como fallback.
-    var pinned=/^Underoath regresan a España en 2027/i.test(n.titulo||"");
-    if(!published||((published<cutoff||published>now+24*60*60*1000)&&!pinned))return false;
-    var key=n.url.split("?")[0];if(seen.has(key))return false;seen.add(key);
-    var text=(n.titulo+" "+(n.resumen||"")).toLowerCase();
-    return /punk|hardcore|ska|metal|oi!|street.?punk|thrash|deathcore|metalcore|grind|stoner|doom|post.?punk|rock alternativo/.test(text);
-  });
-  items.sort(function(a,b){
-    var aState=/españa|estatal|madrid|barcelona|bilbao|valencia|zaragoza|sevilla|galicia|euskadi|asturias|andalucía|cataluña|castilla|navarra/i.test((a.titulo||"")+" "+(a.resumen||""));
-    var bState=/españa|estatal|madrid|barcelona|bilbao|valencia|zaragoza|sevilla|galicia|euskadi|asturias|andalucía|cataluña|castilla|navarra/i.test((b.titulo||"")+" "+(b.resumen||""));
-    var aPinned=/^Underoath regresan a España en 2027/i.test(a.titulo||"");
-    var bPinned=/^Underoath regresan a España en 2027/i.test(b.titulo||"");
-    return (Number(bPinned)-Number(aPinned))||(Number(bState)-Number(aState))||(dateValue(b)-dateValue(a));
-  });
-  items=items.slice(0,6);
-  list.innerHTML="";
-  if(!items.length){list.innerHTML="<li>No hay noticias verificadas de los últimos 7 días. Volveremos a mostrar noticias cuando haya publicaciones recientes.</li>";status.textContent="0 noticias recientes · Límite: 7 días.";return;}
-  items.forEach(function(n,index){
-    var li=document.createElement("li"),a=document.createElement("a"),summary=document.createElement("p"),meta=document.createElement("div"),tag=document.createElement("span"),number=document.createElement("span");
-    var isPinned=/^Underoath regresan a España en 2027/i.test(n.titulo||"");
-    li.className="news-card"+(isPinned?" featured-news":"");li.setAttribute("data-number",String(index+1).padStart(2,"0"));
-    tag.className="news-tag";tag.textContent=n.categoria||(/metal|thrash|death|doom|grind/i.test(n.titulo+" "+(n.resumen||""))?"METAL":/ska/i.test(n.titulo+" "+(n.resumen||""))?"SKA":/hardcore/i.test(n.titulo+" "+(n.resumen||""))?"HARDCORE":"PUNK / ALTERNATIVA");
-    a.href=(n.video||n.escucha)?"noticia-durum.html":n.url;if(!(n.video||n.escucha)){a.target="_blank";a.rel="noopener noreferrer";}a.textContent=n.titulo;
-    summary.textContent=n.resumen||"Consulta la información completa en la fuente original.";
-    meta.className="small news-meta";meta.textContent=(n.fecha?new Date(n.fecha).toLocaleDateString("es-ES"):"Actualidad")+" · "+(n.fuente||n._tag||"Fuente original");
-    number.className="news-number";number.textContent=String(index+1).padStart(2,"0");
-    if(isPinned){
-      var visual=document.createElement("div"),photoLink=document.createElement("a"),photo=document.createElement("img"),credit=document.createElement("span"),copy=document.createElement("div"),cta=document.createElement("a");
-      visual.className="featured-visual";photoLink.href="https://www.broadwayworld.com/bwwmusic/article/Photos-UNDEROATH-to-Tour-Europe-and-UK-in-Spring-2027-Starting-April-2-in-Berlin-20261116";photoLink.target="_blank";photoLink.rel="noopener noreferrer";
-      photo.src="https://cloudimages2.broadwayworld.com/upload13/2470977/share-00006bb465146758-0ef313b3-cbb0-45bb-a029-daff1aff9961-3c5f3863.jpg?format=auto&width=800";photo.alt="Fotografía promocional de Underoath";photo.loading="lazy";
-      credit.className="featured-credit";credit.textContent="Foto: BroadwayWorld";
-      photoLink.appendChild(photo);visual.appendChild(photoLink);visual.appendChild(credit);
-      copy.className="featured-copy";summary.className="featured-summary";meta.className="small featured-meta";
-      cta.className="featured-cta";cta.href=n.url;cta.target="_blank";cta.rel="noopener noreferrer";cta.textContent="LEER NOTICIA COMPLETA ↗";
-      copy.appendChild(tag);copy.appendChild(a);copy.appendChild(summary);copy.appendChild(meta);copy.appendChild(cta);
-      li.appendChild(visual);li.appendChild(copy);
-    }else{
-      li.appendChild(number);li.appendChild(tag);li.appendChild(a);li.appendChild(summary);li.appendChild(meta);
-    }
-    list.appendChild(li);
-  });
-  status.textContent=items.length+"/6 noticias de los últimos 7 días · Fuentes múltiples · "+(new Date()).toLocaleDateString("es-ES");
+  renderNews(results.flat().concat(fallback));
 }
 // Detecta fechas futuras explícitas en el anuncio (no confunde publicación con fecha del evento).
 function getConcertDate(item){
