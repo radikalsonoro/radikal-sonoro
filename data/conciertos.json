@@ -77,6 +77,16 @@
     "cartel": "https://gruta77.com/wp-content/uploads/2026/08/21_noviembre_web.jpg"
   },
   {
+    "fecha": "2026-11-24",
+    "hora": "19:30",
+    "evento": "Astio + Tres Cruces + Cardenales",
+    "artistas": "Astio + Tres Cruces + Cardenales",
+    "sala": "La Trinchera",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://primeralineavkbar.com/index.php/trinchera/"
+  },
+  {
     "fecha": "2026-11-25",
     "hora": "",
     "evento": "Rats in the Temple — Flotsam & Jetsam",
@@ -110,6 +120,17 @@
     "cartel": "https://barracudasrockbar.com/wp-content/uploads/THE-AFONICOS-MONTEREY.jpg"
   },
   {
+    "fecha": "2026-11-27",
+    "hora": "21:00",
+    "evento": "Corteza Inhumana + Dioivo + Mugre",
+    "artistas": "Corteza Inhumana + Dioivo + Mugre",
+    "sala": "La Trinchera",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://primeralineavkbar.com/index.php/trinchera/",
+    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/11/27.11-sabado-noche-150x150.jpeg"
+  },
+  {
     "fecha": "2026-11-28",
     "hora": "",
     "evento": "XXII Feria del Disco de Metal Extremo",
@@ -122,6 +143,16 @@
   },
   {
     "fecha": "2026-11-28",
+    "hora": "12:30",
+    "evento": "Regulars — sesión vermut",
+    "artistas": "Regulars",
+    "sala": "La Trinchera",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://primeralineavkbar.com/index.php/trinchera/"
+  },
+  {
+    "fecha": "2026-11-28",
     "hora": "21:00",
     "evento": "Zutaten + Urban Cookies + Preachers of Distortion",
     "artistas": "Zutaten + Urban Cookies + Preachers of Distortion",
@@ -130,6 +161,61 @@
     "pais": "España",
     "url": "https://barracudasrockbar.com/event/zutaten-urban-cookies-preachers-of-distortion/",
     "cartel": "https://barracudasrockbar.com/wp-content/uploads/ZUTANTEN-URBAN-COOKIES-PREACHERS-OF-DISTORTION.jpg"
+  },
+  {
+    "fecha": "2026-11-28",
+    "hora": "21:30",
+    "evento": "CJ4Madres + Los Danger",
+    "artistas": "CJ4Madres + Los Danger",
+    "sala": "La Trinchera",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://primeralineavkbar.com/index.php/trinchera/",
+    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/11/28.11-sabado-noche-150x150.jpeg"
+  },
+  {
+    "fecha": "2026-11-29",
+    "hora": "12:00",
+    "evento": "Hosten + The Art of War — sesión vermut",
+    "artistas": "Hosten + The Art of War",
+    "sala": "La Trinchera",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://primeralineavkbar.com/index.php/trinchera/",
+    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/11/29.11-domingo-vermut-150x150.jpeg"
+  },
+  {
+    "fecha": "2026-12-03",
+    "hora": "20:00",
+    "evento": "Cumbia vs Punk: Kumbia Ambassadors + DJ Rokoto + Selektor Justin",
+    "artistas": "Kumbia Ambassadors + DJ Rokoto + Selektor Justin",
+    "sala": "La Trinchera",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://primeralineavkbar.com/index.php/trinchera/",
+    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/11/03.12-jueves-150x150.jpeg"
+  },
+  {
+    "fecha": "2026-12-04",
+    "hora": "20:00",
+    "evento": "Civil Protection + Jaleo + Diraki",
+    "artistas": "Civil Protection + Jaleo + Diraki",
+    "sala": "La Trinchera",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://primeralineavkbar.com/index.php/trinchera/",
+    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/11/04.12-viernes-150x150.png"
+  },
+  {
+    "fecha": "2026-12-05",
+    "hora": "",
+    "evento": "Synder + Latal + Flawbrain",
+    "artistas": "Synder + Latal + Flawbrain",
+    "sala": "La Trinchera",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://primeralineavkbar.com/index.php/trinchera/",
+    "cartel": "https://primeralineavkbar.com/wp-content/uploads/2026/11/05.12-sabado-noche-150x150.jpeg"
   },
   {
     "hora": "18:00",
