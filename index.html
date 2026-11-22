@@ -382,6 +382,78 @@ nav a.app-nav-link:hover,nav a.app-nav-link.active{background:var(--red);color:#
 @media(max-width:900px){#conciertos .venue-events{gap:9px}}
 @media(max-width:560px){#conciertos .venue-group{margin-bottom:12px}#conciertos .venue-events{gap:12px}#concert-dialog{padding:12px}#concert-dialog .concert-dialog-head{top:-12px;margin:-12px -12px 12px;padding:11px 12px}#concert-dialog #concert-form{padding:8px}}
 
+
+/* REDISEÑO EDITORIAL · 22-11-2026 · conserva contenidos y funciones existentes */
+:root{--paper:#f0ece3;--ink:#090909;--red:#d7192d;--yellow:#f4d52f}
+body{background:#090909}
+header{min-height:205px;padding:24px 26px 22px 132px;background-position:center 42%;border-bottom-width:5px}
+.logo{left:18px;top:15px}.logo img{width:112px;height:112px}
+header h1{font-size:clamp(48px,7vw,88px);margin-right:160px}
+header .tagline{font-size:10px;letter-spacing:.1em}
+header:after{font-size:clamp(13px,1.5vw,20px);right:2%;top:12px}
+nav{gap:4px;padding:7px 10px}
+nav a{font-size:14px;padding:8px 11px}
+main{max-width:1240px;padding:0 18px 38px;gap:13px}
+.magazine-top{grid-template-columns:minmax(0,1fr);gap:13px;margin-top:14px}
+#radio{min-height:0}
+#radio,.magazine-top #radio{padding:16px}
+#radio .section-head h2{font-size:clamp(36px,4.5vw,56px)}
+.radio-card{padding:14px}
+#conciertos{height:auto;padding:16px}
+#conciertos .section-head{margin-bottom:12px}
+#conciertos .venue-group{margin:12px 0 15px}
+#conciertos .venue-heading{font-size:22px;margin-bottom:8px;padding:7px 10px}
+#conciertos .venue-events{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+#conciertos .concert-card{grid-template-columns:88px minmax(0,1fr);min-height:116px}
+#conciertos .concert-poster,#conciertos .concert-placeholder{min-height:116px;max-height:145px}
+#conciertos .concert-card-body{padding:8px;gap:4px}
+#conciertos .concert-date{font-size:14px;padding:5px 7px}
+#conciertos .concert-card-body>a:not(.concert-more){font-size:18px}
+#conciertos .concert-card-body .small{font-size:9px}
+#conciertos .concert-more{font-size:9px;padding:5px 7px}
+#open-concert-form{margin-top:12px}
+.magazine-bottom{gap:13px}
+main>section,.magazine-top section{padding:17px}
+.section-head{margin-bottom:12px;padding-bottom:8px}
+.section-head h2{font-size:clamp(29px,3.5vw,43px)}
+#news-list li{padding:10px 0}
+#news-list li>a{font-size:20px}
+#news-list li p{font-size:11px!important}
+#videos{grid-column:1/-1}
+#quienes-somos{grid-column:1/-1}
+#contacto{grid-column:1/-1}
+footer{padding:20px 15px}
+@media(max-width:900px){
+ #conciertos .venue-events{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .magazine-bottom{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+ header{min-height:170px;padding:18px 14px 18px 94px}
+ .logo{left:10px;top:16px}.logo img{width:76px;height:76px}
+ header h1{font-size:clamp(39px,11vw,58px);margin:7px 0 5px;text-shadow:3px 3px var(--red)}
+ header:after{display:none}
+ header .tagline{margin:5px 0;font-size:8px;letter-spacing:.06em}
+ .header-stamp{font-size:8px}
+ nav{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin}
+ nav a{font-size:13px;padding:8px 10px}
+ main{padding:0 10px 28px;gap:11px}
+ .magazine-top{margin-top:10px}
+ main>section,.magazine-top section{padding:13px}
+ .radio-grid{grid-template-columns:1fr}
+ .radio-card+.radio-card{border-left:0;border-top:1px solid #655}
+ #conciertos{padding:12px}
+ #conciertos .venue-events{grid-template-columns:1fr;gap:8px}
+ #conciertos .concert-card{grid-template-columns:96px minmax(0,1fr);min-height:118px}
+ #conciertos .concert-poster,#conciertos .concert-placeholder{min-height:118px;max-height:145px}
+ #conciertos .concert-card-body>a:not(.concert-more){font-size:19px}
+ #conciertos .venue-heading{font-size:20px}
+ .section-head h2{font-size:31px}
+ .team-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+ .team-card{padding:8px 6px}
+ .team-card strong{font-size:clamp(12px,3.5vw,16px)}
+ #proximamente .upcoming-feature{grid-template-columns:1fr;gap:13px}
+ #proximamente .upcoming-art{min-height:150px}
+}
 </style>
 
 <!-- Google Analytics 4 · Radikal Sonoro -->
@@ -605,7 +677,7 @@ async function loadNews(){
       var pinB=/^Underoath/i.test(b.titulo||"")?3:0;
       return pinB-pinA||dateValue(b)-dateValue(a);
     });
-    items=items.slice(0,7);list.innerHTML="";
+    items=items.slice(0,5);list.innerHTML="";
     if(!items.length){list.innerHTML="<li>No hay noticias verificadas recientes.</li>";status.textContent="0 noticias recientes.";return;}
     items.forEach(function(n,index){
       var durum=/^DÜRÜM lanza «Francoland»/i.test(n.titulo||"");
@@ -633,7 +705,7 @@ async function loadNews(){
       }else{li.appendChild(number);li.appendChild(tag);li.appendChild(a);li.appendChild(summary);li.appendChild(meta);}
       list.appendChild(li);
     });
-    status.textContent=items.length+"/7 noticias · 6 noticias + destacada · "+(new Date()).toLocaleDateString("es-ES");
+    status.textContent=items.length+"/5 noticias · selección editorial · "+(new Date()).toLocaleDateString("es-ES");
   }
   // Mostrar primero el contenido publicado en el repositorio: no depender de servicios RSS externos.
   renderNews(fallback);
