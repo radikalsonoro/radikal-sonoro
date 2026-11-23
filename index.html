@@ -456,19 +456,31 @@ footer{padding:20px 15px}
 }
 
 
-/* POP-UP DEL PROGRAMA SEMANAL */
-#program-dialog{width:min(760px,calc(100% - 28px));max-width:760px;padding:0;background:#101010;color:var(--paper);border:3px solid var(--paper);border-top:8px solid var(--red);box-shadow:10px 10px var(--yellow)}
-#program-dialog::backdrop{background:rgba(0,0,0,.82);backdrop-filter:blur(3px)}
-.program-dialog-inner{display:grid;grid-template-columns:minmax(190px,.85fr) minmax(0,1.15fr);gap:22px;padding:22px}
-.program-dialog-poster{min-height:300px;padding:18px;display:flex;flex-direction:column;justify-content:space-between;align-items:center;text-align:center;background:repeating-linear-gradient(135deg,#171717 0 4px,#080808 4px 11px);border:2px solid var(--paper);box-shadow:5px 5px var(--red)}
-.program-dialog-poster strong{font:900 clamp(42px,6vw,68px)/.8 var(--display);text-shadow:4px 4px var(--red)}
-.program-dialog-poster em{padding:7px 10px;background:var(--red);color:#fff;font:900 20px var(--display);font-style:normal}
+/* POP-UP SEMANAL · FLYER RADIKAL SONORO */
+#program-dialog{width:min(900px,calc(100% - 24px));max-width:900px;max-height:94vh;overflow:auto;padding:0;background:#101010;color:var(--paper);border:3px solid var(--paper);border-top:8px solid var(--red);box-shadow:10px 10px var(--yellow)}
+#program-dialog::backdrop{background:rgba(0,0,0,.86);backdrop-filter:blur(3px)}
+.program-dialog-inner{display:grid;grid-template-columns:minmax(240px,.9fr) minmax(0,1fr);gap:22px;padding:18px;align-items:center}
+.weekly-flyer-link{display:block;color:inherit;text-decoration:none}
+.weekly-flyer{min-height:540px;padding:14px 12px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:9px;text-align:center;color:#090909;background:repeating-linear-gradient(0deg,#f4f0e8 0 3px,#e5e0d7 3px 4px);border:8px solid #080808;outline:3px solid #d7192d;box-shadow:6px 6px #d7192d;position:relative;overflow:hidden}
+.weekly-flyer:before,.weekly-flyer:after{content:"";position:absolute;inset:8px;border:2px dashed #111;pointer-events:none}
+.weekly-flyer-top{width:100%;padding:13px 5px 8px;background:#090909;color:#fff;border-bottom:7px solid #d7192d;transform:rotate(-1deg)}
+.weekly-flyer-top strong{display:block;font:900 clamp(36px,5vw,55px)/.78 var(--display);letter-spacing:-.04em}
+.weekly-flyer-top b{display:block;margin-top:8px;color:#d7192d;font:900 19px var(--display)}
+.weekly-flyer-return{width:100%;padding:8px 3px;background:#d7192d;color:#fff;font:900 clamp(20px,3vw,31px)/1 var(--display);transform:rotate(1deg);text-shadow:2px 2px #111}
+.weekly-flyer-skull{font:900 86px/1 Arial,sans-serif;color:#080808;text-shadow:5px 4px #d7192d}
+.weekly-flyer-name{font:900 clamp(34px,4.5vw,48px)/.8 var(--display);letter-spacing:-.03em}
+.weekly-flyer-date{width:100%;padding:9px 4px;background:#090909;color:#fff;font:900 17px var(--display)}
+.weekly-flyer-date strong{color:#d7192d;font-size:35px}
+.weekly-flyer-time{color:#d7192d;font:900 clamp(27px,4vw,39px)/1 var(--display);text-shadow:1px 1px #090909}
+.weekly-flyer-live{font:900 19px var(--display)}
+.weekly-flyer-styles{width:100%;padding:8px 4px;background:#090909;color:#fff;font:900 15px/1.2 var(--display)}
+.weekly-flyer-web{padding:8px 0 2px;font:700 13px/1.4 var(--mono)}
 .program-dialog-copy h3{margin:8px 0;color:#fff;font:900 clamp(30px,4vw,45px)/.9 var(--display);text-transform:uppercase}
 .program-dialog-copy p{font-size:13px;color:#eee}
 .program-dialog-meta{margin:14px 0;padding:12px;background:var(--yellow);color:#111;font:900 12px/1.5 var(--mono)}
 .program-dialog-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
-.program-dialog-close{float:right;margin:12px 12px 0 0;background:var(--red);color:#fff;border:2px solid #fff;padding:8px 12px;font:900 11px var(--mono);cursor:pointer}
-@media(max-width:600px){.program-dialog-inner{grid-template-columns:1fr;padding:14px;gap:15px}.program-dialog-poster{min-height:210px}}
+.program-dialog-close{float:right;margin:10px 10px 0 0;background:var(--red);color:#fff;border:2px solid #fff;padding:8px 12px;font:900 11px var(--mono);cursor:pointer}
+@media(max-width:620px){.program-dialog-inner{grid-template-columns:1fr;padding:12px;gap:14px}.weekly-flyer{min-height:470px;max-width:420px;margin:0 auto}.program-dialog-copy{padding:0 4px 10px}}
 </style>
 
 <!-- Google Analytics 4 · Radikal Sonoro -->
@@ -580,33 +592,40 @@ footer{padding:20px 15px}
 <dialog id="program-dialog" aria-labelledby="program-dialog-title">
  <button class="program-dialog-close" type="button" data-close-program aria-label="Cerrar">✕ CERRAR</button>
  <div class="program-dialog-inner">
-  <div class="program-dialog-poster">
-   <span class="flyer-date">MIÉRCOLES · 25 NOVIEMBRE 2026</span>
-   <strong>RADIKAL<br>SONORO</strong>
-   <em>RUIDO EN DIRECTO</em>
-   <small>PUNK · HARDCORE · SKA · METAL</small>
-  </div>
+  <a class="weekly-flyer-link" href="/images/flyer-radikal-sonoro-2026-11-25.svg" target="_blank" rel="noopener noreferrer" aria-label="Abrir flyer semanal">
+   <div class="weekly-flyer">
+    <div class="weekly-flyer-top"><strong>RADIKAL<br>SONORO</strong><b>RADIO SHOW</b></div>
+    <div class="weekly-flyer-return">REGRESO DEL PROGRAMA</div>
+    <div class="weekly-flyer-skull">☠</div>
+    <div class="weekly-flyer-name">RADIKAL<br>SONORO</div>
+    <div class="weekly-flyer-date">MIÉRCOLES <strong>25</strong> NOVIEMBRE</div>
+    <div class="weekly-flyer-time">20:00 A 22:00 HRS</div>
+    <div class="weekly-flyer-live">ESP · EN VIVO</div>
+    <div class="weekly-flyer-styles">PUNK · SKA · METAL · HARDCORE · UNDER</div>
+    <div class="weekly-flyer-web">www.agorasolradio.org<br>www.radikalsonoro.es</div>
+   </div>
+  </a>
   <div class="program-dialog-copy">
-   <span class="next-program-label">RADIO LIBRE · CULTURA UNDERGROUND</span>
-   <h3 id="program-dialog-title">Ruido en Directo</h3>
-   <p>Dos horas de música independiente, bandas, cultura alternativa y actitud DIY. Un espacio para la escena punk, hardcore, ska y metal.</p>
-   <div class="program-dialog-meta">ESTA SEMANA · MIÉRCOLES 25 NOVIEMBRE<br>20:00–22:00 H<br>ÁGORA SOL RADIO</div>
+   <span class="next-program-label">FLYER DE ESTA SEMANA</span>
+   <h3 id="program-dialog-title">Regreso del programa</h3>
+   <p>Esta semana vuelve Radikal Sonoro en directo. Dos horas de punk, ska, metal, hardcore y música underground.</p>
+   <div class="program-dialog-meta">MIÉRCOLES 25 DE NOVIEMBRE<br>20:00–22:00 H · EN DIRECTO<br>ÁGORA SOL RADIO</div>
    <div class="program-dialog-actions">
-    <a class="cta" href="#agora" data-close-program>▶ ESCUCHAR EN DIRECTO</a>
-    <a class="program-calendar" href="https://www.agorasolradio.org/podcast/radikalsonoro/" target="_blank" rel="noopener noreferrer">ESCUCHAR PODCASTS ↗</a>
+    <a class="cta" href="https://www.agorasolradio.org/directo/" target="_blank" rel="noopener noreferrer">▶ ESCUCHAR ÁGORA SOL</a>
+    <a class="program-calendar" href="https://radikalsonoro.es/">VISITAR RADIKAL SONORO ↗</a>
    </div>
   </div>
  </div>
 </dialog>
 <script>
-/* Pop-up semanal: se muestra una vez por visita a la web. */
+/* Pop-up semanal: vuelve a mostrarse cuando cambia la semana del flyer. */
 (function(){
   var popup=document.getElementById("program-dialog");
   if(!popup || typeof popup.showModal!=="function") return;
-  var key="radikal-program-popup-2026-11-25";
+  var key="radikal-program-popup-week-2026-11-25";
   try {
-    if(sessionStorage.getItem(key)) return;
-    sessionStorage.setItem(key,"1");
+    if(localStorage.getItem(key)) return;
+    localStorage.setItem(key,"1");
   } catch(error) {}
   window.setTimeout(function(){
     if(!popup.open) popup.showModal();
