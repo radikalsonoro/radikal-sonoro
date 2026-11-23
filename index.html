@@ -456,6 +456,19 @@ footer{padding:20px 15px}
 }
 
 
+/* POP-UP DEL PROGRAMA SEMANAL */
+#program-dialog{width:min(760px,calc(100% - 28px));max-width:760px;padding:0;background:#101010;color:var(--paper);border:3px solid var(--paper);border-top:8px solid var(--red);box-shadow:10px 10px var(--yellow)}
+#program-dialog::backdrop{background:rgba(0,0,0,.82);backdrop-filter:blur(3px)}
+.program-dialog-inner{display:grid;grid-template-columns:minmax(190px,.85fr) minmax(0,1.15fr);gap:22px;padding:22px}
+.program-dialog-poster{min-height:300px;padding:18px;display:flex;flex-direction:column;justify-content:space-between;align-items:center;text-align:center;background:repeating-linear-gradient(135deg,#171717 0 4px,#080808 4px 11px);border:2px solid var(--paper);box-shadow:5px 5px var(--red)}
+.program-dialog-poster strong{font:900 clamp(42px,6vw,68px)/.8 var(--display);text-shadow:4px 4px var(--red)}
+.program-dialog-poster em{padding:7px 10px;background:var(--red);color:#fff;font:900 20px var(--display);font-style:normal}
+.program-dialog-copy h3{margin:8px 0;color:#fff;font:900 clamp(30px,4vw,45px)/.9 var(--display);text-transform:uppercase}
+.program-dialog-copy p{font-size:13px;color:#eee}
+.program-dialog-meta{margin:14px 0;padding:12px;background:var(--yellow);color:#111;font:900 12px/1.5 var(--mono)}
+.program-dialog-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.program-dialog-close{float:right;margin:12px 12px 0 0;background:var(--red);color:#fff;border:2px solid #fff;padding:8px 12px;font:900 11px var(--mono);cursor:pointer}
+@media(max-width:600px){.program-dialog-inner{grid-template-columns:1fr;padding:14px;gap:15px}.program-dialog-poster{min-height:210px}}
 </style>
 
 <!-- Google Analytics 4 · Radikal Sonoro -->
