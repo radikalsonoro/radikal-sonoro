@@ -592,7 +592,7 @@ footer{padding:20px 15px}
 <dialog id="program-dialog" aria-labelledby="program-dialog-title">
  <button class="program-dialog-close" type="button" data-close-program aria-label="Cerrar">✕ CERRAR</button>
  <div class="program-dialog-inner">
-  <a class="weekly-flyer-link" href="/images/flyer-radikal-sonoro-2026-11-25.svg" target="_blank" rel="noopener noreferrer" aria-label="Abrir flyer semanal">
+  <div class="weekly-flyer-link" aria-label="Flyer de esta semana">
    <div class="weekly-flyer">
     <div class="weekly-flyer-top"><strong>RADIKAL<br>SONORO</strong><b>RADIO SHOW</b></div>
     <div class="weekly-flyer-return">REGRESO DEL PROGRAMA</div>
@@ -604,7 +604,7 @@ footer{padding:20px 15px}
     <div class="weekly-flyer-styles">PUNK · SKA · METAL · HARDCORE · UNDER</div>
     <div class="weekly-flyer-web">www.agorasolradio.org<br>www.radikalsonoro.es</div>
    </div>
-  </a>
+  </div>
   <div class="program-dialog-copy">
    <span class="next-program-label">FLYER DE ESTA SEMANA</span>
    <h3 id="program-dialog-title">Regreso del programa</h3>
@@ -622,7 +622,12 @@ footer{padding:20px 15px}
 (function(){
   var popup=document.getElementById("program-dialog");
   if(!popup || typeof popup.showModal!=="function") return;
-  var key="radikal-program-popup-week-2026-11-25";
+  var now=new Date();
+  var weekDate=new Date(Date.UTC(now.getFullYear(),now.getMonth(),now.getDate()));
+  weekDate.setUTCDate(weekDate.getUTCDate()+4-(weekDate.getUTCDay()||7));
+  var weekYear=weekDate.getUTCFullYear();
+  var weekNumber=Math.ceil((((weekDate-new Date(Date.UTC(weekYear,0,1)))/86400000)+1)/7);
+  var key="radikal-program-popup-"+weekYear+"-W"+String(weekNumber).padStart(2,"0");
   try {
     if(localStorage.getItem(key)) return;
     localStorage.setItem(key,"1");
