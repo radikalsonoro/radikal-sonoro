@@ -618,16 +618,15 @@ footer{padding:20px 15px}
  </div>
 </dialog>
 <script>
-/* Pop-up semanal: vuelve a mostrarse cuando cambia la semana del flyer. */
+/* Pop-up del programa: aparece lunes, miércoles y viernes; una vez por día. */
 (function(){
   var popup=document.getElementById("program-dialog");
   if(!popup || typeof popup.showModal!=="function") return;
   var now=new Date();
-  var weekDate=new Date(Date.UTC(now.getFullYear(),now.getMonth(),now.getDate()));
-  weekDate.setUTCDate(weekDate.getUTCDate()+4-(weekDate.getUTCDay()||7));
-  var weekYear=weekDate.getUTCFullYear();
-  var weekNumber=Math.ceil((((weekDate-new Date(Date.UTC(weekYear,0,1)))/86400000)+1)/7);
-  var key="radikal-program-popup-"+weekYear+"-W"+String(weekNumber).padStart(2,"0");
+  // JavaScript: domingo=0, lunes=1, miércoles=3 y viernes=5.
+  if([1,3,5].indexOf(now.getDay())===-1) return;
+  var dateKey=now.getFullYear()+"-"+String(now.getMonth()+1).padStart(2,"0")+"-"+String(now.getDate()).padStart(2,"0");
+  var key="radikal-program-popup-"+dateKey;
   try {
     if(localStorage.getItem(key)) return;
     localStorage.setItem(key,"1");
