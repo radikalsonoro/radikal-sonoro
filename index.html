@@ -454,6 +454,30 @@ footer{padding:20px 15px}
  #proximamente .upcoming-feature{grid-template-columns:1fr;gap:13px}
  #proximamente .upcoming-art{min-height:150px}
 }
+
+/* FLYERS INTERACTIVOS DE PROGRAMAS */
+#flyers-programas{grid-column:1/-1;background:#101010;border:2px solid var(--paper);border-top:5px solid var(--red);box-shadow:6px 6px #000}
+.program-flyer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.program-flyer{position:relative;min-height:285px;width:100%;padding:18px;display:flex;flex-direction:column;align-items:stretch;justify-content:space-between;text-align:left;color:#fff;background:repeating-linear-gradient(135deg,#171717 0 4px,#080808 4px 11px);border:2px solid var(--paper);box-shadow:6px 6px var(--red);cursor:pointer;overflow:hidden}
+.program-flyer:after{content:"RS";position:absolute;right:-8px;bottom:-32px;color:#d7192d35;font:900 150px/.9 var(--display);pointer-events:none}
+.program-flyer .flyer-date{position:relative;z-index:1;padding:7px;background:var(--yellow);color:#111;font:900 10px var(--mono);letter-spacing:.05em}
+.program-flyer strong{position:relative;z-index:1;margin:24px 0 10px;font:900 clamp(42px,5vw,65px)/.8 var(--display);text-shadow:4px 4px var(--red);overflow-wrap:anywhere}
+.program-flyer em{position:relative;z-index:1;align-self:flex-start;padding:7px 10px;background:var(--red);color:#fff;font:900 20px/1 var(--display);font-style:normal;transform:rotate(-2deg)}
+.program-flyer small{position:relative;z-index:1;margin-top:20px;color:var(--yellow);font:10px var(--mono);letter-spacing:.05em}
+.program-flyer .flyer-open{position:relative;z-index:1;align-self:flex-start;margin-top:15px;padding:8px 10px;background:var(--paper);color:#111;font:900 10px var(--mono)}
+#program-dialog{width:min(760px,calc(100% - 28px));max-width:760px;padding:0;background:#101010;color:var(--paper);border:3px solid var(--paper);border-top:8px solid var(--red);box-shadow:10px 10px var(--yellow)}
+#program-dialog::backdrop{background:rgba(0,0,0,.82);backdrop-filter:blur(3px)}
+.program-dialog-inner{display:grid;grid-template-columns:minmax(190px,.85fr) minmax(0,1.15fr);gap:22px;padding:22px}
+.program-dialog-poster{min-height:300px;padding:18px;display:flex;flex-direction:column;justify-content:space-between;align-items:center;text-align:center;background:repeating-linear-gradient(135deg,#171717 0 4px,#080808 4px 11px);border:2px solid var(--paper);box-shadow:5px 5px var(--red)}
+.program-dialog-poster strong{font:900 clamp(42px,6vw,68px)/.8 var(--display);text-shadow:4px 4px var(--red)}
+.program-dialog-poster em{padding:7px 10px;background:var(--red);color:#fff;font:900 20px var(--display);font-style:normal}
+.program-dialog-copy h3{margin:8px 0;color:#fff;font:900 clamp(30px,4vw,45px)/.9 var(--display);text-transform:uppercase}
+.program-dialog-copy p{font-size:13px;color:#eee}
+.program-dialog-meta{margin:14px 0;padding:12px;background:var(--yellow);color:#111;font:900 12px/1.5 var(--mono)}
+.program-dialog-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.program-dialog-close{float:right;margin:12px 12px 0 0;background:var(--red);color:#fff;border:2px solid #fff;padding:8px 12px;font:900 11px var(--mono);cursor:pointer}
+@media(max-width:600px){.program-dialog-inner{grid-template-columns:1fr;padding:14px;gap:15px}.program-dialog-poster{min-height:210px}.program-flyer{min-height:260px}}
+
 </style>
 
 <!-- Google Analytics 4 · Radikal Sonoro -->
@@ -497,7 +521,7 @@ footer{padding:20px 15px}
 <div class="header-stamp">RUIDO · RESISTENCIA · AUTOGESTIÓN</div>
 </header>
 <nav aria-label="Navegación principal">
-<a class="active" href="#inicio">Inicio</a><a href="#radio">La radio</a><a href="#noticias">Noticias</a><a href="#proximamente">Próximo programa</a><a href="#conciertos">Conciertos</a><a href="#spotify">Podcasts</a><a href="#videos">Bandas libres</a><a href="#quienes-somos">Quiénes somos</a><a href="#contacto">Contacto</a>
+<a class="active" href="#inicio">Inicio</a><a href="#radio">La radio</a><a href="#flyers-programas">Programas</a><a href="#noticias">Noticias</a><a href="#proximamente">Próximo programa</a><a href="#conciertos">Conciertos</a><a href="#spotify">Podcasts</a><a href="#videos">Bandas libres</a><a href="#quienes-somos">Quiénes somos</a><a href="#contacto">Contacto</a>
 <a class="app-nav-link" href="#app-radikal"><span aria-hidden="true">⬇</span> DESCARGA LA APP</a></nav>
 <main>
 <div class="hero">
@@ -561,6 +585,42 @@ footer{padding:20px 15px}
 </div>
 </section>
 <section id="radio"><div class="section-head"><h2>En directo</h2><small>24 horas de música independiente</small></div><div class="radio-grid"><div class="radio-card"><h3>Radikal Sonoro · 24h</h3><p>Nuestra señal online. Dale al play y acompaña la resistencia sonora.</p><button id="play" type="button" aria-label="Escuchar Radikal Sonoro 24 horas">▶ Escuchar 24H</button><audio id="audio" controls preload="none" playsinline></audio><p class="msg" id="msg" role="status"></p></div><div class="radio-card" id="agora"><h3>Ágora Sol Radio</h3><p>Escucha la emisión en directo de Ágora Sol Radio.</p><audio controls preload="none" src="https://cervera.eldialdigital.com:23141/stream">Tu navegador no admite el reproductor de audio.</audio><p class="small agora-schedule"><strong>RADIKAL SONORO · MIÉRCOLES · 20:00–22:00 H</strong></p><a href="https://www.agorasolradio.org/directo/" target="_blank" rel="noopener">Abrir la web de Ágora Sol Radio ↗</a></div></div></section>
+
+<section id="flyers-programas">
+ <div class="section-head"><h2>Nuestros programas</h2><small>Flyers · Pulsa para descubrir</small></div>
+ <div class="program-flyer-grid">
+  <button class="program-flyer" type="button" data-open-program="radikal">
+   <span class="flyer-date">MIÉRCOLES · 20:00–22:00 H</span>
+   <strong>RADIKAL<br>SONORO</strong>
+   <em>RUIDO EN DIRECTO</em>
+   <small>PUNK · HARDCORE · SKA · METAL UNDERGROUND</small>
+   <span class="flyer-open">VER FLYER Y ESCUCHAR ↗</span>
+  </button>
+ </div>
+ <p class="small">¿Tienes otro programa en Radikal Sonoro? Añadiremos su flyer con su horario, locutores y enlace de escucha.</p>
+</section>
+<dialog id="program-dialog" aria-labelledby="program-dialog-title">
+ <button class="program-dialog-close" type="button" data-close-program aria-label="Cerrar">✕ CERRAR</button>
+ <div class="program-dialog-inner">
+  <div class="program-dialog-poster">
+   <span class="flyer-date">ÁGORA SOL RADIO</span>
+   <strong>RADIKAL<br>SONORO</strong>
+   <em>RUIDO EN DIRECTO</em>
+   <small>PUNK · HARDCORE · SKA · METAL</small>
+  </div>
+  <div class="program-dialog-copy">
+   <span class="next-program-label">RADIO LIBRE · CULTURA UNDERGROUND</span>
+   <h3 id="program-dialog-title">Ruido en Directo</h3>
+   <p>Dos horas de música independiente, bandas, cultura alternativa y actitud DIY. Un espacio para la escena punk, hardcore, ska y metal.</p>
+   <div class="program-dialog-meta">MIÉRCOLES<br>20:00–22:00 H<br>ÁGORA SOL RADIO</div>
+   <div class="program-dialog-actions">
+    <a class="cta" href="#agora" data-close-program>▶ ESCUCHAR EN DIRECTO</a>
+    <a class="program-calendar" href="https://www.agorasolradio.org/podcast/radikalsonoro/" target="_blank" rel="noopener noreferrer">ESCUCHAR PODCASTS ↗</a>
+   </div>
+  </div>
+ </div>
+</dialog>
+
 <section id="noticias"><div class="section-head"><h2>Últimas noticias</h2><small>Prioridad estatal · Sin fronteras</small></div><p class="small">Cinco historias seleccionadas de la escena estatal: punk, hardcore, ska, metal y cultura alternativa. Varias fuentes, cero relleno.</p><div id="news-status" role="status" aria-live="polite">Buscando noticias recientes…</div><ul class="list" id="news-list"><li>Conectando con las fuentes…</li></ul>
 <p class="archive-entry"><a href="archivo-noticias.html">VER TODAS LAS NOTICIAS ↗</a></p><p class="small">Fuentes consultadas: Maneras de Vivir, Insonoro, Esquirlas de Metal, MariskalRock, RockZone y prensa musical. Cada noticia enlaza a su publicación original.</p></section>
 <section id="conciertos"><div class="section-head"><h2>Agenda de conciertos</h2><small>Próximas fechas</small></div><p class="small">Hasta 12 conciertos. Madrid y alrededores primero; después, el resto de la escena estatal. Solo se publican conciertos con cartel oficial visible.</p><p class="small">Agenda colaboradora: <a href="https://primeralineavkbar.com/index.php/trinchera/" target="_blank" rel="noopener noreferrer">La Trinchera · Primera Línea VK Bar</a>.</p><div id="concert-news-status" role="status" aria-live="polite">Buscando anuncios de conciertos…</div><ul class="list" id="concert-news-list"><li>Conectando con las fuentes…</li></ul><p class="small">¿Organizas un concierto o tocas en una banda? Envíanos la información para revisarla.</p>
@@ -983,6 +1043,29 @@ rl.innerHTML=r||'<span class="small">Aquí irán tus redes sociales.</span>';
   dialog.addEventListener("click",function(event){
     if(event.target===dialog&&typeof dialog.close==="function")dialog.close();
   });
+})();
+</script>
+
+
+<script>
+(function(){
+ const dialog=document.getElementById("program-dialog");
+ if(!dialog)return;
+ document.querySelectorAll("[data-open-program]").forEach(function(button){
+  button.addEventListener("click",function(){
+   if(typeof dialog.showModal==="function")dialog.showModal();
+   else dialog.setAttribute("open","");
+  });
+ });
+ dialog.querySelectorAll("[data-close-program]").forEach(function(button){
+  button.addEventListener("click",function(){
+   if(typeof dialog.close==="function")dialog.close();
+   else dialog.removeAttribute("open");
+  });
+ });
+ dialog.addEventListener("click",function(event){
+  if(event.target===dialog&&typeof dialog.close==="function")dialog.close();
+ });
 })();
 </script>
 
