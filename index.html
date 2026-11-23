@@ -569,7 +569,7 @@ footer{padding:20px 15px}
 
 </script>
 
-<section id="noticias"><div class="section-head"><h2>Últimas noticias</h2><small>Prioridad estatal · Sin fronteras</small></div><p class="small">Cinco historias seleccionadas de la escena estatal: punk, hardcore, ska, metal y cultura alternativa. Varias fuentes, cero relleno.</p><div id="news-status" role="status" aria-live="polite">Buscando noticias recientes…</div><ul class="list" id="news-list"><li>Conectando con las fuentes…</li></ul>
+<section id="noticias"><div class="section-head"><h2>Últimas noticias</h2><small>Prioridad estatal · Sin fronteras</small></div><p class="small">Nueve historias seleccionadas de la escena estatal e internacional: punk, hardcore, ska, metal y cultura alternativa. Varias fuentes, cero relleno.</p><div id="news-status" role="status" aria-live="polite">Buscando noticias recientes…</div><ul class="list" id="news-list"><li>Conectando con las fuentes…</li></ul>
 <p class="archive-entry"><a href="archivo-noticias.html">VER TODAS LAS NOTICIAS ↗</a></p><p class="small">Fuentes consultadas: Maneras de Vivir, Insonoro, Esquirlas de Metal, MariskalRock, RockZone y prensa musical. Cada noticia enlaza a su publicación original.</p></section>
 <section id="conciertos"><div class="section-head"><h2>Agenda de conciertos</h2><small>Próximas fechas</small></div><p class="small">Hasta 12 conciertos. Madrid y alrededores primero; después, el resto de la escena estatal. Solo se publican conciertos con cartel oficial visible.</p><p class="small">Agenda colaboradora: <a href="https://primeralineavkbar.com/index.php/trinchera/" target="_blank" rel="noopener noreferrer">La Trinchera · Primera Línea VK Bar</a>.</p><div id="concert-news-status" role="status" aria-live="polite">Buscando anuncios de conciertos…</div><ul class="list" id="concert-news-list"><li>Conectando con las fuentes…</li></ul><p class="small">¿Organizas un concierto o tocas en una banda? Envíanos la información para revisarla.</p>
 <button class="concert-submit-open" id="open-concert-form" type="button">＋ PUBLICAR CONCIERTO</button>
@@ -685,7 +685,7 @@ async function loadNews(){
       var pinB=/^Underoath/i.test(b.titulo||"")?3:0;
       return pinB-pinA||dateValue(b)-dateValue(a);
     });
-    items=items.slice(0,5);list.innerHTML="";
+    items=items.slice(0,9);list.innerHTML="";
     if(!items.length){list.innerHTML="<li>No hay noticias verificadas recientes.</li>";status.textContent="0 noticias recientes.";return;}
     items.forEach(function(n,index){
       var durum=/^DÜRÜM lanza «Francoland»/i.test(n.titulo||"");
@@ -713,7 +713,7 @@ async function loadNews(){
       }else{li.appendChild(number);li.appendChild(tag);li.appendChild(a);li.appendChild(summary);li.appendChild(meta);}
       list.appendChild(li);
     });
-    status.textContent=items.length+"/5 noticias · selección editorial · "+(new Date()).toLocaleDateString("es-ES");
+    status.textContent=items.length+"/9 noticias · selección editorial · "+(new Date()).toLocaleDateString("es-ES");
   }
   // Mostrar primero el contenido publicado en el repositorio: no depender de servicios RSS externos.
   renderNews(fallback);
