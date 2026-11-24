@@ -456,6 +456,18 @@ footer{padding:20px 15px}
 }
 
 
+
+/* Cartel original y popup semanal */
+#proximamente .program-poster-wrap{display:block;min-height:0;padding:0;background:#080808;transform:none;overflow:hidden}
+#proximamente .program-poster-wrap>a{display:block;width:100%;line-height:0}
+#proximamente .program-poster-image{display:block;width:100%;height:auto;max-height:560px;object-fit:contain;border:0}
+#flyer-weekly-popup{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(0,0,0,.88)}
+#flyer-weekly-popup.is-open{display:flex}
+#flyer-weekly-popup .flyer-popup-card{position:relative;width:min(92vw,520px);max-height:92vh;overflow:auto;padding:12px;background:#eeeae1;border:3px solid #d7192d;box-shadow:8px 8px #f4d52f}
+#flyer-weekly-popup .flyer-popup-close{position:absolute;top:6px;right:6px;z-index:2;width:38px;height:38px;padding:0;background:#d7192d;color:#fff;border:2px solid #fff;font:900 22px Arial;cursor:pointer}
+#flyer-weekly-popup img{display:block;width:100%;height:auto;max-height:78vh;object-fit:contain}
+#flyer-weekly-popup .flyer-popup-caption{margin:8px 0 0;color:#111;text-align:center;font:900 12px var(--mono)}
+@media(max-width:680px){#proximamente .program-promo{grid-template-columns:1fr}#proximamente .program-poster-image{max-height:65vh}}
 </style>
 
 <!-- Google Analytics 4 · Radikal Sonoro -->
@@ -529,11 +541,10 @@ footer{padding:20px 15px}
 <section id="proximamente" class="upcoming">
 <div class="section-head"><h2>Próximo programa</h2><small>Ágora Sol Radio</small></div>
 <div class="next-program program-promo">
-  <div class="program-promo-art" aria-label="Radikal Sonoro: Ruido en Directo, punk, hardcore, ska y metal underground">
-    <span class="program-promo-date">MIÉRCOLES · 2 DIC 2026</span>
-    <strong>RADIKAL<br>SONORO</strong>
-    <em>RUIDO EN DIRECTO</em>
-    <small>PUNK · HARDCORE · SKA · METAL UNDERGROUND</small>
+  <div class="program-promo-art program-poster-wrap">
+    <a href="https://drive.google.com/uc?export=view&id=11kOsfJWv5A5JOdZknM7yHeHT5tdQHzLN" target="_blank" rel="noopener noreferrer" aria-label="Abrir cartel original del próximo programa">
+      <img class="program-poster-image" src="https://drive.google.com/uc?export=view&id=11kOsfJWv5A5JOdZknM7yHeHT5tdQHzLN" alt="Cartel original de Radikal Sonoro para el programa del 2 de diciembre de 2026" loading="eager">
+    </a>
   </div>
   <div class="program-promo-info">
     <span class="next-program-label">PRÓXIMA EMISIÓN · ÁGORA SOL RADIO</span>
@@ -996,5 +1007,43 @@ rl.innerHTML=r||'<span class="small">Aquí irán tus redes sociales.</span>';
 
 
 
+
+
+<div id="flyer-weekly-popup" role="dialog" aria-modal="true" aria-label="Cartel semanal de Radikal Sonoro">
+  <div class="flyer-popup-card">
+    <button class="flyer-popup-close" type="button" aria-label="Cerrar cartel">×</button>
+    <a href="https://drive.google.com/uc?export=view&id=11kOsfJWv5A5JOdZknM7yHeHT5tdQHzLN" target="_blank" rel="noopener noreferrer">
+      <img src="https://drive.google.com/uc?export=view&id=11kOsfJWv5A5JOdZknM7yHeHT5tdQHzLN" alt="Cartel original del próximo programa de Radikal Sonoro, 2 de diciembre de 2026">
+    </a>
+    <p class="flyer-popup-caption">PRÓXIMO PROGRAMA · MIÉRCOLES 2 DE DICIEMBRE · 20:00–22:00</p>
+  </div>
+</div>
+<script>
+(function(){
+  var popup=document.getElementById("flyer-weekly-popup");
+  if(!popup)return;
+  var close=popup.querySelector(".flyer-popup-close");
+  function closePopup(){popup.classList.remove("is-open");}
+  close.addEventListener("click",closePopup);
+  popup.addEventListener("click",function(e){if(e.target===popup)closePopup();});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape")closePopup();});
+  var now=new Date();
+  var d=new Date(Date.UTC(now.getFullYear(),now.getMonth(),now.getDate()));
+  d.setUTCDate(d.getUTCDate()+4-(d.getUTCDay()||7));
+  var yearStart=new Date(Date.UTC(d.getUTCFullYear(),0,1));
+  var week=Math.ceil((((d-yearStart)/86400000)+1)/7);
+  var key="radikal-sonoro-flyer-"+d.getUTCFullYear()+"-W"+week;
+  try{
+    if(!localStorage.getItem(key)){
+      setTimeout(function(){
+        popup.classList.add("is-open");
+        try{localStorage.setItem(key,"shown");}catch(e){}
+      },900);
+    }
+  }catch(e){
+    setTimeout(function(){popup.classList.add("is-open");},900);
+  }
+})();
+</script>
 
 </body></html>
