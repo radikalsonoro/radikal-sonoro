@@ -1028,22 +1028,8 @@ rl.innerHTML=r||'<span class="small">Aquí irán tus redes sociales.</span>';
   close.addEventListener("click",closePopup);
   popup.addEventListener("click",function(e){if(e.target===popup)closePopup();});
   document.addEventListener("keydown",function(e){if(e.key==="Escape")closePopup();});
-  var now=new Date();
-  var d=new Date(Date.UTC(now.getFullYear(),now.getMonth(),now.getDate()));
-  d.setUTCDate(d.getUTCDate()+4-(d.getUTCDay()||7));
-  var yearStart=new Date(Date.UTC(d.getUTCFullYear(),0,1));
-  var week=Math.ceil((((d-yearStart)/86400000)+1)/7);
-  var key="radikal-sonoro-flyer-"+d.getUTCFullYear()+"-W"+week;
-  try{
-    if(!localStorage.getItem(key)){
-      setTimeout(function(){
-        popup.classList.add("is-open");
-        try{localStorage.setItem(key,"shown");}catch(e){}
-      },900);
-    }
-  }catch(e){
-    setTimeout(function(){popup.classList.add("is-open");},900);
-  }
+  // Mostrar el cartel en cada nueva visita/carga de la web durante esta semana.
+  setTimeout(function(){popup.classList.add("is-open");},900);
 })();
 </script>
 
