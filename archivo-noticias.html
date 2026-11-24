@@ -63,7 +63,8 @@ footer{padding:20px;text-align:center;border-top:3px solid var(--red);color:#aaa
     const article=document.createElement('article');article.className='news';
     const tag=document.createElement('span');tag.className='tag';tag.textContent=n.categoria||'RADIKAL SONORO';
     const title=document.createElement('h2'),link=document.createElement('a');link.textContent=n.titulo;link.href=(n.video||n.escucha)?'noticia-durum.html':(n.url||'#');
-    if(!(n.video||n.escucha)){link.target='_blank';link.rel='noopener noreferrer';}
+    const external=/^https?:\/\//i.test(link.href);
+    if(external){link.target='_blank';link.rel='noopener noreferrer';}
     title.appendChild(link);
     const summary=document.createElement('p');summary.textContent=n.resumen||'';
     const meta=document.createElement('div');meta.className='meta';meta.textContent=new Date(n.fecha+'T12:00:00').toLocaleDateString('es-ES')+' · '+(n.fuente||'Radikal Sonoro');
