@@ -527,20 +527,22 @@ footer{padding:20px 15px}
 </section>
 
 <section id="proximamente" class="upcoming">
-<div class="section-head"><h2>Aviso importante</h2><small>Radikal Sonoro</small></div>
+<div class="section-head"><h2>Próximo programa</h2><small>Ágora Sol Radio</small></div>
 <div class="next-program program-promo">
-  <div class="program-promo-art" aria-label="Aviso: programa de Radikal Sonoro cancelado por enfermedad">
-    <span class="program-promo-date">MIÉRCOLES · 25 NOV 2026</span>
+  <div class="program-promo-art" aria-label="Radikal Sonoro: Ruido en Directo, punk, hardcore, ska y metal underground">
+    <span class="program-promo-date">MIÉRCOLES · 2 DIC 2026</span>
     <strong>RADIKAL<br>SONORO</strong>
-    <em>PROGRAMA CANCELADO</em>
+    <em>RUIDO EN DIRECTO</em>
     <small>PUNK · HARDCORE · SKA · METAL UNDERGROUND</small>
   </div>
   <div class="program-promo-info">
-    <span class="next-program-label">AVISO · CAMBIO DE PROGRAMACIÓN</span>
-    <h3>Mañana no habrá programa</h3>
-    <p>Por motivos de salud, Milton está enfermo y mañana, miércoles 25 de noviembre, no podremos realizar el programa de Radikal Sonoro. Disculpad las molestias. En cuanto sea posible volveremos a las ondas con más punk, hardcore, ska y metal underground. ¡Gracias por vuestro apoyo!</p>
-    <div class="next-program-count"><small>EMISIÓN DEL MIÉRCOLES 25</small><span>NO HABRÁ PROGRAMA</span></div>
+    <span class="next-program-label">PRÓXIMA EMISIÓN · ÁGORA SOL RADIO</span>
+    <h3>Radikal Sonoro: Ruido en Directo</h3>
+    <p>El miércoles 2 de diciembre volvemos a las ondas con dos horas de música independiente, bandas, cultura alternativa y actitud DIY. En directo desde Ágora Sol Radio, de 20:00 a 22:00 h. ¡Gracias por vuestra paciencia y apoyo!</p>
+    <div class="next-program-count"><small>CUENTA ATRÁS</small><span id="next-program-countdown">Próxima emisión</span></div>
     <div class="program-promo-actions">
+      <a class="cta" href="#agora">▶ ESCUCHAR EN DIRECTO</a>
+      <a class="program-calendar" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Radikal+Sonoro%3A+Ruido+en+Directo&amp;dates=20261202T200000%2F20261202T220000&amp;details=Punk+%C2%B7+hardcore+%C2%B7+ska+y+metal+underground.+M%C3%BAsica+independiente+y+cultura+alternativa.&amp;location=%C3%81gora+Sol+Radio&amp;ctz=Europe%2FMadrid" target="_blank" rel="noopener noreferrer">＋ AÑADIR AL CALENDARIO</a>
       <a class="program-podcast" href="https://www.agorasolradio.org/podcast/radikalsonoro/" target="_blank" rel="noopener noreferrer">ESCUCHAR PROGRAMAS ANTERIORES ↗</a>
     </div>
   </div>
@@ -899,9 +901,28 @@ if(m){
 
 var ls=document.getElementById("livestate");
 function tick(){
-  if(ls) ls.textContent="Aviso: la emisión del miércoles 25 de noviembre queda cancelada por enfermedad.";
+  try{
+    // Próxima emisión: miércoles 2 de diciembre de 2026, de 20:00 a 22:00.
+    var target=new Date(2026,11,2,20,0,0);
+    var diff=target.getTime()-Date.now();
+    var nextProgramCountdown=document.getElementById("next-program-countdown");
+    if(diff<=0){
+      var live=diff>-2*60*60*1000;
+      if(nextProgramCountdown) nextProgramCountdown.textContent=live?"EN DIRECTO AHORA":"EMISIÓN FINALIZADA";
+      if(ls) ls.textContent=live?"EN DIRECTO · Radikal Sonoro en Ágora Sol Radio.":"La emisión del miércoles 2 de diciembre ha finalizado.";
+      return;
+    }
+    var totalSeconds=Math.floor(diff/1000);
+    var d=Math.floor(totalSeconds/86400);
+    var h=Math.floor(totalSeconds%86400/3600);
+    var mi=Math.floor(totalSeconds%3600/60);
+    var sec=totalSeconds%60;
+    var countdownText=(d?d+"d ":"")+String(h).padStart(2,"0")+"h "+String(mi).padStart(2,"0")+"m "+String(sec).padStart(2,"0")+"s";
+    if(nextProgramCountdown) nextProgramCountdown.textContent=countdownText;
+    if(ls) ls.textContent="Próxima emisión en "+countdownText;
+  }catch(e){if(ls) ls.textContent="Próximo programa: miércoles 2 de diciembre, de 20:00 a 22:00 h.";}
 }
-tick();
+tick();setInterval(tick,1000);
 
 var concertForm=document.getElementById("concert-form");
 if(concertForm){
