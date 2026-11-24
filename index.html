@@ -527,22 +527,20 @@ footer{padding:20px 15px}
 </section>
 
 <section id="proximamente" class="upcoming">
-<div class="section-head"><h2>Próximo programa</h2><small>Ágora Sol Radio</small></div>
+<div class="section-head"><h2>Aviso importante</h2><small>Radikal Sonoro</small></div>
 <div class="next-program program-promo">
-  <div class="program-promo-art" aria-label="Radikal Sonoro: Ruido en Directo, punk, hardcore, ska y metal underground">
+  <div class="program-promo-art" aria-label="Aviso: programa de Radikal Sonoro cancelado por enfermedad">
     <span class="program-promo-date">MIÉRCOLES · 25 NOV 2026</span>
     <strong>RADIKAL<br>SONORO</strong>
-    <em>RUIDO EN DIRECTO</em>
+    <em>PROGRAMA CANCELADO</em>
     <small>PUNK · HARDCORE · SKA · METAL UNDERGROUND</small>
   </div>
   <div class="program-promo-info">
-    <span class="next-program-label">EL REGRESO · EN LA RADIO LIBRE</span>
-    <h3>Regresa Radikal Sonoro: Ruido en Directo</h3>
-    <p>Punk · Hardcore · Ska · Metal Underground. El miércoles 25 de noviembre volvemos a las ondas con dos horas de música independiente, bandas, cultura alternativa y actitud DIY. En directo desde Ágora Sol Radio, de 20:00 a 22:00 h.</p>
-    <div class="next-program-count"><small>CUENTA ATRÁS</small><span id="next-program-countdown">Próxima emisión</span></div>
+    <span class="next-program-label">AVISO · CAMBIO DE PROGRAMACIÓN</span>
+    <h3>Mañana no habrá programa</h3>
+    <p>Por motivos de salud, Milton está enfermo y mañana, miércoles 25 de noviembre, no podremos realizar el programa de Radikal Sonoro. Disculpad las molestias. En cuanto sea posible volveremos a las ondas con más punk, hardcore, ska y metal underground. ¡Gracias por vuestro apoyo!</p>
+    <div class="next-program-count"><small>EMISIÓN DEL MIÉRCOLES 25</small><span>NO HABRÁ PROGRAMA</span></div>
     <div class="program-promo-actions">
-      <a class="cta" href="#agora">▶ ESCUCHAR EN DIRECTO</a>
-      <a class="program-calendar" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Radikal+Sonoro%3A+Ruido+en+Directo&amp;dates=20261125T200000%2F20261125T220000&amp;details=Punk%2C+hardcore%2C+ska+y+metal+underground.+Dos+horas+de+m%C3%BAsica+independiente+y+cultura+alternativa.&amp;location=%C3%81gora+Sol+Radio&amp;ctz=Europe%2FMadrid" target="_blank" rel="noopener noreferrer">＋ AÑADIR AL CALENDARIO</a>
       <a class="program-podcast" href="https://www.agorasolradio.org/podcast/radikalsonoro/" target="_blank" rel="noopener noreferrer">ESCUCHAR PROGRAMAS ANTERIORES ↗</a>
     </div>
   </div>
@@ -901,28 +899,9 @@ if(m){
 
 var ls=document.getElementById("livestate");
 function tick(){
-  try{
-    // Cuenta atrás hasta la próxima emisión anunciada: miércoles 25 de noviembre de 2026, 20:00 h.
-    var target=new Date(2026,10,25,20,0,0);
-    var diff=target.getTime()-Date.now();
-    var nextProgramCountdown=document.getElementById("next-program-countdown");
-    if(diff<=0){
-      var liveText=diff>-2*60*60*1000?"EN DIRECTO AHORA · Dale al play para escuchar.":"La emisión del miércoles 25 de noviembre ya ha finalizado.";
-      if(nextProgramCountdown) nextProgramCountdown.textContent=diff>-2*60*60*1000?"EN DIRECTO AHORA":"EMISIÓN FINALIZADA";
-      if(ls) ls.textContent=liveText;
-      return;
-    }
-    var totalSeconds=Math.floor(diff/1000);
-    var d=Math.floor(totalSeconds/86400);
-    var h=Math.floor(totalSeconds%86400/3600);
-    var mi=Math.floor(totalSeconds%3600/60);
-    var sec=totalSeconds%60;
-    var countdownText=(d?d+"d ":"")+String(h).padStart(2,"0")+"h "+String(mi).padStart(2,"0")+"m "+String(sec).padStart(2,"0")+"s";
-    if(nextProgramCountdown) nextProgramCountdown.textContent=countdownText;
-    if(ls) ls.textContent="Próxima emisión en "+countdownText;
-  }catch(e){if(ls) ls.textContent="Programa en vivo con música, invitados y mucho ruido.";}
+  if(ls) ls.textContent="Aviso: la emisión del miércoles 25 de noviembre queda cancelada por enfermedad.";
 }
-tick();setInterval(tick,1000);
+tick();
 
 var concertForm=document.getElementById("concert-form");
 if(concertForm){
