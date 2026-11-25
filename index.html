@@ -465,6 +465,29 @@ footer{padding:20px 15px}
 
 
 
+/* BANDA DEL MES · edición editorial */
+#banda-del-mes{background:#eeeae1;color:#111;border:3px solid #111;box-shadow:7px 7px 0 #d7192d;position:relative;overflow:hidden}
+#banda-del-mes .section-head{border-bottom:4px solid #d7192d}
+#banda-del-mes .section-head h2{color:#111;text-transform:uppercase}
+.bom-layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(280px,.95fr);gap:22px;align-items:start}
+.bom-copy{min-width:0}
+.bom-kicker{display:inline-block;margin:0 0 8px;padding:5px 9px;background:#d7192d;color:#fff;font:900 11px var(--mono);letter-spacing:.12em}
+.bom-copy h3{margin:0;color:#111;font:900 clamp(48px,7vw,86px)/.88 var(--display);letter-spacing:-.035em;text-transform:uppercase;text-shadow:4px 4px #f4d52f}
+.bom-origin{margin:12px 0 18px;font:900 11px var(--mono);letter-spacing:.08em}
+.bom-copy>p:not(.bom-kicker):not(.bom-origin){font-size:14px;line-height:1.65}
+.bom-record{display:grid;gap:5px;margin:17px 0;padding:13px;background:#111;color:#fff;border-left:7px solid #d7192d}
+.bom-record strong{color:#f4d52f;font:900 10px var(--mono);letter-spacing:.12em}
+.bom-record span{font:900 clamp(20px,3vw,29px)/1 var(--display)}
+.bom-record small{color:#ddd;font:11px var(--mono)}
+.bom-members{font-size:12px!important}
+.bom-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.bom-links .chip{background:#d7192d;color:#fff;border:2px solid #111}
+.bom-video{min-width:0;background:#111;padding:9px;border:2px solid #111;box-shadow:5px 5px #f4d52f}
+.bom-video-frame{position:relative;width:100%;aspect-ratio:16/9;background:#000}
+.bom-video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.bom-video>.small{margin:9px 2px 1px;color:#fff;font:10px var(--mono)}
+@media(max-width:760px){.bom-layout{grid-template-columns:1fr;gap:15px}.bom-copy h3{font-size:clamp(48px,14vw,76px)}}
+
 /* Cartel original y popup semanal */
 #proximamente .program-poster-wrap{display:block;min-height:0;padding:0;background:#080808;transform:none;overflow:hidden}
 #proximamente .program-poster-wrap>a{display:block;width:100%;line-height:0}
@@ -519,7 +542,7 @@ footer{padding:20px 15px}
 <div class="header-stamp">RUIDO · RESISTENCIA · AUTOGESTIÓN</div>
 </header>
 <nav aria-label="Navegación principal">
-<a class="active" href="#inicio">Inicio</a><a href="#radio">La radio</a><a href="#noticias">Noticias</a><a href="#proximamente">Próximo programa</a><a href="#conciertos">Conciertos</a><a href="#spotify">Podcasts</a><a href="#videos">Bandas libres</a><a href="#quienes-somos">Quiénes somos</a><a href="#contacto">Contacto</a>
+<a class="active" href="#inicio">Inicio</a><a href="#radio">La radio</a><a href="#noticias">Noticias</a><a href="#proximamente">Próximo programa</a><a href="#conciertos">Conciertos</a><a href="#spotify">Podcasts</a><a href="#videos">Bandas libres</a><a href="#banda-del-mes">Banda del mes</a><a href="#quienes-somos">Quiénes somos</a><a href="#contacto">Contacto</a>
 <a class="app-nav-link" href="#app-radikal"><span aria-hidden="true">⬇</span> DESCARGA LA APP</a></nav>
 <main>
 <div class="hero">
@@ -597,6 +620,22 @@ footer{padding:20px 15px}
   <form class="box" id="concert-form" name="concert-form" method="POST" action="https://formsubmit.co/radikalsonororadio@gmail.com" enctype="multipart/form-data"><input type="hidden" name="_subject" value="Nuevo concierto propuesto · Radikal Sonoro"><input type="hidden" name="_autoresponse" value="¡Hola! Gracias por enviar tu propuesta a Radikal Sonoro. Hemos recibido correctamente la información y el cartel de tu concierto. Nuestro equipo revisará los datos y, si cumple nuestros criterios editoriales, lo incorporará a nuestra agenda. Recuerda que damos visibilidad a la escena punk, hardcore, Oi!, ska, metal y underground. ¡Gracias por apoyar la escena independiente! RADIKAL SONORO · Radio, música y cultura underground · https://radikalsonoro.es/"><input type="hidden" name="_template" value="table"><input type="hidden" name="_next" value="https://radikalsonoro.es/gracias.html"><input type="hidden" name="_url" value="https://radikalsonoro.es/"><input type="text" name="_honey" style="display:none"><label>Grupo o artista *<input name="grupo" required></label><label>Nombre del concierto o festival *<input name="evento" required></label><div class="formrow"><label>Fecha *<input type="date" name="fecha" required></label><label>Hora<input type="time" name="hora"></label></div><label>Sala o recinto *<input name="sala" required></label><div class="formrow"><label>Ciudad *<input name="ciudad" required></label><label>País<input name="pais"></label></div><label>Estilo musical<input name="estilo" placeholder="Punk, hardcore, ska, metal…"></label><label>Precio de entrada<input name="precio"></label><label>Enlace de entradas o evento<input type="url" name="enlace" placeholder="https://…"></label><label>Cartel oficial del concierto *<input type="file" name="attachment" accept="image/*" required></label><label>Información adicional<textarea name="info" rows="4"></textarea></label><label>Correo de contacto<input type="email" name="email" required></label><button class="chip" type="submit">Enviar concierto</button><p class="small" id="concert-msg" role="status">Se abrirá tu correo para enviar los datos a Radikal Sonoro. El cartel oficial es obligatorio para publicar el concierto.</p></form>
 </dialog></section>
 <section id="videos"><div class="section-head"><h2>Bandas libres</h2><small>Descubre · Escucha · Comparte</small></div><p class="bands-intro">Un espacio para descubrir y dar visibilidad a bandas independientes y autogestionadas. Aquí encontrarás búsquedas de videoclips, directos y sesiones de punk, hardcore, ska y metal underground. ¿Tienes una banda? Envíanos tus vídeos y la añadiremos.</p><ul class="list video-grid" id="video-list"><li>Preparando vídeos…</li></ul><p class="small bands-note">Los enlaces te llevan a YouTube. Radikal Sonoro no aloja los vídeos.</p></section>
+<section id="banda-del-mes" class="band-of-month">
+<div class="section-head"><h2>Banda del mes</h2><small>Edición · Noviembre 2026</small></div>
+<div class="bom-layout">
+<div class="bom-copy">
+<p class="bom-kicker">RADIKAL SONORO PRESENTA</p>
+<h3>LA DISPUTE</h3>
+<p class="bom-origin">GRAND RAPIDS · MICHIGAN · POST-HARDCORE</p>
+<p>Desde 2004, La Dispute ha construido un lenguaje propio dentro del post-hardcore: guitarras intensas, cambios dinámicos y una voz narrativa que cruza la poesía, el spoken word y la urgencia emocional del hardcore.</p>
+<p>Su música convierte historias personales y escenas cotidianas en relatos de gran intensidad. Una banda que no se limita a tocar canciones: construye mundos, imágenes y preguntas incómodas.</p>
+<div class="bom-record"><strong>DISCO DESTACADO</strong><span>NO ONE WAS DRIVING THE CAR</span><small>2025 · Epitaph Records · 14 canciones · autoproducido por la banda</small></div>
+<p class="bom-members"><strong>Formación:</strong> Jordan Dreyer (voz), Adam Vass (bajo), Brad Vander Lugt (batería), Chad Sterenberg y Corey Stroffolino (guitarras).</p>
+<div class="bom-links"><a class="chip" href="https://ladispute.org/" target="_blank" rel="noopener noreferrer">Web oficial ↗</a><a class="chip" href="https://ladispute.bandcamp.com/album/no-one-was-driving-the-car" target="_blank" rel="noopener noreferrer">Escuchar el álbum ↗</a><a class="chip" href="https://www.youtube.com/@ladisputesomewhere" target="_blank" rel="noopener noreferrer">YouTube oficial ↗</a></div>
+</div>
+<div class="bom-video"><div class="bom-video-frame"><iframe src="https://www.youtube-nocookie.com/embed/8zk4FrljbNA" title="La Dispute - Audiotree From Nothing" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><p class="small">La Dispute · Audiotree From Nothing · Sesión en directo</p></div>
+</div>
+</section>
 <section id="spotify"><div class="section-head"><h2>Podcasts</h2><small>Programas · Sesiones · Archivo</small></div><div class="spot" id="sbox"></div><p class="small">Escucha y sigue los programas de Radikal Sonoro en Spotify.</p><div class="box" style="margin-top:14px"><strong style="font:800 25px Barlow Condensed;text-transform:uppercase">Radikal Sonoro en Ágora Sol Radio</strong><p class="small">Aquí puedes escuchar los podcasts de nuestros programas emitidos en Ágora Sol Radio.</p><a class="chip" href="https://www.agorasolradio.org/podcast/radikalsonoro/" target="_blank" rel="noopener noreferrer">▶ Escuchar podcasts en Ágora Sol ↗</a></div></section>
 <section id="contacto"><div class="section-head"><h2>Contacto y redes</h2><small>Estamos al otro lado</small></div><div class="box"><p><strong>¿Tienes una noticia, propones una entrevista o quieres presentar un especial?</strong></p><p class="small">Rellena el formulario y tu mensaje llegará directamente al equipo de Radikal Sonoro. No necesitas abrir ninguna aplicación de correo.</p><form id="contact-form" action="https://formsubmit.co/radikalsonororadio@gmail.com" method="POST" enctype="multipart/form-data"><input type="hidden" name="_subject" value="Nuevo mensaje · Radikal Sonoro"><input type="hidden" name="_template" value="table"><input type="hidden" name="_next" value="https://radikalsonoro.es/gracias.html"><input type="text" name="_honey" style="display:none"><label>¿Qué quieres proponernos? *<select name="tipo" required><option value="">Selecciona una opción</option><option>Enviar una noticia</option><option>Proponer una entrevista</option><option>Proponer un programa especial</option><option>Otra colaboración</option></select></label><div class="formrow"><label>Nombre o banda *<input name="nombre" required></label><label>Tu correo *<input type="email" name="email" required></label></div><label>Asunto *<input name="asunto" required></label><label>Cuéntanos la propuesta *<textarea name="mensaje" rows="5" required placeholder="Información, enlaces, fechas y cualquier detalle importante…"></textarea></label><label>Adjuntar fotos, cartel o dossier (opcional)<input type="file" name="adjunto" accept="image/*,.pdf"></label><button class="chip" type="submit">Enviar propuesta</button><p class="small">El envío se realiza desde la web. Puedes adjuntar imágenes o un PDF (límite total de 10 MB).</p></form><ul class="list" id="contactlist"></ul><div class="socials" id="redes"></div></div></section>
 </main>
