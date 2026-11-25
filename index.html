@@ -381,6 +381,13 @@ nav a.app-nav-link:hover,nav a.app-nav-link.active{background:var(--red);color:#
 #concert-dialog #concert-form input,#concert-dialog #concert-form textarea,#concert-dialog #concert-form select{background:#fff;color:#111;border:2px solid #111}
 #concert-dialog #concert-form .small{color:#333}
 @media(max-width:900px){#conciertos .venue-events{gap:9px}}
+/* FIX selector de cartel en móvil/Android: control nativo visible y táctil */
+#concert-dialog #concert-form input[type="file"]{
+ display:block!important;position:relative!important;z-index:3;width:100%;min-height:52px;margin:8px 0 12px;padding:9px!important;background:#fff!important;color:#111!important;border:2px solid #111!important;border-radius:0;font:14px var(--body)!important;line-height:1.4;opacity:1!important;visibility:visible!important;pointer-events:auto!important;appearance:auto;-webkit-appearance:auto;
+}
+#concert-dialog #concert-form input[type="file"]::file-selector-button{
+ min-height:32px;margin-right:10px;padding:7px 10px;background:#d7192d;color:#fff;border:0;font:700 12px var(--body);
+}
 @media(max-width:560px){#conciertos .venue-group{margin-bottom:12px}#conciertos .venue-events{gap:12px}#concert-dialog{padding:12px}#concert-dialog .concert-dialog-head{top:-12px;margin:-12px -12px 12px;padding:11px 12px}#concert-dialog #concert-form{padding:8px}}
 
 
