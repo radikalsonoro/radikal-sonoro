@@ -674,7 +674,7 @@ footer{padding:20px 15px}
 <p class="small">Una selección de próximas fechas para darles más promo. Solo eventos con fecha futura, enlace de información y cartel oficial.</p>
 <div id="radar-concert-list" class="radar-grid"><p class="small">Cargando próximos conciertos…</p></div>
 </section>
-<section id="conciertos"><div class="section-head"><h2>Agenda de conciertos</h2><small>Próximas fechas</small></div><p class="small">Hasta 12 conciertos. Madrid y alrededores primero; después, el resto de la escena estatal. Solo se publican conciertos con cartel oficial visible.</p><p class="small">Salas y agendas colaboradoras: <a href="https://primeralineavkbar.com/index.php/trinchera/" target="_blank" rel="noopener noreferrer">La Trinchera · Primera Línea VK Bar</a> · <a href="https://www.tomaticket.es/es-es/recintos/sala-lets-go-rock-bar-parla" target="_blank" rel="noopener noreferrer">Let’s Go Rock Bar · Parla</a>.</p><div id="concert-news-status" role="status" aria-live="polite">Buscando anuncios de conciertos…</div><ul class="list" id="concert-news-list"><li>Conectando con las fuentes…</li></ul><p class="small">¿Organizas un concierto o tocas en una banda? Envíanos la información para revisarla.</p>
+<section id="conciertos"><div class="section-head"><h2>Agenda de conciertos</h2><small>Próximas fechas</small></div><p class="small">Todos los conciertos próximos, agrupados por salas y fechas. Madrid y alrededores primero; después, el resto de la escena estatal. Solo se publican conciertos con cartel oficial visible.</p><p class="small">Salas y agendas colaboradoras: <a href="https://primeralineavkbar.com/index.php/trinchera/" target="_blank" rel="noopener noreferrer">La Trinchera · Primera Línea VK Bar</a> · <a href="https://www.tomaticket.es/es-es/recintos/sala-lets-go-rock-bar-parla" target="_blank" rel="noopener noreferrer">Let’s Go Rock Bar · Parla</a>.</p><div id="concert-news-status" role="status" aria-live="polite">Buscando anuncios de conciertos…</div><ul class="list" id="concert-news-list"><li>Conectando con las fuentes…</li></ul><p class="small">¿Organizas un concierto o tocas en una banda? Envíanos la información para revisarla.</p>
 <button class="concert-submit-open" id="open-concert-form" type="button">＋ PUBLICAR CONCIERTO</button>
 <dialog id="concert-dialog" aria-labelledby="concert-dialog-title">
   <div class="concert-dialog-head"><h3 id="concert-dialog-title">PUBLICA TU CONCIERTO</h3><button class="concert-dialog-close" id="close-concert-form" type="button" aria-label="Cerrar">✕</button></div>
@@ -960,7 +960,7 @@ async function loadConcertNews(){
     var ap=/la trinchera/i.test(a.sala||"")?0:1;
     var bp=/la trinchera/i.test(b.sala||"")?0:1;
     return ap-bp||a.fecha.localeCompare(b.fecha);
-  }).slice(0,22);
+  });
   list.innerHTML="";list.className="concert-grid";
   if(!events.length){
     status.textContent="No hay próximos conciertos con fecha y fuente verificadas.";
