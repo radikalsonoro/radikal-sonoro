@@ -503,6 +503,23 @@ footer{padding:20px 15px}
 /* Sticker NEW / NUEVO: sello punk discreto, temporal */
 .rs-new-sticker{display:inline-block!important;width:max-content!important;margin:0 6px 6px 0!important;padding:4px 7px!important;background:#d7192d!important;color:#fff!important;border:1px solid #fff!important;box-shadow:2px 2px #111!important;font:900 10px/1 Anton,'Barlow Condensed',Impact,sans-serif!important;letter-spacing:.08em!important;transform:rotate(-3deg)!important;text-transform:uppercase!important}
 #conciertos .rs-new-sticker{background:#f4d52f!important;color:#111!important;border-color:#111!important}
+
+/* LANZAMIENTOS · sección editorial */
+#lanzamientos{grid-column:1/-1;background:#111;color:var(--paper);border:2px solid var(--paper);border-top:6px solid var(--red);border-bottom:7px solid var(--yellow);box-shadow:7px 7px #000;position:relative;overflow:hidden}
+#lanzamientos:after{content:"NUEVO SONIDO";position:absolute;right:12px;bottom:-18px;color:#ffffff0b;font:900 clamp(55px,10vw,130px)/1 var(--display);pointer-events:none}
+#lanzamientos .section-head{border-color:var(--yellow)}
+#lanzamientos .section-head h2{color:var(--yellow);font-size:clamp(38px,5vw,62px);text-shadow:3px 3px var(--red)}
+#lanzamientos .launch-intro{max-width:850px;margin:0 0 18px;color:#eee;font-size:14px}
+#lanzamientos .launch-placeholder{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(230px,.9fr);gap:18px;align-items:center;padding:20px;background:repeating-linear-gradient(135deg,#191919 0 3px,#101010 3px 10px);border:1px solid #62564b}
+#lanzamientos .launch-feature-art{min-height:180px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:18px;background:#080808;border:2px solid var(--paper);box-shadow:6px 6px var(--red);transform:rotate(-1deg)}
+#lanzamientos .launch-feature-art strong{font:900 clamp(42px,6vw,76px)/.82 var(--display);color:#fff;text-shadow:4px 4px var(--red)}
+#lanzamientos .launch-feature-art span{margin-top:12px;padding:5px 9px;background:var(--yellow);color:#111;font:900 10px var(--mono);letter-spacing:.1em}
+#lanzamientos .launch-copy h3{margin:0 0 8px;color:#fff;font:900 clamp(27px,3.5vw,40px)/.95 var(--display);text-transform:uppercase}
+#lanzamientos .launch-copy p{margin:7px 0;color:#ddd;font-size:13px}
+#lanzamientos .launch-copy .small{color:var(--yellow);font:10px var(--mono);letter-spacing:.08em}
+#lanzamientos .launch-send{display:inline-flex;margin-top:10px;padding:10px 13px;background:var(--red);color:#fff!important;border:2px solid var(--paper);box-shadow:4px 4px #000;font:900 11px var(--mono);text-decoration:none}
+#lanzamientos .launch-send:hover{background:var(--yellow);color:#111!important}
+@media(max-width:680px){#lanzamientos .launch-placeholder{grid-template-columns:1fr;padding:14px}#lanzamientos .launch-feature-art{min-height:145px}#lanzamientos .section-head{align-items:flex-start;flex-wrap:wrap}}
 </style>
 
 <!-- Google Analytics 4 · Radikal Sonoro -->
@@ -546,7 +563,7 @@ footer{padding:20px 15px}
 <div class="header-stamp">RUIDO · RESISTENCIA · AUTOGESTIÓN</div>
 </header>
 <nav aria-label="Navegación principal">
-<a class="active" href="#inicio">Inicio</a><a href="#radio">La radio</a><a href="#noticias">Noticias</a><a href="#proximamente">Próximo programa</a><a href="#conciertos">Conciertos</a><a href="#spotify">Podcasts</a><a href="#videos">Bandas libres</a><a href="#banda-del-mes">Banda del mes</a><a href="#quienes-somos">Quiénes somos</a><a href="#contacto">Contacto</a>
+<a class="active" href="#inicio">Inicio</a><a href="#radio">La radio</a><a href="#noticias">Noticias</a><a href="#lanzamientos">Lanzamientos</a><a href="#proximamente">Próximo programa</a><a href="#conciertos">Conciertos</a><a href="#spotify">Podcasts</a><a href="#videos">Bandas libres</a><a href="#banda-del-mes">Banda del mes</a><a href="#quienes-somos">Quiénes somos</a><a href="#contacto">Contacto</a>
 <a class="app-nav-link" href="#app-radikal"><span aria-hidden="true">⬇</span> DESCARGA LA APP</a></nav>
 <main>
 <div class="hero">
@@ -623,6 +640,14 @@ footer{padding:20px 15px}
   <div class="concert-dialog-head"><h3 id="concert-dialog-title">PUBLICA TU CONCIERTO</h3><button class="concert-dialog-close" id="close-concert-form" type="button" aria-label="Cerrar">✕</button></div>
   <form class="box" id="concert-form" name="concert-form" method="POST" action="https://formsubmit.co/radikalsonororadio@gmail.com" enctype="multipart/form-data"><input type="hidden" name="_subject" value="Nuevo concierto propuesto · Radikal Sonoro"><input type="hidden" name="_autoresponse" value="¡Hola! Gracias por enviar tu propuesta a Radikal Sonoro. Hemos recibido correctamente la información y el cartel de tu concierto. Nuestro equipo revisará los datos y, si cumple nuestros criterios editoriales, lo incorporará a nuestra agenda. Recuerda que damos visibilidad a la escena punk, hardcore, Oi!, ska, metal y underground. ¡Gracias por apoyar la escena independiente! RADIKAL SONORO · Radio, música y cultura underground · https://radikalsonoro.es/"><input type="hidden" name="_template" value="table"><input type="hidden" name="_next" value="https://radikalsonoro.es/gracias.html"><input type="hidden" name="_url" value="https://radikalsonoro.es/"><input type="text" name="_honey" style="display:none"><label>Grupo o artista *<input name="grupo" required></label><label>Nombre del concierto o festival *<input name="evento" required></label><div class="formrow"><label>Fecha *<input type="date" name="fecha" required></label><label>Hora<input type="time" name="hora"></label></div><label>Sala o recinto *<input name="sala" required></label><div class="formrow"><label>Ciudad *<input name="ciudad" required></label><label>País<input name="pais"></label></div><label>Estilo musical<input name="estilo" placeholder="Punk, hardcore, ska, metal…"></label><label>Precio de entrada<input name="precio"></label><label>Enlace de entradas o evento<input type="url" name="enlace" placeholder="https://…"></label><label>Cartel oficial del concierto *<input type="file" name="attachment" accept="image/*" required></label><label>Información adicional<textarea name="info" rows="4"></textarea></label><label>Correo de contacto<input type="email" name="email" required></label><button class="chip" type="submit">Enviar concierto</button><p class="small" id="concert-msg" role="status">Se abrirá tu correo para enviar los datos a Radikal Sonoro. El cartel oficial es obligatorio para publicar el concierto.</p></form>
 </dialog></section>
+<section id="lanzamientos" aria-labelledby="lanzamientos-title">
+<div class="section-head"><h2 id="lanzamientos-title">Lanzamientos</h2><small>Punk · Metal · Ska · Hardcore · Oi!</small></div>
+<p class="launch-intro">Discos, EPs, singles y videoclips que mantienen viva la escena. Cada semana seleccionaremos novedades estatales e internacionales: un lanzamiento destacado y una selección de otros trabajos. Tú decides qué publicamos y cuál merece el foco.</p>
+<div class="launch-placeholder">
+<div class="launch-feature-art"><strong>PRÓXIMAMENTE</strong><span>EL SONIDO NUEVO DE LA ESCENA</span></div>
+<div class="launch-copy"><p class="small">RADIKAL SONORO · ESPACIO ABIERTO A LA ESCENA</p><h3>Tu próximo disco también tiene sitio aquí</h3><p>¿Has publicado un álbum, EP, single o videoclip? Bandas y sellos pueden enviarnos sus novedades para que las valoremos.</p><a class="launch-send" href="mailto:radikalsonororadio@gmail.com?subject=Nuevo%20lanzamiento%20%7C%20Radikal%20Sonoro&amp;body=Banda%3A%0ATrabajo%20%28disco%2C%20EP%2C%20single%2C%20videoclip%29%3A%0AFecha%20de%20lanzamiento%3A%0AG%C3%A9nero%3A%0AEnlace%20oficial%20para%20escuchar%3A%0ABandcamp%2FSpotify%2FYouTube%3A%0ASello%3A%0AContacto%3A%0AAdjunta%20la%20portada%20o%20material%20promocional.">＋ ENVIAR UN LANZAMIENTO</a></div>
+</div>
+</section>
 <section id="videos"><div class="section-head"><h2>Bandas libres</h2><small>Descubre · Escucha · Comparte</small></div><p class="bands-intro">Un espacio para descubrir y dar visibilidad a bandas independientes y autogestionadas. Aquí encontrarás búsquedas de videoclips, directos y sesiones de punk, hardcore, ska y metal underground. ¿Tienes una banda? Envíanos tus vídeos y la añadiremos.</p><ul class="list video-grid" id="video-list"><li>Preparando vídeos…</li></ul><p class="small bands-note">Los enlaces te llevan a YouTube. Radikal Sonoro no aloja los vídeos.</p></section>
 <section id="banda-del-mes" class="band-of-month">
 <div class="section-head"><h2>Banda del mes</h2><small>Edición · Noviembre 2026</small></div>
