@@ -907,9 +907,9 @@ async function loadConcertRadar(){
     events=(Array.isArray(events)?events:[]).filter(function(ev){
       if(!ev||!ev.fecha||!ev.url||!ev.cartel)return false;
       var d=new Date(ev.fecha+"T00:00:00");
-      return !isNaN(d.getTime())&&d>=today&&d.getFullYear()>today.getFullYear();
+      return !isNaN(d.getTime())&&d>=today;
     }).sort(function(a,b){
-      return (b.prioridad_radikal?1:0)-(a.prioridad_radikal?1:0)||a.fecha.localeCompare(b.fecha);
+      return a.fecha.localeCompare(b.fecha);
     }).slice(0,8);
     list.innerHTML="";
     if(!events.length){
