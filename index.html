@@ -759,7 +759,8 @@ async function loadNews(){
       a.href=(n.video||n.escucha)?"noticia-durum.html":n.url;var external=/^https?:\/\//i.test(a.href);if(external){a.target="_blank";a.rel="noopener noreferrer";}else{a.removeAttribute("target");a.removeAttribute("rel");}a.textContent=n.titulo;
       summary.textContent=n.resumen||"Consulta la información completa en la fuente original.";
       meta.className="small news-meta";meta.textContent=(n.fecha?new Date(n.fecha).toLocaleDateString("es-ES"):"Actualidad")+" · Fuente: "+(n.fuente||n._tag||"Fuente original");
-      number.className="news-number";number.textContent=String(index+1).padStart(2,"0");\n      if(dateValue(n)>now-7*24*60*60*1000){var fresh=document.createElement("span");fresh.className="rs-new-sticker";fresh.textContent="NEW";li.appendChild(fresh);}
+      number.className="news-number";number.textContent=String(index+1).padStart(2,"0");
+      if(dateValue(n)>now-7*24*60*60*1000){var fresh=document.createElement("span");fresh.className="rs-new-sticker";fresh.textContent="NEW";li.appendChild(fresh);}
       if(pinned){
         var visual=document.createElement("div"),copy=document.createElement("div"),stamp=document.createElement("div"),cta=document.createElement("a");
         visual.className="featured-visual";
@@ -887,6 +888,7 @@ async function loadConcertNews(){
         card.appendChild(pending);
       }
       body.className="concert-card-body";
+      var pubTime=ev.fecha_publicacion?new Date(ev.fecha_publicacion).getTime():0;var eventTime=new Date(ev.fecha+"T00:00:00").getTime();if((pubTime&&pubTime>Date.now()-7*86400000)||(!pubTime&&eventTime>=Date.now()-86400000&&eventTime<=Date.now()+7*86400000)){var freshConcert=document.createElement("span");freshConcert.className="rs-new-sticker";freshConcert.textContent="NUEVO";body.appendChild(freshConcert);}
       var date=document.createElement("div"),small=document.createElement("small"),title=document.createElement("a"),meta=document.createElement("div"),more=document.createElement("a");
       date.className="concert-date";small.textContent="FECHA";date.appendChild(small);
       date.appendChild(document.createTextNode(new Date(ev.fecha+"T00:00:00").toLocaleDateString("es-ES",{weekday:"short",day:"2-digit",month:"long"})+(ev.hora?" · "+ev.hora:"")));
