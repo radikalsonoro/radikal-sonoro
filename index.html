@@ -499,6 +499,10 @@ footer{padding:20px 15px}
 #flyer-weekly-popup img{display:block;width:100%;height:auto;max-height:78vh;object-fit:contain}
 #flyer-weekly-popup .flyer-popup-caption{margin:8px 0 0;color:#111;text-align:center;font:900 12px var(--mono)}
 @media(max-width:680px){#proximamente .program-promo{grid-template-columns:1fr}#proximamente .program-poster-image{max-height:65vh}}
+
+/* Sticker NEW / NUEVO: sello punk discreto, temporal */
+.rs-new-sticker{display:inline-block!important;width:max-content!important;margin:0 6px 6px 0!important;padding:4px 7px!important;background:#d7192d!important;color:#fff!important;border:1px solid #fff!important;box-shadow:2px 2px #111!important;font:900 10px/1 Anton,'Barlow Condensed',Impact,sans-serif!important;letter-spacing:.08em!important;transform:rotate(-3deg)!important;text-transform:uppercase!important}
+#conciertos .rs-new-sticker{background:#f4d52f!important;color:#111!important;border-color:#111!important}
 </style>
 
 <!-- Google Analytics 4 · Radikal Sonoro -->
@@ -755,7 +759,7 @@ async function loadNews(){
       a.href=(n.video||n.escucha)?"noticia-durum.html":n.url;var external=/^https?:\/\//i.test(a.href);if(external){a.target="_blank";a.rel="noopener noreferrer";}else{a.removeAttribute("target");a.removeAttribute("rel");}a.textContent=n.titulo;
       summary.textContent=n.resumen||"Consulta la información completa en la fuente original.";
       meta.className="small news-meta";meta.textContent=(n.fecha?new Date(n.fecha).toLocaleDateString("es-ES"):"Actualidad")+" · Fuente: "+(n.fuente||n._tag||"Fuente original");
-      number.className="news-number";number.textContent=String(index+1).padStart(2,"0");
+      number.className="news-number";number.textContent=String(index+1).padStart(2,"0");\n      if(dateValue(n)>now-7*24*60*60*1000){var fresh=document.createElement("span");fresh.className="rs-new-sticker";fresh.textContent="NEW";li.appendChild(fresh);}
       if(pinned){
         var visual=document.createElement("div"),copy=document.createElement("div"),stamp=document.createElement("div"),cta=document.createElement("a");
         visual.className="featured-visual";
