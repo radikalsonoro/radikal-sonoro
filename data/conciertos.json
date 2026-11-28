@@ -239,5 +239,17 @@
     "fecha": "2027-04-30",
     "sala": "La Riviera",
     "ciudad": "Madrid"
+  },
+  {
+    "fecha": "2027-03-22",
+    "hora": "",
+    "evento": "Anthrax + Kerry King + Sacred Reich — Cursum Perficio Tour 2027",
+    "artistas": "Anthrax + Kerry King + Sacred Reich",
+    "sala": "La Riviera",
+    "ciudad": "Madrid",
+    "pais": "España",
+    "url": "https://www.resurrectionfest.es/route/anthrax-tour-2027/",
+    "cartel": "https://www.resurrectionfest.es/wp-content/uploads/2026/11/RR27-Anthrax-Post-1080x1350px-819x1024.jpg",
+    "fecha_publicacion": "2026-11-28"
   }
 ]
