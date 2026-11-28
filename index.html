@@ -924,7 +924,9 @@ async function loadConcertRadar(){
       if(!ev||!ev.fecha||!ev.url||!ev.cartel)return false;
       var d=new Date(ev.fecha+"T00:00:00");
       return !isNaN(d.getTime())&&d>=today;
-    }).sort(function(a,b){return a.fecha.localeCompare(b.fecha);}).slice(0,4);
+    }).sort(function(a,b){
+      return (b.prioridad_radikal?1:0)-(a.prioridad_radikal?1:0)||a.fecha.localeCompare(b.fecha);
+    }).slice(0,8);
     list.innerHTML="";
     if(!events.length){
       list.innerHTML='<p class="small">No hay fechas futuras verificadas con cartel oficial. En cuanto validemos nuevas propuestas, aparecerán aquí.</p>';
@@ -968,10 +970,12 @@ async function loadConcertNews(){
   // No descartamos conciertos porque el servidor externo del cartel falle o tarde.
   // La ficha se conserva y ofrece un enlace directo al cartel original.
   events=events.sort(function(a,b){
+    var ar=a.prioridad_radikal?0:1,br=b.prioridad_radikal?0:1;
+    if(ar!==br)return ar-br;
     var ap=/la trinchera/i.test(a.sala||"")?0:1;
     var bp=/la trinchera/i.test(b.sala||"")?0:1;
     return ap-bp||a.fecha.localeCompare(b.fecha);
-  }).slice(0,18);
+  }).slice(0,22);
   list.innerHTML="";list.className="concert-grid";
   if(!events.length){
     status.textContent="No hay próximos conciertos con fecha y fuente verificadas.";
