@@ -503,6 +503,8 @@ footer{padding:20px 15px}
 /* Sticker NEW / NUEVO: sello punk discreto, temporal */
 .rs-new-sticker{display:inline-block!important;width:max-content!important;margin:0 6px 6px 0!important;padding:4px 7px!important;background:#d7192d!important;color:#fff!important;border:1px solid #fff!important;box-shadow:2px 2px #111!important;font:900 10px/1 Anton,'Barlow Condensed',Impact,sans-serif!important;letter-spacing:.08em!important;transform:rotate(-3deg)!important;text-transform:uppercase!important}
 #conciertos .rs-new-sticker{background:#f4d52f!important;color:#111!important;border-color:#111!important}
+.concert-year-sticker{display:inline-block;width:max-content;margin:0 6px 7px 0;padding:4px 8px;background:#f4d52f;color:#111;border:2px solid #111;box-shadow:2px 2px #111;font:900 11px/1 Anton,'Barlow Condensed',Impact,sans-serif;letter-spacing:.08em;transform:rotate(2deg)}
+.concert-year-sticker.year-2027{background:#d7192d;color:#fff;border-color:#111;transform:rotate(-2deg)}
 
 /* LANZAMIENTOS · sección editorial */
 #lanzamientos{grid-column:1/-1;background:#111;color:var(--paper);border:2px solid var(--paper);border-top:6px solid var(--red);border-bottom:7px solid var(--yellow);box-shadow:7px 7px #000;position:relative;overflow:hidden}
@@ -947,6 +949,7 @@ async function loadConcertNews(){
       }
       body.className="concert-card-body";
       var pubTime=ev.fecha_publicacion?new Date(ev.fecha_publicacion).getTime():0;var eventTime=new Date(ev.fecha+"T00:00:00").getTime();if((pubTime&&pubTime>Date.now()-7*86400000)||(!pubTime&&eventTime>=Date.now()-86400000&&eventTime<=Date.now()+7*86400000)){var freshConcert=document.createElement("span");freshConcert.className="rs-new-sticker";freshConcert.textContent="NUEVO";body.appendChild(freshConcert);}
+      var eventYear=ev.fecha.slice(0,4);if(eventYear==="2026"||eventYear==="2027"){var yearSticker=document.createElement("span");yearSticker.className="concert-year-sticker year-"+eventYear;yearSticker.textContent=eventYear;yearSticker.setAttribute("aria-label","Concierto del año "+eventYear);body.appendChild(yearSticker);}
       var date=document.createElement("div"),small=document.createElement("small"),title=document.createElement("a"),meta=document.createElement("div"),more=document.createElement("a");
       date.className="concert-date";small.textContent="FECHA";date.appendChild(small);
       date.appendChild(document.createTextNode(new Date(ev.fecha+"T00:00:00").toLocaleDateString("es-ES",{weekday:"short",day:"2-digit",month:"long"})+(ev.hora?" · "+ev.hora:"")));
