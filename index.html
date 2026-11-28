@@ -519,7 +519,25 @@ footer{padding:20px 15px}
 #lanzamientos .launch-copy .small{color:var(--yellow);font:10px var(--mono);letter-spacing:.08em}
 #lanzamientos .launch-send{display:inline-flex;margin-top:10px;padding:10px 13px;background:var(--red);color:#fff!important;border:2px solid var(--paper);box-shadow:4px 4px #000;font:900 11px var(--mono);text-decoration:none}
 #lanzamientos .launch-send:hover{background:var(--yellow);color:#111!important}
-@media(max-width:680px){#lanzamientos .launch-placeholder{grid-template-columns:1fr;padding:14px}#lanzamientos .launch-feature-art{min-height:145px}#lanzamientos .section-head{align-items:flex-start;flex-wrap:wrap}}
+#lanzamientos .launch-featured{position:relative;z-index:1;display:grid;grid-template-columns:minmax(190px,.72fr) minmax(0,1.28fr);gap:20px;align-items:center;padding:18px;margin:18px 0;background:var(--paper);color:#111;border:3px solid #080808;border-left:9px solid var(--red);box-shadow:6px 6px var(--yellow)}
+#lanzamientos .launch-cover{display:block;min-width:0;overflow:hidden;border:2px solid #111;box-shadow:5px 5px var(--red);background:#080808}
+#lanzamientos .launch-cover img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover}
+#lanzamientos .launch-copy h3{margin:4px 0 8px;color:#111;font:900 clamp(25px,3.4vw,42px)/.92 var(--display);text-transform:uppercase}
+#lanzamientos .launch-copy p{margin:7px 0;color:#242424;font-size:13px}
+#lanzamientos .launch-copy .small{color:#a20e20;font:900 10px var(--mono);letter-spacing:.07em}
+#lanzamientos .launch-meta{font:10px var(--mono)!important;color:#51483e!important}
+#lanzamientos .launch-grid{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+#lanzamientos .launch-card{min-width:0;padding:12px;background:#eeeae1;color:#111;border:2px solid #080808;border-bottom:5px solid var(--red);box-shadow:4px 4px #000}
+#lanzamientos .launch-card .launch-cover{margin-bottom:12px}
+#lanzamientos .launch-card .launch-copy h3{font-size:clamp(20px,2.1vw,27px)}
+#lanzamientos .launch-card .launch-copy p{font-size:12px}
+#lanzamientos .launch-card .launch-send{margin-top:7px}
+#lanzamientos .launch-submit{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:18px;padding:13px 15px;background:#080808;border:1px solid #62564b}
+#lanzamientos .launch-submit p{margin:0;color:#eee;font-size:12px}
+#lanzamientos .launch-submit strong{color:var(--yellow)}
+#lanzamientos .launch-sticker{margin:0 0 7px!important}
+@media(max-width:800px){#lanzamientos .launch-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:680px){#lanzamientos .launch-featured{grid-template-columns:1fr;padding:13px}#lanzamientos .launch-featured .launch-cover{max-width:380px}#lanzamientos .launch-grid{grid-template-columns:1fr}#lanzamientos .section-head{align-items:flex-start;flex-wrap:wrap}}
 </style>
 
 <!-- Google Analytics 4 · Radikal Sonoro -->
@@ -643,10 +661,25 @@ footer{padding:20px 15px}
 <section id="lanzamientos" aria-labelledby="lanzamientos-title">
 <div class="section-head"><h2 id="lanzamientos-title">Lanzamientos</h2><small>Punk · Metal · Ska · Hardcore · Oi!</small></div>
 <p class="launch-intro">Discos, EPs, singles y videoclips que mantienen viva la escena. Cada semana seleccionaremos novedades estatales e internacionales: un lanzamiento destacado y una selección de otros trabajos. Tú decides qué publicamos y cuál merece el foco.</p>
-<div class="launch-placeholder">
-<div class="launch-feature-art"><strong>PRÓXIMAMENTE</strong><span>EL SONIDO NUEVO DE LA ESCENA</span></div>
-<div class="launch-copy"><p class="small">RADIKAL SONORO · ESPACIO ABIERTO A LA ESCENA</p><h3>Tu próximo disco también tiene sitio aquí</h3><p>¿Has publicado un álbum, EP, single o videoclip? Bandas y sellos pueden enviarnos sus novedades para que las valoremos.</p><a class="launch-send" href="mailto:radikalsonororadio@gmail.com?subject=Nuevo%20lanzamiento%20%7C%20Radikal%20Sonoro&amp;body=Banda%3A%0ATrabajo%20%28disco%2C%20EP%2C%20single%2C%20videoclip%29%3A%0AFecha%20de%20lanzamiento%3A%0AG%C3%A9nero%3A%0AEnlace%20oficial%20para%20escuchar%3A%0ABandcamp%2FSpotify%2FYouTube%3A%0ASello%3A%0AContacto%3A%0AAdjunta%20la%20portada%20o%20material%20promocional.">＋ ENVIAR UN LANZAMIENTO</a></div>
+<article class="launch-featured launch-item" data-published="2026-11-28">
+<a class="launch-cover" href="https://rattenkriegvalladolor.bandcamp.com/album/demo" target="_blank" rel="noopener noreferrer"><img src="https://f4.bcbits.com/img/a2396217033_16.jpg" alt="Portada del álbum Demo de Rattenkrieg" loading="lazy"></a>
+<div class="launch-copy"><span class="rs-new-sticker launch-sticker">NEW</span><p class="small">LANZAMIENTO DESTACADO · PUNK / HARDCORE / STREET PUNK · VALLADOLID</p><h3>RATTENKRIEG – «DEMO»</h3><p>Siete cortes de hardcore punk y street punk autogestionado desde Valladolid. Grabaciones repartidas entre Ángulo Muerto y Ruido Records; una descarga directa y sin adornos.</p><p class="launch-meta">Publicado: 2 noviembre 2026 · 7 temas · 21 min</p><a class="launch-send" href="https://rattenkriegvalladolor.bandcamp.com/album/demo" target="_blank" rel="noopener noreferrer">ESCUCHAR EN BANDCAMP ↗</a></div>
+</article>
+<div class="launch-grid">
+<article class="launch-card launch-item" data-published="2026-11-28">
+<a class="launch-cover" href="https://noenemyhcsr.bandcamp.com/album/hardcore-speedrock" target="_blank" rel="noopener noreferrer"><img src="https://f4.bcbits.com/img/a808361324_16.jpg" alt="Portada del single Hardcore Speedrock de No Enemy" loading="lazy"></a>
+<div class="launch-copy"><span class="rs-new-sticker launch-sticker">NEW</span><p class="small">PUNK / HARDCORE / SPEEDROCK · GRANADA</p><h3>NO ENEMY – «HARDCORE SPEEDROCK»</h3><p>Single debut de tres canciones, grabado y mezclado en FJR Estudios (Granada) y producido por Javi PPM.</p><p class="launch-meta">Publicado: 4 noviembre 2026 · 3 temas</p><a class="launch-send" href="https://noenemyhcsr.bandcamp.com/album/hardcore-speedrock" target="_blank" rel="noopener noreferrer">ESCUCHAR ↗</a></div>
+</article>
+<article class="launch-card launch-item" data-published="2026-11-28">
+<a class="launch-cover" href="https://colossusb.bandcamp.com/album/woods" target="_blank" rel="noopener noreferrer"><img src="https://f4.bcbits.com/img/a221726244_2.jpg" alt="Portada del EP Woods de Colossus B" loading="lazy"></a>
+<div class="launch-copy"><span class="rs-new-sticker launch-sticker">NEW</span><p class="small">METAL · DEATH / DOOM / GOTHIC</p><h3>COLOSSUS B – «WOODS»</h3><p>EP de cuatro temas y 25 minutos que cruza death metal, doom y atmósferas góticas.</p><p class="launch-meta">Publicado: 1 noviembre 2026 · 4 temas</p><a class="launch-send" href="https://colossusb.bandcamp.com/album/woods" target="_blank" rel="noopener noreferrer">ESCUCHAR ↗</a></div>
+</article>
+<article class="launch-card launch-item" data-published="2026-11-28">
+<a class="launch-cover" href="https://angelusapatrida.bandcamp.com/album/the-reckoning" target="_blank" rel="noopener noreferrer"><img src="https://media.rafabrasas.com/media/news/angelus-apatrida-the-reckoning-2026.jpg" alt="Portada del EP The Reckoning de Angelus Apatrida" loading="lazy"></a>
+<div class="launch-copy"><span class="rs-new-sticker launch-sticker">NEW</span><p class="small">THRASH METAL · ALBACETE</p><h3>ANGELUS APATRIDA – «THE RECKONING»</h3><p>Primer EP de la banda con Napalm Records: «Cycle Of Ruin», «Burn It Down» y una versión de «Propaganda» de Sepultura.</p><p class="launch-meta">Publicado: 19 noviembre 2026 · 3 temas</p><a class="launch-send" href="https://angelusapatrida.bandcamp.com/album/the-reckoning" target="_blank" rel="noopener noreferrer">ESCUCHAR ↗</a></div>
+</article>
 </div>
+<div class="launch-submit"><p><strong>¿Tu banda acaba de publicar material?</strong> Envíanos discos, EPs, singles y videoclips con portada y enlace oficial.</p><a class="launch-send" href="mailto:radikalsonororadio@gmail.com?subject=Nuevo%20lanzamiento%20%7C%20Radikal%20Sonoro&amp;body=Banda%3A%0ATrabajo%20%28disco%2C%20EP%2C%20single%2C%20videoclip%29%3A%0AFecha%20de%20lanzamiento%3A%0AG%C3%A9nero%3A%0AEnlace%20oficial%20para%20escuchar%3A%0ABandcamp%2FSpotify%2FYouTube%3A%0ASello%3A%0AContacto%3A%0AAdjunta%20la%20portada%20o%20material%20promocional.">＋ ENVIAR UN LANZAMIENTO</a></div>
 </section>
 <section id="videos"><div class="section-head"><h2>Bandas libres</h2><small>Descubre · Escucha · Comparte</small></div><p class="bands-intro">Un espacio para descubrir y dar visibilidad a bandas independientes y autogestionadas. Aquí encontrarás búsquedas de videoclips, directos y sesiones de punk, hardcore, ska y metal underground. ¿Tienes una banda? Envíanos tus vídeos y la añadiremos.</p><ul class="list video-grid" id="video-list"><li>Preparando vídeos…</li></ul><p class="small bands-note">Los enlaces te llevan a YouTube. Radikal Sonoro no aloja los vídeos.</p></section>
 <section id="banda-del-mes" class="band-of-month">
@@ -1104,4 +1137,18 @@ rl.innerHTML=r||'<span class="small">Aquí irán tus redes sociales.</span>';
 })();
 </script>
 
+<script>
+/* Sticker NEW en lanzamientos: desaparece automáticamente al cumplir 7 días desde su publicación */
+(function(){
+  var now=new Date();now.setHours(0,0,0,0);
+  document.querySelectorAll("#lanzamientos .launch-item[data-published]").forEach(function(item){
+    var published=new Date(item.getAttribute("data-published")+"T00:00:00");
+    var age=(now.getTime()-published.getTime())/86400000;
+    if(isNaN(age)||age<0||age>=7){
+      var sticker=item.querySelector(".launch-sticker");
+      if(sticker)sticker.remove();
+    }
+  });
+})();
+</script>
 </body></html>
